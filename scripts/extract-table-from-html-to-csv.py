@@ -1,10 +1,12 @@
 from bs4 import BeautifulSoup
 import urllib2
 import csv
+from path import path
 
-url = '../docs/documents/registered-allied-professionals-11-3-2018.htm'
-html = urllib2.urlopen(url).read(url)
-soup = BeautifulSoup(html)
+
+filename = '../docs/documents/registered-allied-professionals-11-3-2018.htm'
+html = path(filename).bytes()
+soup = BeautifulSoup(html, "html5lib")
 table = soup.select_one("table.customReportsTable")
 # python3 just use th.text
 headers = [th.text.encode("utf-8") for th in table.select("tr th")]
