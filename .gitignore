@@ -20,3 +20,6 @@
 
 # Visio autosave temporary files
 *.~vsd*
+
+*.sublime-project
+*.sublime-workspace
