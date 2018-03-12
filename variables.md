@@ -287,6 +287,7 @@ https://ugandaadmissions.com/admission-list-universities-uganda-2017-2018/
 #### Other cadres
 
 
+
 ##### Registered comprehensive nurse
 
 The Registered Comprehensive Nursing (RCN) and the Enrolled Comprehensive Nursing (ECN) training
