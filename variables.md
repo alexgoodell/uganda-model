@@ -25,6 +25,30 @@ https://anesthesiology.duke.edu/?p=822320
 ### Training
 
 
+All schools which are accredied to recieve funding: 
+https://ilmis.hesfb.go.ug/AdmittedUniversities.aspx
+
+Overview:
+http://library.health.go.ug/download/file/fid/1376
+
+Diploma entry scheme example:
+http://www.kyu.ac.ug/downloads/Diploma%20requirements%202014-2015.pdf
+
+http://allafrica.com/stories/201706060132.html
+
+National req for university admission
+https://www.newvision.co.ug/new_vision/news/1339142/-800-students-miss-joining-university
+
+Have the Uganda Certificate of Education with at least (five passes), or its equivalent and at least two principal passes at Advanced Level obtained at the same sitting. For day programmes, only candidates who sat "A" Level in 2013, 2012 and 2011 are eligible to apply.  For Evening, Afternoon, and External programmes, a candidate is not restricted on the year of sitting "A" Level.  
+
+Or
+
+Hold at least a Second Class or Credit (or equivalent classification) Diploma  from a recognised institution, relevant to the programmes applied for. ( Details of the Diploma Admission requirements for the 2014/2015 academic year can be viewed on the notice boards of the undergraduate admissions office notice boards or on Makerere University website: http://mak.ac.ug)  or here
+
+https://www.mak.ac.ug/application-procedures/direct-entry
+
+
+
 #### History
 
 
@@ -62,15 +86,45 @@ programme.
 http://cns.mak.ac.ug/sites/default/files/docs/DIPLOMA%20REQUIREMENTS%20FOR%20%20%202014-2015.pdf
 
 
+
+
+##### Anesthetic assistant
+
+
+- Training instituions
+	- Mbale school of clinical officers
+		- The Mbale School of Clinical Officers is a Government founded institution established in 1958. The School's minimum entry requirement is the Uganda Advanced Certificate of Education (UACE). (https://www.mak.ac.ug/affiliated-institutions/mbale-school-clinical-officers)	 
+
+A few years ago it was decided to take suitable
+candidates with ‘0’ levels straight from school.
+These had a 3 year training in anaesthetics, the first
+year being theory, the second year mixed theory and
+practice and the third year entirely practical. The
+products of this training are designated as ‘anaesthetic
+assistants’. They can be of reasonable quality
+but the scheme is likely to collapse unless an experienced
+medical anaesthetist is found to run it. 
+http://onlinelibrary.wiley.com/store/10.1111/j.1365-2044.1980.tb05128.x/asset/j.1365-2044.1980.tb05128.x.pdf;jsessionid=CF5F950053EDF29693EF9EB88D7EFF44.f04t01?v=1&t=jemmfcyp&s=beec9c8f5c789d68287fddbd3ddff14b8ab5e09a
+
+
+
+
+
 #### AO
 
-Training locations
+
+Approved programs: http://www.ahpc.ug/schools.php
+
+Training locations (accred by exam board: http://uaheb.go.ug/accredited-schools/)
 	- UGANDA INSTITUTE OF ALLIED HEALTH AND MANAGEMENT SCIENCE / Mugalo Paramedical school 
 		- affiliated with makarere (https://www.mak.ac.ug/affiliated-institutions/mulago-paramedical-schools)
 		- www.mpts.ac.ug (broken, accessible through wayback machine)
 		- https://www.facebook.com/Mulago-Paramedical-Schools-291020807577112/
 		- 2 years, admission: Registered Midwifery, Registered Nurses, Clinical Officers, Registered Comprehensive Nurses, Anaesthetic Assistants.
-	- 
+	- FORT PORTAL SCHOOL OF CLINICAL OFFICERS – ANAESTHESIA 
+	- MBALE  SCHOOL OF CLINICAL OFFICERS- ANAESTHESIA
+		- Only 4 tutors? http://www.monitor.co.ug/News/National/Mbale-clinical-school-has-only-four-tutors/688334-2968568-8kilwp/index.html 
+		- https://ugandaradionetwork.com/story/mbale-clinical-school-administrators-investigated
 
 
 Registration
@@ -225,6 +279,10 @@ https://paperpile.com/app/p/9fb8e126-ee6f-0aba-978c-7aeff23815a1
 There are two 3-year MMed programmes in anaesthesia at present, one at Mulago Hospital Kampala, the other at Mbarara University Hospital. Apply after their intern year. 
 https://paperpile.com/app/p/d3cdb184-c41c-0112-b2ee-74cfe173d866
 
+
+Admission list
+https://ugandaadmissions.com/2017-2018-makerere-university-postgraduate-admission-lists/
+https://ugandaadmissions.com/admission-list-universities-uganda-2017-2018/
 
 #### Other cadres
 
