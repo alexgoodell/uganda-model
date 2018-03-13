@@ -12,6 +12,7 @@ def archive_test():
 
 def archive_all_citations():
 
+
 	with open('refs/library.bib') as bibtex_file:
 		bibtex_database = bibtexparser.load(bibtex_file)
 
@@ -20,12 +21,13 @@ def archive_all_citations():
 			cite_key = str(entry['ID'])
 			url = str(entry['url'])
 			cmd = "archivenow --ia {}".format(url)
-			archive_url = local(cmd)
-			bibtex_database.entries[i]["archive-url"] = archive_url
 
+			archive_url = local(cmd,capture=True)
+
+			bibtex_database.entries[i]["archive-url"] = archive_url
 			print "Archived as {} \n\n".format(archive_url)
 			
 
-	with open('bibtex.bib', 'w') as bibtex_file:
+	with open('refs/library.bib', 'w') as bibtex_file:
 		bibtexparser.dump(bibtex_database, bibtex_file)
 
