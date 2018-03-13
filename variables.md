@@ -8,6 +8,17 @@ In 2006 there were only two physicians in anaesthesia training in Uganda.
 https://paperpile.com/app/p/d3cdb184-c41c-0112-b2ee-74cfe173d866
 
 
+
+
+
+Generally, there was a severe shortage of the anaesthetic drugs. Of the 10 anaesthetic drugs that
+were enquired about during the census, only 2% of the hospitals/HC IVs had all of them and 19% had
+at least half of the medicines (Figure 111). 
+
+http://www.who.int/healthinfo/systems/SARA_H_UGA_Results_2014.pdf
+
+
+
 ## Anecdotal evidence
 
 inability to monitor EtC02
@@ -363,3 +374,32 @@ A certificate or diploma in nursing issued by the council;
 A person who produces evidence satisfactory to the council that he or she has been registered or enrolled as a nurse or midwife in any other country in which there is a law for registration or enrollment of nurses and midwives and in respect of which country the council is satisfied that the standard of training and examination is not inferior to the standard set by the council; A nursing or midwifery qualification recognised by the council under Section 20.
 https://paperpile.com/app/p/a3b3c81e-cdd3-0557-9ca3-eafb54b9b0e1
 
+
+
+
+
+
+
+Cost effectiveness of CRNA
+Cosr Satefy Access
+
+NSOAP - national plan - mtg dubai next week - adrian speaking
+PGSSC - tanzania plan
+
+
+Applicants from the following hard to reach/ hard to stay districts will be given priority:
+Kotido, Abim, Kaabong, Moroto, Napak, Nakapiripit, Pader, Lamwo, Kitgum, Amuru, Nwoya, Gulu, Adjumani, Kalangala, Mukono including Koome
+Islands, Buvuma, Bundibugyo, Ntoroko, Kisoro, Kanungu, Mayuge including Islands of Malongwe Sub-County, Bukwo, Bugiri, Namayingo including
+Sigulu islands, Amolator, Amuria, Zombo, Nebbi, Koboko, Buliisa, Katakwi, Kaberamaido, Yumbe, Moyo, Sembabule, Kabale, Rakai, Maracha,
+Isingiro, Buyende, and Kiruhura.
+\citet{mohscholar2017}
+
+
+
+
+Staff list
+http://www.jinjahealthoffice.go.ug/track/staff_uploads/Jinja%20District%20health%20staff%20list%202014.xls
+
+
+They are starting an eRruitment platform
+http://hers.ug/
