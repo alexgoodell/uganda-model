@@ -36,16 +36,10 @@ def anchored_notes():
 		bibtex_database = bibtexparser.load(bibtex_file)
 
 	for i, entry in enumerate(bibtex_database.entries):
-		if 'url' in entry:
-			if not 'archive-url' in entry:
-				cite_key = str(entry['ID'])
-				url = str(entry['url'])
-				cmd = "archivenow --ia {}".format(url)
-
-				archive_url = local(cmd,capture=True)
-
-				bibtex_database.entries[i]["archive-url"] = archive_url
-				print "Archived as {} \n\n".format(archive_url)
+		cite_key = str(entry['ID'])
+		# note = "<a name=\"{}\">".format(cite_key)
+		bibtex_database.entries[i]["note"] = cite_key
+		# print "note set as: {}".format(note)
 			
 
 	with open('refs/library.bib', 'w') as bibtex_file:
