@@ -1,4 +1,6 @@
 
+facility data: https://search.tmcg.co.ug/hospital.php
+https://www.scribd.com/document/356174724/Coded-Health-Facility-Master-Lists-August-2017
 
 
 # Current situation
