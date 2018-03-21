@@ -1,5 +1,5 @@
 | Item          | Value                                                           |
-|---------------+-----------------------------------------------------------------|
+|:--------------|:----------------------------------------------------------------|
 | date-modified | 2018-03-13 23:32:21 +0000                                       |
 | title         | Uganda Medical and Dental Practitioners Council Registry        |
 | url           | http://www.umdpc.com/registers.php                              |

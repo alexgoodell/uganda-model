@@ -41,7 +41,7 @@ def generate_cite_md():
 		cite_key = str(entry['ID'])
 		entry_items = [ [key,value] for key, value in entry.iteritems()]
 		headers = ['Item', 'Value']
-		table = tabulate.tabulate(entry_items, headers, tablefmt="orgtbl")
+		table = tabulate.tabulate(entry_items, headers, tablefmt="pipe")
 		table = str(table)
 		file = open("refs/cite-md/" + cite_key + ".md", 'w')
 		file.write(table)

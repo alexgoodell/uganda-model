@@ -1,5 +1,5 @@
 | Item          | Value                                                                                              |
-|---------------+----------------------------------------------------------------------------------------------------|
+|:--------------|:---------------------------------------------------------------------------------------------------|
 | bdsk-url-1    | http://www.bioline.org.br/request?js11047                                                          |
 | publisher     | Association of Surgeons of East Africa and College of Surgeons of East Central and Southern Africa |
 | date-modified | 2018-03-13 06:16:59 +0000                                                                          |

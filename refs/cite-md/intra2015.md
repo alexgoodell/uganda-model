@@ -1,5 +1,5 @@
 | Item          | Value                                                                                                                                 |
-|---------------+---------------------------------------------------------------------------------------------------------------------------------------|
+|:--------------|:--------------------------------------------------------------------------------------------------------------------------------------|
 | bdsk-url-1    | http://www.who.int/workforcealliance/media/news/2015/HRH_Commitments_Uganda_Case_Study.pdf                                            |
 | date-modified | 2018-03-12 22:01:40 +0000                                                                                                             |
 | author        | Vincent Oketcho, Isaac Ezati, John Odaga, Allison Annette Foster, James McMahan, Lena Muldavin                                        |
