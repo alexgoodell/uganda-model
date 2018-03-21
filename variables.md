@@ -1,6 +1,8 @@
-
+r
 facility data: https://search.tmcg.co.ug/hospital.php
 https://www.scribd.com/document/356174724/Coded-Health-Facility-Master-Lists-August-2017
+
+more facility data; # lots of data here on district-level stuff: http://mapping.uac.go.ug
 
 
 # Current situation
