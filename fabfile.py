@@ -1,8 +1,9 @@
-importbibtexparser
-import pdfkit
+import bibtexparser
 from fabric.api import run, sudo, local, settings
 import logging
 import sys
+import tabulate
+
 logging.basicConfig()
 
 
@@ -31,19 +32,40 @@ def archive_all_citations():
 		bibtexparser.dump(bibtex_database, bibtex_file)
 
 
-def anchored_notes():
+
+def generate_cite_md():
 	with open('refs/library.bib') as bibtex_file:
 		bibtex_database = bibtexparser.load(bibtex_file)
 
 	for i, entry in enumerate(bibtex_database.entries):
 		cite_key = str(entry['ID'])
-		# note = "<a name=\"{}\">".format(cite_key)
-		bibtex_database.entries[i]["note"] = cite_key
-		# print "note set as: {}".format(note)
+		entry_items = [ [key,value] for key, value in entry.iteritems()]
+		headers = ['Item', 'Value']
+		table = tabulate.tabulate(entry_items, headers, tablefmt="grid")
+		file = open("refs/cite-md/" + cite_key + ".md", 'w')
+		file.write(table)
+		file.close()
+		
+		
+
+
+
+
+
+
+# def anchored_notes():
+# 	with open('refs/library.bib') as bibtex_file:
+# 		bibtex_database = bibtexparser.load(bibtex_file)
+
+# 	for i, entry in enumerate(bibtex_database.entries):
+# 		cite_key = str(entry['ID'])
+# 		# note = "<a name=\"{}\">".format(cite_key)
+# 		bibtex_database.entries[i]["note"] = cite_key
+# 		# print "note set as: {}".format(note)
 			
 
-	with open('refs/library.bib', 'w') as bibtex_file:
-		bibtexparser.dump(bibtex_database, bibtex_file)
+# 	with open('refs/library.bib', 'w') as bibtex_file:
+# 		bibtexparser.dump(bibtex_database, bibtex_file)
 
 
 
