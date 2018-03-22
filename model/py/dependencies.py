@@ -1,3 +1,5 @@
+
+# REPL dependencies
 import pandas as pd
 import numpy as np
 import os
@@ -11,6 +13,12 @@ from bs4 import BeautifulSoup
 import urllib2
 import csv
 
+# CLI dependencies
+import bibtexparser
+from fabric.api import run, sudo, local, settings
+import logging
+import sys
+import tabulate
 
 # required to use as module
 if __name__ == '__main__': 

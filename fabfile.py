@@ -46,28 +46,5 @@ def generate_cite_md():
 		file = open("refs/cite-md/" + cite_key + ".md", 'w')
 		file.write(table)
 		file.close()
-		
-		
-
-
-
-
-
-
-# def anchored_notes():
-# 	with open('refs/library.bib') as bibtex_file:
-# 		bibtex_database = bibtexparser.load(bibtex_file)
-
-# 	for i, entry in enumerate(bibtex_database.entries):
-# 		cite_key = str(entry['ID'])
-# 		# note = "<a name=\"{}\">".format(cite_key)
-# 		bibtex_database.entries[i]["note"] = cite_key
-# 		# print "note set as: {}".format(note)
-			
-
-# 	with open('refs/library.bib', 'w') as bibtex_file:
-# 		bibtexparser.dump(bibtex_database, bibtex_file)
-
-
 
 
