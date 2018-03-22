@@ -3,6 +3,8 @@ from fabric.api import run, sudo, local, settings
 import logging
 import sys
 import tabulate
+from prompter import prompt, yesno
+from termcolor import colored
 
 logging.basicConfig()
 
@@ -46,5 +48,17 @@ def generate_cite_md():
 		file = open("refs/cite-md/" + cite_key + ".md", 'w')
 		file.write(table)
 		file.close()
+
+def update():
+	m = prompt("Message:", default='Autoupdate')
+	print colored('Updating requirements file...','blue')
+	local('pip freeze -r devel-req.txt > requirements.txt')
+	print colored('Adding to git','blue')
+	local('git add .')
+	local('git status')
+	if not yesno('Continue?'):
+		return
+	local('git commit -m \'' + m + "\'")
+	local('git push origin master')
 
 
