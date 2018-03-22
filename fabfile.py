@@ -1,5 +1,6 @@
 import bibtexparser
 from fabric.api import run, sudo, local, settings
+from fabric.api import roles, execute
 import logging
 import sys
 import tabulate
@@ -41,6 +42,7 @@ def generate_cite_md():
 
 	for i, entry in enumerate(bibtex_database.entries):
 		cite_key = str(entry['ID'])
+		print "Updating {} md file....".format(cite_key),
 		entry_items = [ [key,value] for key, value in entry.iteritems()]
 		headers = ['Item', 'Value']
 		table = tabulate.tabulate(entry_items, headers, tablefmt="pipe")
@@ -48,17 +50,23 @@ def generate_cite_md():
 		file = open("refs/cite-md/" + cite_key + ".md", 'w')
 		file.write(table)
 		file.close()
+	print "Done"
 
 def update():
 	m = prompt("Message:", default='Autoupdate')
-	print colored('Updating requirements file...','blue')
+
+	print colored('Updating requirements file............................','blue')
 	local('pip freeze -r devel-req.txt > requirements.txt')
-	print colored('Adding to git','blue')
+
+	print colored('Updating citations md files............................','blue')
+	execute(generate_cite_md)
+
+	print colored('Adding to git.............................','blue')
 	local('git add .')
 	local('git status')
 	if not yesno('Continue?'):
 		return
-	local('git commit -m \'' + m + "\'")
-	local('git push origin master')
+	# local('git commit -m \'' + m + "\'")
+	# local('git push origin master')
 
 
