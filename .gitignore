@@ -1,7 +1,7 @@
-.DS_STORE
+*.DS_STORE
 
 # Compiled python
-.pyc
+*.pyc
 
 # Temp files
 *.tmp
@@ -25,3 +25,5 @@
 *.sublime-workspace
 
 *.key
+
+tmp/*.*
