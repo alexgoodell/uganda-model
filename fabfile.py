@@ -53,7 +53,7 @@ def generate_cite_md():
 	print "Complete"
 
 def update():
-	m = prompt("Message:", default='Autoupdate')
+
 
 	print colored('Updating requirements file............................','blue')
 	local('pip freeze -r ' + config.root_path + '/devel-req.txt > ' + config.root_path + '/requirements.txt')
@@ -64,8 +64,9 @@ def update():
 	print colored('Adding to git.............................','blue')
 	local('git add .')
 	local('git status')
-	if not yesno('Continue?'):
-		return
+	m = prompt("Commit message:", default='Autoupdate')
+	# if not yesno('Continue?'):
+		# return
 	local('git commit -m \'' + m + "\'")
 	local('git push origin master')
 	print colored('............................. Done','blue')
