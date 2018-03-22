@@ -141,7 +141,7 @@
     \def\gt{>}
     \def\lt{<}
     % Document parameters
-    \title{uganda-model}
+    \title{Facilities}
     
     
     
@@ -280,524 +280,220 @@
     
 
     
-    \hypertarget{descriptive-information-about-anesthetists}{%
-\section{Descriptive information about
-anesthetists}\label{descriptive-information-about-anesthetists}}
+    \hypertarget{facilities}{%
+\section{Facilities}\label{facilities}}
 
-So far, no one has described the current data available for the number
-or distribution of the various cadres of anethetists in Uganda.
+District-level information was obtained online, through the Ministry of
+Finance online ``Fiscal Transfers'' database \cite{otims_2018}. Health
+facility information was obtained from the 2017 Health Facility Master
+List, which we found on the document-sharing website Scribd.com
+\cite{mohdhi2017}. Data was extracted with the Tabula software
+\cite{tabula_2018}.
 
-My primary questions concern both physician anesthestics and
-non-physician anesthestists. Primarily, - How many are there? - Where
-are they (ie, distributed rural vs urban)? - How were they educated? -
-How much money do they make? - How many are being trained?
+\hypertarget{master-facility-list-pre-processing}{%
+\subsubsection{Master facility list
+pre-processing}\label{master-facility-list-pre-processing}}
 
-Note: My citations will look funny in this notebook. Please see this
-\href{https://github.com/alexgoodell/uganda-model/blob/master/refs/library.bib}{BibTex
-file} for the current list of my citations.
-
-\hypertarget{physician-anesthetists}{%
-\subsection{Physician anesthetists}\label{physician-anesthetists}}
-
-According to the WFSA, in Uganda, there are 3,361 physicians (for a
-physician-to-population ratio of 0.18 per 100,000), 263 of which are
-surgerons, 72 of which are physican anesthtists, and 47 physician
-providers that have an anaesthetic qualification. \cite{wfsaug2018}. In
-2004, 2005, and 2015 (the only data published by the WHO) there were
-2209, 3361, and 3645 physicians country-wide. \cite{whogho2018}
-
-Data concerning the number and location of physician anesthetists was
-obtained from the Uganda Medical and Dental Practitioners Council
-Registry website \cite{umdpc2018reg}. Extracted data can be found in our
-GitHub repository, under ``data/umdpc/.'' Filenames were changed to
-exclude spaces and extract date was included in the title. Data was
-cleaned by removing whitespace and formatting oddities as documented.
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}13}]:} \PY{c+c1}{\PYZsh{} import requirements (all found in /model/py/requirements.txt)}
-         \PY{k+kn}{import} \PY{n+nn}{pandas} \PY{k+kn}{as} \PY{n+nn}{pd}
-         \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k+kn}{as} \PY{n+nn}{np}
-         \PY{k+kn}{import} \PY{n+nn}{os}
-         \PY{k+kn}{import} \PY{n+nn}{matplotlib}
-         \PY{n}{matplotlib}\PY{o}{.}\PY{n}{use}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Agg}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} 
-         \PY{k+kn}{import} \PY{n+nn}{matplotlib.pyplot} \PY{k+kn}{as} \PY{n+nn}{plt}\PY{o}{,} \PY{n+nn}{mpld3}
-         \PY{k+kn}{import} \PY{n+nn}{seaborn} \PY{k+kn}{as} \PY{n+nn}{sns}
-         \PY{k+kn}{from} \PY{n+nn}{IPython.display} \PY{k+kn}{import} \PY{n}{HTML} \PY{k}{as} \PY{n}{html\PYZus{}print}
-         
-         \PY{c+c1}{\PYZsh{} function for easy printing}
-         \PY{k}{def} \PY{n+nf}{nprint}\PY{p}{(}\PY{n}{q}\PY{p}{)}\PY{p}{:}
-             \PY{k}{print} \PY{n+nb}{list}\PY{p}{(}\PY{n}{q}\PY{o}{.}\PY{n}{astype}\PY{p}{(}\PY{n+nb}{str}\PY{p}{)}\PY{p}{)}
-\end{Verbatim}
-
+After extraction, data from the master facility list were compared
+against summary tables from the same document to identify any missing
+data. Changes were needed in four districts: 1. The Health Facility
+Master List claimed that there were 32 operating health facilities in
+the \textbf{Amuru} district, but did not list any. For this district, 26
+facilities were identified from the budgeting office data
+\cite{otims_2016}. An additional three facilities (for a total of 29)
+were identified from 2012 health infastructure data: ST. AUGUSTINE
+Health Center II, Otwee Health Center III, and Pabbo Health Centre III
+\cite{hid2012}. There were assigned a sub-county NHPI of SC8ZISZD6
+(Amuru town council, Amoyokoma Parish) 2. There were also no facilities
+listed for the \textbf{Kibaale} district, though the document listed 16
+facilities (7 of which are HCIII, 1 HC IV, 1 hospital) in a summary
+table (Table 8). This is a new district, created in July 2016, when the
+previous Kibaale District was split into Kagadi, Kakumiro and Kibaale.
+Eight facilities were identified in the budgeting data
+\cite{otims_2016}, and two additional were identified with the
+infastructure data \cite{hid2012}. This process thus identified a total
+of 5 HC III's, 1 HC IV, and 1 hospital. There were assigned a
+sub-country of SCLMS8IG1 (Kibaale town council, Ruguuza Parish). 3. The
+\textbf{Mityana} district was missing its 24th facility, reporting 65 of
+66 facilities. According to table 5, this district has a hospital. After
+reviewing the budgeting data, Mityana Hospital was identified and added
+to our database. It was assigned a random sub-county within Mityana:
+SC96Q5BX1 (Bulera Subcounty, Kakonde Parish) 4. Three facilites in the
+\textbf{Mukono} district (68: Royal Family Clinic Clinic, 88: Trinity
+Clinic Clinic, 91: Vine Medical centre Clinic) did not have a sub-county
+NHPI. These facilities were assigned a sub-county NHPI of SCTMPU7S6 (for
+the Mukono Municipality, Nantaburirwa Parish).
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}14}]:} \PY{c+c1}{\PYZsh{} read in data for \PYZdq{}full registry \PYZhy{} skip first three rows (header information)}
-         \PY{n}{df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}excel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{../../data/umdpc/full\PYZhy{}register\PYZhy{}3\PYZhy{}13\PYZhy{}2018.xls}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{skiprows}\PY{o}{=}\PY{l+m+mi}{3}\PY{p}{,} \PY{n}{header}\PY{o}{=}\PY{l+m+mi}{0}\PY{p}{)}
-         \PY{c+c1}{\PYZsh{} show first 5 rows}
-         \PY{n}{df}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{)}
-\end{Verbatim}
-
-
-\begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}14}]:}   Reg No.    Surname          Other Name Sex                    Employer  \textbackslash{}
-         0   H2441  AACA OKUI             LILLIAN          F                  NaN   
-         1   F0186      AANYU  HELLEN TUKAMUHEBWA          F      MULAGO HOSPITAL   
-         2   I3717      ABACH               JAMES          M  CASE MEDICAL CENTRE   
-         3   J5344     ABACHU               SIMON          M                  NaN   
-         4   I3770      ABAHO   RWABYONA SHELLINA          F                  NaN   
-         
-                    Postal Address  BOX        CITYTOWN        First Registration  \textbackslash{}
-         0   P.O BOX 7072, KAMPALA        7072    KAMPALA   MBChB,MUK,UGANDA,2003   
-         1  P.O BOX 21846, KAMPALA       21846    KAMPALA  MBChB,MUST,UGANDA,1995   
-         2   P.O BOX 4547, KAMPALA        4547    KAMPALA   MBChB,MUK,UGANDA,2010   
-         3  P.O BOX 91031, KAMPALA       91031    KAMPALA   MD,BLIDA,ALGERIA,2014   
-         4     P.O BOX 488, KABALE         488     KABALE  MBChB,MUST,UGANDA,2011   
-         
-           PROFES                   {\ldots}                        PROFES03    \textbackslash{}
-         0      MBChB               {\ldots}                               NaN   
-         1      MBChB               {\ldots}                 CERT. PULMONOLOGY   
-         2      MBChB               {\ldots}                               NaN   
-         3         MD               {\ldots}                               NaN   
-         4      MBChB               {\ldots}                               NaN   
-         
-                       AWARD03     COUNTRY03  YEAR03     Unnamed: 30 PROFES04    \textbackslash{}
-         0                    NaN         NaN        NaN         NaN        NaN   
-         1  CAPE TOWN \& RED CROSS          SA       2010         NaN        NaN   
-         2                    NaN         NaN        NaN         NaN        NaN   
-         3                    NaN         NaN        NaN         NaN        NaN   
-         4                    NaN         NaN        NaN         NaN        NaN   
-         
-           AWARD04    COUNTRY04  YEAR04                           Speciality  
-         0        NaN        NaN        NaN                              NaN  
-         1        NaN        NaN        NaN  PAEDIATRIC PULMONOLOGY, ALLERGY  
-         2        NaN        NaN        NaN                      PAEDIATRICS  
-         3        NaN        NaN        NaN                              NaN  
-         4        NaN        NaN        NaN                              NaN  
-         
-         [5 rows x 36 columns]
-\end{Verbatim}
-            
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}15}]:} \PY{c+c1}{\PYZsh{} Fix the whitespace in the column names, replace strings with underscore}
-         \PY{n}{df}\PY{o}{.}\PY{n}{columns} \PY{o}{=} \PY{n}{df}\PY{o}{.}\PY{n}{columns}\PY{o}{.}\PY{n}{str}\PY{o}{.}\PY{n}{strip}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{str}\PY{o}{.}\PY{n}{lower}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{str}\PY{o}{.}\PY{n}{replace}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ }\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZus{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-         \PY{n}{nprint}\PY{p}{(}\PY{n}{df}\PY{o}{.}\PY{n}{columns}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}111}]:} \PY{c+c1}{\PYZsh{} Import dependencies}
+          \PY{k+kn}{from} \PY{n+nn}{dependencies} \PY{k+kn}{import} \PY{o}{*}
 \end{Verbatim}
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-['reg\_no.', 'surname', 'other\_name', 'sex', 'employer', 'postal\_address', 'box', 'citytown', 'first\_registration', 'profes', 'award', 'country', 'year', 'date\_of\_first\_registration', 'additional\_qualification(s)', 'unnamed:\_15', 'profes01', 'award01', 'country01', 'year01', 'unnamed:\_20', 'profes02', 'award02', 'country02', 'year02', 'unnamed:\_25', 'profes03', 'award03', 'country03', 'year03', 'unnamed:\_30', 'profes04', 'award04', 'country04', 'year04', 'speciality']
-
-    \end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}16}]:} \PY{c+c1}{\PYZsh{} Let\PYZsq{}s find what all these columns are for}
-         
-         \PY{c+c1}{\PYZsh{} Find all rows with null values in any column}
-         \PY{n}{any\PYZus{}null} \PY{o}{=} \PY{n}{df}\PY{o}{.}\PY{n}{isnull}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{any}\PY{p}{(}\PY{n}{axis}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{)}
-         
-         \PY{c+c1}{\PYZsh{} Find the inverse}
-         \PY{n}{not\PYZus{}any\PYZus{}null} \PY{o}{=} \PY{n}{any\PYZus{}null}\PY{o}{.}\PY{n}{apply}\PY{p}{(}\PY{k}{lambda} \PY{n}{x}\PY{p}{:} \PY{o+ow}{not} \PY{n}{x}\PY{p}{)}
-         
-         \PY{c+c1}{\PYZsh{} Print the columns of question for a few rows, (transformed then limited to ten cols, which are now rows)}
-         \PY{n}{df}\PY{p}{[}\PY{n}{not\PYZus{}any\PYZus{}null}\PY{p}{]}\PY{p}{[}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{first\PYZus{}registration}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{profes}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{award}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{country}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{additional\PYZus{}qualification(s)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
-                           \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{unnamed:\PYZus{}15}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{profes01}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{award01}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{country01}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year01}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{unnamed:\PYZus{}20}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{profes02}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{award02}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} 
-                           \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{country02}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year02}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{unnamed:\PYZus{}25}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{profes03}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{award03}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{country03}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year03}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{unnamed:\PYZus{}30}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} 
-                           \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{profes04}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{award04}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{country04}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year04}\PY{l+s+s1}{\PYZsq{}} \PY{p}{]}\PY{p}{]}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{2}\PY{p}{]}\PY{o}{.}\PY{n}{T}
-\end{Verbatim}
-
-
-\begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}16}]:}                                                                            528  \textbackslash{}
-         first\_registration                                       MBChB,MUK,UGANDA,1978   
-         profes                                                                   MBChB   
-         award                                                                      MUK   
-         country                                                                 UGANDA   
-         year                                                                      1978   
-         additional\_qualification(s)  PhD,DUBLIN,IRELAND,1987,MRCP,RCP,IRELAND,1987,{\ldots}   
-         unnamed:\_15                                            PhD,DUBLIN,IRELAND,1987   
-         profes01                                                                   PhD   
-         award01                                                                 DUBLIN   
-         country01                                                              IRELAND   
-         year01                                                                    1987   
-         unnamed:\_20                                              MRCP,RCP,IRELAND,1987   
-         profes02                                                                  MRCP   
-         award02                                                                    RCP   
-         country02                                                              IRELAND   
-         year02                                                                    1987   
-         unnamed:\_25                                             FDE,MANIPAL,INDIA,2001   
-         profes03                                                                   FDE   
-         award03                                                                MANIPAL   
-         country03                                                                INDIA   
-         year03                                                                    2001   
-         unnamed:\_30                                   MSC,GLOBAL HEALTH DUBLIN,UK,2007   
-         profes04                                                                   MSC   
-         award04                                                   GLOBAL HEALTH DUBLIN   
-         country04                                                                   UK   
-         year04                                                                    2007   
-         
-                                                                                    924  
-         first\_registration                                       MBChB,MUK,UGANDA,1984  
-         profes                                                                   MBChB  
-         award                                                                      MUK  
-         country                                                                 UGANDA  
-         year                                                                      1984  
-         additional\_qualification(s)  MPH,WITWATERSRAND,SA,2001,MSc,MUK,UGANDA,1988,{\ldots}  
-         unnamed:\_15                                          MPH,WITWATERSRAND,SA,2001  
-         profes01                                                                   MPH  
-         award01                                                          WITWATERSRAND  
-         country01                                                                   SA  
-         year01                                                                    2001  
-         unnamed:\_20                                                MSc,MUK,UGANDA,1988  
-         profes02                                                                   MSc  
-         award02                                                                    MUK  
-         country02                                                               UGANDA  
-         year02                                                                    1988  
-         unnamed:\_25                  DIP. PRIMARY EMERGENCY CARE,WITWATERSRAND,SA,1992  
-         profes03                                           DIP. PRIMARY EMERGENCY CARE  
-         award03                                                          WITWATERSRAND  
-         country03                                                                   SA  
-         year03                                                                    1992  
-         unnamed:\_30                                      DTM \& H,WITWATERSRAND,SA,1994  
-         profes04                                                               DTM \& H  
-         award04                                                          WITWATERSRAND  
-         country04                                                                   SA  
-         year04                                                                    1994  
-\end{Verbatim}
-            
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}18}]:} \PY{c+c1}{\PYZsh{} Rename columns to more useful }
-         \PY{n}{df} \PY{o}{=} \PY{n}{df}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}
-             \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{reg\PYZus{}no.}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{reg\PYZus{}no}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
-             \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{first\PYZus{}registration}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{concat\PYZus{}degree2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{profes}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree\PYZus{}degree2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{award}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{program\PYZus{}degree2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{country}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{country\PYZus{}degree2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year\PYZus{}degree2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
-             \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{unnamed:\PYZus{}15}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{concat\PYZus{}degree2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{profes01}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree\PYZus{}degree2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{award01}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{program\PYZus{}degree2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{country01}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{country\PYZus{}degree2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year01}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year\PYZus{}degree2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
-             \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{unnamed:\PYZus{}20}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{concat\PYZus{}degree3}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{profes02}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree\PYZus{}degree3}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{award02}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{program\PYZus{}degree3}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{country02}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{country\PYZus{}degree3}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year02}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year\PYZus{}degree3}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
-             \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{unnamed:\PYZus{}25}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{concat\PYZus{}degree4}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{profes03}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree\PYZus{}degree4}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{award03}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{program\PYZus{}degree4}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{country03}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{country\PYZus{}degree4}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year03}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year\PYZus{}degree4}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
-             \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{unnamed:\PYZus{}30}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{concat\PYZus{}degree5}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{profes04}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree\PYZus{}degree5}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{award04}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{program\PYZus{}degree5}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{country04}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{country\PYZus{}degree5}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year04}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year\PYZus{}degree5}\PY{l+s+s1}{\PYZsq{}}
-         \PY{p}{\PYZcb{}}\PY{p}{)}
-         
-         \PY{c+c1}{\PYZsh{} Confirm rename}
-         \PY{n}{df}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{)}
-\end{Verbatim}
-
-
-\begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}18}]:}   reg\_no    surname          other\_name sex             employer  \textbackslash{}
-         0  H2441  AACA OKUI             LILLIAN   F                  NaN   
-         1  F0186      AANYU  HELLEN TUKAMUHEBWA   F      MULAGO HOSPITAL   
-         2  I3717      ABACH               JAMES   M  CASE MEDICAL CENTRE   
-         3  J5344     ABACHU               SIMON   M                  NaN   
-         4  I3770      ABAHO   RWABYONA SHELLINA   F                  NaN   
-         
-                    postal\_address    box citytown          concat\_degree2  \textbackslash{}
-         0   P.O BOX 7072, KAMPALA   7072  KAMPALA   MBChB,MUK,UGANDA,2003   
-         1  P.O BOX 21846, KAMPALA  21846  KAMPALA  MBChB,MUST,UGANDA,1995   
-         2   P.O BOX 4547, KAMPALA   4547  KAMPALA   MBChB,MUK,UGANDA,2010   
-         3  P.O BOX 91031, KAMPALA  91031  KAMPALA   MD,BLIDA,ALGERIA,2014   
-         4     P.O BOX 488, KABALE    488   KABALE  MBChB,MUST,UGANDA,2011   
-         
-           degree\_degree2               {\ldots}                    degree\_degree4  \textbackslash{}
-         0          MBChB               {\ldots}                               NaN   
-         1          MBChB               {\ldots}                 CERT. PULMONOLOGY   
-         2          MBChB               {\ldots}                               NaN   
-         3             MD               {\ldots}                               NaN   
-         4          MBChB               {\ldots}                               NaN   
-         
-                  program\_degree4  country\_degree4 year\_degree4 concat\_degree5  \textbackslash{}
-         0                    NaN              NaN          NaN            NaN   
-         1  CAPE TOWN \& RED CROSS               SA         2010            NaN   
-         2                    NaN              NaN          NaN            NaN   
-         3                    NaN              NaN          NaN            NaN   
-         4                    NaN              NaN          NaN            NaN   
-         
-           degree\_degree5 program\_degree5 country\_degree5 year\_degree5  \textbackslash{}
-         0            NaN             NaN             NaN          NaN   
-         1            NaN             NaN             NaN          NaN   
-         2            NaN             NaN             NaN          NaN   
-         3            NaN             NaN             NaN          NaN   
-         4            NaN             NaN             NaN          NaN   
-         
-                                 speciality  
-         0                              NaN  
-         1  PAEDIATRIC PULMONOLOGY, ALLERGY  
-         2                      PAEDIATRICS  
-         3                              NaN  
-         4                              NaN  
-         
-         [5 rows x 36 columns]
-\end{Verbatim}
-            
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}36}]:} \PY{c+c1}{\PYZsh{} Look for missing values in key fields}
-         \PY{n}{df}\PY{p}{[}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{reg\PYZus{}no}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{surname}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{other\PYZus{}name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{sex}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{]}\PY{o}{.}\PY{n}{notnull}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{p}{)}
-\end{Verbatim}
-
-
-\begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}36}]:} reg\_no        5219
-         surname       5222
-         other\_name    5222
-         sex           5222
-         dtype: int64
-\end{Verbatim}
-            
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}20}]:} \PY{c+c1}{\PYZsh{} There is at least one person missing a reg number}
-         \PY{n}{df}\PY{p}{[}\PY{n}{df}\PY{o}{.}\PY{n}{reg\PYZus{}no}\PY{o}{.}\PY{n}{isnull}\PY{p}{(}\PY{p}{)}\PY{p}{]}
-\end{Verbatim}
-
-
-\begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}20}]:}      reg\_no     surname      other\_name sex           employer  \textbackslash{}
-         2082    NaN       KUNGU  SULAIMAN PETER   M                NaN   
-         4465    NaN    RUGUMAYO         NATASHA   F                NaN   
-         4950    NaN  TURANZOMWE          STUART   M  RUGARAMA HOSPITAL   
-         
-                    postal\_address  box citytown          concat\_degree2  \textbackslash{}
-         2082                  NaN  NaN      NaN   MBChB,KIU,UGANDA,2015   
-         4465  P.O BOX 291, MUKONO  291   MUKONO   MBChB,KIU,UGANDA,2010   
-         4950  P.O BOX 785, KABALE  785   KABALE  MBChB,MUST,UGANDA,2014   
-         
-              degree\_degree2     {\ldots}     degree\_degree4 program\_degree4  \textbackslash{}
-         2082          MBChB     {\ldots}                NaN             NaN   
-         4465          MBChB     {\ldots}                NaN             NaN   
-         4950          MBChB     {\ldots}                NaN             NaN   
-         
-               country\_degree4 year\_degree4 concat\_degree5 degree\_degree5  \textbackslash{}
-         2082              NaN          NaN            NaN            NaN   
-         4465              NaN          NaN            NaN            NaN   
-         4950              NaN          NaN            NaN            NaN   
-         
-              program\_degree5 country\_degree5 year\_degree5  speciality  
-         2082             NaN             NaN          NaN         NaN  
-         4465             NaN             NaN          NaN         NaN  
-         4950             NaN             NaN          NaN         NaN  
-         
-         [3 rows x 36 columns]
-\end{Verbatim}
-            
-    On the main registry, there were \{\{
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}30}]:} \PY{c+c1}{\PYZsh{} Looks like there are three, but they seem to be real people, so I will keep them}
-         
-         \PY{c+c1}{\PYZsh{} Let\PYZsq{}s assign a dummy var to all real people \PYZhy{} .loc[x,y] finds rows that met x (: mean all, and sets y)}
-         \PY{n}{df}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{dummy}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{df}\PY{o}{.}\PY{n}{surname}\PY{o}{.}\PY{n}{notnull}\PY{p}{(}\PY{p}{)}
-         
-         \PY{c+c1}{\PYZsh{} Let\PYZsq{}s see how many physicians are actively practicing, since this table is only *registered* docs}
-         
-         \PY{c+c1}{\PYZsh{} First, let\PYZsq{}s just see how many list a place of employment}
-         \PY{c+c1}{\PYZsh{} df[df.employer.notnull()].count()}
-\end{Verbatim}
-
-
-\begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}30}]:} 5222
-\end{Verbatim}
-            
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor} }]:} \PY{c+c1}{\PYZsh{} Freq table for most common hospitals to work at}
-        \PY{n}{q} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{employer}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{15}\PY{p}{]}\PY{o}{.}\PY{n}{to\PYZus{}frame}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{employer}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{num\PYZus{}docs\PYZus{}employed}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{)}
-        \PY{n}{q}\PY{o}{.}\PY{n}{index}\PY{o}{.}\PY{n}{name} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{employer}\PY{l+s+s2}{\PYZdq{}}
-        \PY{n}{q}
-\end{Verbatim}
-
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}157}]:} \PY{n}{top\PYZus{}15} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{employer}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{15}\PY{p}{]}\PY{o}{.}\PY{n}{keys}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{tolist}\PY{p}{(}\PY{p}{)}
-          \PY{n}{g} \PY{o}{=} \PY{n}{sns}\PY{o}{.}\PY{n}{countplot}\PY{p}{(}\PY{n}{x}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{employer}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{data}\PY{o}{=}\PY{n}{df}\PY{p}{[}\PY{n}{df}\PY{o}{.}\PY{n}{employer}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{top\PYZus{}15}\PY{p}{)}\PY{p}{]}\PY{p}{,} \PY{n}{palette}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Greens\PYZus{}d}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{order}\PY{o}{=}\PY{n}{top\PYZus{}15}\PY{p}{)}
-          \PY{n}{\PYZus{}} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{xticks}\PY{p}{(}\PY{n}{rotation}\PY{o}{=}\PY{l+m+mi}{90}\PY{p}{)}
-\end{Verbatim}
-
-
-    \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_11_0.png}
-    \end{center}
-    { \hspace*{\fill} \\}
-    
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}21}]:} 
-\end{Verbatim}
-
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-
-        ------------------------------------------------------------------------
-
-        ValueError                             Traceback (most recent call last)
-
-        <ipython-input-21-d3a9bbfa8da9> in <module>()
-    ----> 1 sns.countplot(x="employer", data=d, palette="Greens\_d");
-    
-
-        /Users/alexgoodell/.virtualenvs/ipython/lib/python2.7/site-packages/seaborn/categorical.pyc in countplot(x, y, hue, data, order, hue\_order, orient, color, palette, saturation, ax, **kwargs)
-       2542                           estimator, ci, n\_boot, units,
-       2543                           orient, color, palette, saturation,
-    -> 2544                           errcolor)
-       2545 
-       2546     plotter.value\_label = "count"
-
-
-        /Users/alexgoodell/.virtualenvs/ipython/lib/python2.7/site-packages/seaborn/categorical.pyc in \_\_init\_\_(self, x, y, hue, data, order, hue\_order, estimator, ci, n\_boot, units, orient, color, palette, saturation, errcolor)
-       1260         """Initialize the plotter."""
-       1261         self.establish\_variables(x, y, hue, data, orient,
-    -> 1262                                  order, hue\_order, units)
-       1263         self.establish\_colors(color, palette, saturation)
-       1264         self.estimate\_statistic(estimator, ci, n\_boot)
-
-
-        /Users/alexgoodell/.virtualenvs/ipython/lib/python2.7/site-packages/seaborn/categorical.pyc in establish\_variables(self, x, y, hue, data, orient, order, hue\_order, units)
-        143                 if isinstance(input, string\_types):
-        144                     err = "Could not interperet input '\{\}'".format(input)
-    --> 145                     raise ValueError(err)
-        146 
-        147             \# Figure out the plotting orientation
-
-
-        ValueError: Could not interperet input 'employer'
-
-    \end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}158}]:} \PY{c+c1}{\PYZsh{} \PYZpc{}matplotlib inline}
-          \PY{c+c1}{\PYZsh{} plt.figure();}
-          \PY{c+c1}{\PYZsh{} d.plot.hist()}
-\end{Verbatim}
-
-
-    \hypertarget{references}{%
-\subsection{\# References}\label{references}}
-
-\hypertarget{refs}{}
-\hypertarget{ref-aau2018}{}
---- aau2018 --- Association of Anesthesiologist of Uganda. (2018).
-Bachelors of science in anaesthesia. Retrieved from
-http://www.anesthesiaug.org/bachelors/
-
-\hypertarget{ref-ahpcschools2016}{}
---- ahpcschools2016 --- uganda allied health professionals council.
-(2016). AHPC recognized training institutions 2016. Retrieved from
-http://www.ahpc.ug/schools.php
-
-\hypertarget{ref-Banerjee2005Mar}{}
---- Banerjee2005Mar --- Banerjee, S., Faiz, O., Rennie, J. A.,
-Balyejjusa, J., \& Walsh, M. (2005). Bridging the health gap in Uganda:
-The surgical role of the clinical officer. Afr. Health Sci., 5(1),
-86--89. Retrieved from
-http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1831898
-
-\hypertarget{ref-dsco2012}{}
---- dsco2012 --- DISTRICT SERVICE COMMISSIONS OF UGANDA. (2012).
-DISTRICT service commissions of uganda health vacancies. DISTRICT
-SERVICE COMMISSIONS OF UGANDA. Retrieved from
-http://health.go.ug/docs/final\_advert.pdf
-
-\hypertarget{ref-examboard2015}{}
---- examboard2015 --- Uganda Allied Health Examinations Board. (2015).
-Newsletter. Retrieved from
-http://uaheb.go.ug/wp-content/uploads/2016/06/Newsletter.pdf
-
-\hypertarget{ref-examboardschools}{}
---- examboardschools --- Uganda Allied Health Examinations Board.
-(2018). Accredited school. Retrieved from
-http://uaheb.go.ug/accredited-schools/
-
-\hypertarget{ref-hcsurvey2014}{}
---- hcsurvey2014 --- African Development Bank, M. W. (2014). Uganda
-hospital and health centre iv census survey. Retrieved from
-http://www.who.int/healthinfo/systems/SARA\_H\_UGA\_Results\_2014.pdf
-
-\hypertarget{ref-intra2015}{}
---- intra2015 --- Vincent Oketcho, J. O., Isaac Ezati. (2015). UGANDA on
-track for keeping human resources for health commitments. Retrieved from
-http://www.who.int/workforcealliance/media/news/2015/HRH\_Commitments\_Uganda\_Case\_Study.pdf
-
-\hypertarget{ref-kakande2011review}{}
---- kakande2011review --- Kakande, I., Mkandawire, N., \& Thompson, M.
-(2011). A review of surgical capacity and surgical education programmes
-in the cosecsa region. East and Central African Journal of Surgery,
-16(3), 6--34. Retrieved from http://www.bioline.org.br/request?js11047
-
-\hypertarget{ref-Klopper2012-pp}{}
---- Klopper2012-pp --- Klopper, H., \& Uys, L. R. (2012). The State of
-Nursing and Nursing Education in Africa: A \{Country-By-Country\}
-Review. Sigma Theta Tau.
-
-\hypertarget{ref-lacoranes2018}{}
---- lacoranes2018 --- Lacor School of Anesthesia. (2018). Lacor school
-of anesthesia. Retrieved from
-http://mambosms.ug/Data/atha/lacorh/?page\_id=7346
-
-\hypertarget{ref-Linden2012-sw}{}
---- Linden2012-sw --- Linden, A. F., Sekidde, F. S., Galukande, M.,
-Knowlton, L. M., Chackungal, S., \& McQueen, K. A. K. (2012). Challenges
-of surgery in developing countries: a survey of surgical and anesthesia
-capacity in Uganda's public hospitals. World J. Surg., 36(5),
-1056--1065.
-
-\hypertarget{ref-mak2018}{}
---- mak2018 --- Makarere University. (n.d.). Application requirements -
-direct entry. Retrieved from
-https://www.mak.ac.ug/application-procedures/direct-entry
-
-\hypertarget{ref-MOH-hosp-list}{}
---- MOH-hosp-list --- Ministry of Health. (2018). List of Hospitals.
-Retrieved from http://health.go.ug/affiliated-institutions/hospitals
-
-\hypertarget{ref-mohscholar2017}{}
---- mohscholar2017 --- Ministry of Health. (2017). ANNOUNCEMENT of
-scholarships for academic year 2017/2018. Retrieved from
-https://www.mnh.musph.ac.ug/wp-content/uploads/2016/10/MIN-OF-HEALTH.-scholarships.pdf
-
-\hypertarget{ref-mugalopara2013}{}
---- mugalopara2013 --- Uganda Allied Health Institute and Management
-Sciences Mugalo. (2018). Post-basic programs uganda allied health
-institute and management sciences mugalo. Retrieved from
-http://uiahms.ac.ug/anaesthesia/
-
-\hypertarget{ref-must2014}{}
---- must2014 --- Mbarara University of Science and Technology. (n.d.).
-Admission Requirements. Retrieved from
-http://www.must.ac.ug/news/2014-must-private-admissions-advert
-
-\hypertarget{ref-roth2014role}{}
---- roth2014role --- Roth, R., Frost, E. A., Gevirtz, C., \& Atcheson,
-C. L. (2014). The role of anesthesiology in global health: A
-comprehensive guide. Springer.
-
-\hypertarget{ref-UBS2017}{}
---- UBS2017 --- Ugandan Bureau of Statistics. (2017). Statistical
-Abstract.
-
-\hypertarget{ref-umdpc2018reg}{}
---- umdpc2018reg --- Uganda Medical and Dental Practitioners Council.
-(n.d.). Uganda medical and dental practitioners council registry.
-Retrieved from http://www.umdpc.com/registers.php
-
-\hypertarget{ref-UNFPA2009}{}
---- UNFPA2009 --- United Nations Fund for Population Activities. (2009).
-The State of Midwifery Training, Service and Practice in Uganda
-Assessment Report, (July), 1--92.
-
-    The remaining is code snippets for later.
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}159}]:} \PY{c+c1}{\PYZsh{} def cstr(s, color=\PYZsq{}black\PYZsq{}):}
-          \PY{c+c1}{\PYZsh{}     return \PYZdq{}\PYZlt{}text style=color:\PYZob{}\PYZcb{}\PYZgt{}\PYZob{}\PYZcb{}\PYZlt{}/text\PYZgt{}\PYZdq{}.format(color, s)}
+{\color{incolor}In [{\color{incolor}112}]:} \PY{c+c1}{\PYZsh{} Let\PYZsq{}s start a dataframe with district information. }
+          \PY{c+c1}{\PYZsh{} I\PYZsq{}ve gotten most of this data from http://www.budget.go.ug/fiscal\PYZus{}transfers}
+          \PY{c+c1}{\PYZsh{} The following is the code that was used to create the file \PYZhy{}\PYZhy{} no longer in use, just grab the CSV}
           
-          \PY{c+c1}{\PYZsh{} import pprint}
-          \PY{c+c1}{\PYZsh{} pp = pprint.PrettyPrinter(depth=1)}
-          \PY{c+c1}{\PYZsh{} pp.pprint(list(df.columns.astype(str)))}
+          \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}}
+          \PY{l+s+sd}{\PYZsh{} get the population data as skeleton \PYZhy{} create dataframe}
+          \PY{l+s+sd}{url = \PYZsq{}http://www.budget.go.ug/fiscal\PYZus{}transfers/variable/show\PYZus{}dataset/var/MjA3\PYZsq{}}
+          \PY{l+s+sd}{page = urllib2.urlopen(url).read()}
+          \PY{l+s+sd}{soup = BeautifulSoup(page, \PYZdq{}html5lib\PYZdq{})}
+          \PY{l+s+sd}{table = soup.select\PYZus{}one(\PYZdq{}table.dataset\PYZdq{})}
+          \PY{l+s+sd}{\PYZsh{} headers = [th.text.encode(\PYZdq{}utf\PYZhy{}8\PYZdq{}) for th in table.select(\PYZdq{}tr th\PYZdq{})]}
+          \PY{l+s+sd}{districts = pd.read\PYZus{}html(str(table))[0]}
+          \PY{l+s+sd}{districts = districts.set\PYZus{}index(\PYZsq{}Vote code\PYZsq{})}
           
-          \PY{c+c1}{\PYZsh{} They added columns to differentiate specialties. These need to be removed. Let\PYZsq{}s see if they have any other info}
-          \PY{c+c1}{\PYZsh{} df[df.surname.isnull()]}
+          \PY{l+s+sd}{\PYZsh{} urls for the remaining columns we want}
+          \PY{l+s+sd}{urls = [ }
+          \PY{l+s+sd}{\PYZsh{} hard to reach}
+          \PY{l+s+sd}{\PYZsq{}http://www.budget.go.ug/fiscal\PYZus{}transfers/variable/show\PYZus{}dataset/var/OTA3\PYZsq{},}
+          \PY{l+s+sd}{\PYZsh{} pop per health fac    }
+          \PY{l+s+sd}{\PYZsq{}http://www.budget.go.ug/fiscal\PYZus{}transfers/variable/show\PYZus{}dataset/var/Mjc3\PYZsq{},}
+          \PY{l+s+sd}{\PYZsh{} rural pop}
+          \PY{l+s+sd}{\PYZsq{}http://www.budget.go.ug/fiscal\PYZus{}transfers/variable/show\PYZus{}dataset/var/NjA3\PYZsq{},}
+          \PY{l+s+sd}{\PYZsh{} public hospitals}
+          \PY{l+s+sd}{\PYZsq{}http://www.budget.go.ug/fiscal\PYZus{}transfers/variable/show\PYZus{}dataset/var/MDQ4\PYZsq{},}
+          \PY{l+s+sd}{\PYZsh{} is district?}
+          \PY{l+s+sd}{\PYZsq{}http://www.budget.go.ug/fiscal\PYZus{}transfers/variable/show\PYZus{}dataset/var/MzU2\PYZsq{},}
+          \PY{l+s+sd}{\PYZsh{} poverty headcount}
+          \PY{l+s+sd}{\PYZsq{}http://www.budget.go.ug/fiscal\PYZus{}transfers/variable/show\PYZus{}dataset/var/NDMy\PYZsq{},}
+          \PY{l+s+sd}{\PYZsh{} is municiplality}
+          \PY{l+s+sd}{\PYZsq{}http://www.budget.go.ug/fiscal\PYZus{}transfers/variable/show\PYZus{}dataset/var/NDc2\PYZsq{},}
+          \PY{l+s+sd}{\PYZsh{} distance from kampala (cities)}
+          \PY{l+s+sd}{\PYZsq{}http://www.budget.go.ug/fiscal\PYZus{}transfers/variable/show\PYZus{}dataset/var/Njc2\PYZsq{},}
+          \PY{l+s+sd}{\PYZsh{} distance from kampala (districts)}
+          \PY{l+s+sd}{\PYZsq{}http://www.budget.go.ug/fiscal\PYZus{}transfers/variable/show\PYZus{}dataset/var/OTU2\PYZsq{}}
+          \PY{l+s+sd}{]}
+          
+          \PY{l+s+sd}{for url in urls:}
+          \PY{l+s+sd}{    page = urllib2.urlopen(url).read()}
+          \PY{l+s+sd}{    soup = BeautifulSoup(page, \PYZdq{}html5lib\PYZdq{})}
+          \PY{l+s+sd}{    table = soup.select\PYZus{}one(\PYZdq{}table.dataset\PYZdq{})}
+          \PY{l+s+sd}{    nd = pd.read\PYZus{}html(str(table))[0]}
+          \PY{l+s+sd}{    nd = nd.set\PYZus{}index(\PYZsq{}Vote code\PYZsq{})}
+          \PY{l+s+sd}{    districts = pd.concat([districts, nd], axis=1)}
+          
+          \PY{l+s+sd}{\PYZsh{} Remove duplicated columns}
+          \PY{l+s+sd}{districts = districts.loc[:,\PYZti{}districts.columns.duplicated()]}
+          
+          \PY{l+s+sd}{\PYZsh{} Export}
+          \PY{l+s+sd}{districts.to\PYZus{}csv(\PYZdq{}districts\PYZus{}20\PYZhy{}March\PYZhy{}2018.csv\PYZdq{})}
+          
+          \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}}
+          
+          \PY{n}{districts} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{../../data/budget\PYZhy{}office/districts\PYZus{}20\PYZhy{}March\PYZhy{}2018.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+          
+          \PY{n}{rename} \PY{o}{=} \PY{p}{\PYZob{}}
+          \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Population (2015/16)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{pop}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+          \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Hard to Reach, Hard to Stay (2015/16)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{is\PYZus{}hard\PYZus{}to\PYZus{}reach}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+          \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Population per health facility (2015/16)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{pop\PYZus{}per\PYZus{}health\PYZus{}fac}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+          \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Rural Population (2015/16)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{rural\PYZus{}pop}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+          \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Constant (Public or PNFP Hospitals) (2015/16)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{public\PYZus{}hosp}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+          \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Constant (District) (2015/16)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{is\PYZus{}district}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} 
+          \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Poverty Headcount (2015/16)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{poverty\PYZus{}pop}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+          \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Constant (Municipality) (2015/16)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{is\PYZus{}city}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+          \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Distance from Kampala (Municipality) (2015/16)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{distance\PYZus{}from\PYZus{}kampala\PYZus{}city}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+          \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Distance from Kampala (District) (2015/16)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{distance\PYZus{}from\PYZus{}kampala\PYZus{}district}\PY{l+s+s1}{\PYZsq{}} 
+          \PY{p}{\PYZcb{}}
+          
+          \PY{c+c1}{\PYZsh{} Rename columns to more useful }
+          \PY{n}{districts} \PY{o}{=} \PY{n}{districts}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{n}{rename}\PY{p}{)}
+          
+          \PY{c+c1}{\PYZsh{} Combined distance from kampala (different columns for same variable)}
+          \PY{n}{districts}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{distance\PYZus{}from\PYZus{}kampala}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{districts}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{distance\PYZus{}from\PYZus{}kampala\PYZus{}district}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{+} \PY{n}{districts}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{distance\PYZus{}from\PYZus{}kampala\PYZus{}city}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} 
+          \PY{n}{districts} \PY{o}{=} \PY{n}{districts}\PY{o}{.}\PY{n}{drop}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{distance\PYZus{}from\PYZus{}kampala\PYZus{}district}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{distance\PYZus{}from\PYZus{}kampala\PYZus{}city}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+          \PY{n}{districts} \PY{o}{=} \PY{n}{districts}\PY{o}{.}\PY{n}{set\PYZus{}index}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Vote code}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
           
           
-          \PY{c+c1}{\PYZsh{} f, axarr = plt.subplots(1,2, figsize=(16, 5)) \PYZsh{}sharex=True, sharey=True)}
-          
-          \PY{c+c1}{\PYZsh{} r = sns.countplot(x=\PYZdq{}employer\PYZdq{}, data=df[df.employer.isin(top\PYZus{}15)], palette=\PYZdq{}Greens\PYZus{}d\PYZdq{}, order=top\PYZus{}15)}
+          \PY{n}{districts}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{)}\PY{o}{.}\PY{n}{T}
 \end{Verbatim}
 
 
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}112}]:} Vote code                          573                501              611  \textbackslash{}
+          Region                 Northern Region    Northern Region  Northern Region   
+          District                 Abim District  Adjumani District   Agago District   
+          pop                             129400             239500           237900   
+          is\_hard\_to\_reach                     1                  1                1   
+          pop\_per\_health\_fac             6810.53            7044.12          5802.44   
+          rural\_pop                       108700             195156           207338   
+          public\_hosp                          1                  1                1   
+          is\_district                          2                  2                2   
+          poverty\_pop                      0.742              0.423            0.354   
+          is\_city                              0                  0                0   
+          distance\_from\_kampala              840                914              856   
+          
+          Vote code                            588                564  
+          Region                   Northern Region    Northern Region  
+          District               Alebtong District  Amolatar District  
+          pop                               242000             161600  
+          is\_hard\_to\_reach                       0                  0  
+          pop\_per\_health\_fac                 11000            12430.8  
+          rural\_pop                         234928             138027  
+          public\_hosp                            0                  0  
+          is\_district                            2                  2  
+          poverty\_pop                        0.354              0.354  
+          is\_city                                0                  0  
+          distance\_from\_kampala                750                792  
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}113}]:} \PY{c+c1}{\PYZsh{} Import the data from the mohdhi2017 facilities list \PYZhy{} using excel because CSV caused }
+          \PY{c+c1}{\PYZsh{} line\PYZhy{}splitting problems (some cells have returns)}
+          \PY{n}{facilities} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}excel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{../../data/moh\PYZhy{}div\PYZhy{}health\PYZhy{}info/facilities.xlsx}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{sheet\PYZus{}name}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{facilities}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{header}\PY{o}{=}\PY{l+m+mi}{0}\PY{p}{)}
+          
+          \PY{c+c1}{\PYZsh{} make splitter function}
+          \PY{n}{splitter} \PY{o}{=} \PY{k}{lambda} \PY{n}{x}\PY{p}{:} \PY{n}{pd}\PY{o}{.}\PY{n}{Series}\PY{p}{(}\PY{p}{[}\PY{n}{i} \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{reversed}\PY{p}{(}\PY{n}{x}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{/}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{)}\PY{p}{]}\PY{p}{)}
+          
+          \PY{c+c1}{\PYZsh{} split HSDT Code (see page 7 of mohdhi2017 for details of HSDT codes)}
+          \PY{c+c1}{\PYZsh{} note: after data cleaning, some facilities required manual setting of subcounty NHPI.}
+          \PY{c+c1}{\PYZsh{} This was accomplished by setting the facility HSDT code to SCXXXXXX/NA/NA, where X\PYZsq{}s = SC NHPI}
+          \PY{n}{facilities}\PY{p}{[}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{parish\PYZus{}level\PYZus{}fac\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{parish\PYZus{}nhpi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{subcounty\PYZus{}nhpi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{]} \PY{o}{=} \PY{n}{facilities}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{HSDT Code}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{apply}\PY{p}{(}\PY{n}{splitter}\PY{p}{)}
+          
+          \PY{c+c1}{\PYZsh{} drop uneeded columns}
+          \PY{n}{facilities} \PY{o}{=} \PY{n}{facilities}\PY{o}{.}\PY{n}{drop}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{District\PYZus{}name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{)}
+          
+          \PY{c+c1}{\PYZsh{} Load the subcounty list \PYZhy{} used to link facilities to their district}
+          \PY{n}{subcounties} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{../../data/moh\PYZhy{}div\PYZhy{}health\PYZhy{}info/subcounties.csv}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+          \PY{n}{rename} \PY{o}{=} \PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{NHPI Code}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{subcounty\PYZus{}nhpi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{subcounty\PYZus{}name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} 
+                    \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{HSDT Code}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{subcounty\PYZus{}full\PYZus{}hsdt\PYZus{}code}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{County}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{county\PYZus{}name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} 
+                    \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{District}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{district\PYZus{}name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+                    \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Subregion}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{subregion\PYZus{}name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}
+          \PY{n}{subcounties} \PY{o}{=} \PY{n}{subcounties}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{n}{rename}\PY{p}{)}
+          \PY{n}{subcounties} \PY{o}{=} \PY{n}{subcounties}\PY{o}{.}\PY{n}{drop}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsh{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{)}
+          \PY{n}{subcounties}\PY{o}{.}\PY{n}{subcounty\PYZus{}nhpi} \PY{o}{=} \PY{n}{subcounties}\PY{o}{.}\PY{n}{subcounty\PYZus{}nhpi}\PY{o}{.}\PY{n}{str}\PY{o}{.}\PY{n}{strip}\PY{p}{(}\PY{p}{)}
+          
+          \PY{c+c1}{\PYZsh{} Add the subcounty data to the facilites list}
+          \PY{n}{facilities} \PY{o}{=} \PY{n}{facilities}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{subcounties}\PY{o}{.}\PY{n}{set\PYZus{}index}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{subcounty\PYZus{}nhpi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{,} \PY{n}{on}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{subcounty\PYZus{}nhpi}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{how}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{left}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+          
+          \PY{n}{facilities}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}\PY{o}{.}\PY{n}{T}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}113}]:}                                                  0                         1
+          db\_id                                            0                         1
+          id\_within\_district                               1                         2
+          HSD                                     Labwor HSD                Labwor HSD
+          Name                        Abim  General Hospital     Adea Health Centre II
+          Level                                     Hospital                     HC II
+          Authority                                      MOH                       MOH
+          Ownership                                     Govt                      Govt
+          NHPI Code                                HFA6Q7GB2                 HFZW8MEX9
+          HSDT Code                 SCL79ULU0/PA95VLAL8/8001  SC5AFV6Y8/PALG8WW26/8001
+          Source                                  mohdhi2017                mohdhi2017
+          parish\_level\_fac\_id                           8001                      8001
+          parish\_nhpi                              PA95VLAL8                 PALG8WW26
+          subcounty\_nhpi                           SCL79ULU0                 SC5AFV6Y8
+          subregion\_name                            Karamoja                  Karamoja
+          district\_name                        Abim District             Abim District
+          county\_name                          Labwor County             Labwor County
+          subcounty\_name                   Abim Town Council         Morulem Subcounty
+          subcounty\_full\_hsdt\_code  DTA8PQKW0/CTQVBTT41/6005  DTA8PQKW0/CTQVBTT41/6002
+\end{Verbatim}
+            
 
     % Add a bibliography block to the postdoc
     
