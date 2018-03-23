@@ -28,38 +28,57 @@ def rename_vals(df, xs):
 # -------------------------------- Formatting ---------------------------------
 
 def pt(df, headers=0, title=0):
-	if headers==0:
+	if not isinstance(df, pd.DataFrame):
+		try:
+			df = pd.DataFrame(df)
+		except:
+			print "error cannot make pretty table"
+	if headers==0 and len(df.columns.values)>1:
 		headers = df.columns
-	table = tabulate.tabulate(df,tablefmt="pipe", headers=headers)
+		table = tabulate.tabulate(df,tablefmt="pipe", headers=headers)
+	elif headers==0 and not len(df.columns)>1:
+		table = tabulate.tabulate(df,tablefmt="pipe")
+	else:
+		table = tabulate.tabulate(df,tablefmt="pipe", headers=headers)	
 	if title != 0:
 		length = len(table.split('\n')[0])
 		x = '{:^' + str(length) + '}'
 		r = x.format(title)
-		return r + '\n\n' + table
-	return table
+		table = r + '\n\n' + table
+	return "\n\n" + table
 
 
-def fmtr(v):
-  if v > 10000000000: # if over 10 bill, 0 decmial point
-    v = v/1000000000
-    return "{:,.0f}b".format(float('%.3g' % v))
-  if v > 1000000000: # if over 1 bill, 1 decmial point
-    v = v/1000000000
-    return "{:,.1f}b".format(float('%.3g' % v))
-  if v > 100000000: # if over 100 mill, two decmial points
-    v = v/1000000000
-    return "{:,.2f}b".format(float('%.3g' % v))
-  if v > 1000000:
-    v = v/100000
-    return "{:,.0f}m".format(float('%.3g' % v))
-  if v > 1000:
-    v = v/1000
-    return "{:,.0f}k".format(float('%.3g' % v))
-  if v >= 10:
-    return "{:,.0f}".format(float('%.3g' % v))
-  else:
-    return "{:.2f}".format(float('%.2g' % v))
+def fmt2sf(v):
+	if not is_number(v):
+		return v
+	if v > 10000000000: # if over 10 bill, 0 decmial point
+		v = v/1000000000
+		return "{:,.0f}b".format(float('%.3g' % v))
+	if v > 1000000000: # if over 1 bill, 1 decmial point
+		v = v/1000000000
+		return "{:,.1f}b".format(float('%.3g' % v))
+	if v > 100000000: # if over 100 mill, two decmial points
+		v = v/1000000000
+		return "{:,.2f}b".format(float('%.3g' % v))
+	if v > 1000000:
+		v = v/100000
+		return "{:,.0f}m".format(float('%.3g' % v))
+	if v > 1000:
+		v = v/1000
+		return "{:,.0f}k".format(float('%.3g' % v))
+	if v >= 10:
+		return "{:,.0f}".format(float('%.3g' % v))
+	else:
+		return "{:.2f}".format(float('%.2g' % v))
 
+
+def is_number(s):
+    """ Returns True is string is a number. """
+    try:
+        float(s)
+        return True
+    except ValueError:
+        return False
 
 # ----------------------------------- Other -----------------------------------
 

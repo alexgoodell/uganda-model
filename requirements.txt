@@ -13,7 +13,6 @@ descartes==1.1.0
 pyproj==1.9.5.1
 lxml==4.2.0
 pyshp==1.2.12
-#PySal lite mapping
 PySAL==1.14.3
 # Ipython and Jupyer
 jupyter==1.0.0
