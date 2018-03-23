@@ -19,10 +19,11 @@ def hist(df, cn, num_cols, title, xlabel):
 def tab(df, cns):
 	for cn in cns:
 		print "\n\n{}".format(titlecase(cn))
-		print pretty_table(df[cn].value_counts()) 
+		print tabulate.tabulate(df[cn].value_counts(),tablefmt="pipe", headers=['Name', 'Count']) 
 
-def pretty_table(df):
-	return tabulate.tabulate(pd.DataFrame(df),tablefmt="pipe", headers=['Name', 'Count'])
+def pt(df):
+	headers = df.columns
+	return tabulate.tabulate(df,tablefmt="pipe", headers=headers)
 
 
 def rename_vals(df, xs):
