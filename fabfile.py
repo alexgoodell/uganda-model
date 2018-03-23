@@ -7,6 +7,7 @@ import tabulate
 from prompter import prompt, yesno
 from termcolor import colored
 import config
+import lib.util as util
 
 logging.basicConfig()
 
@@ -24,12 +25,13 @@ def archive_all_citations():
 			if not 'archive-url' in entry:
 				cite_key = str(entry['ID'])
 				url = str(entry['url'])
-				cmd = "archivenow --ia {}".format(url)
-
-				archive_url = local(cmd,capture=True)
-
-				bibtex_database.entries[i]["archive-url"] = archive_url
-				print "Archived as {} \n\n".format(archive_url)
+				if "dx.doi.org" in url: 
+					print "\n\n{} does not need archive as it's a DOI url: \n{}".format(cite_key,url)
+				else:
+					cmd = "archivenow --ia \'{}\'".format(url)
+					archive_url = local(cmd,capture=True)
+					bibtex_database.entries[i]["archive-url"] = archive_url
+					print "Archived as {} \n\n".format(archive_url)
 			
 
 	with open(config.refs_path + '/library.bib', 'w') as bibtex_file:
@@ -52,16 +54,22 @@ def generate_cite_md():
 		file.close()
 	print "Complete"
 
-def update():
 
-
-	print colored('Updating requirements file............................','blue')
+def update_requirements():
+	util.header('Updating requirements file')
 	local('pip freeze -r ' + config.root_path + '/devel-req.txt > ' + config.root_path + '/requirements.txt')
 
-	print colored('Updating citations md files............................','blue')
+def update():
+	util.header('Archiving citations')
+	execute(archive_all_citations)
+
+	util.header('Updating requirements file')
+	local('pip freeze -r ' + config.root_path + '/devel-req.txt > ' + config.root_path + '/requirements.txt')
+
+	util.header('Updating citations md files')
 	execute(generate_cite_md)
 
-	print colored('Adding to git.............................','blue')
+	util.header('Adding to git')
 	local('git add .')
 	local('git status')
 	m = prompt("Commit message:", default='Autoupdate')
@@ -69,8 +77,6 @@ def update():
 		# return
 	local('git commit -m \'' + m + "\'")
 	local('git push origin master')
-	print colored('............................. Done','blue')
+	print colored('............................. Done','green')
 
-def root():
-	print config.root_path
 

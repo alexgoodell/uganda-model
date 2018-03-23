@@ -118,3 +118,11 @@ munch==2.2.0
 parso==0.1.1
 ptpython==0.41
 ## The following requirements were added by pip freeze:
+archivenow==2017.11.21.10.50.27
+certifi==2018.1.18
+chardet==3.0.4
+Flask==0.12.2
+itsdangerous==0.24
+requests==2.18.4
+urllib3==1.22
+Werkzeug==0.14.1

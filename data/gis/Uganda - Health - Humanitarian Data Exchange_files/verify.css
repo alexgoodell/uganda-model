@@ -1,0 +1,339 @@
+.table-valign {
+  display: table;
+  position: relative;
+}
+.table-valign-content {
+  display: table-cell;
+  vertical-align: middle;
+}
+.notification-widget {
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+.notification-widget .notification-title {
+  font-family: 'Gotham-Bold', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007CE0;
+  letter-spacing: 0.01em;
+  line-height: 20px;
+  padding: 20px;
+}
+.notification-widget .notification-title .close {
+  margin-left: 20px;
+  float: right;
+  top: 0;
+  color: #fff;
+  opacity: 1;
+}
+.notification-widget .notification-message {
+  font-family: 'Gotham-Bold', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #007CE0;
+  letter-spacing: 0.01em;
+}
+.done-widget {
+  padding: 20px;
+  height: 300px;
+  background-color: #fff;
+  width: 370px;
+}
+.done-widget img {
+  height: 150px;
+}
+
+.table-valign {
+  display: table;
+  position: relative;
+}
+.table-valign-content {
+  display: table-cell;
+  vertical-align: middle;
+}
+.notification-widget {
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+.notification-widget .notification-title {
+  font-family: 'Gotham-Bold', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007CE0;
+  letter-spacing: 0.01em;
+  line-height: 20px;
+  padding: 20px;
+}
+.notification-widget .notification-title .close {
+  margin-left: 20px;
+  float: right;
+  top: 0;
+  color: #fff;
+  opacity: 1;
+}
+.notification-widget .notification-message {
+  font-family: 'Gotham-Bold', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #007CE0;
+  letter-spacing: 0.01em;
+}
+.logout-widget {
+  padding: 20px;
+  height: 300px;
+  background-color: #fff;
+  width: 370px;
+}
+.logout-widget img {
+  height: 150px;
+}
+
+.table-valign {
+  display: table;
+  position: relative;
+}
+.table-valign-content {
+  display: table-cell;
+  vertical-align: middle;
+}
+.notification-widget {
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+.notification-widget .notification-title {
+  font-family: 'Gotham-Bold', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007CE0;
+  letter-spacing: 0.01em;
+  line-height: 20px;
+  padding: 20px;
+}
+.notification-widget .notification-title .close {
+  margin-left: 20px;
+  float: right;
+  top: 0;
+  color: #fff;
+  opacity: 1;
+}
+.notification-widget .notification-message {
+  font-family: 'Gotham-Bold', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #007CE0;
+  letter-spacing: 0.01em;
+}
+
+.table-valign {
+  display: table;
+  position: relative;
+}
+.table-valign-content {
+  display: table-cell;
+  vertical-align: middle;
+}
+.notification-widget {
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+.notification-widget .notification-title {
+  font-family: 'Gotham-Bold', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007CE0;
+  letter-spacing: 0.01em;
+  line-height: 20px;
+  padding: 20px;
+}
+.notification-widget .notification-title .close {
+  margin-left: 20px;
+  float: right;
+  top: 0;
+  color: #fff;
+  opacity: 1;
+}
+.notification-widget .notification-message {
+  font-family: 'Gotham-Bold', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #007CE0;
+  letter-spacing: 0.01em;
+}
+.recover-widget {
+  position: relative;
+  width: 370px;
+  height: 300px;
+  background-color: #eeeeee;
+  padding: 20px;
+}
+.recover-widget .bottom-actions {
+  position: absolute;
+  bottom: 20px;
+  width: 330px;
+}
+
+.table-valign {
+  display: table;
+  position: relative;
+}
+.table-valign-content {
+  display: table-cell;
+  vertical-align: middle;
+}
+.signup-widget {
+  height: 560px;
+  width: 890px;
+  background-color: #007CE0;
+  background-image: url('/images/backgrounds/pixels_white.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%;
+  color: #fff;
+}
+.signup-widget .close {
+  margin-top: 25px;
+  margin-right: 25px;
+}
+.signup-widget .inner-bg {
+  background-image: url('/images/backgrounds/browse_illustration.png');
+  background-position: bottom right;
+  background-size: 430px;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  padding: 60px;
+}
+.signup-widget .signup-list {
+  margin-left: 0;
+  list-style: none;
+  padding-left: 10px;
+  font-family: 'Gotham-Book', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+.signup-widget .signup-list .starred:after {
+  content: "*";
+  margin-left: 5px;
+}
+.signup-widget .signup-list li:before {
+  display: inline-block;
+  content: "-";
+  width: 1em;
+  margin-left: -10px;
+}
+.signup-widget .signup-list li.starred-reason {
+  font-size: 10px;
+  font-style: italic;
+}
+.signup-widget .signup-list li.starred-reason:before {
+  content: "*";
+}
+.signup-widget .signup-box {
+  width: 370px;
+  height: 290px;
+  padding: 35px;
+  background-color: #eeeeee;
+  border-radius: 6px;
+}
+.signup-widget .signup-action {
+  text-transform: none;
+}
+.signup-widget .signup-action i {
+  margin-left: 8px;
+  font-size: 14px;
+}
+.signup-widget .grecaptcha-badge {
+  transform: scale(0.8);
+  transform-origin: 0;
+}
+
+.table-valign {
+  display: table;
+  position: relative;
+}
+.table-valign-content {
+  display: table-cell;
+  vertical-align: middle;
+}
+.two-column-widget {
+  width: 890px;
+}
+.two-column-widget .two-column-left {
+  background-color: #007CE0;
+  background-image: url('/images/backgrounds/pixels_white.png');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 200%;
+  color: #fff;
+  padding: 60px;
+}
+.two-column-widget .two-column-right {
+  position: relative;
+  background-color: #eeeeee;
+}
+.two-column-widget .two-column-right .right-side-actions {
+  position: absolute;
+  right: 35px;
+  bottom: 35px;
+}
+
+.table-valign {
+  display: table;
+  position: relative;
+}
+.table-valign-content {
+  display: table-cell;
+  vertical-align: middle;
+}
+.notification-widget {
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+.notification-widget .notification-title {
+  font-family: 'Gotham-Bold', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007CE0;
+  letter-spacing: 0.01em;
+  line-height: 20px;
+  padding: 20px;
+}
+.notification-widget .notification-title .close {
+  margin-left: 20px;
+  float: right;
+  top: 0;
+  color: #fff;
+  opacity: 1;
+}
+.notification-widget .notification-message {
+  font-family: 'Gotham-Bold', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #007CE0;
+  letter-spacing: 0.01em;
+}
+.verify-widget {
+  width: 370px;
+  height: 300px;
+  background-color: #fff;
+}
+.verify-widget img {
+  height: 150px;
+  animation-iteration-count: infinite;
+}
+.verify-widget .verify-email {
+  font-family: 'Gotham-Book', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #007CE0;
+}
