@@ -1,0 +1,27 @@
+- position:
+    - name: ao_student 
+      pretty_name: AO student
+      tags: ['student']
+    - name: md_student 
+      pretty_name: MBChB student
+      tags: ['student']
+    - name: ao 
+      pretty_name: Anesthetic officer
+    - name: mda 
+      pretty_name: Physician anesthesthetist
+- location:
+    - name: rural 
+      pretty_name: Rural
+    - name: urban
+      pretty_name: Urban
+- level:
+    - name: hc3 
+      pretty_name: Health Center III
+    - name: hc4
+      pretty_name: Health Center IV
+    - name: dhosp
+      pretty_name: District Hospital
+    - name: rrh
+      pretty_name: Regional Referral Hospital
+    - name: nrh
+      pretty_name: National Referral Hospital

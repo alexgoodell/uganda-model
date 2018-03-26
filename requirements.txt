@@ -127,3 +127,9 @@ urllib3==1.22
 Werkzeug==0.14.1
 # !!! Don't add to requirements txt manually
 ## The following requirements were added by pip freeze:
+blockdiag==1.5.3
+funcparserlib==0.3.6
+jupyter-pip==0.3.1
+Pillow==5.0.0
+ruamel.ordereddict==0.4.13
+webcolors==1.8.1
