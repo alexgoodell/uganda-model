@@ -57,7 +57,7 @@ def generate_cite_md():
 
 def update_requirements():
 	util.header('Updating requirements file')
-	local('pip freeze -r ' + config.root_path + '/devel-req.txt > ' + config.root_path + '/requirements.txt')
+	local('pip freeze -r ' + config.root_path + '/devel-req.txt > ' + config.root_path + '/requirements_local.txt')
 
 def update():
 	util.header('Archiving citations')
