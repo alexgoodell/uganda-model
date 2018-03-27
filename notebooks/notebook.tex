@@ -141,7 +141,7 @@
     \def\gt{>}
     \def\lt{<}
     % Document parameters
-    \title{Mapping}
+    \title{Physicians}
     
     
     
@@ -280,33 +280,2044 @@
     
 
     
+    \hypertarget{descriptive-information-about-anesthetists}{%
+\section{Descriptive information about
+anesthetists}\label{descriptive-information-about-anesthetists}}
+
+So far, no one has described the current data available for the number
+or distribution of the various cadres of anethetists in Uganda.
+
+My primary questions concern both physician anesthestics and
+non-physician anesthestists. Primarily, - How many are there? - Where
+are they (ie, distributed rural vs urban)? - How were they educated? -
+How much money do they make? - How many are being trained?
+
+Note: My citations will look funny in this notebook. Please see this
+\href{https://github.com/alexgoodell/uganda-model/blob/master/refs/library.bib}{BibTex
+file} for the current list of my citations, or click on the links in
+this notebook.
+
+\hypertarget{physicians}{%
+\subsection{Physicians}\label{physicians}}
+
+According to the WFSA, in Uganda, there are 3,361 physicians (for a
+physician-to-population ratio of 0.18 per 100,000), 263 of which are
+surgerons, 72 of which are physican anesthtists, and 47 physician
+providers that have an anaesthetic qualification. \cite{wfsaug2018}. In
+2004, 2005, and 2015 (the only data published by the WHO) there were
+2209, 3361, and 3645 physicians country-wide. \cite{whogho2018}
+
+Data concerning the number and location of physician anesthetists was
+obtained from the Uganda Medical and Dental Practitioners Council
+Registry website \cite{umdpc2018reg}. Extracted data can be found in our
+GitHub repository, under ``data/umdpc/.'' Filenames were changed to
+exclude spaces and extract date was included in the title.
+
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}1}]:} \PY{c+c1}{\PYZsh{} Import mapping scripts used to develop maps, see mapper.py}
-        
-        \PY{k+kn}{import} \PY{n+nn}{sys}\PY{o}{,} \PY{n+nn}{os}
+{\color{incolor}In [{\color{incolor}1}]:} \PY{k+kn}{import} \PY{n+nn}{sys}\PY{o}{,} \PY{n+nn}{os}
         \PY{n}{sys}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{dirname}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{..}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{)}
         \PY{k+kn}{from} \PY{n+nn}{lib.dependencies} \PY{k+kn}{import} \PY{o}{*}
-        \PY{k+kn}{from} \PY{n+nn}{lib} \PY{k+kn}{import} \PY{n}{mapper}
+        \PY{k+kn}{from} \PY{n+nn}{lib} \PY{k+kn}{import} \PY{n}{stats\PYZus{}util} \PY{k}{as} \PY{n}{su}
         \PY{k+kn}{import} \PY{n+nn}{config}
+        
+        \PY{c+c1}{\PYZsh{} maximizes output}
+        \PY{n}{verbose} \PY{o}{=} \PY{n+nb+bp}{False}
+        
+        \PY{c+c1}{\PYZsh{} function for easy printing}
+        \PY{k}{def} \PY{n+nf}{nprint}\PY{p}{(}\PY{n}{q}\PY{p}{)}\PY{p}{:}
+            \PY{k}{print} \PY{n+nb}{list}\PY{p}{(}\PY{n}{q}\PY{o}{.}\PY{n}{astype}\PY{p}{(}\PY{n+nb}{str}\PY{p}{)}\PY{p}{)}
+            
+        \PY{c+c1}{\PYZsh{} function for conversion to title case}
+        \PY{k}{def} \PY{n+nf}{emtc}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{:}
+            \PY{k}{if} \PY{n+nb}{len}\PY{p}{(}\PY{n+nb}{str}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{)} \PY{o}{\PYZgt{}} \PY{l+m+mi}{5}\PY{p}{:}
+                \PY{k}{return} \PY{n}{titlecase}\PY{p}{(}\PY{n+nb}{str}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{)}  
+            \PY{k}{else}\PY{p}{:}
+                \PY{k}{return} \PY{n+nb}{str}\PY{p}{(}\PY{n}{x}\PY{p}{)}
 \end{Verbatim}
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}2}]:} \PY{n}{mapper}\PY{o}{.}\PY{n}{cloro}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{POP2013}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}2}]:} \PY{c+c1}{\PYZsh{} Notes on reading python code}
+        \PY{c+c1}{\PYZsh{} NaN = not a number, the python equivlent of \PYZdq{}null\PYZdq{}/\PYZdq{}nil\PYZdq{}/\PYZdq{}NA\PYZdq{}}
+        \PY{c+c1}{\PYZsh{} pandas (pd) is the main data analysis tool and uses dataframes (df), similar to R}
+        
+        \PY{c+c1}{\PYZsh{} read in data for \PYZdq{}full registry \PYZhy{} skip first three rows (header information)}
+        \PY{n}{df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}excel}\PY{p}{(}\PY{n}{config}\PY{o}{.}\PY{n}{data\PYZus{}path} \PY{o}{+} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{/umdpc/full\PYZhy{}register\PYZhy{}3\PYZhy{}13\PYZhy{}2018.xls}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{skiprows}\PY{o}{=}\PY{l+m+mi}{3}\PY{p}{,} \PY{n}{header}\PY{o}{=}\PY{l+m+mi}{0}\PY{p}{)}
+        \PY{c+c1}{\PYZsh{} show first 5 rows}
+        \PY{n}{df}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{)}
 \end{Verbatim}
 
 
-    
-    \begin{verbatim}
-<Figure size 432x288 with 0 Axes>
-    \end{verbatim}
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}2}]:}   Reg No.    Surname          Other Name Sex                    Employer  \textbackslash{}
+        0   H2441  AACA OKUI             LILLIAN          F                  NaN   
+        1   F0186      AANYU  HELLEN TUKAMUHEBWA          F      MULAGO HOSPITAL   
+        2   I3717      ABACH               JAMES          M  CASE MEDICAL CENTRE   
+        3   J5344     ABACHU               SIMON          M                  NaN   
+        4   I3770      ABAHO   RWABYONA SHELLINA          F                  NaN   
+        
+                   Postal Address  BOX        CITYTOWN        First Registration  \textbackslash{}
+        0   P.O BOX 7072, KAMPALA      7072.0    KAMPALA   MBChB,MUK,UGANDA,2003   
+        1  P.O BOX 21846, KAMPALA     21846.0    KAMPALA  MBChB,MUST,UGANDA,1995   
+        2   P.O BOX 4547, KAMPALA      4547.0    KAMPALA   MBChB,MUK,UGANDA,2010   
+        3  P.O BOX 91031, KAMPALA     91031.0    KAMPALA   MD,BLIDA,ALGERIA,2014   
+        4     P.O BOX 488, KABALE       488.0     KABALE  MBChB,MUST,UGANDA,2011   
+        
+          PROFES                   {\ldots}                        PROFES03    \textbackslash{}
+        0      MBChB               {\ldots}                               NaN   
+        1      MBChB               {\ldots}                 CERT. PULMONOLOGY   
+        2      MBChB               {\ldots}                               NaN   
+        3         MD               {\ldots}                               NaN   
+        4      MBChB               {\ldots}                               NaN   
+        
+                      AWARD03     COUNTRY03  YEAR03     Unnamed: 30 PROFES04    \textbackslash{}
+        0                    NaN         NaN        NaN         NaN        NaN   
+        1  CAPE TOWN \& RED CROSS          SA     2010.0         NaN        NaN   
+        2                    NaN         NaN        NaN         NaN        NaN   
+        3                    NaN         NaN        NaN         NaN        NaN   
+        4                    NaN         NaN        NaN         NaN        NaN   
+        
+          AWARD04    COUNTRY04  YEAR04                           Speciality  
+        0        NaN        NaN        NaN                              NaN  
+        1        NaN        NaN        NaN  PAEDIATRIC PULMONOLOGY, ALLERGY  
+        2        NaN        NaN        NaN                      PAEDIATRICS  
+        3        NaN        NaN        NaN                              NaN  
+        4        NaN        NaN        NaN                              NaN  
+        
+        [5 rows x 36 columns]
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}3}]:} \PY{c+c1}{\PYZsh{} Fix the whitespace in the column names, replace strings with underscore}
+        \PY{n}{df} \PY{o}{=} \PY{n}{su}\PY{o}{.}\PY{n}{clean\PYZus{}columns}\PY{p}{(}\PY{n}{df}\PY{p}{)}
+        \PY{n}{nprint}\PY{p}{(}\PY{n}{df}\PY{o}{.}\PY{n}{columns}\PY{p}{)}
+\end{Verbatim}
 
-    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+['reg\_no.', 'surname', 'other\_name', 'sex', 'employer', 'postal\_address', 'box', 'citytown', 'first\_registration', 'profes', 'award', 'country', 'year', 'date\_of\_first\_registration', 'additional\_qualification(s)', 'unnamed:\_15', 'profes01', 'award01', 'country01', 'year01', 'unnamed:\_20', 'profes02', 'award02', 'country02', 'year02', 'unnamed:\_25', 'profes03', 'award03', 'country03', 'year03', 'unnamed:\_30', 'profes04', 'award04', 'country04', 'year04', 'speciality']
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}4}]:} \PY{c+c1}{\PYZsh{} Let\PYZsq{}s find what all these columns are for}
+        
+        \PY{c+c1}{\PYZsh{} Find all rows with null values in any column}
+        \PY{n}{any\PYZus{}null} \PY{o}{=} \PY{n}{df}\PY{o}{.}\PY{n}{isnull}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{any}\PY{p}{(}\PY{n}{axis}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} Find the inverse}
+        \PY{n}{not\PYZus{}any\PYZus{}null} \PY{o}{=} \PY{n}{any\PYZus{}null}\PY{o}{.}\PY{n}{apply}\PY{p}{(}\PY{k}{lambda} \PY{n}{x}\PY{p}{:} \PY{o+ow}{not} \PY{n}{x}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} Print the columns of question for a few rows, (transformed then limited to ten cols, which are now rows)}
+        \PY{n}{df}\PY{p}{[}\PY{n}{not\PYZus{}any\PYZus{}null}\PY{p}{]}\PY{p}{[}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{first\PYZus{}registration}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{profes}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{award}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{country}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{additional\PYZus{}qualification(s)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+                          \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{unnamed:\PYZus{}15}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{profes01}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{award01}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{country01}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year01}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{unnamed:\PYZus{}20}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{profes02}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{award02}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} 
+                          \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{country02}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year02}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{unnamed:\PYZus{}25}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{profes03}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{award03}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{country03}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year03}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{unnamed:\PYZus{}30}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} 
+                          \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{profes04}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{award04}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{country04}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year04}\PY{l+s+s1}{\PYZsq{}} \PY{p}{]}\PY{p}{]}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{T}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}4}]:}                                                                            528
+        first\_registration                                       MBChB,MUK,UGANDA,1978
+        profes                                                                   MBChB
+        award                                                                      MUK
+        country                                                                 UGANDA
+        year                                                                      1978
+        additional\_qualification(s)  PhD,DUBLIN,IRELAND,1987,MRCP,RCP,IRELAND,1987,{\ldots}
+        unnamed:\_15                                            PhD,DUBLIN,IRELAND,1987
+        profes01                                                                   PhD
+        award01                                                                 DUBLIN
+        country01                                                              IRELAND
+        year01                                                                    1987
+        unnamed:\_20                                              MRCP,RCP,IRELAND,1987
+        profes02                                                                  MRCP
+        award02                                                                    RCP
+        country02                                                              IRELAND
+        year02                                                                    1987
+        unnamed:\_25                                             FDE,MANIPAL,INDIA,2001
+        profes03                                                                   FDE
+        award03                                                                MANIPAL
+        country03                                                                INDIA
+        year03                                                                    2001
+        unnamed:\_30                                   MSC,GLOBAL HEALTH DUBLIN,UK,2007
+        profes04                                                                   MSC
+        award04                                                   GLOBAL HEALTH DUBLIN
+        country04                                                                   UK
+        year04                                                                    2007
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}5}]:} \PY{c+c1}{\PYZsh{} Rename columns to more useful }
+        \PY{n}{df} \PY{o}{=} \PY{n}{df}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}
+            \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{reg\PYZus{}no.}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{reg\PYZus{}no}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+            \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{first\PYZus{}registration}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{concat\PYZus{}degree1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{profes}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree\PYZus{}degree1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+            \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{award}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{program\PYZus{}degree1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{country}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{country\PYZus{}degree1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year\PYZus{}degree1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+            \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{unnamed:\PYZus{}15}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{concat\PYZus{}degree2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{profes01}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree\PYZus{}degree2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{award01}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{program\PYZus{}degree2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} 
+            \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{country01}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{country\PYZus{}degree2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year01}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year\PYZus{}degree2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{unnamed:\PYZus{}20}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{concat\PYZus{}degree3}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+            \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{profes02}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree\PYZus{}degree3}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{award02}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{program\PYZus{}degree3}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{country02}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{country\PYZus{}degree3}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+            \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year02}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year\PYZus{}degree3}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{unnamed:\PYZus{}25}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{concat\PYZus{}degree4}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{profes03}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree\PYZus{}degree4}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+            \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{award03}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{program\PYZus{}degree4}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{country03}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{country\PYZus{}degree4}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year03}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year\PYZus{}degree4}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+            \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{unnamed:\PYZus{}30}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{concat\PYZus{}degree5}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{profes04}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree\PYZus{}degree5}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{award04}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{program\PYZus{}degree5}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+            \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{country04}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{country\PYZus{}degree5}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year04}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year\PYZus{}degree5}\PY{l+s+s1}{\PYZsq{}}
+        \PY{p}{\PYZcb{}}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} Confirm rename}
+        \PY{n}{nprint}\PY{p}{(}\PY{n}{df}\PY{o}{.}\PY{n}{columns}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+['reg\_no', 'surname', 'other\_name', 'sex', 'employer', 'postal\_address', 'box', 'citytown', 'concat\_degree1', 'degree\_degree1', 'program\_degree1', 'country\_degree1', 'year\_degree1', 'date\_of\_first\_registration', 'additional\_qualification(s)', 'concat\_degree2', 'degree\_degree2', 'program\_degree2', 'country\_degree2', 'year\_degree2', 'concat\_degree3', 'degree\_degree3', 'program\_degree3', 'country\_degree3', 'year\_degree3', 'concat\_degree4', 'degree\_degree4', 'program\_degree4', 'country\_degree4', 'year\_degree4', 'concat\_degree5', 'degree\_degree5', 'program\_degree5', 'country\_degree5', 'year\_degree5', 'speciality']
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}6}]:} \PY{c+c1}{\PYZsh{} Look for missing values in key fields}
+        \PY{n}{key\PYZus{}demographic\PYZus{}fields} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{reg\PYZus{}no}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{surname}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{other\PYZus{}name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{sex}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+        \PY{n}{df}\PY{p}{[}\PY{n}{key\PYZus{}demographic\PYZus{}fields}\PY{p}{]}\PY{o}{.}\PY{n}{notnull}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}6}]:} reg\_no        5219
+        surname       5222
+        other\_name    5222
+        sex           5222
+        dtype: int64
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}7}]:} \PY{c+c1}{\PYZsh{} There is at least one person missing a reg number}
+        \PY{n}{df}\PY{p}{[}\PY{n}{df}\PY{o}{.}\PY{n}{reg\PYZus{}no}\PY{o}{.}\PY{n}{isnull}\PY{p}{(}\PY{p}{)}\PY{p}{]}\PY{p}{[}\PY{n}{key\PYZus{}demographic\PYZus{}fields}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}7}]:}      reg\_no     surname      other\_name sex
+        2082    NaN       KUNGU  SULAIMAN PETER   M
+        4465    NaN    RUGUMAYO         NATASHA   F
+        4950    NaN  TURANZOMWE          STUART   M
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}8}]:} \PY{c+c1}{\PYZsh{} Looks like there are three, but they seem to be real people, so I will keep them}
+        
+        \PY{n}{number\PYZus{}of\PYZus{}physicians\PYZus{}per\PYZus{}registry} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{key\PYZus{}demographic\PYZus{}fields}\PY{p}{]}\PY{o}{.}\PY{n}{notnull}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{max}\PY{p}{(}\PY{p}{)}
+        \PY{n}{unregistered\PYZus{}physicians\PYZus{}per\PYZus{}registry} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{surname}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{]}\PY{o}{.}\PY{n}{notnull}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{max}\PY{p}{(}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n}{df}\PY{p}{[}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{reg\PYZus{}no}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{]}\PY{o}{.}\PY{n}{notnull}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{max}\PY{p}{(}\PY{p}{)}
+        \PY{k}{print} \PY{n}{number\PYZus{}of\PYZus{}physicians\PYZus{}per\PYZus{}registry}\PY{p}{,} \PY{n}{unregistered\PYZus{}physicians\PYZus{}per\PYZus{}registry}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+5222 3
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}9}]:} \PY{c+c1}{\PYZsh{} Let\PYZsq{}s compare this two what was in the licensing file}
+        \PY{n}{ldf} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}excel}\PY{p}{(}\PY{n}{config}\PY{o}{.}\PY{n}{data\PYZus{}path} \PY{o}{+} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{/umdpc/licenced\PYZhy{}medical\PYZhy{}and\PYZhy{}dental\PYZhy{}practitioners\PYZhy{}3\PYZhy{}13\PYZhy{}2018.xls}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{skiprows}\PY{o}{=}\PY{l+m+mi}{3}\PY{p}{,} \PY{n}{header}\PY{o}{=}\PY{l+m+mi}{0}\PY{p}{)}
+        \PY{c+c1}{\PYZsh{} repeat the cleanup process from above, make it a function so we don\PYZsq{}t have to repeat}
+        \PY{n}{ldf}\PY{o}{.}\PY{n}{columns} \PY{o}{=} \PY{n}{ldf}\PY{o}{.}\PY{n}{columns}\PY{o}{.}\PY{n}{str}\PY{o}{.}\PY{n}{strip}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{str}\PY{o}{.}\PY{n}{lower}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{str}\PY{o}{.}\PY{n}{replace}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ }\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZus{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{c+c1}{\PYZsh{} Inspect missing fields in the license data file}
+        \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{ non\PYZhy{}null values: }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{ \PYZob{}\PYZcb{}}\PY{l+s+s2}{\PYZdq{}}\PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n}{ldf}\PY{o}{.}\PY{n}{notnull}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+        \PY{n}{number\PYZus{}of\PYZus{}lic\PYZus{}physicians\PYZus{}per\PYZus{}registry} \PY{o}{=} \PY{n}{ldf}\PY{o}{.}\PY{n}{surname}\PY{o}{.}\PY{n}{notnull}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{p}{)}
+        \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{ number of physicians licensed: \PYZob{}\PYZcb{}}\PY{l+s+s2}{\PYZdq{}}\PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n}{number\PYZus{}of\PYZus{}lic\PYZus{}physicians\PYZus{}per\PYZus{}registry}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+
+ non-null values: 
+
+ surname        2996
+other\_names    2996
+receipt        2926
+serial         2966
+date           2995
+speciality      958
+dtype: int64
+
+ number of physicians licensed: 2996
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}10}]:} \PY{c+c1}{\PYZsh{} This gives us a confusing picture of \PYZsh{} active docs}
+         \PY{c+c1}{\PYZsh{} Let\PYZsq{}s see how many physicians are actively practicing using their \PYZdq{}employer\PYZdq{} field}
+         
+         \PY{c+c1}{\PYZsh{} Assign a dummy var to all real people \PYZhy{} .loc[x,y] finds rows that met x (: mean all, and sets y)}
+         \PY{n}{df}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{dummy}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{df}\PY{o}{.}\PY{n}{surname}\PY{o}{.}\PY{n}{notnull}\PY{p}{(}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} First, let\PYZsq{}s just see how many list a place of employment}
+         \PY{n}{number\PYZus{}of\PYZus{}physicians\PYZus{}employed\PYZus{}per\PYZus{}registry} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{df}\PY{o}{.}\PY{n}{employer}\PY{o}{.}\PY{n}{notnull}\PY{p}{(}\PY{p}{)}\PY{p}{]}\PY{o}{.}\PY{n}{dummy}\PY{o}{.}\PY{n}{count}\PY{p}{(}\PY{p}{)}
+         \PY{k}{print} \PY{n}{number\PYZus{}of\PYZus{}physicians\PYZus{}employed\PYZus{}per\PYZus{}registry}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+3786
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}11}]:} \PY{c+c1}{\PYZsh{} Freq table for most common hospitals to work at}
+         \PY{n}{df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{employer}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{df}\PY{o}{.}\PY{n}{employer}\PY{o}{.}\PY{n}{notnull}\PY{p}{(}\PY{p}{)}\PY{p}{]}\PY{o}{.}\PY{n}{employer}\PY{o}{.}\PY{n}{apply}\PY{p}{(}\PY{n}{emtc}\PY{p}{)}
+         
+         \PY{n}{q} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{employer}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{15}\PY{p}{]}\PY{o}{.}\PY{n}{to\PYZus{}frame}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{employer}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{num\PYZus{}docs\PYZus{}employed}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{)}
+         \PY{n}{q}\PY{o}{.}\PY{n}{index}\PY{o}{.}\PY{n}{name} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{employer}\PY{l+s+s2}{\PYZdq{}}
+         \PY{k}{print} \PY{n}{q}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+                          num\_docs\_employed
+employer                                   
+Mulago Hospital                         242
+Makerere University                     107
+Infectious Disease Inst.                 76
+Ministry of Health                       71
+Mengo Hospital                           67
+Nsambya Hospital                         57
+Baylor Uganda                            49
+MUST                                     39
+Lacor Hospital                           34
+Uganda Cancer Institute                  33
+Lubaga Hospital                          30
+Uganda Heart Institute                   28
+Medical Research Council                 27
+Case Medical Centre                      26
+Mildmay Uganda                           24
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}12}]:} \PY{c+c1}{\PYZsh{} Histogram}
+         \PY{n}{su}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{df}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{employer}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{15}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Physician employement (top 15 hospitals)}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Hospital}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+
+
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_1_1.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_12_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
+    \hypertarget{physician-anesthestists---number}{%
+\subsection{Physician anesthestists -
+number}\label{physician-anesthestists---number}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}13}]:} \PY{c+c1}{\PYZsh{} Now lets turn to anesthesiologist. Using the registry data, look at the specialty}
+         
+         \PY{c+c1}{\PYZsh{} Make speciaties lower case}
+         \PY{n}{df}\PY{o}{.}\PY{n}{speciality} \PY{o}{=} \PY{n}{df}\PY{o}{.}\PY{n}{speciality}\PY{p}{[}\PY{n}{df}\PY{o}{.}\PY{n}{speciality}\PY{o}{.}\PY{n}{notnull}\PY{p}{(}\PY{p}{)}\PY{p}{]}\PY{o}{.}\PY{n}{apply}\PY{p}{(}\PY{k}{lambda} \PY{n}{x}\PY{p}{:} \PY{n+nb}{str}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{o}{.}\PY{n}{lower}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} Get unique speciaties}
+         \PY{n}{all\PYZus{}specialties} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{df}\PY{o}{.}\PY{n}{speciality}\PY{o}{.}\PY{n}{notnull}\PY{p}{(}\PY{p}{)}\PY{p}{]}\PY{o}{.}\PY{n}{speciality}\PY{o}{.}\PY{n}{unique}\PY{p}{(}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} Print all}
+         \PY{k}{if} \PY{n}{verbose}\PY{p}{:}
+             \PY{k}{print} \PY{n}{all\PYZus{}specialties}
+         
+         \PY{c+c1}{\PYZsh{} Fuzzy search, find the 10 best results}
+         \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{ Best ten results: }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{ \PYZob{}\PYZcb{}}\PY{l+s+s2}{\PYZdq{}}\PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n}{process}\PY{o}{.}\PY{n}{extract}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{anesthesia}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{all\PYZus{}specialties}\PY{p}{,} \PY{n}{limit}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{)}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} Find those with 80\PYZpc{} match or more}
+         \PY{n}{filtered} \PY{o}{=} \PY{p}{[} \PY{n+nb}{str}\PY{p}{(}\PY{n}{i}\PY{p}{)} \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n}{all\PYZus{}specialties} \PY{k}{if} \PY{n}{fuzz}\PY{o}{.}\PY{n}{partial\PYZus{}ratio}\PY{p}{(}\PY{n}{i}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{anesthesia}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)} \PY{o}{\PYZgt{}} \PY{l+m+mi}{80}\PY{p}{]}
+         \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{ those with 80}\PY{l+s+s2}{\PYZpc{}}\PY{l+s+s2}{ match or more: }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{ \PYZob{}\PYZcb{}}\PY{l+s+s2}{\PYZdq{}}\PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n}{filtered}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+
+ Best ten results: 
+
+ [('anaesthesia', 95), ('anaesthesiology', 81), ('anaesthesia,paediatric anaesth.', 81), ('anaesthsia \& intensive care', 81), ('anaesthesia,critical care\& pain', 81), ('ent', 60), ('gastro-hepalolosy', 54), ('health services research', 51), ('health service research', 51), ('pediatrics \& child health', 51)]
+
+ those with 80\% match or more: 
+
+ ['anaesthesia', 'anaesthesiology', 'anaesthesia,paediatric anaesth.', 'anaesthsia \& intensive care', 'anaesthesia,critical care\& pain']
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}14}]:} \PY{c+c1}{\PYZsh{} The filtered group captured the strings of interest}
+         \PY{n}{anes\PYZus{}career} \PY{o}{=} \PY{n}{filtered}
+         
+         \PY{c+c1}{\PYZsh{} create anes df}
+         \PY{n}{adf} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{df}\PY{o}{.}\PY{n}{speciality}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{anes\PYZus{}career}\PY{p}{)}\PY{p}{]}
+         
+         \PY{c+c1}{\PYZsh{} look at some data}
+         \PY{n}{adf}\PY{p}{[}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{surname}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{employer}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{date\PYZus{}of\PYZus{}first\PYZus{}registration}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{speciality}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree\PYZus{}degree1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year\PYZus{}degree1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{]}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}14}]:}       surname                employer date\_of\_first\_registration  \textbackslash{}
+         440    ATURIA                     NaN                   12/22/06   
+         469   AYEBALE     Makerere University                   08/07/09   
+         490     AYUPO  Uganda Heart Institute                   01/28/13   
+         764   BUGEMBE          Jinja Hospital                   02/07/03   
+         787  BUKWIRWA                     NaN                   03/11/99   
+         
+                   speciality degree\_degree1  year\_degree1  
+         440      anaesthesia          MBChB        1995.0  
+         469  anaesthesiology          MBChB        2008.0  
+         490      anaesthesia          MBChB        2011.0  
+         764  anaesthesiology          MBChB        1996.0  
+         787      anaesthesia          MBChB        1980.0  
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}15}]:} \PY{c+c1}{\PYZsh{} summary statistics}
+         \PY{n}{q} \PY{o}{=} \PY{n}{adf}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{speciality}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{to\PYZus{}frame}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{speciality}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{num}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{)}
+         \PY{n}{q}\PY{o}{.}\PY{n}{index}\PY{o}{.}\PY{n}{name} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{speciality}\PY{l+s+s2}{\PYZdq{}}
+         \PY{n}{q}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{total}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{num}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{adf}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{speciality}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{p}{)}
+         \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{from general file: }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{\PYZob{}\PYZcb{}}\PY{l+s+s2}{\PYZdq{}}\PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n}{q}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+from general file: 
+
+                                  num
+speciality                           
+anaesthesia                      36.0
+anaesthesiology                   8.0
+anaesthesia,paediatric anaesth.   1.0
+anaesthesia,critical care\& pain   1.0
+anaesthsia \& intensive care       1.0
+total                            47.0
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}16}]:} \PY{c+c1}{\PYZsh{} 47 is quite a bit less that what the WFSA reports. Let\PYZsq{}s cross\PYZhy{}check with the \PYZdq{}specialities\PYZdq{} database.}
+         \PY{n}{sdf} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}excel}\PY{p}{(}\PY{n}{config}\PY{o}{.}\PY{n}{data\PYZus{}path} \PY{o}{+} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{/umdpc/licenced\PYZhy{}medical\PYZhy{}and\PYZhy{}dental\PYZhy{}practitioners\PYZhy{}3\PYZhy{}13\PYZhy{}2018.xls}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{skiprows}\PY{o}{=}\PY{l+m+mi}{3}\PY{p}{,} \PY{n}{header}\PY{o}{=}\PY{l+m+mi}{0}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} repeat the cleanup process from above \PYZhy{} strip colums, lower case, and remove blank records}
+         \PY{n}{sdf}\PY{o}{.}\PY{n}{columns} \PY{o}{=} \PY{n}{sdf}\PY{o}{.}\PY{n}{columns}\PY{o}{.}\PY{n}{str}\PY{o}{.}\PY{n}{strip}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{str}\PY{o}{.}\PY{n}{lower}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{str}\PY{o}{.}\PY{n}{replace}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ }\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZus{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{sdf}\PY{o}{.}\PY{n}{speciality} \PY{o}{=} \PY{n}{sdf}\PY{p}{[}\PY{n}{sdf}\PY{o}{.}\PY{n}{speciality}\PY{o}{.}\PY{n}{notnull}\PY{p}{(}\PY{p}{)}\PY{p}{]}\PY{o}{.}\PY{n}{speciality}\PY{o}{.}\PY{n}{apply}\PY{p}{(}\PY{k}{lambda} \PY{n}{x}\PY{p}{:} \PY{n+nb}{str}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{o}{.}\PY{n}{lower}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+         \PY{n}{sdf} \PY{o}{=} \PY{n}{sdf}\PY{p}{[}\PY{n}{sdf}\PY{o}{.}\PY{n}{surname}\PY{o}{.}\PY{n}{notnull}\PY{p}{(}\PY{p}{)}\PY{p}{]}
+         
+         \PY{c+c1}{\PYZsh{} see if specialities are same in this file \PYZhy{} Get unique speciaties then fuzzy search}
+         \PY{n}{all\PYZus{}specialties} \PY{o}{=} \PY{n}{sdf}\PY{p}{[}\PY{n}{sdf}\PY{o}{.}\PY{n}{speciality}\PY{o}{.}\PY{n}{notnull}\PY{p}{(}\PY{p}{)}\PY{p}{]}\PY{o}{.}\PY{n}{speciality}\PY{o}{.}\PY{n}{unique}\PY{p}{(}\PY{p}{)}
+         \PY{n}{filtered} \PY{o}{=} \PY{p}{[} \PY{n+nb}{str}\PY{p}{(}\PY{n}{i}\PY{p}{)} \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n}{all\PYZus{}specialties} \PY{k}{if} \PY{n}{fuzz}\PY{o}{.}\PY{n}{partial\PYZus{}ratio}\PY{p}{(}\PY{n}{i}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{anesthesia}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)} \PY{o}{\PYZgt{}} \PY{l+m+mi}{80}\PY{p}{]}
+         \PY{k}{print} \PY{n}{filtered}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+['anaesthesia', 'anaesthesiology', 'anaesthesia,paediatric anaesth.', 'anaesthsia \& intensive care', 'anaesthesia,critical care\& pain']
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}17}]:} \PY{c+c1}{\PYZsh{} they were the same \PYZhy{} continue}
+         \PY{c+c1}{\PYZsh{} summary statistics}
+         \PY{n}{anes\PYZus{}career} \PY{o}{=} \PY{n}{filtered}
+         \PY{n}{sdf} \PY{o}{=} \PY{n}{sdf}\PY{p}{[}\PY{n}{sdf}\PY{o}{.}\PY{n}{speciality}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{anes\PYZus{}career}\PY{p}{)}\PY{p}{]}
+         \PY{n}{q} \PY{o}{=} \PY{n}{sdf}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{speciality}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{to\PYZus{}frame}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{speciality}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{num}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{)}
+         \PY{n}{q}\PY{o}{.}\PY{n}{index}\PY{o}{.}\PY{n}{name} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{speciality}\PY{l+s+s2}{\PYZdq{}}
+         \PY{n}{q}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{total}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{num}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{adf}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{speciality}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{p}{)}
+         \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{from specialist file: }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{\PYZob{}\PYZcb{}}\PY{l+s+s2}{\PYZdq{}}\PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n}{q}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+from specialist file: 
+
+                                  num
+speciality                           
+anaesthesia                      23.0
+anaesthesiology                   3.0
+anaesthesia,paediatric anaesth.   1.0
+anaesthesia,critical care\& pain   1.0
+anaesthsia \& intensive care       1.0
+total                            47.0
+
+    \end{Verbatim}
+
+    \hypertarget{physician-anesthestists---employer}{%
+\subsection{Physician anesthestists -
+employer}\label{physician-anesthestists---employer}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}18}]:} \PY{c+c1}{\PYZsh{} That confirms the number. Let\PYZsq{}s look at more data. }
+         
+         \PY{c+c1}{\PYZsh{} Where do the phys anes work?}
+         \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{initial:}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{adf}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{employer}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{15}\PY{p}{]}
+         
+         \PY{c+c1}{\PYZsh{} Consolidate names}
+         \PY{n}{other\PYZus{}names\PYZus{}for\PYZus{}mak} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Makerere University}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mulago Hosp.}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Dept. Of Anaes, Mulago}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} 
+                                \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Dept. Of Anaes, Mulago}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Muk College of Health Sci.}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} 
+                                \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MUK.UNIV. Coll. Of Health}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mulago Hosp( Anaes. Dept)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+         \PY{n}{other\PYZus{}names\PYZus{}for\PYZus{}must} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mbarara University}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+         \PY{n}{adf}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{p}{(}\PY{n}{adf}\PY{o}{.}\PY{n}{employer}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{other\PYZus{}names\PYZus{}for\PYZus{}mak}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{employer}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mulago Hospital}\PY{l+s+s1}{\PYZsq{}}
+         \PY{n}{adf}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{p}{(}\PY{n}{adf}\PY{o}{.}\PY{n}{employer}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{other\PYZus{}names\PYZus{}for\PYZus{}must}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{employer}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MUST}\PY{l+s+s1}{\PYZsq{}}
+         
+         \PY{c+c1}{\PYZsh{} Check}
+         \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{revised:}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{adf}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{employer}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{15}\PY{p}{]}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+
+
+initial:
+
+Makerere University           4
+Mulago Hospital               4
+Uganda Heart Institute        3
+Lacor Hospital                2
+Bombo Military Hospital       2
+International Hospital Kla    2
+MUST                          2
+Mbarara Reg. Ref. Hosp        1
+Mulago Hosp.                  1
+Case Medical Centre           1
+Infectious Disease Inst.      1
+Mengo Hospital                1
+Dept. Of Anaes, Mulago        1
+Nakasero Hospital             1
+Nsambya Hospital              1
+Name: employer, dtype: int64
+
+
+revised:
+
+Mulago Hospital               13
+MUST                           3
+Uganda Heart Institute         3
+Bombo Military Hospital        2
+Lacor Hospital                 2
+International Hospital Kla     2
+Kadic Hospital Limited         1
+Mbarara Reg. Ref. Hosp         1
+Infectious Disease Inst.       1
+Lacor Hos                      1
+CORSU                          1
+Case Medical Centre            1
+Jinja Hospital                 1
+Nsambya Hospital               1
+Dept of Anaesth                1
+Name: employer, dtype: int64
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+/Users/alexgoodell/.virtualenvs/uganda/lib/python2.7/site-packages/pandas/core/indexing.py:537: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row\_indexer,col\_indexer] = value instead
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html\#indexing-view-versus-copy
+  self.obj[item] = s
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}19}]:} \PY{c+c1}{\PYZsh{} Histogram}
+         \PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
+         \PY{n}{top\PYZus{}15} \PY{o}{=} \PY{n}{adf}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{employer}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{keys}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{tolist}\PY{p}{(}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{)}\PY{p}{)}
+         \PY{n}{g} \PY{o}{=} \PY{n}{sns}\PY{o}{.}\PY{n}{countplot}\PY{p}{(}\PY{n}{x}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{employer}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{data}\PY{o}{=}\PY{n}{adf}\PY{p}{[}\PY{n}{adf}\PY{o}{.}\PY{n}{employer}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{top\PYZus{}15}\PY{p}{)}\PY{p}{]}\PY{p}{,} \PY{n}{palette}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Greens\PYZus{}d}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{order}\PY{o}{=}\PY{n}{top\PYZus{}15}\PY{p}{)}
+         \PY{n}{\PYZus{}} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{xticks}\PY{p}{(}\PY{n}{rotation}\PY{o}{=}\PY{l+m+mi}{90}\PY{p}{)}
+         \PY{n}{\PYZus{}} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Hospital}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{\PYZus{}} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Physician anesthesiologist employement (all hospitals)}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_21_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \hypertarget{physician-anesthestists---education}{%
+\subsection{Physician anesthestists -
+education}\label{physician-anesthestists---education}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}20}]:} \PY{c+c1}{\PYZsh{} What degrees do they have?}
+         
+         \PY{c+c1}{\PYZsh{} Make a dataframe}
+         \PY{n}{degree\PYZus{}list} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{unique}\PY{p}{(}\PY{n}{adf}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree\PYZus{}degree1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{tolist}\PY{p}{(}\PY{p}{)} \PY{o}{+} \PYZbs{}
+             \PY{n}{adf}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree\PYZus{}degree2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{tolist}\PY{p}{(}\PY{p}{)} \PY{o}{+} \PYZbs{}
+             \PY{n}{adf}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree\PYZus{}degree3}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{tolist}\PY{p}{(}\PY{p}{)} \PY{o}{+} \PYZbs{}
+             \PY{n}{adf}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree\PYZus{}degree4}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{tolist}\PY{p}{(}\PY{p}{)} \PY{o}{+} \PYZbs{}
+             \PY{n}{adf}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree\PYZus{}degree5}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{tolist}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+         
+         \PY{k}{print} \PY{n}{degree\PYZus{}list}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+[u'MBChB' u'MBBS' u'MBCHB' u'DIP ANAESTH' u'M.MED ANAES'
+ u'M.MED ANAESTHESIA' u'M MED ANAESTH' u'M.MED. ANAESTHESIA'
+ u'M MED. ANAESTHESIA' u'FRCA' u'M.MED.ANAESTHESIA' u'M MED. ANAES'
+ u'M MED ANAESTHESIA' u'M MED. ANAESTH.' u'DIP ANAEST' u'M.MED.ANAESTH.'
+ u'FFARCS' u'FCA' nan u'DIP.ANAESTH' u'FELLOWSHIP OBS\&GYN' u'FRCSI'
+ u'FELLOWSHIP IN CARDIAC ANAES.']
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}21}]:} \PY{c+c1}{\PYZsh{} Degree processing...}
+         
+         \PY{c+c1}{\PYZsh{} Stack (ie melt) all the degree fields}
+         \PY{n}{arrays} \PY{o}{=} \PY{p}{[} \PY{p}{[} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{]} \PY{p}{,} \PY{p}{[} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+             \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+             \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+             \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+             \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{]}
+         \PY{n}{r} \PY{o}{=} \PY{n}{adf}\PY{p}{[}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree\PYZus{}degree1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year\PYZus{}degree1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+             \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree\PYZus{}degree2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year\PYZus{}degree2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+             \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree\PYZus{}degree3}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year\PYZus{}degree3}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} 
+             \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree\PYZus{}degree4}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year\PYZus{}degree4}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+             \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree\PYZus{}degree5}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year\PYZus{}degree5}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{]}
+         \PY{n}{ddf} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{r}\PY{o}{.}\PY{n}{as\PYZus{}matrix}\PY{p}{(}\PY{p}{)}\PY{p}{,}\PY{n}{columns}\PY{o}{=}\PY{n}{arrays}\PY{p}{)}
+         \PY{n}{ddf} \PY{o}{=} \PY{n}{ddf}\PY{o}{.}\PY{n}{stack}\PY{p}{(}\PY{n}{level}\PY{o}{=}\PY{l+m+mi}{0}\PY{p}{,} \PY{n}{dropna}\PY{o}{=}\PY{n+nb+bp}{True}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} Merge identical degrees}
+         \PY{n}{dip} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{DIP ANAESTH}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{DIP ANAEST}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{DIP.ANAESTH}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+         \PY{n}{mmed} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{M.MED ANAES}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} 
+                 \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{M.MED ANAESTHESIA}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} 
+                 \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{M MED ANAESTH}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} 
+                 \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{M.MED. ANAESTHESIA}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} 
+                 \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{M MED. ANAESTHESIA}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} 
+                 \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{M.MED.ANAESTHESIA}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} 
+                 \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{M MED. ANAES}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} 
+                 \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{M MED ANAESTHESIA}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} 
+                 \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{M MED. ANAESTH.}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} 
+                 \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{M.MED.ANAESTH.}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+         
+         \PY{n}{med\PYZus{}degree} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MBChB}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MBBS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+         \PY{n}{ddf}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{n}{ddf}\PY{o}{.}\PY{n}{degree} \PY{o}{==} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MBCHB}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MBChB}\PY{l+s+s1}{\PYZsq{}}
+         \PY{n}{ddf}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{n}{ddf}\PY{o}{.}\PY{n}{degree}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{dip}\PY{p}{)}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Diploma in Anesthesia}\PY{l+s+s1}{\PYZsq{}}
+         \PY{n}{ddf}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{n}{ddf}\PY{o}{.}\PY{n}{degree}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{mmed}\PY{p}{)}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MMed in Anesthesia}\PY{l+s+s1}{\PYZsq{}}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}22}]:} \PY{c+c1}{\PYZsh{} What are the most common degrees (Histogram)}
+         
+         \PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
+         
+         \PY{c+c1}{\PYZsh{} Histogram}
+         \PY{n}{ordered\PYZus{}list} \PY{o}{=} \PY{n}{ddf}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{keys}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{tolist}\PY{p}{(}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{)}\PY{p}{)}
+         \PY{n}{g} \PY{o}{=} \PY{n}{sns}\PY{o}{.}\PY{n}{countplot}\PY{p}{(}\PY{n}{x}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{degree}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{data}\PY{o}{=}\PY{n}{ddf}\PY{p}{,} \PY{n}{palette}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Greens\PYZus{}d}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{order}\PY{o}{=}\PY{n}{ordered\PYZus{}list}\PY{p}{)}
+         \PY{n}{\PYZus{}} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{xticks}\PY{p}{(}\PY{n}{rotation}\PY{o}{=}\PY{l+m+mi}{90}\PY{p}{)}
+         \PY{n}{\PYZus{}} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Degree}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{\PYZus{}} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Cumulative degrees obtained by physician anesthesthetist in Uganada}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_25_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}23}]:} \PY{c+c1}{\PYZsh{} When did they get their degrees? (Table)}
+         
+         \PY{n}{x} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1980}\PY{p}{,} \PY{l+m+mi}{1990}\PY{p}{,} \PY{l+m+mi}{2000}\PY{p}{,} \PY{l+m+mi}{2010}\PY{p}{,} \PY{l+m+mi}{2020}\PY{p}{]}
+         \PY{n}{y} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Before 1980}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{1981\PYZhy{}1990}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{1991\PYZhy{}2000}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{2001\PYZhy{}2010}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{2011\PYZhy{}2020}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+         \PY{n}{med\PYZus{}deg\PYZus{}years} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{cut}\PY{p}{(}\PY{n}{ddf}\PY{p}{[}\PY{n}{ddf}\PY{o}{.}\PY{n}{degree}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{med\PYZus{}degree}\PY{p}{)}\PY{p}{]}\PY{o}{.}\PY{n}{year}\PY{p}{,} \PY{n}{x}\PY{p}{,} \PY{n}{labels}\PY{o}{=}\PY{n}{y}\PY{p}{)}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}
+         \PY{n}{mmed\PYZus{}years} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{cut}\PY{p}{(}\PY{n}{ddf}\PY{p}{[}\PY{n}{ddf}\PY{o}{.}\PY{n}{degree} \PY{o}{==} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MMed in Anesthesia}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{year}\PY{p}{,} \PY{n}{x}\PY{p}{,} \PY{n}{labels}\PY{o}{=}\PY{n}{y}\PY{p}{)}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}
+         \PY{n}{l} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{p}{\PYZob{}} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MBChB/MBBS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{n}{med\PYZus{}deg\PYZus{}years}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MMed Anesthesia}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{n}{mmed\PYZus{}years}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{index}\PY{o}{=}\PY{n}{y}\PY{p}{)}
+         \PY{n}{l}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}23}]:}              MBChB/MBBS  MMed Anesthesia
+         Before 1980           4                0
+         1981-1990             7                5
+         1991-2000             9                4
+         2001-2010            23               11
+         2011-2020             4               23
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}24}]:} \PY{c+c1}{\PYZsh{} When did they get their degrees? (Histogram)}
+         
+         \PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
+         \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{)}\PY{p}{)}
+         \PY{n}{l} \PY{o}{=} \PY{n}{ddf}\PY{p}{[}\PY{p}{(}\PY{n}{ddf}\PY{o}{.}\PY{n}{degree}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{med\PYZus{}degree}\PY{p}{)}\PY{p}{)} \PY{o}{|} \PY{p}{(}\PY{n}{ddf}\PY{o}{.}\PY{n}{degree} \PY{o}{==} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MMed in Anesthesia}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{]}
+         \PY{n}{l}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{n}{l}\PY{o}{.}\PY{n}{degree}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{med\PYZus{}degree}\PY{p}{)}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MBChB/MBBS}\PY{l+s+s1}{\PYZsq{}}
+         \PY{n}{l}\PY{o}{.}\PY{n}{year} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{cut}\PY{p}{(}\PY{n}{l}\PY{o}{.}\PY{n}{year}\PY{p}{,} \PY{n}{x}\PY{p}{,} \PY{n}{labels}\PY{o}{=}\PY{n}{y}\PY{p}{)}
+         \PY{n}{sns}\PY{o}{.}\PY{n}{countplot}\PY{p}{(}\PY{n}{x}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{hue}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{data}\PY{o}{=}\PY{n}{l}\PY{p}{,} \PY{n}{palette}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Greens\PYZus{}d}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{\PYZus{}} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Degree date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{\PYZus{}} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Timeline of medical degree and MMed granted to physician anesthesiologist}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{\PYZus{}} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+/Users/alexgoodell/.virtualenvs/uganda/lib/python2.7/site-packages/pandas/core/generic.py:3643: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row\_indexer,col\_indexer] = value instead
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html\#indexing-view-versus-copy
+  self[name] = value
+
+    \end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_27_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}25}]:} \PY{c+c1}{\PYZsh{} it appears someone does have a medical degree \PYZhy{} who is this person?}
+         \PY{n}{person} \PY{o}{=} \PY{n}{adf}\PY{p}{[}\PY{p}{(}\PY{o}{\PYZti{}}\PY{n}{adf}\PY{o}{.}\PY{n}{degree\PYZus{}degree1}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{med\PYZus{}degree}\PY{p}{)} \PY{o}{\PYZam{}} \PYZbs{}
+                                     \PY{o}{\PYZti{}}\PY{n}{adf}\PY{o}{.}\PY{n}{degree\PYZus{}degree2}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{med\PYZus{}degree}\PY{p}{)} \PY{o}{\PYZam{}} \PYZbs{}
+                                     \PY{o}{\PYZti{}}\PY{n}{adf}\PY{o}{.}\PY{n}{degree\PYZus{}degree3}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{med\PYZus{}degree}\PY{p}{)} \PY{o}{\PYZam{}} \PYZbs{}
+                                     \PY{o}{\PYZti{}}\PY{n}{adf}\PY{o}{.}\PY{n}{degree\PYZus{}degree4}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{med\PYZus{}degree}\PY{p}{)} \PY{o}{\PYZam{}} \PYZbs{}
+                                     \PY{o}{\PYZti{}}\PY{n}{adf}\PY{o}{.}\PY{n}{degree\PYZus{}degree5}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{med\PYZus{}degree}\PY{p}{)}\PY{p}{)}\PY{p}{]}
+         
+         \PY{k}{print} \PY{n}{person}\PY{o}{.}\PY{n}{surname}\PY{p}{,} \PY{n}{person}\PY{o}{.}\PY{n}{degree\PYZus{}degree1}
+         
+         \PY{c+c1}{\PYZsh{} fix this person }
+         \PY{n}{adf}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{n}{adf}\PY{o}{.}\PY{n}{degree\PYZus{}degree1} \PY{o}{==} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MBCHB}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{degree\PYZus{}degree1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MBChB}\PY{l+s+s1}{\PYZsq{}}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+4729    SSEMMANDA
+Name: surname, dtype: object 4729    MBCHB
+Name: degree\_degree1, dtype: object
+
+    \end{Verbatim}
+
+    \hypertarget{physician-anesthestists---location}{%
+\subsection{Physician anesthestists -
+location}\label{physician-anesthestists---location}}
+
+Next we looked at where this physician anesthesthetists were located by
+linking their reported employer to the facility identified in the
+``facilities'' notebook - this next hidden cell does that
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}26}]:} \PY{k+kn}{import} \PY{n+nn}{io}\PY{o}{,} \PY{n+nn}{os}\PY{o}{,} \PY{n+nn}{sys}\PY{o}{,} \PY{n+nn}{types}
+         \PY{k+kn}{from} \PY{n+nn}{IPython} \PY{k+kn}{import} \PY{n}{get\PYZus{}ipython}
+         \PY{k+kn}{from} \PY{n+nn}{nbformat} \PY{k+kn}{import} \PY{n}{read}
+         \PY{k+kn}{from} \PY{n+nn}{IPython.core.interactiveshell} \PY{k+kn}{import} \PY{n}{InteractiveShell}
+         \PY{n}{sys}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{dirname}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{..}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{)}
+         
+         \PY{k}{def} \PY{n+nf}{find\PYZus{}notebook}\PY{p}{(}\PY{n}{fullname}\PY{p}{,} \PY{n}{path}\PY{o}{=}\PY{n+nb+bp}{None}\PY{p}{)}\PY{p}{:}
+             \PY{l+s+sd}{\PYZdq{}\PYZdq{}\PYZdq{}find a notebook, given its fully qualified name and an optional path}
+         
+         \PY{l+s+sd}{    This turns \PYZdq{}foo.bar\PYZdq{} into \PYZdq{}foo/bar.ipynb\PYZdq{}}
+         \PY{l+s+sd}{    and tries turning \PYZdq{}Foo\PYZus{}Bar\PYZdq{} into \PYZdq{}Foo Bar\PYZdq{} if Foo\PYZus{}Bar}
+         \PY{l+s+sd}{    does not exist.}
+         \PY{l+s+sd}{    \PYZdq{}\PYZdq{}\PYZdq{}}
+             \PY{n}{name} \PY{o}{=} \PY{n}{fullname}\PY{o}{.}\PY{n}{rsplit}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}
+             \PY{k}{if} \PY{o+ow}{not} \PY{n}{path}\PY{p}{:}
+                 \PY{n}{path} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+             \PY{k}{for} \PY{n}{d} \PY{o+ow}{in} \PY{n}{path}\PY{p}{:}
+                 \PY{n}{nb\PYZus{}path} \PY{o}{=} \PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{d}\PY{p}{,} \PY{n}{name} \PY{o}{+} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{.ipynb}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+                 \PY{k}{if} \PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{isfile}\PY{p}{(}\PY{n}{nb\PYZus{}path}\PY{p}{)}\PY{p}{:}
+                     \PY{k}{return} \PY{n}{nb\PYZus{}path}
+                 \PY{c+c1}{\PYZsh{} let import Notebook\PYZus{}Name find \PYZdq{}Notebook Name.ipynb\PYZdq{}}
+                 \PY{n}{nb\PYZus{}path} \PY{o}{=} \PY{n}{nb\PYZus{}path}\PY{o}{.}\PY{n}{replace}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZus{}}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ }\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+                 \PY{k}{if} \PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{isfile}\PY{p}{(}\PY{n}{nb\PYZus{}path}\PY{p}{)}\PY{p}{:}
+                     \PY{k}{return} \PY{n}{nb\PYZus{}path}
+         
+         \PY{k}{class} \PY{n+nc}{NotebookLoader}\PY{p}{(}\PY{n+nb}{object}\PY{p}{)}\PY{p}{:}
+             \PY{l+s+sd}{\PYZdq{}\PYZdq{}\PYZdq{}Module Loader for Jupyter Notebooks\PYZdq{}\PYZdq{}\PYZdq{}}
+             \PY{k}{def} \PY{n+nf+fm}{\PYZus{}\PYZus{}init\PYZus{}\PYZus{}}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{path}\PY{o}{=}\PY{n+nb+bp}{None}\PY{p}{)}\PY{p}{:}
+                 \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{shell} \PY{o}{=} \PY{n}{InteractiveShell}\PY{o}{.}\PY{n}{instance}\PY{p}{(}\PY{p}{)}
+                 \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{path} \PY{o}{=} \PY{n}{path}
+         
+             \PY{k}{def} \PY{n+nf}{load\PYZus{}module}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{fullname}\PY{p}{)}\PY{p}{:}
+                 \PY{l+s+sd}{\PYZdq{}\PYZdq{}\PYZdq{}import a notebook as a module\PYZdq{}\PYZdq{}\PYZdq{}}
+                 \PY{n}{path} \PY{o}{=} \PY{n}{find\PYZus{}notebook}\PY{p}{(}\PY{n}{fullname}\PY{p}{,} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{path}\PY{p}{)}
+         
+                 \PY{k}{print} \PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{importing Jupyter notebook from }\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s2}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{n}{path}\PY{p}{)}
+         
+                 \PY{c+c1}{\PYZsh{} load the notebook object}
+                 \PY{k}{with} \PY{n}{io}\PY{o}{.}\PY{n}{open}\PY{p}{(}\PY{n}{path}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{r}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{encoding}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{utf\PYZhy{}8}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{f}\PY{p}{:}
+                     \PY{n}{nb} \PY{o}{=} \PY{n}{read}\PY{p}{(}\PY{n}{f}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{)}
+         
+         
+                 \PY{c+c1}{\PYZsh{} create the module and add it to sys.modules}
+                 \PY{c+c1}{\PYZsh{} if name in sys.modules:}
+                 \PY{c+c1}{\PYZsh{}    return sys.modules[name]}
+                 \PY{n}{mod} \PY{o}{=} \PY{n}{types}\PY{o}{.}\PY{n}{ModuleType}\PY{p}{(}\PY{n}{fullname}\PY{p}{)}
+                 \PY{n}{mod}\PY{o}{.}\PY{n+nv+vm}{\PYZus{}\PYZus{}file\PYZus{}\PYZus{}} \PY{o}{=} \PY{n}{path}
+                 \PY{n}{mod}\PY{o}{.}\PY{n}{\PYZus{}\PYZus{}loader\PYZus{}\PYZus{}} \PY{o}{=} \PY{n+nb+bp}{self}
+                 \PY{n}{mod}\PY{o}{.}\PY{n+nv+vm}{\PYZus{}\PYZus{}dict\PYZus{}\PYZus{}}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{get\PYZus{}ipython}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{get\PYZus{}ipython}
+                 \PY{n}{sys}\PY{o}{.}\PY{n}{modules}\PY{p}{[}\PY{n}{fullname}\PY{p}{]} \PY{o}{=} \PY{n}{mod}
+         
+                 \PY{c+c1}{\PYZsh{} extra work to ensure that magics that would affect the user\PYZus{}ns}
+                 \PY{c+c1}{\PYZsh{} actually affect the notebook module\PYZsq{}s ns}
+                 \PY{n}{save\PYZus{}user\PYZus{}ns} \PY{o}{=} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{shell}\PY{o}{.}\PY{n}{user\PYZus{}ns}
+                 \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{shell}\PY{o}{.}\PY{n}{user\PYZus{}ns} \PY{o}{=} \PY{n}{mod}\PY{o}{.}\PY{n+nv+vm}{\PYZus{}\PYZus{}dict\PYZus{}\PYZus{}}
+         
+                 \PY{k}{try}\PY{p}{:}
+                   \PY{k}{for} \PY{n}{cell} \PY{o+ow}{in} \PY{n}{nb}\PY{o}{.}\PY{n}{cells}\PY{p}{:}
+                     \PY{k}{if} \PY{n}{cell}\PY{o}{.}\PY{n}{cell\PYZus{}type} \PY{o}{==} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{code}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}
+                         \PY{c+c1}{\PYZsh{} transform the input to executable Python}
+                         \PY{n}{code} \PY{o}{=} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{shell}\PY{o}{.}\PY{n}{input\PYZus{}transformer\PYZus{}manager}\PY{o}{.}\PY{n}{transform\PYZus{}cell}\PY{p}{(}\PY{n}{cell}\PY{o}{.}\PY{n}{source}\PY{p}{)}
+                         \PY{c+c1}{\PYZsh{} run the code in themodule}
+                         \PY{k}{exec}\PY{p}{(}\PY{n}{code}\PY{p}{,} \PY{n}{mod}\PY{o}{.}\PY{n+nv+vm}{\PYZus{}\PYZus{}dict\PYZus{}\PYZus{}}\PY{p}{)}
+                 \PY{k}{finally}\PY{p}{:}
+                     \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{shell}\PY{o}{.}\PY{n}{user\PYZus{}ns} \PY{o}{=} \PY{n}{save\PYZus{}user\PYZus{}ns}
+                 \PY{k}{return} \PY{n}{mod}
+         
+         \PY{k}{class} \PY{n+nc}{NotebookFinder}\PY{p}{(}\PY{n+nb}{object}\PY{p}{)}\PY{p}{:}
+             \PY{l+s+sd}{\PYZdq{}\PYZdq{}\PYZdq{}Module finder that locates Jupyter Notebooks\PYZdq{}\PYZdq{}\PYZdq{}}
+             \PY{k}{def} \PY{n+nf+fm}{\PYZus{}\PYZus{}init\PYZus{}\PYZus{}}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{)}\PY{p}{:}
+                 \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{loaders} \PY{o}{=} \PY{p}{\PYZob{}}\PY{p}{\PYZcb{}}
+         
+             \PY{k}{def} \PY{n+nf}{find\PYZus{}module}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{fullname}\PY{p}{,} \PY{n}{path}\PY{o}{=}\PY{n+nb+bp}{None}\PY{p}{)}\PY{p}{:}
+                 \PY{n}{nb\PYZus{}path} \PY{o}{=} \PY{n}{find\PYZus{}notebook}\PY{p}{(}\PY{n}{fullname}\PY{p}{,} \PY{n}{path}\PY{p}{)}
+                 \PY{k}{if} \PY{o+ow}{not} \PY{n}{nb\PYZus{}path}\PY{p}{:}
+                     \PY{k}{return}
+         
+                 \PY{n}{key} \PY{o}{=} \PY{n}{path}
+                 \PY{k}{if} \PY{n}{path}\PY{p}{:}
+                     \PY{c+c1}{\PYZsh{} lists aren\PYZsq{}t hashable}
+                     \PY{n}{key} \PY{o}{=} \PY{n}{os}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{sep}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{path}\PY{p}{)}
+         
+                 \PY{k}{if} \PY{n}{key} \PY{o+ow}{not} \PY{o+ow}{in} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{loaders}\PY{p}{:}
+                     \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{loaders}\PY{p}{[}\PY{n}{key}\PY{p}{]} \PY{o}{=} \PY{n}{NotebookLoader}\PY{p}{(}\PY{n}{path}\PY{p}{)}
+                 \PY{k}{return} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{loaders}\PY{p}{[}\PY{n}{key}\PY{p}{]}
+         
+         \PY{n}{sys}\PY{o}{.}\PY{n}{meta\PYZus{}path}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{NotebookFinder}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+         
+         \PY{k+kn}{import} \PY{n+nn}{notebooks.Facilities} \PY{k+kn}{as} \PY{n+nn}{fac}
+         \PY{n+nb}{reload}\PY{p}{(}\PY{n}{fac}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+importing Jupyter notebook from ../notebooks/Facilities.ipynb
+
+
+Ownership
+| Name   |   Count |
+|:-------|--------:|
+| Govt   |    3084 |
+| PFP    |    2365 |
+| PNFP   |     945 |
+
+
+Authority
+| Name       |   Count |
+|:-----------|--------:|
+| MOH        |    2921 |
+| Private    |    2365 |
+| NGO        |     349 |
+| CBO        |     213 |
+| UEC (UCMB) |     183 |
+| UPMB       |      92 |
+| UPS        |      64 |
+| UPF        |      53 |
+| UMMB       |      32 |
+| UPDF       |      30 |
+| UEC        |      18 |
+| (UCMB)     |         |
+| SDA        |      17 |
+| UBTS       |      14 |
+| TASO       |      12 |
+| AIC        |       9 |
+| CAFU       |       7 |
+| Orthodox   |       6 |
+| Other NGO  |       2 |
+| UCMB       |       2 |
+| UNHCR      |       2 |
+| SOS        |       2 |
+| UEC        |       1 |
+
+
+Level
+| Name     |   Count |
+|:---------|--------:|
+| HC II    |    4200 |
+| HC III   |    1508 |
+| Clinic   |     258 |
+| HC IV    |     215 |
+| Hospital |     146 |
+| SC       |      26 |
+| RRH      |      16 |
+| RBB      |       7 |
+| BCDP     |       6 |
+| NRH      |       2 |
+| NBB      |       1 |
+
+
+ ownership 
+
+
+|:-----|-----:|
+| Govt | 3084 |
+| PFP  | 2365 |
+| PNFP |  945 |
+
+
+ authority 
+
+
+|:-----------|-----:|
+| Adventist  |   17 |
+| CBO        |  213 |
+| Catholic   |  204 |
+| MOH        | 2935 |
+| Muslim     |   32 |
+| NGO        |  372 |
+| Other      |   17 |
+| Other govt |  147 |
+| Private    | 2365 |
+| Protestant |   92 |
+
+
+ level 
+
+
+|:---------------------------|-----:|
+| Blood bank                 |    8 |
+| Clinic                     |  258 |
+| HC II                      | 4200 |
+| HC III                     | 1508 |
+| HC IV                      |  215 |
+| Hospital                   |  146 |
+| National referral hospital |    2 |
+| Other                      |    6 |
+| Regional referral hospital |   16 |
+| Specialty clinic           |   26 |
+
+
+|                            |   Govt |   PFP |   PNFP |
+|:---------------------------|-------:|------:|-------:|
+| Blood bank                 |      8 |     0 |      0 |
+| Clinic                     |      0 |   244 |     14 |
+| HC II                      |   1832 |  1850 |    518 |
+| HC III                     |    992 |   216 |    300 |
+| HC IV                      |    175 |    19 |     21 |
+| Hospital                   |     51 |    35 |     60 |
+| National referral hospital |      2 |     0 |      0 |
+| Other                      |      6 |     0 |      0 |
+| Regional referral hospital |     16 |     0 |      0 |
+| Specialty clinic           |      0 |     0 |     26 |
+
+
+        Facilities by hard-to-reach, abs.         
+
+|                            |   Not HTR |   HTR |
+|:---------------------------|----------:|------:|
+| Blood bank                 |         7 |     1 |
+| Clinic                     |       199 |    58 |
+| HC II                      |      3643 |   543 |
+| HC III                     |      1287 |   208 |
+| HC IV                      |       180 |    32 |
+| Hospital                   |       127 |    19 |
+| National referral hospital |         2 |     0 |
+| Other                      |         6 |     0 |
+| Regional referral hospital |        14 |     2 |
+| Specialty clinic           |        24 |     2 |
+
+
+Population in HTR and non-HTR areas
+
+|            | HTR   | Non-HTR   |
+|:-----------|:------|:----------|
+| Population | 53m   | 284m      |
+
+
+     Facilities by hard-to-reach per 100k pop     
+
+|                            |   Not HTR |   HTR |
+|:---------------------------|----------:|------:|
+| Blood bank                 |      0.13 |  0    |
+| Clinic                     |      3.7  |  0.2  |
+| HC II                      |     68    |  1.9  |
+| HC III                     |     24    |  0.73 |
+| HC IV                      |      3.4  |  0.11 |
+| Hospital                   |      2.4  |  0.07 |
+| National referral hospital |      0.04 |  0    |
+| Other                      |      0.11 |  0    |
+| Regional referral hospital |      0.26 |  0.01 |
+| Specialty clinic           |      0.45 |  0.01 |
+importing Jupyter notebook from ../notebooks/Facilities.ipynb
+
+
+Ownership
+| Name   |   Count |
+|:-------|--------:|
+| Govt   |    3084 |
+| PFP    |    2365 |
+| PNFP   |     945 |
+
+
+Authority
+| Name       |   Count |
+|:-----------|--------:|
+| MOH        |    2921 |
+| Private    |    2365 |
+| NGO        |     349 |
+| CBO        |     213 |
+| UEC (UCMB) |     183 |
+| UPMB       |      92 |
+| UPS        |      64 |
+| UPF        |      53 |
+| UMMB       |      32 |
+| UPDF       |      30 |
+| UEC        |      18 |
+| (UCMB)     |         |
+| SDA        |      17 |
+| UBTS       |      14 |
+| TASO       |      12 |
+| AIC        |       9 |
+| CAFU       |       7 |
+| Orthodox   |       6 |
+| Other NGO  |       2 |
+| UCMB       |       2 |
+| UNHCR      |       2 |
+| SOS        |       2 |
+| UEC        |       1 |
+
+
+Level
+| Name     |   Count |
+|:---------|--------:|
+| HC II    |    4200 |
+| HC III   |    1508 |
+| Clinic   |     258 |
+| HC IV    |     215 |
+| Hospital |     146 |
+| SC       |      26 |
+| RRH      |      16 |
+| RBB      |       7 |
+| BCDP     |       6 |
+| NRH      |       2 |
+| NBB      |       1 |
+
+
+ ownership 
+
+
+|:-----|-----:|
+| Govt | 3084 |
+| PFP  | 2365 |
+| PNFP |  945 |
+
+
+ authority 
+
+
+|:-----------|-----:|
+| Adventist  |   17 |
+| CBO        |  213 |
+| Catholic   |  204 |
+| MOH        | 2935 |
+| Muslim     |   32 |
+| NGO        |  372 |
+| Other      |   17 |
+| Other govt |  147 |
+| Private    | 2365 |
+| Protestant |   92 |
+
+
+ level 
+
+
+|:---------------------------|-----:|
+| Blood bank                 |    8 |
+| Clinic                     |  258 |
+| HC II                      | 4200 |
+| HC III                     | 1508 |
+| HC IV                      |  215 |
+| Hospital                   |  146 |
+| National referral hospital |    2 |
+| Other                      |    6 |
+| Regional referral hospital |   16 |
+| Specialty clinic           |   26 |
+
+
+|                            |   Govt |   PFP |   PNFP |
+|:---------------------------|-------:|------:|-------:|
+| Blood bank                 |      8 |     0 |      0 |
+| Clinic                     |      0 |   244 |     14 |
+| HC II                      |   1832 |  1850 |    518 |
+| HC III                     |    992 |   216 |    300 |
+| HC IV                      |    175 |    19 |     21 |
+| Hospital                   |     51 |    35 |     60 |
+| National referral hospital |      2 |     0 |      0 |
+| Other                      |      6 |     0 |      0 |
+| Regional referral hospital |     16 |     0 |      0 |
+| Specialty clinic           |      0 |     0 |     26 |
+
+
+        Facilities by hard-to-reach, abs.         
+
+|                            |   Not HTR |   HTR |
+|:---------------------------|----------:|------:|
+| Blood bank                 |         7 |     1 |
+| Clinic                     |       199 |    58 |
+| HC II                      |      3643 |   543 |
+| HC III                     |      1287 |   208 |
+| HC IV                      |       180 |    32 |
+| Hospital                   |       127 |    19 |
+| National referral hospital |         2 |     0 |
+| Other                      |         6 |     0 |
+| Regional referral hospital |        14 |     2 |
+| Specialty clinic           |        24 |     2 |
+
+
+Population in HTR and non-HTR areas
+
+|            | HTR   | Non-HTR   |
+|:-----------|:------|:----------|
+| Population | 53m   | 284m      |
+
+
+     Facilities by hard-to-reach per 100k pop     
+
+|                            |   Not HTR |   HTR |
+|:---------------------------|----------:|------:|
+| Blood bank                 |      0.13 |  0    |
+| Clinic                     |      3.7  |  0.2  |
+| HC II                      |     68    |  1.9  |
+| HC III                     |     24    |  0.73 |
+| HC IV                      |      3.4  |  0.11 |
+| Hospital                   |      2.4  |  0.07 |
+| National referral hospital |      0.04 |  0    |
+| Other                      |      0.11 |  0    |
+| Regional referral hospital |      0.26 |  0.01 |
+| Specialty clinic           |      0.45 |  0.01 |
+
+    \end{Verbatim}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}26}]:} <module 'notebooks.Facilities' from '../notebooks/Facilities.ipynb'>
+\end{Verbatim}
+            
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_30_2.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_30_3.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}27}]:} \PY{n}{pd}\PY{o}{.}\PY{n}{crosstab}\PY{p}{(}\PY{n}{adf}\PY{o}{.}\PY{n}{employer}\PY{p}{,} \PY{n}{columns}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{count}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}27}]:} col\_0                       count
+         employer                         
+         Bombo Military Hospital         2
+         CORSU                           1
+         Case Medical Centre             1
+         Cure Children's Hospital        1
+         Dept of Anaesth                 1
+         Family Care Clinic              1
+         Infectious Disease Inst.        1
+         International Hosp. Kla         1
+         International Hospital Kla      2
+         Jinja Hospital                  1
+         Kadic Hospital Limited          1
+         Lacor Hos                       1
+         Lacor Hospital                  2
+         MUST                            3
+         Mbarara Reg. Ref. Hosp          1
+         Mengo Hospital                  1
+         Mulago Hospital                13
+         Nakasero Hospital               1
+         Nsambya Hospital                1
+         Uganda Heart Institute          3
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}28}]:} \PY{c+c1}{\PYZsh{} the hospital list was used to manually find the hospitals listed in the employement field. this is what i found:}
+         \PY{c+c1}{\PYZsh{} [\PYZsq{}Kadic Hospital Limited\PYZsq{},] was not found in hid2012\PYZhy{} though it was confirmed in the otims\PYZus{}2016 }
+         \PY{c+c1}{\PYZsh{} source and added to the facilities list (see facilites notebook)}
+         
+         \PY{n}{list1} \PY{o}{=} \PY{p}{[}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Bombo Military Hospital}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{3993}\PY{p}{]}\PY{p}{,}
+         \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{CORSU}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{5938}\PY{p}{]}\PY{p}{,}
+         \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Case Medical Centre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{1765}\PY{p}{]}\PY{p}{,}
+         \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Cure Children}\PY{l+s+se}{\PYZbs{}\PYZsq{}}\PY{l+s+s1}{s Hospital}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{4335}\PY{p}{]}\PY{p}{,}
+         \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Dept of Anaesth}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{2548}\PY{p}{]}\PY{p}{,}
+         \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Kadic Hospital Limited}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+m+mi}{6394}\PY{p}{]}\PY{p}{,}
+          \PY{c+c1}{\PYZsh{} for below https,.]here.com/uganda/kampala/hospital\PYZhy{}health\PYZhy{}care\PYZhy{}facility/}
+          \PY{c+c1}{\PYZsh{} family\PYZhy{}care\PYZhy{}clinic\PYZhy{}\PYZhy{}800s8p1u\PYZhy{}f41c3008f737455b9f5fb90f3c77d2be?}
+          \PY{c+c1}{\PYZsh{} x=ep\PYZam{}map=0.33695,32.54788,15,normal }
+         \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Family Care Clinic}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{1933}\PY{p}{]}\PY{p}{,} 
+         \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Infectious Disease Inst.}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{2548}\PY{p}{]}\PY{p}{,}
+         \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{International Hosp. Kla}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{2123}\PY{p}{]}\PY{p}{,}
+         \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{International Hospital Kla}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{2123}\PY{p}{]}\PY{p}{,}
+         \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Jinja Hospital}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{1171}\PY{p}{]}\PY{p}{,}
+         \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Lacor Hos}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{855}\PY{p}{]}\PY{p}{,}
+         \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Lacor Hospital}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{855}\PY{p}{]}\PY{p}{,}
+         \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MUST}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{4422}\PY{p}{]}\PY{p}{,}
+         \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mbarara Reg. Ref. Hosp}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{4422}\PY{p}{]}\PY{p}{,}
+         \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mengo Hospital}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{2474}\PY{p}{]}\PY{p}{,}
+         \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mulago Hospital}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{2548}\PY{p}{]}\PY{p}{,}
+         \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Nakasero Hospital}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{2584}\PY{p}{]}\PY{p}{,}
+         \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Nsambya Hospital}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{2916}\PY{p}{]}\PY{p}{,}
+         \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Uganda Heart Institute}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{2548}\PY{p}{]}\PY{p}{]}
+         
+         \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n}{list1}\PY{p}{:}
+             \PY{k}{print} \PY{n}{su}\PY{o}{.}\PY{n}{pt}\PY{p}{(}\PY{n}{fac}\PY{o}{.}\PY{n}{facilities}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{n}{i}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{]}\PY{p}{,}\PY{n}{title}\PY{o}{=}\PY{n}{i}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)}
+             \PY{c+c1}{\PYZsh{} set facility ID}
+             \PY{n}{adf}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{facility\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{i}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}
+             \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{\PYZdq{}}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+
+
+                        Bombo Military Hospital                        
+
+|:-------------------------|:-----------------------------------------|
+| facility\_id              | 3993                                     |
+| id\_within\_district       | 6                                        |
+| hsd                      | Katikamu South HSD                       |
+| name                     | Bombo General Military  General Hospital |
+| level                    | Hospital                                 |
+| authority                | Other govt                               |
+| ownership                | Govt                                     |
+| nhpi\_code                | HFM6UHUQ6                                |
+| hsdt\_code                | SCVZC87R0/PAOHTOAF5/8001                 |
+| source                   | mohdhi2017                               |
+| parish\_level\_fac\_id      | 8001                                     |
+| parish\_nhpi              | PAOHTOAF5                                |
+| subcounty\_nhpi           | SCVZC87R0                                |
+| subregion\_name           | Central 2                                |
+| district\_name            | Luwero District                          |
+| county\_name              | Katikamu County                          |
+| subcounty\_name           | Bombo Town Council                       |
+| subcounty\_full\_hsdt\_code | DT9GG9HG5/CT4TFGX64/6008                 |
+| vote\_code                | 532.0                                    |
+| region\_name              | Central Region                           |
+| population               | 488600.007812                            |
+| is\_hard\_to\_reach         | 0.0                                      |
+| pop\_per\_health\_fac       | 8281.35644531                            |
+| rural\_pop                | 386156.564453                            |
+| public\_hosp              | 0.0                                      |
+| is\_district              | 2.0                                      |
+| poverty\_pop              | 0.0729999989271                          |
+| is\_city                  | 0.0                                      |
+| distance\_from\_kampala    | 126.2                                    |
+
+
+
+
+
+                                CORSU                                
+
+|:-------------------------|:---------------------------------------|
+| facility\_id              | 5938                                   |
+| id\_within\_district       | 59                                     |
+| hsd                      | Busiro South HSD                       |
+| name                     | Corsu Rehabilitation  General Hospital |
+| level                    | Hospital                               |
+| authority                | Private                                |
+| ownership                | PFP                                    |
+| nhpi\_code                | HF5QFTWC8                              |
+| hsdt\_code                | SCUT68D29/PADTJ8HX7/8006               |
+| source                   | mohdhi2017                             |
+| parish\_level\_fac\_id      | 8006                                   |
+| parish\_nhpi              | PADTJ8HX7                              |
+| subcounty\_nhpi           | SCUT68D29                              |
+| subregion\_name           | Central 1                              |
+| district\_name            | Wakiso District                        |
+| county\_name              | Busiro County                          |
+| subcounty\_name           | Katabi Subcounty                       |
+| subcounty\_full\_hsdt\_code | DTXQJZEI5/CT3FUVJ84/6010               |
+| vote\_code                | 555.0                                  |
+| region\_name              | Central Region                         |
+| population               | 1165872.86816                          |
+| is\_hard\_to\_reach         | 0.0                                    |
+| pop\_per\_health\_fac       | 18216.7636719                          |
+| rural\_pop                | 461509.118164                          |
+| public\_hosp              | 1.0                                    |
+| is\_district              | 2.0                                    |
+| poverty\_pop              | 0.0370000004768                        |
+| is\_city                  | 0.0                                    |
+| distance\_from\_kampala    | 106.4                                  |
+
+
+
+
+
+                        Case Medical Centre                        
+
+|:-------------------------|:-------------------------------------|
+| facility\_id              | 1765                                 |
+| id\_within\_district       | 172                                  |
+| hsd                      | Central Division HSD                 |
+| name                     | Case Medical Centre General Hospital |
+| level                    | Hospital                             |
+| authority                | Private                              |
+| ownership                | PFP                                  |
+| nhpi\_code                | HFEWB8NQ6                            |
+| hsdt\_code                | SCQM9DXK4/PAQB66Z77/8025             |
+| source                   | mohdhi2017                           |
+| parish\_level\_fac\_id      | 8025                                 |
+| parish\_nhpi              | PAQB66Z77                            |
+| subcounty\_nhpi           | SCQM9DXK4                            |
+| subregion\_name           | Kampala                              |
+| district\_name            | Kampala District                     |
+| county\_name              | Kampala Capital City                 |
+| subcounty\_name           | Kamapala Central Division            |
+| subcounty\_full\_hsdt\_code | DTUANA5C0/CT89FGSU5/6005             |
+| vote\_code                | 122.0                                |
+| region\_name              | Central Region                       |
+| population               | 1528800.0                            |
+| is\_hard\_to\_reach         | 0.0                                  |
+| pop\_per\_health\_fac       | 1098.0                               |
+| rural\_pop                | 0.0                                  |
+| public\_hosp              | 1.0                                  |
+| is\_district              | 2.0                                  |
+| poverty\_pop              | 0.037                                |
+| is\_city                  | 0.0                                  |
+| distance\_from\_kampala    | 0.0                                  |
+
+
+
+
+
+                       Cure Children's Hospital                       
+
+|:-------------------------|:----------------------------------------|
+| facility\_id              | 4335                                    |
+| id\_within\_district       | 18                                      |
+| hsd                      | Mbale Municipality HSD                  |
+| name                     | Cure ChildrenÃ¢â‚¬TMs  General Hospital |
+| level                    | Hospital                                |
+| authority                | NGO                                     |
+| ownership                | PNFP                                    |
+| nhpi\_code                | HFJTEH873                               |
+| hsdt\_code                | SCGEW3AQ0/PAIPEG848/8001                |
+| source                   | mohdhi2017                              |
+| parish\_level\_fac\_id      | 8001                                    |
+| parish\_nhpi              | PAIPEG848                               |
+| subcounty\_nhpi           | SCGEW3AQ0                               |
+| subregion\_name           | Mid Eastern                             |
+| district\_name            | Mbale District                          |
+| county\_name              | Mbale Municipality                      |
+| subcounty\_name           | Mbale Northern Division                 |
+| subcounty\_full\_hsdt\_code | DTDRHDW67/CTP3TUUP4/6002                |
+| vote\_code                | 536.0                                   |
+| region\_name              | Eastern Region                          |
+| population               | 433000.000732                           |
+| is\_hard\_to\_reach         | 0.0                                     |
+| pop\_per\_health\_fac       | 9413.04394531                           |
+| rural\_pop                | 396804.954102                           |
+| public\_hosp              | 1.0                                     |
+| is\_district              | 2.0                                     |
+| poverty\_pop              | 0.247000008821                          |
+| is\_city                  | 0.0                                     |
+| distance\_from\_kampala    | 458.0                                   |
+
+
+
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+/Users/alexgoodell/.virtualenvs/uganda/lib/python2.7/site-packages/pandas/core/indexing.py:357: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row\_indexer,col\_indexer] = value instead
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html\#indexing-view-versus-copy
+  self.obj[key] = \_infer\_fill\_value(value)
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+
+
+                        Dept of Anaesth                         
+
+|:-------------------------|:----------------------------------|
+| facility\_id              | 2548                              |
+| id\_within\_district       | 955                               |
+| hsd                      | Kawempe Division HSD              |
+| name                     | Mulago National Referral Hospital |
+| level                    | National referral hospital        |
+| authority                | MOH                               |
+| ownership                | Govt                              |
+| nhpi\_code                | HFBJT4693                         |
+| hsdt\_code                | SCL952JG5/PANC5LYV1/8012          |
+| source                   | mohdhi2017                        |
+| parish\_level\_fac\_id      | 8012                              |
+| parish\_nhpi              | PANC5LYV1                         |
+| subcounty\_nhpi           | SCL952JG5                         |
+| subregion\_name           | Kampala                           |
+| district\_name            | Kampala District                  |
+| county\_name              | Kampala Capital City              |
+| subcounty\_name           | Kawempe Division                  |
+| subcounty\_full\_hsdt\_code | DTUANA5C0/CT89FGSU5/6004          |
+| vote\_code                | 122.0                             |
+| region\_name              | Central Region                    |
+| population               | 1528800.0                         |
+| is\_hard\_to\_reach         | 0.0                               |
+| pop\_per\_health\_fac       | 1098.0                            |
+| rural\_pop                | 0.0                               |
+| public\_hosp              | 1.0                               |
+| is\_district              | 2.0                               |
+| poverty\_pop              | 0.037                             |
+| is\_city                  | 0.0                               |
+| distance\_from\_kampala    | 0.0                               |
+
+
+
+
+
+                Kadic Hospital Limited                 
+
+|:-------------------------|:-------------------------|
+| facility\_id              | 6394                     |
+| id\_within\_district       | 623                      |
+| hsd                      | Nakawa Division HSD      |
+| name                     | Kidac General Hospital   |
+| level                    | Hospital                 |
+| authority                | Private                  |
+| ownership                | PFP                      |
+| nhpi\_code                | HFRZJFJ91                |
+| hsdt\_code                | SC6EQF6C3/PAB9TWNR4/8010 |
+| source                   | mohdhi2017               |
+| parish\_level\_fac\_id      | 8010                     |
+| parish\_nhpi              | PAB9TWNR4                |
+| subcounty\_nhpi           | SC6EQF6C3                |
+| subregion\_name           | Kampala                  |
+| district\_name            | Kampala District         |
+| county\_name              | Kampala Capital City     |
+| subcounty\_name           | Nakawa Division          |
+| subcounty\_full\_hsdt\_code | DTUANA5C0/CT89FGSU5/6002 |
+| vote\_code                | 122.0                    |
+| region\_name              | Central Region           |
+| population               | 1528800.0                |
+| is\_hard\_to\_reach         | 0.0                      |
+| pop\_per\_health\_fac       | 1098.0                   |
+| rural\_pop                | 0.0                      |
+| public\_hosp              | 1.0                      |
+| is\_district              | 2.0                      |
+| poverty\_pop              | 0.037                    |
+| is\_city                  | 0.0                      |
+| distance\_from\_kampala    | 0.0                      |
+
+
+
+
+
+                               Family Care Clinic                               
+
+|:-------------------------|:--------------------------------------------------|
+| facility\_id              | 1933                                              |
+| id\_within\_district       | 340                                               |
+| hsd                      | Central Division HSD                              |
+| name                     | Family Care Clinic (Kamwokya II) Health Centre II |
+| level                    | HC II                                             |
+| authority                | Private                                           |
+| ownership                | PFP                                               |
+| nhpi\_code                | HFWKB24D0                                         |
+| hsdt\_code                | SCQM9DXK4/PADFZ5IK6/8029                          |
+| source                   | mohdhi2017                                        |
+| parish\_level\_fac\_id      | 8029                                              |
+| parish\_nhpi              | PADFZ5IK6                                         |
+| subcounty\_nhpi           | SCQM9DXK4                                         |
+| subregion\_name           | Kampala                                           |
+| district\_name            | Kampala District                                  |
+| county\_name              | Kampala Capital City                              |
+| subcounty\_name           | Kamapala Central Division                         |
+| subcounty\_full\_hsdt\_code | DTUANA5C0/CT89FGSU5/6005                          |
+| vote\_code                | 122.0                                             |
+| region\_name              | Central Region                                    |
+| population               | 1528800.0                                         |
+| is\_hard\_to\_reach         | 0.0                                               |
+| pop\_per\_health\_fac       | 1098.0                                            |
+| rural\_pop                | 0.0                                               |
+| public\_hosp              | 1.0                                               |
+| is\_district              | 2.0                                               |
+| poverty\_pop              | 0.037                                             |
+| is\_city                  | 0.0                                               |
+| distance\_from\_kampala    | 0.0                                               |
+
+
+
+
+
+                    Infectious Disease Inst.                    
+
+|:-------------------------|:----------------------------------|
+| facility\_id              | 2548                              |
+| id\_within\_district       | 955                               |
+| hsd                      | Kawempe Division HSD              |
+| name                     | Mulago National Referral Hospital |
+| level                    | National referral hospital        |
+| authority                | MOH                               |
+| ownership                | Govt                              |
+| nhpi\_code                | HFBJT4693                         |
+| hsdt\_code                | SCL952JG5/PANC5LYV1/8012          |
+| source                   | mohdhi2017                        |
+| parish\_level\_fac\_id      | 8012                              |
+| parish\_nhpi              | PANC5LYV1                         |
+| subcounty\_nhpi           | SCL952JG5                         |
+| subregion\_name           | Kampala                           |
+| district\_name            | Kampala District                  |
+| county\_name              | Kampala Capital City              |
+| subcounty\_name           | Kawempe Division                  |
+| subcounty\_full\_hsdt\_code | DTUANA5C0/CT89FGSU5/6004          |
+| vote\_code                | 122.0                             |
+| region\_name              | Central Region                    |
+| population               | 1528800.0                         |
+| is\_hard\_to\_reach         | 0.0                               |
+| pop\_per\_health\_fac       | 1098.0                            |
+| rural\_pop                | 0.0                               |
+| public\_hosp              | 1.0                               |
+| is\_district              | 2.0                               |
+| poverty\_pop              | 0.037                             |
+| is\_city                  | 0.0                               |
+| distance\_from\_kampala    | 0.0                               |
+
+
+
+
+
+                           International Hosp. Kla                            
+
+|:-------------------------|:------------------------------------------------|
+| facility\_id              | 2123                                            |
+| id\_within\_district       | 530                                             |
+| hsd                      | Makindye Division HSD                           |
+| name                     | International Hospital Kampala General Hospital |
+| level                    | Hospital                                        |
+| authority                | Private                                         |
+| ownership                | PFP                                             |
+| nhpi\_code                | HFDIBOWH8                                       |
+| hsdt\_code                | SCXUR3FY9/PACQULD65/8007                        |
+| source                   | mohdhi2017                                      |
+| parish\_level\_fac\_id      | 8007                                            |
+| parish\_nhpi              | PACQULD65                                       |
+| subcounty\_nhpi           | SCXUR3FY9                                       |
+| subregion\_name           | Kampala                                         |
+| district\_name            | Kampala District                                |
+| county\_name              | Kampala Capital City                            |
+| subcounty\_name           | Makindye Division                               |
+| subcounty\_full\_hsdt\_code | DTUANA5C0/CT89FGSU5/6003                        |
+| vote\_code                | 122.0                                           |
+| region\_name              | Central Region                                  |
+| population               | 1528800.0                                       |
+| is\_hard\_to\_reach         | 0.0                                             |
+| pop\_per\_health\_fac       | 1098.0                                          |
+| rural\_pop                | 0.0                                             |
+| public\_hosp              | 1.0                                             |
+| is\_district              | 2.0                                             |
+| poverty\_pop              | 0.037                                           |
+| is\_city                  | 0.0                                             |
+| distance\_from\_kampala    | 0.0                                             |
+
+
+
+
+
+                          International Hospital Kla                          
+
+|:-------------------------|:------------------------------------------------|
+| facility\_id              | 2123                                            |
+| id\_within\_district       | 530                                             |
+| hsd                      | Makindye Division HSD                           |
+| name                     | International Hospital Kampala General Hospital |
+| level                    | Hospital                                        |
+| authority                | Private                                         |
+| ownership                | PFP                                             |
+| nhpi\_code                | HFDIBOWH8                                       |
+| hsdt\_code                | SCXUR3FY9/PACQULD65/8007                        |
+| source                   | mohdhi2017                                      |
+| parish\_level\_fac\_id      | 8007                                            |
+| parish\_nhpi              | PACQULD65                                       |
+| subcounty\_nhpi           | SCXUR3FY9                                       |
+| subregion\_name           | Kampala                                         |
+| district\_name            | Kampala District                                |
+| county\_name              | Kampala Capital City                            |
+| subcounty\_name           | Makindye Division                               |
+| subcounty\_full\_hsdt\_code | DTUANA5C0/CT89FGSU5/6003                        |
+| vote\_code                | 122.0                                           |
+| region\_name              | Central Region                                  |
+| population               | 1528800.0                                       |
+| is\_hard\_to\_reach         | 0.0                                             |
+| pop\_per\_health\_fac       | 1098.0                                          |
+| rural\_pop                | 0.0                                             |
+| public\_hosp              | 1.0                                             |
+| is\_district              | 2.0                                             |
+| poverty\_pop              | 0.037                                           |
+| is\_city                  | 0.0                                             |
+| distance\_from\_kampala    | 0.0                                             |
+
+
+
+
+
+                        Jinja Hospital                         
+
+|:-------------------------|:---------------------------------|
+| facility\_id              | 1171                             |
+| id\_within\_district       | 36                               |
+| hsd                      | Jinja Municipality West HSD      |
+| name                     | Jinja Regional Referral Hospital |
+| level                    | Regional referral hospital       |
+| authority                | MOH                              |
+| ownership                | Govt                             |
+| nhpi\_code                | HFRZZI486                        |
+| hsdt\_code                | SC3DI2OC4/PAZBYUYH4/8003         |
+| source                   | mohdhi2017                       |
+| parish\_level\_fac\_id      | 8003                             |
+| parish\_nhpi              | PAZBYUYH4                        |
+| subcounty\_nhpi           | SC3DI2OC4                        |
+| subregion\_name           | East Central                     |
+| district\_name            | Jinja District                   |
+| county\_name              | Jinja Municipality               |
+| subcounty\_name           | Jmc West                         |
+| subcounty\_full\_hsdt\_code | DTCOHZ6A5/CTUL24OS0/6002         |
+| vote\_code                | 511.0                            |
+| region\_name              | Eastern Region                   |
+| population               | 411199.998047                    |
+| is\_hard\_to\_reach         | 0.0                              |
+| pop\_per\_health\_fac       | 7089.65527344                    |
+| rural\_pop                | 311060.582031                    |
+| public\_hosp              | 1.0                              |
+| is\_district              | 2.0                              |
+| poverty\_pop              | 0.242999985814                   |
+| is\_city                  | 0.0                              |
+| distance\_from\_kampala    | 177.0                            |
+
+
+
+
+
+                            Lacor Hos                             
+
+|:-------------------------|:------------------------------------|
+| facility\_id              | 855                                 |
+| id\_within\_district       | 58                                  |
+| hsd                      | Gulu Municipality HSD               |
+| name                     | St.Maryâ€™s  Lacor General Hospital |
+| level                    | Hospital                            |
+| authority                | Catholic                            |
+| ownership                | PNFP                                |
+| nhpi\_code                | HFKTA9JB9                           |
+| hsdt\_code                | SCQ5QO2P9/PATPEB8U2/8001            |
+| source                   | mohdhi2017                          |
+| parish\_level\_fac\_id      | 8001                                |
+| parish\_nhpi              | PATPEB8U2                           |
+| subcounty\_nhpi           | SCQ5QO2P9                           |
+| subregion\_name           | Mid Northern                        |
+| district\_name            | Gulu District                       |
+| county\_name              | Gulu Municipal Council              |
+| subcounty\_name           | Bar-Dege Division                   |
+| subcounty\_full\_hsdt\_code | DTZHJOMJ9/CTER3HHH9/6004            |
+| vote\_code                | 508.0                               |
+| region\_name              | Northern Region                     |
+| population               | 135168.921875                       |
+| is\_hard\_to\_reach         | 1.0                                 |
+| pop\_per\_health\_fac       | 3379.22314453                       |
+| rural\_pop                | 135168.921875                       |
+| public\_hosp              | 0.0                                 |
+| is\_district              | 2.0                                 |
+| poverty\_pop              | 0.354000002146                      |
+| is\_city                  | 0.0                                 |
+| distance\_from\_kampala    | 670.0                               |
+
+
+
+
+
+                          Lacor Hospital                          
+
+|:-------------------------|:------------------------------------|
+| facility\_id              | 855                                 |
+| id\_within\_district       | 58                                  |
+| hsd                      | Gulu Municipality HSD               |
+| name                     | St.Maryâ€™s  Lacor General Hospital |
+| level                    | Hospital                            |
+| authority                | Catholic                            |
+| ownership                | PNFP                                |
+| nhpi\_code                | HFKTA9JB9                           |
+| hsdt\_code                | SCQ5QO2P9/PATPEB8U2/8001            |
+| source                   | mohdhi2017                          |
+| parish\_level\_fac\_id      | 8001                                |
+| parish\_nhpi              | PATPEB8U2                           |
+| subcounty\_nhpi           | SCQ5QO2P9                           |
+| subregion\_name           | Mid Northern                        |
+| district\_name            | Gulu District                       |
+| county\_name              | Gulu Municipal Council              |
+| subcounty\_name           | Bar-Dege Division                   |
+| subcounty\_full\_hsdt\_code | DTZHJOMJ9/CTER3HHH9/6004            |
+| vote\_code                | 508.0                               |
+| region\_name              | Northern Region                     |
+| population               | 135168.921875                       |
+| is\_hard\_to\_reach         | 1.0                                 |
+| pop\_per\_health\_fac       | 3379.22314453                       |
+| rural\_pop                | 135168.921875                       |
+| public\_hosp              | 0.0                                 |
+| is\_district              | 2.0                                 |
+| poverty\_pop              | 0.354000002146                      |
+| is\_city                  | 0.0                                 |
+| distance\_from\_kampala    | 670.0                               |
+
+
+
+
+
+                              MUST                               
+
+|:-------------------------|:-----------------------------------|
+| facility\_id              | 4422                               |
+| id\_within\_district       | 46                                 |
+| hsd                      | Mbarara Municipal Council  HSD     |
+| name                     | Mbarara Regional Referral Hospital |
+| level                    | Regional referral hospital         |
+| authority                | MOH                                |
+| ownership                | Govt                               |
+| nhpi\_code                | HF3Q38X36                          |
+| hsdt\_code                | SCHT628J0/PAUJY4NJ5/8002           |
+| source                   | mohdhi2017                         |
+| parish\_level\_fac\_id      | 8002                               |
+| parish\_nhpi              | PAUJY4NJ5                          |
+| subcounty\_nhpi           | SCHT628J0                          |
+| subregion\_name           | South Western                      |
+| district\_name            | Mbarara District                   |
+| county\_name              | Mbarara Municipal Council          |
+| subcounty\_name           | Kamukuzi Subcounty                 |
+| subcounty\_full\_hsdt\_code | DTLIEU625/CT2HX5CJ1/6003           |
+| vote\_code                | 537.0                              |
+| region\_name              | Western Region                     |
+| population               | 295999.996094                      |
+| is\_hard\_to\_reach         | 0.0                                |
+| pop\_per\_health\_fac       | 6040.81640625                      |
+| rural\_pop                | 295999.996094                      |
+| public\_hosp              | 0.0                                |
+| is\_district              | 2.0                                |
+| poverty\_pop              | 0.0759999975562                    |
+| is\_city                  | 0.0                                |
+| distance\_from\_kampala    | 532.0                              |
+
+
+
+
+
+                     Mbarara Reg. Ref. Hosp                      
+
+|:-------------------------|:-----------------------------------|
+| facility\_id              | 4422                               |
+| id\_within\_district       | 46                                 |
+| hsd                      | Mbarara Municipal Council  HSD     |
+| name                     | Mbarara Regional Referral Hospital |
+| level                    | Regional referral hospital         |
+| authority                | MOH                                |
+| ownership                | Govt                               |
+| nhpi\_code                | HF3Q38X36                          |
+| hsdt\_code                | SCHT628J0/PAUJY4NJ5/8002           |
+| source                   | mohdhi2017                         |
+| parish\_level\_fac\_id      | 8002                               |
+| parish\_nhpi              | PAUJY4NJ5                          |
+| subcounty\_nhpi           | SCHT628J0                          |
+| subregion\_name           | South Western                      |
+| district\_name            | Mbarara District                   |
+| county\_name              | Mbarara Municipal Council          |
+| subcounty\_name           | Kamukuzi Subcounty                 |
+| subcounty\_full\_hsdt\_code | DTLIEU625/CT2HX5CJ1/6003           |
+| vote\_code                | 537.0                              |
+| region\_name              | Western Region                     |
+| population               | 295999.996094                      |
+| is\_hard\_to\_reach         | 0.0                                |
+| pop\_per\_health\_fac       | 6040.81640625                      |
+| rural\_pop                | 295999.996094                      |
+| public\_hosp              | 0.0                                |
+| is\_district              | 2.0                                |
+| poverty\_pop              | 0.0759999975562                    |
+| is\_city                  | 0.0                                |
+| distance\_from\_kampala    | 532.0                              |
+
+
+
+
+
+                    Mengo Hospital                     
+
+|:-------------------------|:-------------------------|
+| facility\_id              | 2474                     |
+| id\_within\_district       | 881                      |
+| hsd                      | Rubaga Division HSD      |
+| name                     | Mengo  General Hospital  |
+| level                    | Hospital                 |
+| authority                | Protestant               |
+| ownership                | PNFP                     |
+| nhpi\_code                | HFZ2ZNPV1                |
+| hsdt\_code                | SC2K6HWN8/PAZ3HYRY7/8009 |
+| source                   | mohdhi2017               |
+| parish\_level\_fac\_id      | 8009                     |
+| parish\_nhpi              | PAZ3HYRY7                |
+| subcounty\_nhpi           | SC2K6HWN8                |
+| subregion\_name           | Kampala                  |
+| district\_name            | Kampala District         |
+| county\_name              | Kampala Capital City     |
+| subcounty\_name           | Rubaga Division          |
+| subcounty\_full\_hsdt\_code | DTUANA5C0/CT89FGSU5/6001 |
+| vote\_code                | 122.0                    |
+| region\_name              | Central Region           |
+| population               | 1528800.0                |
+| is\_hard\_to\_reach         | 0.0                      |
+| pop\_per\_health\_fac       | 1098.0                   |
+| rural\_pop                | 0.0                      |
+| public\_hosp              | 1.0                      |
+| is\_district              | 2.0                      |
+| poverty\_pop              | 0.037                    |
+| is\_city                  | 0.0                      |
+| distance\_from\_kampala    | 0.0                      |
+
+
+
+
+
+                        Mulago Hospital                         
+
+|:-------------------------|:----------------------------------|
+| facility\_id              | 2548                              |
+| id\_within\_district       | 955                               |
+| hsd                      | Kawempe Division HSD              |
+| name                     | Mulago National Referral Hospital |
+| level                    | National referral hospital        |
+| authority                | MOH                               |
+| ownership                | Govt                              |
+| nhpi\_code                | HFBJT4693                         |
+| hsdt\_code                | SCL952JG5/PANC5LYV1/8012          |
+| source                   | mohdhi2017                        |
+| parish\_level\_fac\_id      | 8012                              |
+| parish\_nhpi              | PANC5LYV1                         |
+| subcounty\_nhpi           | SCL952JG5                         |
+| subregion\_name           | Kampala                           |
+| district\_name            | Kampala District                  |
+| county\_name              | Kampala Capital City              |
+| subcounty\_name           | Kawempe Division                  |
+| subcounty\_full\_hsdt\_code | DTUANA5C0/CT89FGSU5/6004          |
+| vote\_code                | 122.0                             |
+| region\_name              | Central Region                    |
+| population               | 1528800.0                         |
+| is\_hard\_to\_reach         | 0.0                               |
+| pop\_per\_health\_fac       | 1098.0                            |
+| rural\_pop                | 0.0                               |
+| public\_hosp              | 1.0                               |
+| is\_district              | 2.0                               |
+| poverty\_pop              | 0.037                             |
+| is\_city                  | 0.0                               |
+| distance\_from\_kampala    | 0.0                               |
+
+
+
+
+
+                   Nakasero Hospital                    
+
+|:-------------------------|:--------------------------|
+| facility\_id              | 2584                      |
+| id\_within\_district       | 991                       |
+| hsd                      | Central Division HSD      |
+| name                     | Nakasero General Hospital |
+| level                    | Hospital                  |
+| authority                | Private                   |
+| ownership                | PFP                       |
+| nhpi\_code                | HF3APRY83                 |
+| hsdt\_code                | SCQM9DXK4/PAQB66Z77/8013  |
+| source                   | mohdhi2017                |
+| parish\_level\_fac\_id      | 8013                      |
+| parish\_nhpi              | PAQB66Z77                 |
+| subcounty\_nhpi           | SCQM9DXK4                 |
+| subregion\_name           | Kampala                   |
+| district\_name            | Kampala District          |
+| county\_name              | Kampala Capital City      |
+| subcounty\_name           | Kamapala Central Division |
+| subcounty\_full\_hsdt\_code | DTUANA5C0/CT89FGSU5/6005  |
+| vote\_code                | 122.0                     |
+| region\_name              | Central Region            |
+| population               | 1528800.0                 |
+| is\_hard\_to\_reach         | 0.0                       |
+| pop\_per\_health\_fac       | 1098.0                    |
+| rural\_pop                | 0.0                       |
+| public\_hosp              | 1.0                       |
+| is\_district              | 2.0                       |
+| poverty\_pop              | 0.037                     |
+| is\_city                  | 0.0                       |
+| distance\_from\_kampala    | 0.0                       |
+
+
+
+
+
+                          Nsambya Hospital                           
+
+|:-------------------------|:---------------------------------------|
+| facility\_id              | 2916                                   |
+| id\_within\_district       | 1323                                   |
+| hsd                      | Makindye Division HSD                  |
+| name                     | St. Francis   Nsambya General Hospital |
+| level                    | Hospital                               |
+| authority                | Protestant                             |
+| ownership                | PNFP                                   |
+| nhpi\_code                | HFYI7JWM8                              |
+| hsdt\_code                | SCXUR3FY9/PATF8GK34/8002               |
+| source                   | mohdhi2017                             |
+| parish\_level\_fac\_id      | 8002                                   |
+| parish\_nhpi              | PATF8GK34                              |
+| subcounty\_nhpi           | SCXUR3FY9                              |
+| subregion\_name           | Kampala                                |
+| district\_name            | Kampala District                       |
+| county\_name              | Kampala Capital City                   |
+| subcounty\_name           | Makindye Division                      |
+| subcounty\_full\_hsdt\_code | DTUANA5C0/CT89FGSU5/6003               |
+| vote\_code                | 122.0                                  |
+| region\_name              | Central Region                         |
+| population               | 1528800.0                              |
+| is\_hard\_to\_reach         | 0.0                                    |
+| pop\_per\_health\_fac       | 1098.0                                 |
+| rural\_pop                | 0.0                                    |
+| public\_hosp              | 1.0                                    |
+| is\_district              | 2.0                                    |
+| poverty\_pop              | 0.037                                  |
+| is\_city                  | 0.0                                    |
+| distance\_from\_kampala    | 0.0                                    |
+
+
+
+
+
+                     Uganda Heart Institute                     
+
+|:-------------------------|:----------------------------------|
+| facility\_id              | 2548                              |
+| id\_within\_district       | 955                               |
+| hsd                      | Kawempe Division HSD              |
+| name                     | Mulago National Referral Hospital |
+| level                    | National referral hospital        |
+| authority                | MOH                               |
+| ownership                | Govt                              |
+| nhpi\_code                | HFBJT4693                         |
+| hsdt\_code                | SCL952JG5/PANC5LYV1/8012          |
+| source                   | mohdhi2017                        |
+| parish\_level\_fac\_id      | 8012                              |
+| parish\_nhpi              | PANC5LYV1                         |
+| subcounty\_nhpi           | SCL952JG5                         |
+| subregion\_name           | Kampala                           |
+| district\_name            | Kampala District                  |
+| county\_name              | Kampala Capital City              |
+| subcounty\_name           | Kawempe Division                  |
+| subcounty\_full\_hsdt\_code | DTUANA5C0/CT89FGSU5/6004          |
+| vote\_code                | 122.0                             |
+| region\_name              | Central Region                    |
+| population               | 1528800.0                         |
+| is\_hard\_to\_reach         | 0.0                               |
+| pop\_per\_health\_fac       | 1098.0                            |
+| rural\_pop                | 0.0                               |
+| public\_hosp              | 1.0                               |
+| is\_district              | 2.0                               |
+| poverty\_pop              | 0.037                             |
+| is\_city                  | 0.0                               |
+| distance\_from\_kampala    | 0.0                               |
+
+
+
+
+    \end{Verbatim}
+
+    \hypertarget{physician-anesthestists---summary}{%
+\subsection{Physician anesthestists -
+summary}\label{physician-anesthestists---summary}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}29}]:} \PY{n}{num\PYZus{}physician\PYZus{}anesthesthetist} \PY{o}{=} \PY{n}{q}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{total}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{num}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{adf}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{speciality}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{p}{)}
+         
+         \PY{n}{num\PYZus{}phys\PYZus{}anes\PYZus{}holding\PYZus{}mmed} \PY{o}{=} \PY{n}{adf}\PY{p}{[}\PY{p}{(}\PY{n}{adf}\PY{o}{.}\PY{n}{degree\PYZus{}degree1}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{mmed}\PY{p}{)} \PY{o}{|} \PYZbs{}
+                                     \PY{n}{adf}\PY{o}{.}\PY{n}{degree\PYZus{}degree2}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{mmed}\PY{p}{)} \PY{o}{|} \PYZbs{}
+                                     \PY{n}{adf}\PY{o}{.}\PY{n}{degree\PYZus{}degree3}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{mmed}\PY{p}{)} \PY{o}{|} \PYZbs{}
+                                     \PY{n}{adf}\PY{o}{.}\PY{n}{degree\PYZus{}degree4}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{mmed}\PY{p}{)} \PY{o}{|} \PYZbs{}
+                                     \PY{n}{adf}\PY{o}{.}\PY{n}{degree\PYZus{}degree5}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{mmed}\PY{p}{)}\PY{p}{)}\PY{p}{]} \PYZbs{}
+                                     \PY{o}{.}\PY{n}{dummy}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{p}{)}
+             
+         \PY{n}{num\PYZus{}phys\PYZus{}anes\PYZus{}holding\PYZus{}med\PYZus{}degree} \PY{o}{=} \PY{n}{adf}\PY{p}{[}\PY{p}{(}\PY{n}{adf}\PY{o}{.}\PY{n}{degree\PYZus{}degree1}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{med\PYZus{}degree}\PY{p}{)} \PY{o}{|} \PYZbs{}
+                                     \PY{n}{adf}\PY{o}{.}\PY{n}{degree\PYZus{}degree2}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{med\PYZus{}degree}\PY{p}{)} \PY{o}{|} \PYZbs{}
+                                     \PY{n}{adf}\PY{o}{.}\PY{n}{degree\PYZus{}degree3}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{med\PYZus{}degree}\PY{p}{)} \PY{o}{|} \PYZbs{}
+                                     \PY{n}{adf}\PY{o}{.}\PY{n}{degree\PYZus{}degree4}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{med\PYZus{}degree}\PY{p}{)} \PY{o}{|} \PYZbs{}
+                                     \PY{n}{adf}\PY{o}{.}\PY{n}{degree\PYZus{}degree5}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{med\PYZus{}degree}\PY{p}{)}\PY{p}{)}\PY{p}{]} \PYZbs{}
+                                     \PY{o}{.}\PY{n}{dummy}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{p}{)}
+             
+         
+         \PY{c+c1}{\PYZsh{} convert to floats to avoid floor divide }
+         \PY{n}{prop\PYZus{}phys\PYZus{}anes\PYZus{}w\PYZus{}mmed} \PY{o}{=} \PY{n+nb}{float}\PY{p}{(}\PY{n}{num\PYZus{}phys\PYZus{}anes\PYZus{}holding\PYZus{}mmed}\PY{p}{)} \PY{o}{/} \PY{n+nb}{float}\PY{p}{(}\PY{n}{num\PYZus{}physician\PYZus{}anesthesthetist}\PY{p}{)}
+         
+         \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{num\PYZus{}phys\PYZus{}anes\PYZus{}holding\PYZus{} MBChB or MBBS: \PYZob{}\PYZcb{}}\PY{l+s+s2}{\PYZdq{}}\PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n}{num\PYZus{}phys\PYZus{}anes\PYZus{}holding\PYZus{}med\PYZus{}degree}\PY{p}{)}
+         \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{num\PYZus{}phys\PYZus{}anes\PYZus{}holding\PYZus{}mmed: \PYZob{}\PYZcb{}}\PY{l+s+s2}{\PYZdq{}}\PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n}{num\PYZus{}phys\PYZus{}anes\PYZus{}holding\PYZus{}mmed}\PY{p}{)}
+         
+         \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{num\PYZus{}physician\PYZus{}anesthesthetist: \PYZob{}\PYZcb{}}\PY{l+s+s2}{\PYZdq{}}\PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n}{num\PYZus{}physician\PYZus{}anesthesthetist}\PY{p}{)}
+         \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{prop\PYZus{}phys\PYZus{}anes\PYZus{}w\PYZus{}mmed: \PYZob{}:.0}\PY{l+s+s2}{\PYZpc{}}\PY{l+s+s2}{\PYZcb{}}\PY{l+s+s2}{\PYZdq{}}\PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n}{prop\PYZus{}phys\PYZus{}anes\PYZus{}w\PYZus{}mmed}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+num\_phys\_anes\_holding\_ MBChB or MBBS: 47
+num\_phys\_anes\_holding\_mmed: 43
+num\_physician\_anesthesthetist: 47
+prop\_phys\_anes\_w\_mmed: 91\%
+
+    \end{Verbatim}
+
+    \hypertarget{number-of-physicians---methods}{%
+\subsubsection{Number of physicians -
+methods}\label{number-of-physicians---methods}}
+
+Three files were used: the main registry, the licensing database, and
+the specialist database. Data was cleaned by removing whitespace and
+formatting oddities as documented in the supplement.
+
+\hypertarget{number-of-physicians---results}{%
+\subsubsection{Number of physicians -
+results}\label{number-of-physicians---results}}
+
+On the main registry, there were
+\{\{number\_of\_physicians\_per\_registry\}\} physicians listed,
+\{\{number\_of\_physicians\_employed\_per\_registry\}\} of whom listed a
+place of employment. There were
+\{\{unregistered\_physicians\_per\_registry\}\} with no registration
+number. The licensing database revealed that
+\{\{number\_of\_lic\_physicians\_per\_registry\}\} were licensed. The
+remaining \{\{number\_of\_physicians\_per\_registry -
+number\_of\_lic\_physicians\_per\_registry\}\} who were missing from the
+license file are either (1) no longer in practice or (2) lapsed in their
+annual licensing.
+
+According to the registration documents, there are
+\{\{num\_physician\_anesthesthetist\}\} physician anesthesthetists,
+\{\{``\{:.0\%\}''.format(prop\_phys\_anes\_w\_mmed)\}\} of which
+(\{\{num\_phys\_anes\_holding\_mmed\}\}) hold an MMed.
+
+    The remaining is code snippets for later.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}30}]:} \PY{c+c1}{\PYZsh{} def cstr(s, color=\PYZsq{}black\PYZsq{}):}
+         \PY{c+c1}{\PYZsh{}     return \PYZdq{}\PYZlt{}text style=color:\PYZob{}\PYZcb{}\PYZgt{}\PYZob{}\PYZcb{}\PYZlt{}/text\PYZgt{}\PYZdq{}.format(color, s)}
+         
+         \PY{c+c1}{\PYZsh{} import pprint}
+         \PY{c+c1}{\PYZsh{} pp = pprint.PrettyPrinter(depth=1)}
+         \PY{c+c1}{\PYZsh{} pp.pprint(list(df.columns.astype(str)))}
+         
+         \PY{c+c1}{\PYZsh{} They added columns to differentiate specialties. These need to be removed. Let\PYZsq{}s see if they have any other info}
+         \PY{c+c1}{\PYZsh{} df[df.surname.isnull()]}
+         
+         
+         \PY{c+c1}{\PYZsh{} f, axarr = plt.subplots(1,2, figsize=(16, 5)) \PYZsh{}sharex=True, sharey=True)}
+         
+         \PY{c+c1}{\PYZsh{} r = sns.countplot(x=\PYZdq{}employer\PYZdq{}, data=df[df.employer.isin(top\PYZus{}15)], palette=\PYZdq{}Greens\PYZus{}d\PYZdq{}, order=top\PYZus{}15)}
+\end{Verbatim}
+
+
 
     % Add a bibliography block to the postdoc
     
