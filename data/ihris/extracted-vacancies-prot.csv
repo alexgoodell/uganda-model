@@ -1,0 +1,1865 @@
+,district_name,facility_name,title,salary_grade,num_positions,filled_positions,vacancies,percent_filled
+0,AMOLATAR,Protestant General Hospital,Senior Nursing Officer,,5,0,-5,NA
+1,AMOLATAR,Protestant General Hospital,Principal Nursing Officer,,1,0,-1,NA
+2,AMOLATAR,Protestant General Hospital,Physiotherapist,,1,0,-1,NA
+3,AMOLATAR,Protestant General Hospital,Senior Clinical Officer,,1,1,0,NA
+4,AMOLATAR,Protestant General Hospital,Enrolled Psychiatric Nurse,,2,0,-2,NA
+5,AMOLATAR,Protestant General Hospital,Occupational Therapist,,1,0,-1,NA
+6,AMOLATAR,Protestant General Hospital,Nursing Officer (Nursing),,17,0,-17,NA
+7,AMOLATAR,Protestant General Hospital,Senior Medical Officer,,1,0,-1,NA
+8,AMOLATAR,Protestant General Hospital,Enrolled Nurse,,46,1,-45,NA
+9,AMOLATAR,Protestant General Hospital,Clinical Officer,,5,2,-3,NA
+10,AMOLATAR,Protestant General Hospital,Radiographer,,2,0,-2,NA
+11,AMOLATAR,Protestant General Hospital,Ophthalmic Clinical Officer,,1,0,-1,NA
+12,AMOLATAR,Protestant General Hospital,Anaesthetic Assistant,,2,0,-2,NA
+13,AMOLATAR,Protestant General Hospital,Laboratory Assistant,,1,1,0,NA
+14,AMOLATAR,Protestant General Hospital,Theatre Assistant,,0,0,0,NA
+15,AMOLATAR,Protestant General Hospital,Health Inspector,,1,0,-1,NA
+16,AMOLATAR,Protestant General Hospital,Health Educator,,1,0,-1,NA
+17,AMOLATAR,Protestant General Hospital,Anaesthetic Officer,,3,0,-3,NA
+18,AMOLATAR,Protestant General Hospital,Medical Officer Special Grade (Obs Gyne),,1,0,-1,NA
+19,AMOLATAR,Protestant General Hospital,Enrolled Midwife,,25,0,-25,NA
+20,AMOLATAR,Protestant General Hospital,Nutritionist,,1,0,-1,NA
+21,AMOLATAR,Protestant General Hospital,Orthopedic Officer,,2,0,-2,NA
+22,AMOLATAR,Protestant General Hospital,Medical Officer Special Grade (Community),,1,0,-1,NA
+23,AMOLATAR,Protestant General Hospital,Senior Laboratory Technologist,,1,0,-1,NA
+24,AMOLATAR,Protestant General Hospital,Laboratory Technician,,2,1,-1,NA
+25,AMOLATAR,Protestant General Hospital,Principal Medical Officer,,1,0,-1,NA
+26,AMOLATAR,Protestant General Hospital,Medical Officer Special Grade (Internal Medicine),,1,0,-1,NA
+27,AMOLATAR,Protestant General Hospital,Medical Officer Special Grade (Surgery),,1,0,-1,NA
+28,AMOLATAR,Protestant General Hospital,Medical Officer Special Grade (Paediatrics),,1,0,-1,NA
+29,AMOLATAR,Protestant General Hospital,Public Health Nurse,,1,0,-1,NA
+30,AMOLATAR,Protestant General Hospital,Psychiatric Clinical Officer,,1,0,-1,NA
+31,AMOLATAR,Protestant General Hospital,Nursing Officer (Psychiatry),,3,0,-3,NA
+32,AMOLATAR,Protestant General Hospital,Nursing Officer (Midwifery),,1,0,-1,NA
+33,AMOLATAR,Protestant General Hospital,Assistant Entomological Officer (Med),,1,0,-1,NA
+34,AMOLATAR,Protestant General Hospital,Medical Officer,,4,2,-2,NA
+35,AMOLATAR,Protestant General Hospital,Laboratory Technologist,,1,0,-1,NA
+36,AMOLATAR,Protestant General Hospital,Principal Medical Officer,U2(SC),1,0,-1,NA
+37,AMOLATAR,Protestant General Hospital,Medical Officer Special Grade - Internal Medicine,U2(SC),1,0,-1,NA
+38,AMOLATAR,Protestant General Hospital,Medical Officer Special Grade - General Surgery,U2(SC),1,0,-1,NA
+39,AMOLATAR,Protestant General Hospital,Medical Officer Special Grade - Obstetrics & Gynaecology,U2(SC),1,0,-1,NA
+40,AMOLATAR,Protestant General Hospital,Medical Officer Special Grade - Paediatrics,U2(SC),1,0,-1,NA
+41,AMOLATAR,Protestant General Hospital,Medical Officer Special Grade - Public Health,U2(SC),1,0,-1,NA
+42,AMOLATAR,Protestant General Hospital,Principal Nursing Officer,U2(SC),1,0,-1,NA
+43,AMOLATAR,Protestant General Hospital,Senior Medical Officer,U3(SC),1,0,-1,NA
+44,AMOLATAR,Protestant General Hospital,Senior Medical Clinical officer,U3(SC),1,0,-1,NA
+45,AMOLATAR,Protestant General Hospital,Medical Officer,U4(SC),4,0,-4,NA
+46,AMOLATAR,Protestant General Hospital,Senior Assistant Nursing Officer,U4(SC),5,0,-5,NA
+47,AMOLATAR,Protestant General Hospital,Public/Community Health Nurse,U4(SC),1,0,-1,NA
+48,AMOLATAR,Protestant General Hospital,Ophthalmic clinical Officer,U4(SC),1,0,-1,NA
+49,AMOLATAR,Protestant General Hospital,Medical Clinical officer,U4(SC),5,0,-5,NA
+50,AMOLATAR,Protestant General Hospital,Orthopaedic Officer,U4(SC),2,0,-2,NA
+51,AMOLATAR,Protestant General Hospital,Senior Medical Laboratory Technologist,U4(SC),1,0,-1,NA
+52,AMOLATAR,Protestant General Hospital,Health Educator,U4(SC),1,0,-1,NA
+53,AMOLATAR,Protestant General Hospital,Medical Social Worker,U4L,1,0,-1,NA
+54,AMOLATAR,Protestant General Hospital,Assistant Nursing Officer,U5(SC),17,0,-17,NA
+55,AMOLATAR,Protestant General Hospital,Assistant Nursing Officer - Psychiatry,U5(SC),1,0,-1,NA
+56,AMOLATAR,Protestant General Hospital,Assistant Nursing Officer (Midwifery),U5(SC),3,0,-3,NA
+57,AMOLATAR,Protestant General Hospital,Psychiatric Clinical Officer,U5(SC),1,0,-1,NA
+58,AMOLATAR,Protestant General Hospital,Anaesthetic officer,U5(SC),3,0,-3,NA
+59,AMOLATAR,Protestant General Hospital,Dispenser,U5(SC),2,0,-2,NA
+60,AMOLATAR,Protestant General Hospital,Physiotherapist,U5(SC),1,0,-1,NA
+61,AMOLATAR,Protestant General Hospital,Occupational therapist,U5(SC),1,0,-1,NA
+62,AMOLATAR,Protestant General Hospital,Radiographer,U5(SC),2,0,-2,NA
+63,AMOLATAR,Protestant General Hospital,Medical Laboratory Technologist,U5(SC),1,0,-1,NA
+64,AMOLATAR,Protestant General Hospital,Medical Laboratory Technician,U5(SC),2,0,-2,NA
+65,AMOLATAR,Protestant General Hospital,Assistant Health Educator,U5(SC),1,0,-1,NA
+66,AMOLATAR,Protestant General Hospital,Health Inspector,U5(SC),1,0,-1,NA
+67,AMOLATAR,Protestant General Hospital,Medical Laboratory Assistant,U7U,1,0,-1,NA
+68,AMOLATAR,Protestant General Hospital,Enrolled Nurse,U7U,46,0,-46,NA
+69,AMOLATAR,Protestant General Hospital,Enrolled Psychiatric Nurse,U7U,2,0,-2,NA
+70,AMOLATAR,Protestant General Hospital,Anaesthetic Attendant,U8U,2,0,-2,NA
+71,AMOLATAR,Protestant General Hospital,Mortuary Attendant,U8L,2,0,-2,NA
+72,AMOLATAR,Protestant General Hospital,Darkroom Attendant,U8L,1,0,-1,NA
+73,AMUDAT,Protestant General Hospital,Senior Nursing Officer,,5,1,-4,NA
+74,AMUDAT,Protestant General Hospital,Principal Nursing Officer,,1,0,-1,NA
+75,AMUDAT,Protestant General Hospital,Physiotherapist,,1,0,-1,NA
+76,AMUDAT,Protestant General Hospital,Senior Clinical Officer,,1,1,0,NA
+77,AMUDAT,Protestant General Hospital,Enrolled Psychiatric Nurse,,2,0,-2,NA
+78,AMUDAT,Protestant General Hospital,Occupational Therapist,,1,0,-1,NA
+79,AMUDAT,Protestant General Hospital,Nursing Officer (Nursing),,17,15,-2,NA
+80,AMUDAT,Protestant General Hospital,Senior Medical Officer,,1,2,1,NA
+81,AMUDAT,Protestant General Hospital,Enrolled Nurse,,46,5,-41,NA
+82,AMUDAT,Protestant General Hospital,Clinical Officer,,5,5,0,NA
+83,AMUDAT,Protestant General Hospital,Radiographer,,2,0,-2,NA
+84,AMUDAT,Protestant General Hospital,Ophthalmic Clinical Officer,,1,0,-1,NA
+85,AMUDAT,Protestant General Hospital,Anaesthetic Assistant,,2,0,-2,NA
+86,AMUDAT,Protestant General Hospital,Laboratory Assistant,,1,5,4,NA
+87,AMUDAT,Protestant General Hospital,Theatre Assistant,,0,0,0,NA
+88,AMUDAT,Protestant General Hospital,Health Inspector,,1,1,0,NA
+89,AMUDAT,Protestant General Hospital,Health Educator,,1,1,0,NA
+90,AMUDAT,Protestant General Hospital,Anaesthetic Officer,,3,0,-3,NA
+91,AMUDAT,Protestant General Hospital,Medical Officer Special Grade (Obs Gyne),,1,0,-1,NA
+92,AMUDAT,Protestant General Hospital,Enrolled Midwife,,25,3,-22,NA
+93,AMUDAT,Protestant General Hospital,Nutritionist,,1,0,-1,NA
+94,AMUDAT,Protestant General Hospital,Orthopedic Officer,,2,0,-2,NA
+95,AMUDAT,Protestant General Hospital,Medical Officer Special Grade (Community),,1,0,-1,NA
+96,AMUDAT,Protestant General Hospital,Senior Laboratory Technologist,,1,0,-1,NA
+97,AMUDAT,Protestant General Hospital,Laboratory Technician,,2,2,0,NA
+98,AMUDAT,Protestant General Hospital,Principal Medical Officer,,1,0,-1,NA
+99,AMUDAT,Protestant General Hospital,Medical Officer Special Grade (Internal Medicine),,1,0,-1,NA
+100,AMUDAT,Protestant General Hospital,Medical Officer Special Grade (Surgery),,1,0,-1,NA
+101,AMUDAT,Protestant General Hospital,Medical Officer Special Grade (Paediatrics),,1,0,-1,NA
+102,AMUDAT,Protestant General Hospital,Public Health Nurse,,1,0,-1,NA
+103,AMUDAT,Protestant General Hospital,Psychiatric Clinical Officer,,1,0,-1,NA
+104,AMUDAT,Protestant General Hospital,Nursing Officer (Psychiatry),,3,0,-3,NA
+105,AMUDAT,Protestant General Hospital,Nursing Officer (Midwifery),,1,0,-1,NA
+106,AMUDAT,Protestant General Hospital,Assistant Entomological Officer (Med),,1,0,-1,NA
+107,AMUDAT,Protestant General Hospital,Medical Officer,,4,5,1,NA
+108,AMUDAT,Protestant General Hospital,Laboratory Technologist,,1,0,-1,NA
+109,AMUDAT,Protestant General Hospital,Principal Medical Officer,U2(SC),1,0,-1,NA
+110,AMUDAT,Protestant General Hospital,Medical Officer Special Grade - Internal Medicine,U2(SC),1,0,-1,NA
+111,AMUDAT,Protestant General Hospital,Medical Officer Special Grade - General Surgery,U2(SC),1,0,-1,NA
+112,AMUDAT,Protestant General Hospital,Medical Officer Special Grade - Obstetrics & Gynaecology,U2(SC),1,0,-1,NA
+113,AMUDAT,Protestant General Hospital,Medical Officer Special Grade - Paediatrics,U2(SC),1,0,-1,NA
+114,AMUDAT,Protestant General Hospital,Medical Officer Special Grade - Public Health,U2(SC),1,0,-1,NA
+115,AMUDAT,Protestant General Hospital,Principal Nursing Officer,U2(SC),1,0,-1,NA
+116,AMUDAT,Protestant General Hospital,Senior Medical Officer,U3(SC),1,0,-1,NA
+117,AMUDAT,Protestant General Hospital,Senior Medical Clinical officer,U3(SC),1,0,-1,NA
+118,AMUDAT,Protestant General Hospital,Medical Officer,U4(SC),4,0,-4,NA
+119,AMUDAT,Protestant General Hospital,Senior Assistant Nursing Officer,U4(SC),5,0,-5,NA
+120,AMUDAT,Protestant General Hospital,Public/Community Health Nurse,U4(SC),1,0,-1,NA
+121,AMUDAT,Protestant General Hospital,Ophthalmic clinical Officer,U4(SC),1,0,-1,NA
+122,AMUDAT,Protestant General Hospital,Medical Clinical officer,U4(SC),5,0,-5,NA
+123,AMUDAT,Protestant General Hospital,Orthopaedic Officer,U4(SC),2,0,-2,NA
+124,AMUDAT,Protestant General Hospital,Senior Medical Laboratory Technologist,U4(SC),1,0,-1,NA
+125,AMUDAT,Protestant General Hospital,Health Educator,U4(SC),1,0,-1,NA
+126,AMUDAT,Protestant General Hospital,Medical Social Worker,U4L,1,0,-1,NA
+127,AMUDAT,Protestant General Hospital,Assistant Nursing Officer,U5(SC),17,0,-17,NA
+128,AMUDAT,Protestant General Hospital,Assistant Nursing Officer - Psychiatry,U5(SC),1,0,-1,NA
+129,AMUDAT,Protestant General Hospital,Assistant Nursing Officer (Midwifery),U5(SC),3,0,-3,NA
+130,AMUDAT,Protestant General Hospital,Psychiatric Clinical Officer,U5(SC),1,0,-1,NA
+131,AMUDAT,Protestant General Hospital,Anaesthetic officer,U5(SC),3,0,-3,NA
+132,AMUDAT,Protestant General Hospital,Dispenser,U5(SC),2,0,-2,NA
+133,AMUDAT,Protestant General Hospital,Physiotherapist,U5(SC),1,0,-1,NA
+134,AMUDAT,Protestant General Hospital,Occupational therapist,U5(SC),1,0,-1,NA
+135,AMUDAT,Protestant General Hospital,Radiographer,U5(SC),2,0,-2,NA
+136,AMUDAT,Protestant General Hospital,Medical Laboratory Technologist,U5(SC),1,0,-1,NA
+137,AMUDAT,Protestant General Hospital,Medical Laboratory Technician,U5(SC),2,0,-2,NA
+138,AMUDAT,Protestant General Hospital,Assistant Health Educator,U5(SC),1,0,-1,NA
+139,AMUDAT,Protestant General Hospital,Health Inspector,U5(SC),1,0,-1,NA
+140,AMUDAT,Protestant General Hospital,Medical Laboratory Assistant,U7U,1,0,-1,NA
+141,AMUDAT,Protestant General Hospital,Enrolled Nurse,U7U,46,0,-46,NA
+142,AMUDAT,Protestant General Hospital,Enrolled Psychiatric Nurse,U7U,2,0,-2,NA
+143,AMUDAT,Protestant General Hospital,Anaesthetic Attendant,U8U,2,0,-2,NA
+144,AMUDAT,Protestant General Hospital,Mortuary Attendant,U8L,2,0,-2,NA
+145,AMUDAT,Protestant General Hospital,Darkroom Attendant,U8L,1,0,-1,NA
+146,ARUA,Protestant General Hospital,Senior Nursing Officer,,5,1,-4,NA
+147,ARUA,Protestant General Hospital,Principal Nursing Officer,,1,0,-1,NA
+148,ARUA,Protestant General Hospital,Physiotherapist,,1,0,-1,NA
+149,ARUA,Protestant General Hospital,Senior Clinical Officer,,1,1,0,NA
+150,ARUA,Protestant General Hospital,Enrolled Psychiatric Nurse,,2,0,-2,NA
+151,ARUA,Protestant General Hospital,Occupational Therapist,,1,0,-1,NA
+152,ARUA,Protestant General Hospital,Nursing Officer (Nursing),,17,2,-15,NA
+153,ARUA,Protestant General Hospital,Senior Medical Officer,,1,0,-1,NA
+154,ARUA,Protestant General Hospital,Enrolled Nurse,,46,5,-41,NA
+155,ARUA,Protestant General Hospital,Clinical Officer,,5,5,0,NA
+156,ARUA,Protestant General Hospital,Radiographer,,2,1,-1,NA
+157,ARUA,Protestant General Hospital,Ophthalmic Clinical Officer,,1,0,-1,NA
+158,ARUA,Protestant General Hospital,Anaesthetic Assistant,,2,1,-1,NA
+159,ARUA,Protestant General Hospital,Laboratory Assistant,,1,3,2,NA
+160,ARUA,Protestant General Hospital,Theatre Assistant,,0,0,0,NA
+161,ARUA,Protestant General Hospital,Health Inspector,,1,0,-1,NA
+162,ARUA,Protestant General Hospital,Health Educator,,1,0,-1,NA
+163,ARUA,Protestant General Hospital,Anaesthetic Officer,,3,1,-2,NA
+164,ARUA,Protestant General Hospital,Medical Officer Special Grade (Obs Gyne),,1,0,-1,NA
+165,ARUA,Protestant General Hospital,Enrolled Midwife,,25,2,-23,NA
+166,ARUA,Protestant General Hospital,Nutritionist,,1,0,-1,NA
+167,ARUA,Protestant General Hospital,Orthopedic Officer,,2,0,-2,NA
+168,ARUA,Protestant General Hospital,Medical Officer Special Grade (Community),,1,0,-1,NA
+169,ARUA,Protestant General Hospital,Senior Laboratory Technologist,,1,0,-1,NA
+170,ARUA,Protestant General Hospital,Laboratory Technician,,2,2,0,NA
+171,ARUA,Protestant General Hospital,Principal Medical Officer,,1,0,-1,NA
+172,ARUA,Protestant General Hospital,Medical Officer Special Grade (Internal Medicine),,1,0,-1,NA
+173,ARUA,Protestant General Hospital,Medical Officer Special Grade (Surgery),,1,0,-1,NA
+174,ARUA,Protestant General Hospital,Medical Officer Special Grade (Paediatrics),,1,0,-1,NA
+175,ARUA,Protestant General Hospital,Public Health Nurse,,1,0,-1,NA
+176,ARUA,Protestant General Hospital,Psychiatric Clinical Officer,,1,0,-1,NA
+177,ARUA,Protestant General Hospital,Nursing Officer (Psychiatry),,3,0,-3,NA
+178,ARUA,Protestant General Hospital,Nursing Officer (Midwifery),,1,0,-1,NA
+179,ARUA,Protestant General Hospital,Assistant Entomological Officer (Med),,1,0,-1,NA
+180,ARUA,Protestant General Hospital,Medical Officer,,4,2,-2,NA
+181,ARUA,Protestant General Hospital,Laboratory Technologist,,1,0,-1,NA
+182,ARUA,Protestant General Hospital,Principal Medical Officer,U2(SC),1,0,-1,NA
+183,ARUA,Protestant General Hospital,Medical Officer Special Grade - Internal Medicine,U2(SC),1,0,-1,NA
+184,ARUA,Protestant General Hospital,Medical Officer Special Grade - General Surgery,U2(SC),1,0,-1,NA
+185,ARUA,Protestant General Hospital,Medical Officer Special Grade - Obstetrics & Gynaecology,U2(SC),1,0,-1,NA
+186,ARUA,Protestant General Hospital,Medical Officer Special Grade - Paediatrics,U2(SC),1,0,-1,NA
+187,ARUA,Protestant General Hospital,Medical Officer Special Grade - Public Health,U2(SC),1,0,-1,NA
+188,ARUA,Protestant General Hospital,Principal Nursing Officer,U2(SC),1,0,-1,NA
+189,ARUA,Protestant General Hospital,Senior Medical Officer,U3(SC),1,0,-1,NA
+190,ARUA,Protestant General Hospital,Senior Medical Clinical officer,U3(SC),1,0,-1,NA
+191,ARUA,Protestant General Hospital,Medical Officer,U4(SC),4,0,-4,NA
+192,ARUA,Protestant General Hospital,Senior Assistant Nursing Officer,U4(SC),5,0,-5,NA
+193,ARUA,Protestant General Hospital,Public/Community Health Nurse,U4(SC),1,0,-1,NA
+194,ARUA,Protestant General Hospital,Ophthalmic clinical Officer,U4(SC),1,0,-1,NA
+195,ARUA,Protestant General Hospital,Medical Clinical officer,U4(SC),5,0,-5,NA
+196,ARUA,Protestant General Hospital,Orthopaedic Officer,U4(SC),2,0,-2,NA
+197,ARUA,Protestant General Hospital,Senior Medical Laboratory Technologist,U4(SC),1,0,-1,NA
+198,ARUA,Protestant General Hospital,Health Educator,U4(SC),1,0,-1,NA
+199,ARUA,Protestant General Hospital,Medical Social Worker,U4L,1,0,-1,NA
+200,ARUA,Protestant General Hospital,Assistant Nursing Officer,U5(SC),17,0,-17,NA
+201,ARUA,Protestant General Hospital,Assistant Nursing Officer - Psychiatry,U5(SC),1,0,-1,NA
+202,ARUA,Protestant General Hospital,Assistant Nursing Officer (Midwifery),U5(SC),3,0,-3,NA
+203,ARUA,Protestant General Hospital,Psychiatric Clinical Officer,U5(SC),1,0,-1,NA
+204,ARUA,Protestant General Hospital,Anaesthetic officer,U5(SC),3,0,-3,NA
+205,ARUA,Protestant General Hospital,Dispenser,U5(SC),2,0,-2,NA
+206,ARUA,Protestant General Hospital,Physiotherapist,U5(SC),1,0,-1,NA
+207,ARUA,Protestant General Hospital,Occupational therapist,U5(SC),1,0,-1,NA
+208,ARUA,Protestant General Hospital,Radiographer,U5(SC),2,0,-2,NA
+209,ARUA,Protestant General Hospital,Medical Laboratory Technologist,U5(SC),1,0,-1,NA
+210,ARUA,Protestant General Hospital,Medical Laboratory Technician,U5(SC),2,0,-2,NA
+211,ARUA,Protestant General Hospital,Assistant Health Educator,U5(SC),1,0,-1,NA
+212,ARUA,Protestant General Hospital,Health Inspector,U5(SC),1,0,-1,NA
+213,ARUA,Protestant General Hospital,Medical Laboratory Assistant,U7U,1,0,-1,NA
+214,ARUA,Protestant General Hospital,Enrolled Nurse,U7U,46,0,-46,NA
+215,ARUA,Protestant General Hospital,Enrolled Psychiatric Nurse,U7U,2,0,-2,NA
+216,ARUA,Protestant General Hospital,Anaesthetic Attendant,U8U,2,0,-2,NA
+217,ARUA,Protestant General Hospital,Mortuary Attendant,U8L,2,0,-2,NA
+218,ARUA,Protestant General Hospital,Darkroom Attendant,U8L,1,0,-1,NA
+219,ARUA,Protestant Health Centre II,Enrolled Nurse,U7U,1,0,-1,NA
+220,ARUA,Protestant Health Centre II,Health Assistant,U7U,1,0,-1,NA
+221,ARUA,Protestant Health Centre III,Senior Clinical Officer,,2,0,-2,NA
+222,ARUA,Protestant Health Centre III,Nursing Officer (Nursing),,2,0,-2,NA
+223,ARUA,Protestant Health Centre III,Enrolled Nurse,,6,1,-5,NA
+224,ARUA,Protestant Health Centre III,Clinical Officer,,2,0,-2,NA
+225,ARUA,Protestant Health Centre III,Laboratory Assistant,,2,1,-1,NA
+226,ARUA,Protestant Health Centre III,Enrolled Midwife,,4,1,-3,NA
+227,ARUA,Protestant Health Centre III,Laboratory Technician,,2,0,-2,NA
+228,ARUA,Protestant Health Centre III,Senior Medical Clinical officer,U3(SC),2,0,-2,NA
+229,ARUA,Protestant Health Centre III,Assistant Nursing Officer,U5(SC),2,0,-2,NA
+230,ARUA,Protestant Health Centre III,Clinical officer,U5(SC),2,0,-2,NA
+231,ARUA,Protestant Health Centre III,Medical Laboratory Technician,U5(SC),2,0,-2,NA
+232,ARUA,Protestant Health Centre III,Medical Laboratory Assistant,U7U,2,0,-2,NA
+233,ARUA,Protestant Health Centre III,Enrolled Nurse,U7U,6,0,-6,NA
+234,ARUA,Protestant Health Centre III,Health Information Assistant,U7U,2,0,-2,NA
+235,ARUA,Protestant Health Centre III,Health Assistant,U7U,2,0,-2,NA
+236,BUSHENYI,Protestant General Hospital,Senior Nursing Officer,,10,0,-10,NA
+237,BUSHENYI,Protestant General Hospital,Principal Nursing Officer,,2,1,-1,NA
+238,BUSHENYI,Protestant General Hospital,Physiotherapist,,2,0,-2,NA
+239,BUSHENYI,Protestant General Hospital,Senior Clinical Officer,,2,2,0,NA
+240,BUSHENYI,Protestant General Hospital,Enrolled Psychiatric Nurse,,4,0,-4,NA
+241,BUSHENYI,Protestant General Hospital,Occupational Therapist,,2,0,-2,NA
+242,BUSHENYI,Protestant General Hospital,Nursing Officer (Nursing),,34,2,-32,NA
+243,BUSHENYI,Protestant General Hospital,Senior Medical Officer,,2,0,-2,NA
+244,BUSHENYI,Protestant General Hospital,Enrolled Nurse,,92,6,-86,NA
+245,BUSHENYI,Protestant General Hospital,Clinical Officer,,10,8,-2,NA
+246,BUSHENYI,Protestant General Hospital,Radiographer,,4,1,-3,NA
+247,BUSHENYI,Protestant General Hospital,Ophthalmic Clinical Officer,,2,0,-2,NA
+248,BUSHENYI,Protestant General Hospital,Anaesthetic Assistant,,4,1,-3,NA
+249,BUSHENYI,Protestant General Hospital,Laboratory Assistant,,2,10,8,NA
+250,BUSHENYI,Protestant General Hospital,Theatre Assistant,,0,0,0,NA
+251,BUSHENYI,Protestant General Hospital,Health Inspector,,2,0,-2,NA
+252,BUSHENYI,Protestant General Hospital,Health Educator,,2,0,-2,NA
+253,BUSHENYI,Protestant General Hospital,Anaesthetic Officer,,6,0,-6,NA
+254,BUSHENYI,Protestant General Hospital,Medical Officer Special Grade (Obs Gyne),,2,0,-2,NA
+255,BUSHENYI,Protestant General Hospital,Enrolled Midwife,,50,17,-33,NA
+256,BUSHENYI,Protestant General Hospital,Nutritionist,,2,1,-1,NA
+257,BUSHENYI,Protestant General Hospital,Orthopedic Officer,,4,0,-4,NA
+258,BUSHENYI,Protestant General Hospital,Medical Officer Special Grade (Community),,2,0,-2,NA
+259,BUSHENYI,Protestant General Hospital,Senior Laboratory Technologist,,2,0,-2,NA
+260,BUSHENYI,Protestant General Hospital,Laboratory Technician,,4,2,-2,NA
+261,BUSHENYI,Protestant General Hospital,Principal Medical Officer,,2,0,-2,NA
+262,BUSHENYI,Protestant General Hospital,Medical Officer Special Grade (Internal Medicine),,2,0,-2,NA
+263,BUSHENYI,Protestant General Hospital,Medical Officer Special Grade (Surgery),,2,0,-2,NA
+264,BUSHENYI,Protestant General Hospital,Medical Officer Special Grade (Paediatrics),,2,0,-2,NA
+265,BUSHENYI,Protestant General Hospital,Public Health Nurse,,2,0,-2,NA
+266,BUSHENYI,Protestant General Hospital,Psychiatric Clinical Officer,,2,0,-2,NA
+267,BUSHENYI,Protestant General Hospital,Nursing Officer (Psychiatry),,6,0,-6,NA
+268,BUSHENYI,Protestant General Hospital,Nursing Officer (Midwifery),,2,0,-2,NA
+269,BUSHENYI,Protestant General Hospital,Assistant Entomological Officer (Med),,2,0,-2,NA
+270,BUSHENYI,Protestant General Hospital,Medical Officer,,8,4,-4,NA
+271,BUSHENYI,Protestant General Hospital,Laboratory Technologist,,2,2,0,NA
+272,BUSHENYI,Protestant General Hospital,Principal Medical Officer,U2(SC),2,0,-2,NA
+273,BUSHENYI,Protestant General Hospital,Medical Officer Special Grade - Internal Medicine,U2(SC),2,0,-2,NA
+274,BUSHENYI,Protestant General Hospital,Medical Officer Special Grade - General Surgery,U2(SC),2,0,-2,NA
+275,BUSHENYI,Protestant General Hospital,Medical Officer Special Grade - Obstetrics & Gynaecology,U2(SC),2,0,-2,NA
+276,BUSHENYI,Protestant General Hospital,Medical Officer Special Grade - Paediatrics,U2(SC),2,0,-2,NA
+277,BUSHENYI,Protestant General Hospital,Medical Officer Special Grade - Public Health,U2(SC),2,0,-2,NA
+278,BUSHENYI,Protestant General Hospital,Principal Nursing Officer,U2(SC),2,0,-2,NA
+279,BUSHENYI,Protestant General Hospital,Senior Medical Officer,U3(SC),2,0,-2,NA
+280,BUSHENYI,Protestant General Hospital,Senior Medical Clinical officer,U3(SC),2,0,-2,NA
+281,BUSHENYI,Protestant General Hospital,Medical Officer,U4(SC),8,2,-6,NA
+282,BUSHENYI,Protestant General Hospital,Senior Assistant Nursing Officer,U4(SC),10,0,-10,NA
+283,BUSHENYI,Protestant General Hospital,Public/Community Health Nurse,U4(SC),2,0,-2,NA
+284,BUSHENYI,Protestant General Hospital,Ophthalmic clinical Officer,U4(SC),2,0,-2,NA
+285,BUSHENYI,Protestant General Hospital,Medical Clinical officer,U4(SC),10,0,-10,NA
+286,BUSHENYI,Protestant General Hospital,Orthopaedic Officer,U4(SC),4,0,-4,NA
+287,BUSHENYI,Protestant General Hospital,Senior Medical Laboratory Technologist,U4(SC),2,0,-2,NA
+288,BUSHENYI,Protestant General Hospital,Health Educator,U4(SC),2,0,-2,NA
+289,BUSHENYI,Protestant General Hospital,Medical Social Worker,U4L,2,0,-2,NA
+290,BUSHENYI,Protestant General Hospital,Assistant Nursing Officer,U5(SC),34,0,-34,NA
+291,BUSHENYI,Protestant General Hospital,Assistant Nursing Officer - Psychiatry,U5(SC),2,0,-2,NA
+292,BUSHENYI,Protestant General Hospital,Assistant Nursing Officer (Midwifery),U5(SC),6,0,-6,NA
+293,BUSHENYI,Protestant General Hospital,Psychiatric Clinical Officer,U5(SC),2,0,-2,NA
+294,BUSHENYI,Protestant General Hospital,Anaesthetic officer,U5(SC),6,0,-6,NA
+295,BUSHENYI,Protestant General Hospital,Dispenser,U5(SC),4,0,-4,NA
+296,BUSHENYI,Protestant General Hospital,Physiotherapist,U5(SC),2,0,-2,NA
+297,BUSHENYI,Protestant General Hospital,Occupational therapist,U5(SC),2,0,-2,NA
+298,BUSHENYI,Protestant General Hospital,Radiographer,U5(SC),4,1,-3,NA
+299,BUSHENYI,Protestant General Hospital,Medical Laboratory Technologist,U5(SC),2,0,-2,NA
+300,BUSHENYI,Protestant General Hospital,Medical Laboratory Technician,U5(SC),4,0,-4,NA
+301,BUSHENYI,Protestant General Hospital,Assistant Health Educator,U5(SC),2,0,-2,NA
+302,BUSHENYI,Protestant General Hospital,Health Inspector,U5(SC),2,0,-2,NA
+303,BUSHENYI,Protestant General Hospital,Medical Laboratory Assistant,U7U,2,0,-2,NA
+304,BUSHENYI,Protestant General Hospital,Enrolled Nurse,U7U,92,0,-92,NA
+305,BUSHENYI,Protestant General Hospital,Enrolled Psychiatric Nurse,U7U,4,0,-4,NA
+306,BUSHENYI,Protestant General Hospital,Anaesthetic Attendant,U8U,4,0,-4,NA
+307,BUSHENYI,Protestant General Hospital,Mortuary Attendant,U8L,4,0,-4,NA
+308,BUSHENYI,Protestant General Hospital,Darkroom Attendant,U8L,2,0,-2,NA
+309,HOIMA,Protestant Health Centre IV,Senior Nursing Officer,,1,1,0,NA
+310,HOIMA,Protestant Health Centre IV,Enrolled Psychiatric Nurse,,1,0,-1,NA
+311,HOIMA,Protestant Health Centre IV,Nursing Officer (Nursing),,1,2,1,NA
+312,HOIMA,Protestant Health Centre IV,Senior Medical Officer,,1,1,0,NA
+313,HOIMA,Protestant Health Centre IV,Enrolled Nurse,,3,17,14,NA
+314,HOIMA,Protestant Health Centre IV,Clinical Officer,,2,3,1,NA
+315,HOIMA,Protestant Health Centre IV,Ophthalmic Clinical Officer,,1,0,-1,NA
+316,HOIMA,Protestant Health Centre IV,Anaesthetic Assistant,,2,0,-2,NA
+317,HOIMA,Protestant Health Centre IV,Laboratory Assistant,,1,2,1,NA
+318,HOIMA,Protestant Health Centre IV,Theatre Assistant,,2,0,-2,NA
+319,HOIMA,Protestant Health Centre IV,Health Inspector,,2,0,-2,NA
+320,HOIMA,Protestant Health Centre IV,Anaesthetic Officer,,1,0,-1,NA
+321,HOIMA,Protestant Health Centre IV,Enrolled Midwife,,3,1,-2,NA
+322,HOIMA,Protestant Health Centre IV,Laboratory Technician,,1,1,0,NA
+323,HOIMA,Protestant Health Centre IV,Public Health Nurse,,1,0,-1,NA
+324,HOIMA,Protestant Health Centre IV,Nursing Officer (Psychiatry),,1,0,-1,NA
+325,HOIMA,Protestant Health Centre IV,Nursing Officer (Midwifery),,1,0,-1,NA
+326,HOIMA,Protestant Health Centre IV,Assistant Entomological Officer (Med),,1,0,-1,NA
+327,HOIMA,Protestant Health Centre IV,Medical Officer,,1,1,0,NA
+328,HOIMA,Protestant Health Centre IV,Senior Medical Officer,U3(SC),1,0,-1,NA
+329,HOIMA,Protestant Health Centre IV,Medical Officer,U4(SC),1,0,-1,NA
+330,HOIMA,Protestant Health Centre IV,Senior Assistant Nursing Officer,U4(SC),1,0,-1,NA
+331,HOIMA,Protestant Health Centre IV,Public/Community Health Nurse,U4(SC),1,0,-1,NA
+332,HOIMA,Protestant Health Centre IV,Ophthalmic clinical Officer,U4(SC),1,0,-1,NA
+333,HOIMA,Protestant Health Centre IV,Medical Clinical officer,U4(SC),2,0,-2,NA
+334,HOIMA,Protestant Health Centre IV,Assistant Nursing Officer,U5(SC),1,0,-1,NA
+335,HOIMA,Protestant Health Centre IV,Assistant Nursing Officer - Psychiatry,U5(SC),1,0,-1,NA
+336,HOIMA,Protestant Health Centre IV,Assistant Nursing Officer (Midwifery),U5(SC),1,0,-1,NA
+337,HOIMA,Protestant Health Centre IV,Anaesthetic officer,U5(SC),1,0,-1,NA
+338,HOIMA,Protestant Health Centre IV,Dispenser,U5(SC),1,0,-1,NA
+339,HOIMA,Protestant Health Centre IV,Medical Laboratory Technician,U5(SC),1,0,-1,NA
+340,HOIMA,Protestant Health Centre IV,Assistant Health Educator,U5(SC),1,0,-1,NA
+341,HOIMA,Protestant Health Centre IV,Health Inspector,U5(SC),2,0,-2,NA
+342,HOIMA,Protestant Health Centre IV,Theatre Assistant,U6U,2,0,-2,NA
+343,HOIMA,Protestant Health Centre IV,Anaesthetic Assistant,U7U,2,0,-2,NA
+344,HOIMA,Protestant Health Centre IV,Medical Laboratory Assistant,U7U,1,0,-1,NA
+345,HOIMA,Protestant Health Centre IV,Enrolled Nurse,U7U,3,0,-3,NA
+346,HOIMA,Protestant Health Centre IV,Enrolled Psychiatric Nurse,U7U,1,0,-1,NA
+347,HOIMA,Protestant Health Centre IV,Health Information Assistant,U7U,1,0,-1,NA
+348,HOIMA,Protestant Health Centre IV,Health Assistant,U7U,1,0,-1,NA
+349,HOIMA,Protestant Health Centre IV,Cold Chain Assistant,U7L,1,0,-1,NA
+350,KABALE,Protestant General Hospital,Senior Nursing Officer,,5,0,-5,NA
+351,KABALE,Protestant General Hospital,Principal Nursing Officer,,1,0,-1,NA
+352,KABALE,Protestant General Hospital,Physiotherapist,,1,0,-1,NA
+353,KABALE,Protestant General Hospital,Senior Clinical Officer,,1,0,-1,NA
+354,KABALE,Protestant General Hospital,Enrolled Psychiatric Nurse,,2,0,-2,NA
+355,KABALE,Protestant General Hospital,Occupational Therapist,,1,0,-1,NA
+356,KABALE,Protestant General Hospital,Nursing Officer (Nursing),,17,2,-15,NA
+357,KABALE,Protestant General Hospital,Senior Medical Officer,,1,0,-1,NA
+358,KABALE,Protestant General Hospital,Enrolled Nurse,,46,19,-27,NA
+359,KABALE,Protestant General Hospital,Clinical Officer,,5,15,10,NA
+360,KABALE,Protestant General Hospital,Radiographer,,2,2,0,NA
+361,KABALE,Protestant General Hospital,Ophthalmic Clinical Officer,,1,3,2,NA
+362,KABALE,Protestant General Hospital,Anaesthetic Assistant,,2,0,-2,NA
+363,KABALE,Protestant General Hospital,Laboratory Assistant,,1,11,10,NA
+364,KABALE,Protestant General Hospital,Theatre Assistant,,0,1,1,NA
+365,KABALE,Protestant General Hospital,Health Inspector,,1,0,-1,NA
+366,KABALE,Protestant General Hospital,Health Educator,,1,0,-1,NA
+367,KABALE,Protestant General Hospital,Anaesthetic Officer,,3,2,-1,NA
+368,KABALE,Protestant General Hospital,Medical Officer Special Grade (Obs Gyne),,1,0,-1,NA
+369,KABALE,Protestant General Hospital,Enrolled Midwife,,25,6,-19,NA
+370,KABALE,Protestant General Hospital,Nutritionist,,1,0,-1,NA
+371,KABALE,Protestant General Hospital,Orthopedic Officer,,2,1,-1,NA
+372,KABALE,Protestant General Hospital,Medical Officer Special Grade (Community),,1,0,-1,NA
+373,KABALE,Protestant General Hospital,Senior Laboratory Technologist,,1,0,-1,NA
+374,KABALE,Protestant General Hospital,Laboratory Technician,,2,1,-1,NA
+375,KABALE,Protestant General Hospital,Principal Medical Officer,,1,0,-1,NA
+376,KABALE,Protestant General Hospital,Medical Officer Special Grade (Internal Medicine),,1,0,-1,NA
+377,KABALE,Protestant General Hospital,Medical Officer Special Grade (Surgery),,1,0,-1,NA
+378,KABALE,Protestant General Hospital,Medical Officer Special Grade (Paediatrics),,1,0,-1,NA
+379,KABALE,Protestant General Hospital,Public Health Nurse,,1,0,-1,NA
+380,KABALE,Protestant General Hospital,Psychiatric Clinical Officer,,1,0,-1,NA
+381,KABALE,Protestant General Hospital,Nursing Officer (Psychiatry),,3,0,-3,NA
+382,KABALE,Protestant General Hospital,Nursing Officer (Midwifery),,1,0,-1,NA
+383,KABALE,Protestant General Hospital,Assistant Entomological Officer (Med),,1,0,-1,NA
+384,KABALE,Protestant General Hospital,Medical Officer,,4,5,1,NA
+385,KABALE,Protestant General Hospital,Laboratory Technologist,,1,0,-1,NA
+386,KABALE,Protestant General Hospital,Principal Medical Officer,U2(SC),1,0,-1,NA
+387,KABALE,Protestant General Hospital,Medical Officer Special Grade - Internal Medicine,U2(SC),1,0,-1,NA
+388,KABALE,Protestant General Hospital,Medical Officer Special Grade - General Surgery,U2(SC),1,0,-1,NA
+389,KABALE,Protestant General Hospital,Medical Officer Special Grade - Obstetrics & Gynaecology,U2(SC),1,0,-1,NA
+390,KABALE,Protestant General Hospital,Medical Officer Special Grade - Paediatrics,U2(SC),1,0,-1,NA
+391,KABALE,Protestant General Hospital,Medical Officer Special Grade - Public Health,U2(SC),1,0,-1,NA
+392,KABALE,Protestant General Hospital,Principal Nursing Officer,U2(SC),1,0,-1,NA
+393,KABALE,Protestant General Hospital,Senior Medical Officer,U3(SC),1,0,-1,NA
+394,KABALE,Protestant General Hospital,Senior Medical Clinical officer,U3(SC),1,0,-1,NA
+395,KABALE,Protestant General Hospital,Medical Officer,U4(SC),4,0,-4,NA
+396,KABALE,Protestant General Hospital,Senior Assistant Nursing Officer,U4(SC),5,0,-5,NA
+397,KABALE,Protestant General Hospital,Public/Community Health Nurse,U4(SC),1,0,-1,NA
+398,KABALE,Protestant General Hospital,Ophthalmic clinical Officer,U4(SC),1,0,-1,NA
+399,KABALE,Protestant General Hospital,Medical Clinical officer,U4(SC),5,0,-5,NA
+400,KABALE,Protestant General Hospital,Orthopaedic Officer,U4(SC),2,0,-2,NA
+401,KABALE,Protestant General Hospital,Senior Medical Laboratory Technologist,U4(SC),1,0,-1,NA
+402,KABALE,Protestant General Hospital,Health Educator,U4(SC),1,0,-1,NA
+403,KABALE,Protestant General Hospital,Medical Social Worker,U4L,1,0,-1,NA
+404,KABALE,Protestant General Hospital,Assistant Nursing Officer,U5(SC),17,0,-17,NA
+405,KABALE,Protestant General Hospital,Assistant Nursing Officer - Psychiatry,U5(SC),1,0,-1,NA
+406,KABALE,Protestant General Hospital,Assistant Nursing Officer (Midwifery),U5(SC),3,0,-3,NA
+407,KABALE,Protestant General Hospital,Psychiatric Clinical Officer,U5(SC),1,0,-1,NA
+408,KABALE,Protestant General Hospital,Anaesthetic officer,U5(SC),3,0,-3,NA
+409,KABALE,Protestant General Hospital,Dispenser,U5(SC),2,0,-2,NA
+410,KABALE,Protestant General Hospital,Physiotherapist,U5(SC),1,0,-1,NA
+411,KABALE,Protestant General Hospital,Occupational therapist,U5(SC),1,0,-1,NA
+412,KABALE,Protestant General Hospital,Radiographer,U5(SC),2,0,-2,NA
+413,KABALE,Protestant General Hospital,Medical Laboratory Technologist,U5(SC),1,0,-1,NA
+414,KABALE,Protestant General Hospital,Medical Laboratory Technician,U5(SC),2,0,-2,NA
+415,KABALE,Protestant General Hospital,Assistant Health Educator,U5(SC),1,0,-1,NA
+416,KABALE,Protestant General Hospital,Health Inspector,U5(SC),1,0,-1,NA
+417,KABALE,Protestant General Hospital,Medical Laboratory Assistant,U7U,1,0,-1,NA
+418,KABALE,Protestant General Hospital,Enrolled Nurse,U7U,46,0,-46,NA
+419,KABALE,Protestant General Hospital,Enrolled Psychiatric Nurse,U7U,2,0,-2,NA
+420,KABALE,Protestant General Hospital,Anaesthetic Attendant,U8U,2,0,-2,NA
+421,KABALE,Protestant General Hospital,Mortuary Attendant,U8L,2,0,-2,NA
+422,KABALE,Protestant General Hospital,Darkroom Attendant,U8L,1,0,-1,NA
+423,KABALE,Protestant Health Centre III,Senior Clinical Officer,,2,0,-2,NA
+424,KABALE,Protestant Health Centre III,Nursing Officer (Nursing),,2,0,-2,NA
+425,KABALE,Protestant Health Centre III,Enrolled Nurse,,6,0,-6,NA
+426,KABALE,Protestant Health Centre III,Clinical Officer,,2,2,0,NA
+427,KABALE,Protestant Health Centre III,Laboratory Assistant,,2,2,0,NA
+428,KABALE,Protestant Health Centre III,Enrolled Midwife,,4,0,-4,NA
+429,KABALE,Protestant Health Centre III,Laboratory Technician,,2,0,-2,NA
+430,KABALE,Protestant Health Centre III,Senior Medical Clinical officer,U3(SC),2,0,-2,NA
+431,KABALE,Protestant Health Centre III,Assistant Nursing Officer,U5(SC),2,0,-2,NA
+432,KABALE,Protestant Health Centre III,Clinical officer,U5(SC),2,0,-2,NA
+433,KABALE,Protestant Health Centre III,Medical Laboratory Technician,U5(SC),2,0,-2,NA
+434,KABALE,Protestant Health Centre III,Medical Laboratory Assistant,U7U,2,0,-2,NA
+435,KABALE,Protestant Health Centre III,Enrolled Nurse,U7U,6,0,-6,NA
+436,KABALE,Protestant Health Centre III,Health Information Assistant,U7U,2,0,-2,NA
+437,KABALE,Protestant Health Centre III,Health Assistant,U7U,2,0,-2,NA
+438,KABAROLE,Protestant General Hospital,Senior Nursing Officer,,5,0,-5,NA
+439,KABAROLE,Protestant General Hospital,Principal Nursing Officer,,1,0,-1,NA
+440,KABAROLE,Protestant General Hospital,Physiotherapist,,1,0,-1,NA
+441,KABAROLE,Protestant General Hospital,Senior Clinical Officer,,1,0,-1,NA
+442,KABAROLE,Protestant General Hospital,Enrolled Psychiatric Nurse,,2,0,-2,NA
+443,KABAROLE,Protestant General Hospital,Occupational Therapist,,1,0,-1,NA
+444,KABAROLE,Protestant General Hospital,Nursing Officer (Nursing),,17,0,-17,NA
+445,KABAROLE,Protestant General Hospital,Senior Medical Officer,,1,0,-1,NA
+446,KABAROLE,Protestant General Hospital,Enrolled Nurse,,46,10,-36,NA
+447,KABAROLE,Protestant General Hospital,Clinical Officer,,5,5,0,NA
+448,KABAROLE,Protestant General Hospital,Radiographer,,2,1,-1,NA
+449,KABAROLE,Protestant General Hospital,Ophthalmic Clinical Officer,,1,0,-1,NA
+450,KABAROLE,Protestant General Hospital,Anaesthetic Assistant,,2,0,-2,NA
+451,KABAROLE,Protestant General Hospital,Laboratory Assistant,,1,2,1,NA
+452,KABAROLE,Protestant General Hospital,Theatre Assistant,,0,0,0,NA
+453,KABAROLE,Protestant General Hospital,Health Inspector,,1,0,-1,NA
+454,KABAROLE,Protestant General Hospital,Health Educator,,1,0,-1,NA
+455,KABAROLE,Protestant General Hospital,Anaesthetic Officer,,3,0,-3,NA
+456,KABAROLE,Protestant General Hospital,Medical Officer Special Grade (Obs Gyne),,1,0,-1,NA
+457,KABAROLE,Protestant General Hospital,Enrolled Midwife,,25,4,-21,NA
+458,KABAROLE,Protestant General Hospital,Nutritionist,,1,0,-1,NA
+459,KABAROLE,Protestant General Hospital,Orthopedic Officer,,2,0,-2,NA
+460,KABAROLE,Protestant General Hospital,Medical Officer Special Grade (Community),,1,0,-1,NA
+461,KABAROLE,Protestant General Hospital,Senior Laboratory Technologist,,1,0,-1,NA
+462,KABAROLE,Protestant General Hospital,Laboratory Technician,,2,1,-1,NA
+463,KABAROLE,Protestant General Hospital,Principal Medical Officer,,1,0,-1,NA
+464,KABAROLE,Protestant General Hospital,Medical Officer Special Grade (Internal Medicine),,1,0,-1,NA
+465,KABAROLE,Protestant General Hospital,Medical Officer Special Grade (Surgery),,1,0,-1,NA
+466,KABAROLE,Protestant General Hospital,Medical Officer Special Grade (Paediatrics),,1,0,-1,NA
+467,KABAROLE,Protestant General Hospital,Public Health Nurse,,1,0,-1,NA
+468,KABAROLE,Protestant General Hospital,Psychiatric Clinical Officer,,1,0,-1,NA
+469,KABAROLE,Protestant General Hospital,Nursing Officer (Psychiatry),,3,0,-3,NA
+470,KABAROLE,Protestant General Hospital,Nursing Officer (Midwifery),,1,0,-1,NA
+471,KABAROLE,Protestant General Hospital,Assistant Entomological Officer (Med),,1,0,-1,NA
+472,KABAROLE,Protestant General Hospital,Medical Officer,,4,3,-1,NA
+473,KABAROLE,Protestant General Hospital,Laboratory Technologist,,1,0,-1,NA
+474,KABAROLE,Protestant General Hospital,Principal Medical Officer,U2(SC),1,0,-1,NA
+475,KABAROLE,Protestant General Hospital,Medical Officer Special Grade - Internal Medicine,U2(SC),1,0,-1,NA
+476,KABAROLE,Protestant General Hospital,Medical Officer Special Grade - General Surgery,U2(SC),1,0,-1,NA
+477,KABAROLE,Protestant General Hospital,Medical Officer Special Grade - Obstetrics & Gynaecology,U2(SC),1,0,-1,NA
+478,KABAROLE,Protestant General Hospital,Medical Officer Special Grade - Paediatrics,U2(SC),1,0,-1,NA
+479,KABAROLE,Protestant General Hospital,Medical Officer Special Grade - Public Health,U2(SC),1,0,-1,NA
+480,KABAROLE,Protestant General Hospital,Principal Nursing Officer,U2(SC),1,0,-1,NA
+481,KABAROLE,Protestant General Hospital,Senior Medical Officer,U3(SC),1,0,-1,NA
+482,KABAROLE,Protestant General Hospital,Senior Medical Clinical officer,U3(SC),1,0,-1,NA
+483,KABAROLE,Protestant General Hospital,Medical Officer,U4(SC),4,0,-4,NA
+484,KABAROLE,Protestant General Hospital,Senior Assistant Nursing Officer,U4(SC),5,0,-5,NA
+485,KABAROLE,Protestant General Hospital,Public/Community Health Nurse,U4(SC),1,0,-1,NA
+486,KABAROLE,Protestant General Hospital,Ophthalmic clinical Officer,U4(SC),1,0,-1,NA
+487,KABAROLE,Protestant General Hospital,Medical Clinical officer,U4(SC),5,0,-5,NA
+488,KABAROLE,Protestant General Hospital,Orthopaedic Officer,U4(SC),2,0,-2,NA
+489,KABAROLE,Protestant General Hospital,Senior Medical Laboratory Technologist,U4(SC),1,0,-1,NA
+490,KABAROLE,Protestant General Hospital,Health Educator,U4(SC),1,0,-1,NA
+491,KABAROLE,Protestant General Hospital,Medical Social Worker,U4L,1,0,-1,NA
+492,KABAROLE,Protestant General Hospital,Assistant Nursing Officer,U5(SC),17,0,-17,NA
+493,KABAROLE,Protestant General Hospital,Assistant Nursing Officer - Psychiatry,U5(SC),1,0,-1,NA
+494,KABAROLE,Protestant General Hospital,Assistant Nursing Officer (Midwifery),U5(SC),3,0,-3,NA
+495,KABAROLE,Protestant General Hospital,Psychiatric Clinical Officer,U5(SC),1,0,-1,NA
+496,KABAROLE,Protestant General Hospital,Anaesthetic officer,U5(SC),3,0,-3,NA
+497,KABAROLE,Protestant General Hospital,Dispenser,U5(SC),2,0,-2,NA
+498,KABAROLE,Protestant General Hospital,Physiotherapist,U5(SC),1,0,-1,NA
+499,KABAROLE,Protestant General Hospital,Occupational therapist,U5(SC),1,0,-1,NA
+500,KABAROLE,Protestant General Hospital,Radiographer,U5(SC),2,0,-2,NA
+501,KABAROLE,Protestant General Hospital,Medical Laboratory Technologist,U5(SC),1,0,-1,NA
+502,KABAROLE,Protestant General Hospital,Medical Laboratory Technician,U5(SC),2,0,-2,NA
+503,KABAROLE,Protestant General Hospital,Assistant Health Educator,U5(SC),1,0,-1,NA
+504,KABAROLE,Protestant General Hospital,Health Inspector,U5(SC),1,0,-1,NA
+505,KABAROLE,Protestant General Hospital,Medical Laboratory Assistant,U7U,1,0,-1,NA
+506,KABAROLE,Protestant General Hospital,Enrolled Nurse,U7U,46,0,-46,NA
+507,KABAROLE,Protestant General Hospital,Enrolled Psychiatric Nurse,U7U,2,0,-2,NA
+508,KABAROLE,Protestant General Hospital,Anaesthetic Attendant,U8U,2,0,-2,NA
+509,KABAROLE,Protestant General Hospital,Mortuary Attendant,U8L,2,0,-2,NA
+510,KABAROLE,Protestant General Hospital,Darkroom Attendant,U8L,1,0,-1,NA
+511,KABAROLE,Protestant Health Centre III,Senior Clinical Officer,,2,0,-2,NA
+512,KABAROLE,Protestant Health Centre III,Nursing Officer (Nursing),,2,0,-2,NA
+513,KABAROLE,Protestant Health Centre III,Enrolled Nurse,,6,0,-6,NA
+514,KABAROLE,Protestant Health Centre III,Clinical Officer,,2,0,-2,NA
+515,KABAROLE,Protestant Health Centre III,Laboratory Assistant,,2,0,-2,NA
+516,KABAROLE,Protestant Health Centre III,Enrolled Midwife,,4,0,-4,NA
+517,KABAROLE,Protestant Health Centre III,Laboratory Technician,,2,0,-2,NA
+518,KABAROLE,Protestant Health Centre III,Senior Medical Clinical officer,U3(SC),2,0,-2,NA
+519,KABAROLE,Protestant Health Centre III,Assistant Nursing Officer,U5(SC),2,0,-2,NA
+520,KABAROLE,Protestant Health Centre III,Clinical officer,U5(SC),2,0,-2,NA
+521,KABAROLE,Protestant Health Centre III,Medical Laboratory Technician,U5(SC),2,0,-2,NA
+522,KABAROLE,Protestant Health Centre III,Medical Laboratory Assistant,U7U,2,0,-2,NA
+523,KABAROLE,Protestant Health Centre III,Enrolled Nurse,U7U,6,0,-6,NA
+524,KABAROLE,Protestant Health Centre III,Health Information Assistant,U7U,2,0,-2,NA
+525,KABAROLE,Protestant Health Centre III,Health Assistant,U7U,2,0,-2,NA
+526,KALUNGU,Protestant Health Centre III,Senior Clinical Officer,,2,0,-2,NA
+527,KALUNGU,Protestant Health Centre III,Nursing Officer (Nursing),,2,0,-2,NA
+528,KALUNGU,Protestant Health Centre III,Enrolled Nurse,,6,4,-2,NA
+529,KALUNGU,Protestant Health Centre III,Clinical Officer,,2,4,2,NA
+530,KALUNGU,Protestant Health Centre III,Laboratory Assistant,,2,2,0,NA
+531,KALUNGU,Protestant Health Centre III,Enrolled Midwife,,4,4,0,NA
+532,KALUNGU,Protestant Health Centre III,Laboratory Technician,,2,0,-2,NA
+533,KALUNGU,Protestant Health Centre III,Senior Medical Clinical officer,U3(SC),2,0,-2,NA
+534,KALUNGU,Protestant Health Centre III,Assistant Nursing Officer,U5(SC),2,0,-2,NA
+535,KALUNGU,Protestant Health Centre III,Clinical officer,U5(SC),2,0,-2,NA
+536,KALUNGU,Protestant Health Centre III,Medical Laboratory Technician,U5(SC),2,0,-2,NA
+537,KALUNGU,Protestant Health Centre III,Medical Laboratory Assistant,U7U,2,0,-2,NA
+538,KALUNGU,Protestant Health Centre III,Enrolled Nurse,U7U,6,0,-6,NA
+539,KALUNGU,Protestant Health Centre III,Health Information Assistant,U7U,2,0,-2,NA
+540,KALUNGU,Protestant Health Centre III,Health Assistant,U7U,2,0,-2,NA
+541,KAMPALA,Protestant General Hospital,Senior Nursing Officer,,10,2,-8,NA
+542,KAMPALA,Protestant General Hospital,Principal Nursing Officer,,2,4,2,NA
+543,KAMPALA,Protestant General Hospital,Physiotherapist,,2,0,-2,NA
+544,KAMPALA,Protestant General Hospital,Senior Clinical Officer,,2,4,2,NA
+545,KAMPALA,Protestant General Hospital,Enrolled Psychiatric Nurse,,4,0,-4,NA
+546,KAMPALA,Protestant General Hospital,Occupational Therapist,,2,0,-2,NA
+547,KAMPALA,Protestant General Hospital,Nursing Officer (Nursing),,34,16,-18,NA
+548,KAMPALA,Protestant General Hospital,Senior Medical Officer,,2,8,6,NA
+549,KAMPALA,Protestant General Hospital,Enrolled Nurse,,92,276,184,NA
+550,KAMPALA,Protestant General Hospital,Clinical Officer,,10,16,6,NA
+551,KAMPALA,Protestant General Hospital,Radiographer,,4,2,-2,NA
+552,KAMPALA,Protestant General Hospital,Ophthalmic Clinical Officer,,2,9,7,NA
+553,KAMPALA,Protestant General Hospital,Anaesthetic Assistant,,4,0,-4,NA
+554,KAMPALA,Protestant General Hospital,Laboratory Assistant,,2,37,35,NA
+555,KAMPALA,Protestant General Hospital,Theatre Assistant,,0,9,9,NA
+556,KAMPALA,Protestant General Hospital,Health Inspector,,2,0,-2,NA
+557,KAMPALA,Protestant General Hospital,Health Educator,,2,1,-1,NA
+558,KAMPALA,Protestant General Hospital,Anaesthetic Officer,,6,8,2,NA
+559,KAMPALA,Protestant General Hospital,Medical Officer Special Grade (Obs Gyne),,2,1,-1,NA
+560,KAMPALA,Protestant General Hospital,Enrolled Midwife,,50,64,14,NA
+561,KAMPALA,Protestant General Hospital,Nutritionist,,2,0,-2,NA
+562,KAMPALA,Protestant General Hospital,Orthopedic Officer,,4,0,-4,NA
+563,KAMPALA,Protestant General Hospital,Medical Officer Special Grade (Community),,2,0,-2,NA
+564,KAMPALA,Protestant General Hospital,Senior Laboratory Technologist,,2,1,-1,NA
+565,KAMPALA,Protestant General Hospital,Laboratory Technician,,4,18,14,NA
+566,KAMPALA,Protestant General Hospital,Principal Medical Officer,,2,0,-2,NA
+567,KAMPALA,Protestant General Hospital,Medical Officer Special Grade (Internal Medicine),,2,0,-2,NA
+568,KAMPALA,Protestant General Hospital,Medical Officer Special Grade (Surgery),,2,0,-2,NA
+569,KAMPALA,Protestant General Hospital,Medical Officer Special Grade (Paediatrics),,2,0,-2,NA
+570,KAMPALA,Protestant General Hospital,Public Health Nurse,,2,0,-2,NA
+571,KAMPALA,Protestant General Hospital,Psychiatric Clinical Officer,,2,0,-2,NA
+572,KAMPALA,Protestant General Hospital,Nursing Officer (Psychiatry),,6,0,-6,NA
+573,KAMPALA,Protestant General Hospital,Nursing Officer (Midwifery),,2,0,-2,NA
+574,KAMPALA,Protestant General Hospital,Assistant Entomological Officer (Med),,2,0,-2,NA
+575,KAMPALA,Protestant General Hospital,Medical Officer,,8,37,29,NA
+576,KAMPALA,Protestant General Hospital,Laboratory Technologist,,2,7,5,NA
+577,KAMPALA,Protestant General Hospital,Principal Medical Officer,U2(SC),2,0,-2,NA
+578,KAMPALA,Protestant General Hospital,Medical Officer Special Grade - Internal Medicine,U2(SC),2,0,-2,NA
+579,KAMPALA,Protestant General Hospital,Medical Officer Special Grade - General Surgery,U2(SC),2,0,-2,NA
+580,KAMPALA,Protestant General Hospital,Medical Officer Special Grade - Obstetrics & Gynaecology,U2(SC),2,0,-2,NA
+581,KAMPALA,Protestant General Hospital,Medical Officer Special Grade - Paediatrics,U2(SC),2,0,-2,NA
+582,KAMPALA,Protestant General Hospital,Medical Officer Special Grade - Public Health,U2(SC),2,0,-2,NA
+583,KAMPALA,Protestant General Hospital,Principal Nursing Officer,U2(SC),2,0,-2,NA
+584,KAMPALA,Protestant General Hospital,Senior Medical Officer,U3(SC),2,0,-2,NA
+585,KAMPALA,Protestant General Hospital,Senior Medical Clinical officer,U3(SC),2,0,-2,NA
+586,KAMPALA,Protestant General Hospital,Medical Officer,U4(SC),8,0,-8,NA
+587,KAMPALA,Protestant General Hospital,Senior Assistant Nursing Officer,U4(SC),10,0,-10,NA
+588,KAMPALA,Protestant General Hospital,Public/Community Health Nurse,U4(SC),2,0,-2,NA
+589,KAMPALA,Protestant General Hospital,Ophthalmic clinical Officer,U4(SC),2,0,-2,NA
+590,KAMPALA,Protestant General Hospital,Medical Clinical officer,U4(SC),10,0,-10,NA
+591,KAMPALA,Protestant General Hospital,Orthopaedic Officer,U4(SC),4,0,-4,NA
+592,KAMPALA,Protestant General Hospital,Senior Medical Laboratory Technologist,U4(SC),2,0,-2,NA
+593,KAMPALA,Protestant General Hospital,Health Educator,U4(SC),2,0,-2,NA
+594,KAMPALA,Protestant General Hospital,Medical Social Worker,U4L,2,0,-2,NA
+595,KAMPALA,Protestant General Hospital,Assistant Nursing Officer,U5(SC),34,0,-34,NA
+596,KAMPALA,Protestant General Hospital,Assistant Nursing Officer - Psychiatry,U5(SC),2,0,-2,NA
+597,KAMPALA,Protestant General Hospital,Assistant Nursing Officer (Midwifery),U5(SC),6,0,-6,NA
+598,KAMPALA,Protestant General Hospital,Psychiatric Clinical Officer,U5(SC),2,0,-2,NA
+599,KAMPALA,Protestant General Hospital,Anaesthetic officer,U5(SC),6,0,-6,NA
+600,KAMPALA,Protestant General Hospital,Dispenser,U5(SC),4,0,-4,NA
+601,KAMPALA,Protestant General Hospital,Physiotherapist,U5(SC),2,0,-2,NA
+602,KAMPALA,Protestant General Hospital,Occupational therapist,U5(SC),2,0,-2,NA
+603,KAMPALA,Protestant General Hospital,Radiographer,U5(SC),4,0,-4,NA
+604,KAMPALA,Protestant General Hospital,Medical Laboratory Technologist,U5(SC),2,0,-2,NA
+605,KAMPALA,Protestant General Hospital,Medical Laboratory Technician,U5(SC),4,0,-4,NA
+606,KAMPALA,Protestant General Hospital,Assistant Health Educator,U5(SC),2,0,-2,NA
+607,KAMPALA,Protestant General Hospital,Health Inspector,U5(SC),2,0,-2,NA
+608,KAMPALA,Protestant General Hospital,Medical Laboratory Assistant,U7U,2,0,-2,NA
+609,KAMPALA,Protestant General Hospital,Enrolled Nurse,U7U,92,0,-92,NA
+610,KAMPALA,Protestant General Hospital,Enrolled Psychiatric Nurse,U7U,4,0,-4,NA
+611,KAMPALA,Protestant General Hospital,Anaesthetic Attendant,U8U,4,0,-4,NA
+612,KAMPALA,Protestant General Hospital,Mortuary Attendant,U8L,4,0,-4,NA
+613,KAMPALA,Protestant General Hospital,Darkroom Attendant,U8L,2,0,-2,NA
+614,KAMPALA,Protestant Health Centre IV,Senior Nursing Officer,,1,0,-1,NA
+615,KAMPALA,Protestant Health Centre IV,Enrolled Psychiatric Nurse,,1,0,-1,NA
+616,KAMPALA,Protestant Health Centre IV,Nursing Officer (Nursing),,1,1,0,NA
+617,KAMPALA,Protestant Health Centre IV,Senior Medical Officer,,1,0,-1,NA
+618,KAMPALA,Protestant Health Centre IV,Enrolled Nurse,,3,0,-3,NA
+619,KAMPALA,Protestant Health Centre IV,Clinical Officer,,2,1,-1,NA
+620,KAMPALA,Protestant Health Centre IV,Ophthalmic Clinical Officer,,1,0,-1,NA
+621,KAMPALA,Protestant Health Centre IV,Anaesthetic Assistant,,2,0,-2,NA
+622,KAMPALA,Protestant Health Centre IV,Laboratory Assistant,,1,0,-1,NA
+623,KAMPALA,Protestant Health Centre IV,Theatre Assistant,,2,0,-2,NA
+624,KAMPALA,Protestant Health Centre IV,Health Inspector,,2,0,-2,NA
+625,KAMPALA,Protestant Health Centre IV,Anaesthetic Officer,,1,0,-1,NA
+626,KAMPALA,Protestant Health Centre IV,Enrolled Midwife,,3,7,4,NA
+627,KAMPALA,Protestant Health Centre IV,Laboratory Technician,,1,3,2,NA
+628,KAMPALA,Protestant Health Centre IV,Public Health Nurse,,1,0,-1,NA
+629,KAMPALA,Protestant Health Centre IV,Nursing Officer (Psychiatry),,1,0,-1,NA
+630,KAMPALA,Protestant Health Centre IV,Nursing Officer (Midwifery),,1,0,-1,NA
+631,KAMPALA,Protestant Health Centre IV,Assistant Entomological Officer (Med),,1,0,-1,NA
+632,KAMPALA,Protestant Health Centre IV,Medical Officer,,1,2,1,NA
+633,KAMPALA,Protestant Health Centre IV,Senior Medical Officer,U3(SC),1,0,-1,NA
+634,KAMPALA,Protestant Health Centre IV,Medical Officer,U4(SC),1,0,-1,NA
+635,KAMPALA,Protestant Health Centre IV,Senior Assistant Nursing Officer,U4(SC),1,0,-1,NA
+636,KAMPALA,Protestant Health Centre IV,Public/Community Health Nurse,U4(SC),1,0,-1,NA
+637,KAMPALA,Protestant Health Centre IV,Ophthalmic clinical Officer,U4(SC),1,0,-1,NA
+638,KAMPALA,Protestant Health Centre IV,Medical Clinical officer,U4(SC),2,0,-2,NA
+639,KAMPALA,Protestant Health Centre IV,Assistant Nursing Officer,U5(SC),1,0,-1,NA
+640,KAMPALA,Protestant Health Centre IV,Assistant Nursing Officer - Psychiatry,U5(SC),1,0,-1,NA
+641,KAMPALA,Protestant Health Centre IV,Assistant Nursing Officer (Midwifery),U5(SC),1,0,-1,NA
+642,KAMPALA,Protestant Health Centre IV,Anaesthetic officer,U5(SC),1,0,-1,NA
+643,KAMPALA,Protestant Health Centre IV,Dispenser,U5(SC),1,0,-1,NA
+644,KAMPALA,Protestant Health Centre IV,Medical Laboratory Technician,U5(SC),1,0,-1,NA
+645,KAMPALA,Protestant Health Centre IV,Assistant Health Educator,U5(SC),1,0,-1,NA
+646,KAMPALA,Protestant Health Centre IV,Health Inspector,U5(SC),2,0,-2,NA
+647,KAMPALA,Protestant Health Centre IV,Theatre Assistant,U6U,2,0,-2,NA
+648,KAMPALA,Protestant Health Centre IV,Anaesthetic Assistant,U7U,2,0,-2,NA
+649,KAMPALA,Protestant Health Centre IV,Medical Laboratory Assistant,U7U,1,0,-1,NA
+650,KAMPALA,Protestant Health Centre IV,Enrolled Nurse,U7U,3,0,-3,NA
+651,KAMPALA,Protestant Health Centre IV,Enrolled Psychiatric Nurse,U7U,1,0,-1,NA
+652,KAMPALA,Protestant Health Centre IV,Health Information Assistant,U7U,1,0,-1,NA
+653,KAMPALA,Protestant Health Centre IV,Health Assistant,U7U,1,0,-1,NA
+654,KAMPALA,Protestant Health Centre IV,Cold Chain Assistant,U7L,1,0,-1,NA
+655,KAMWENGE,Protestant Health Centre III,Senior Clinical Officer,,1,0,-1,NA
+656,KAMWENGE,Protestant Health Centre III,Nursing Officer (Nursing),,1,0,-1,NA
+657,KAMWENGE,Protestant Health Centre III,Enrolled Nurse,,3,0,-3,NA
+658,KAMWENGE,Protestant Health Centre III,Clinical Officer,,1,2,1,NA
+659,KAMWENGE,Protestant Health Centre III,Laboratory Assistant,,1,0,-1,NA
+660,KAMWENGE,Protestant Health Centre III,Enrolled Midwife,,2,0,-2,NA
+661,KAMWENGE,Protestant Health Centre III,Laboratory Technician,,1,0,-1,NA
+662,KAMWENGE,Protestant Health Centre III,Senior Medical Clinical officer,U3(SC),1,0,-1,NA
+663,KAMWENGE,Protestant Health Centre III,Assistant Nursing Officer,U5(SC),1,0,-1,NA
+664,KAMWENGE,Protestant Health Centre III,Clinical officer,U5(SC),1,0,-1,NA
+665,KAMWENGE,Protestant Health Centre III,Medical Laboratory Technician,U5(SC),1,0,-1,NA
+666,KAMWENGE,Protestant Health Centre III,Medical Laboratory Assistant,U7U,1,0,-1,NA
+667,KAMWENGE,Protestant Health Centre III,Enrolled Nurse,U7U,3,0,-3,NA
+668,KAMWENGE,Protestant Health Centre III,Health Information Assistant,U7U,1,0,-1,NA
+669,KAMWENGE,Protestant Health Centre III,Health Assistant,U7U,1,0,-1,NA
+670,KANUNGU,Protestant General Hospital,Senior Nursing Officer,,5,0,-5,NA
+671,KANUNGU,Protestant General Hospital,Principal Nursing Officer,,1,0,-1,NA
+672,KANUNGU,Protestant General Hospital,Physiotherapist,,1,0,-1,NA
+673,KANUNGU,Protestant General Hospital,Senior Clinical Officer,,1,1,0,NA
+674,KANUNGU,Protestant General Hospital,Enrolled Psychiatric Nurse,,2,0,-2,NA
+675,KANUNGU,Protestant General Hospital,Occupational Therapist,,1,0,-1,NA
+676,KANUNGU,Protestant General Hospital,Nursing Officer (Nursing),,17,0,-17,NA
+677,KANUNGU,Protestant General Hospital,Senior Medical Officer,,1,0,-1,NA
+678,KANUNGU,Protestant General Hospital,Enrolled Nurse,,46,1,-45,NA
+679,KANUNGU,Protestant General Hospital,Clinical Officer,,5,4,-1,NA
+680,KANUNGU,Protestant General Hospital,Radiographer,,2,0,-2,NA
+681,KANUNGU,Protestant General Hospital,Ophthalmic Clinical Officer,,1,0,-1,NA
+682,KANUNGU,Protestant General Hospital,Anaesthetic Assistant,,2,0,-2,NA
+683,KANUNGU,Protestant General Hospital,Laboratory Assistant,,1,3,2,NA
+684,KANUNGU,Protestant General Hospital,Theatre Assistant,,0,0,0,NA
+685,KANUNGU,Protestant General Hospital,Health Inspector,,1,0,-1,NA
+686,KANUNGU,Protestant General Hospital,Health Educator,,1,0,-1,NA
+687,KANUNGU,Protestant General Hospital,Anaesthetic Officer,,3,0,-3,NA
+688,KANUNGU,Protestant General Hospital,Medical Officer Special Grade (Obs Gyne),,1,1,0,NA
+689,KANUNGU,Protestant General Hospital,Enrolled Midwife,,25,4,-21,NA
+690,KANUNGU,Protestant General Hospital,Nutritionist,,1,1,0,NA
+691,KANUNGU,Protestant General Hospital,Orthopedic Officer,,2,0,-2,NA
+692,KANUNGU,Protestant General Hospital,Medical Officer Special Grade (Community),,1,1,0,NA
+693,KANUNGU,Protestant General Hospital,Senior Laboratory Technologist,,1,0,-1,NA
+694,KANUNGU,Protestant General Hospital,Laboratory Technician,,2,2,0,NA
+695,KANUNGU,Protestant General Hospital,Principal Medical Officer,,1,0,-1,NA
+696,KANUNGU,Protestant General Hospital,Medical Officer Special Grade (Internal Medicine),,1,0,-1,NA
+697,KANUNGU,Protestant General Hospital,Medical Officer Special Grade (Surgery),,1,0,-1,NA
+698,KANUNGU,Protestant General Hospital,Medical Officer Special Grade (Paediatrics),,1,0,-1,NA
+699,KANUNGU,Protestant General Hospital,Public Health Nurse,,1,0,-1,NA
+700,KANUNGU,Protestant General Hospital,Psychiatric Clinical Officer,,1,0,-1,NA
+701,KANUNGU,Protestant General Hospital,Nursing Officer (Psychiatry),,3,0,-3,NA
+702,KANUNGU,Protestant General Hospital,Nursing Officer (Midwifery),,1,0,-1,NA
+703,KANUNGU,Protestant General Hospital,Assistant Entomological Officer (Med),,1,0,-1,NA
+704,KANUNGU,Protestant General Hospital,Medical Officer,,4,4,0,NA
+705,KANUNGU,Protestant General Hospital,Laboratory Technologist,,1,0,-1,NA
+706,KANUNGU,Protestant General Hospital,Principal Medical Officer,U2(SC),1,0,-1,NA
+707,KANUNGU,Protestant General Hospital,Medical Officer Special Grade - Internal Medicine,U2(SC),1,0,-1,NA
+708,KANUNGU,Protestant General Hospital,Medical Officer Special Grade - General Surgery,U2(SC),1,0,-1,NA
+709,KANUNGU,Protestant General Hospital,Medical Officer Special Grade - Obstetrics & Gynaecology,U2(SC),1,0,-1,NA
+710,KANUNGU,Protestant General Hospital,Medical Officer Special Grade - Paediatrics,U2(SC),1,0,-1,NA
+711,KANUNGU,Protestant General Hospital,Medical Officer Special Grade - Public Health,U2(SC),1,0,-1,NA
+712,KANUNGU,Protestant General Hospital,Principal Nursing Officer,U2(SC),1,0,-1,NA
+713,KANUNGU,Protestant General Hospital,Senior Medical Officer,U3(SC),1,0,-1,NA
+714,KANUNGU,Protestant General Hospital,Senior Medical Clinical officer,U3(SC),1,0,-1,NA
+715,KANUNGU,Protestant General Hospital,Medical Officer,U4(SC),4,0,-4,NA
+716,KANUNGU,Protestant General Hospital,Senior Assistant Nursing Officer,U4(SC),5,0,-5,NA
+717,KANUNGU,Protestant General Hospital,Public/Community Health Nurse,U4(SC),1,0,-1,NA
+718,KANUNGU,Protestant General Hospital,Ophthalmic clinical Officer,U4(SC),1,0,-1,NA
+719,KANUNGU,Protestant General Hospital,Medical Clinical officer,U4(SC),5,0,-5,NA
+720,KANUNGU,Protestant General Hospital,Orthopaedic Officer,U4(SC),2,0,-2,NA
+721,KANUNGU,Protestant General Hospital,Senior Medical Laboratory Technologist,U4(SC),1,0,-1,NA
+722,KANUNGU,Protestant General Hospital,Health Educator,U4(SC),1,0,-1,NA
+723,KANUNGU,Protestant General Hospital,Medical Social Worker,U4L,1,0,-1,NA
+724,KANUNGU,Protestant General Hospital,Assistant Nursing Officer,U5(SC),17,0,-17,NA
+725,KANUNGU,Protestant General Hospital,Assistant Nursing Officer - Psychiatry,U5(SC),1,0,-1,NA
+726,KANUNGU,Protestant General Hospital,Assistant Nursing Officer (Midwifery),U5(SC),3,0,-3,NA
+727,KANUNGU,Protestant General Hospital,Psychiatric Clinical Officer,U5(SC),1,0,-1,NA
+728,KANUNGU,Protestant General Hospital,Anaesthetic officer,U5(SC),3,0,-3,NA
+729,KANUNGU,Protestant General Hospital,Dispenser,U5(SC),2,0,-2,NA
+730,KANUNGU,Protestant General Hospital,Physiotherapist,U5(SC),1,0,-1,NA
+731,KANUNGU,Protestant General Hospital,Occupational therapist,U5(SC),1,0,-1,NA
+732,KANUNGU,Protestant General Hospital,Radiographer,U5(SC),2,0,-2,NA
+733,KANUNGU,Protestant General Hospital,Medical Laboratory Technologist,U5(SC),1,0,-1,NA
+734,KANUNGU,Protestant General Hospital,Medical Laboratory Technician,U5(SC),2,0,-2,NA
+735,KANUNGU,Protestant General Hospital,Assistant Health Educator,U5(SC),1,0,-1,NA
+736,KANUNGU,Protestant General Hospital,Health Inspector,U5(SC),1,0,-1,NA
+737,KANUNGU,Protestant General Hospital,Medical Laboratory Assistant,U7U,1,0,-1,NA
+738,KANUNGU,Protestant General Hospital,Enrolled Nurse,U7U,46,0,-46,NA
+739,KANUNGU,Protestant General Hospital,Enrolled Psychiatric Nurse,U7U,2,0,-2,NA
+740,KANUNGU,Protestant General Hospital,Anaesthetic Attendant,U8U,2,0,-2,NA
+741,KANUNGU,Protestant General Hospital,Mortuary Attendant,U8L,2,0,-2,NA
+742,KANUNGU,Protestant General Hospital,Darkroom Attendant,U8L,1,0,-1,NA
+743,KANUNGU,Protestant Health Centre III,Senior Clinical Officer,,1,0,-1,NA
+744,KANUNGU,Protestant Health Centre III,Nursing Officer (Nursing),,1,2,1,NA
+745,KANUNGU,Protestant Health Centre III,Enrolled Nurse,,3,0,-3,NA
+746,KANUNGU,Protestant Health Centre III,Clinical Officer,,1,2,1,NA
+747,KANUNGU,Protestant Health Centre III,Laboratory Assistant,,1,2,1,NA
+748,KANUNGU,Protestant Health Centre III,Enrolled Midwife,,2,4,2,NA
+749,KANUNGU,Protestant Health Centre III,Laboratory Technician,,1,0,-1,NA
+750,KANUNGU,Protestant Health Centre III,Senior Medical Clinical officer,U3(SC),1,0,-1,NA
+751,KANUNGU,Protestant Health Centre III,Assistant Nursing Officer,U5(SC),1,0,-1,NA
+752,KANUNGU,Protestant Health Centre III,Clinical officer,U5(SC),1,0,-1,NA
+753,KANUNGU,Protestant Health Centre III,Medical Laboratory Technician,U5(SC),1,0,-1,NA
+754,KANUNGU,Protestant Health Centre III,Medical Laboratory Assistant,U7U,1,0,-1,NA
+755,KANUNGU,Protestant Health Centre III,Enrolled Nurse,U7U,3,0,-3,NA
+756,KANUNGU,Protestant Health Centre III,Health Information Assistant,U7U,1,0,-1,NA
+757,KANUNGU,Protestant Health Centre III,Health Assistant,U7U,1,0,-1,NA
+758,KASESE,Protestant General Hospital,Senior Nursing Officer,,5,2,-3,NA
+759,KASESE,Protestant General Hospital,Principal Nursing Officer,,1,0,-1,NA
+760,KASESE,Protestant General Hospital,Physiotherapist,,1,1,0,NA
+761,KASESE,Protestant General Hospital,Senior Clinical Officer,,1,0,-1,NA
+762,KASESE,Protestant General Hospital,Enrolled Psychiatric Nurse,,2,0,-2,NA
+763,KASESE,Protestant General Hospital,Occupational Therapist,,1,0,-1,NA
+764,KASESE,Protestant General Hospital,Nursing Officer (Nursing),,17,11,-6,NA
+765,KASESE,Protestant General Hospital,Senior Medical Officer,,1,0,-1,NA
+766,KASESE,Protestant General Hospital,Enrolled Nurse,,46,11,-35,NA
+767,KASESE,Protestant General Hospital,Clinical Officer,,5,8,3,NA
+768,KASESE,Protestant General Hospital,Radiographer,,2,6,4,NA
+769,KASESE,Protestant General Hospital,Ophthalmic Clinical Officer,,1,1,0,NA
+770,KASESE,Protestant General Hospital,Anaesthetic Assistant,,2,1,-1,NA
+771,KASESE,Protestant General Hospital,Laboratory Assistant,,1,12,11,NA
+772,KASESE,Protestant General Hospital,Theatre Assistant,,0,1,1,NA
+773,KASESE,Protestant General Hospital,Health Inspector,,1,0,-1,NA
+774,KASESE,Protestant General Hospital,Health Educator,,1,0,-1,NA
+775,KASESE,Protestant General Hospital,Anaesthetic Officer,,3,2,-1,NA
+776,KASESE,Protestant General Hospital,Medical Officer Special Grade (Obs Gyne),,1,0,-1,NA
+777,KASESE,Protestant General Hospital,Enrolled Midwife,,25,10,-15,NA
+778,KASESE,Protestant General Hospital,Nutritionist,,1,0,-1,NA
+779,KASESE,Protestant General Hospital,Orthopedic Officer,,2,1,-1,NA
+780,KASESE,Protestant General Hospital,Medical Officer Special Grade (Community),,1,0,-1,NA
+781,KASESE,Protestant General Hospital,Senior Laboratory Technologist,,1,0,-1,NA
+782,KASESE,Protestant General Hospital,Laboratory Technician,,2,4,2,NA
+783,KASESE,Protestant General Hospital,Principal Medical Officer,,1,0,-1,NA
+784,KASESE,Protestant General Hospital,Medical Officer Special Grade (Internal Medicine),,1,0,-1,NA
+785,KASESE,Protestant General Hospital,Medical Officer Special Grade (Surgery),,1,0,-1,NA
+786,KASESE,Protestant General Hospital,Medical Officer Special Grade (Paediatrics),,1,0,-1,NA
+787,KASESE,Protestant General Hospital,Public Health Nurse,,1,0,-1,NA
+788,KASESE,Protestant General Hospital,Psychiatric Clinical Officer,,1,0,-1,NA
+789,KASESE,Protestant General Hospital,Nursing Officer (Psychiatry),,3,0,-3,NA
+790,KASESE,Protestant General Hospital,Nursing Officer (Midwifery),,1,1,0,NA
+791,KASESE,Protestant General Hospital,Assistant Entomological Officer (Med),,1,0,-1,NA
+792,KASESE,Protestant General Hospital,Medical Officer,,4,6,2,NA
+793,KASESE,Protestant General Hospital,Laboratory Technologist,,1,6,5,NA
+794,KASESE,Protestant General Hospital,Principal Medical Officer,U2(SC),1,0,-1,NA
+795,KASESE,Protestant General Hospital,Medical Officer Special Grade - Internal Medicine,U2(SC),1,0,-1,NA
+796,KASESE,Protestant General Hospital,Medical Officer Special Grade - General Surgery,U2(SC),1,0,-1,NA
+797,KASESE,Protestant General Hospital,Medical Officer Special Grade - Obstetrics & Gynaecology,U2(SC),1,0,-1,NA
+798,KASESE,Protestant General Hospital,Medical Officer Special Grade - Paediatrics,U2(SC),1,0,-1,NA
+799,KASESE,Protestant General Hospital,Medical Officer Special Grade - Public Health,U2(SC),1,0,-1,NA
+800,KASESE,Protestant General Hospital,Principal Nursing Officer,U2(SC),1,0,-1,NA
+801,KASESE,Protestant General Hospital,Senior Medical Officer,U3(SC),1,0,-1,NA
+802,KASESE,Protestant General Hospital,Senior Medical Clinical officer,U3(SC),1,0,-1,NA
+803,KASESE,Protestant General Hospital,Medical Officer,U4(SC),4,0,-4,NA
+804,KASESE,Protestant General Hospital,Senior Assistant Nursing Officer,U4(SC),5,0,-5,NA
+805,KASESE,Protestant General Hospital,Public/Community Health Nurse,U4(SC),1,0,-1,NA
+806,KASESE,Protestant General Hospital,Ophthalmic clinical Officer,U4(SC),1,0,-1,NA
+807,KASESE,Protestant General Hospital,Medical Clinical officer,U4(SC),5,0,-5,NA
+808,KASESE,Protestant General Hospital,Orthopaedic Officer,U4(SC),2,0,-2,NA
+809,KASESE,Protestant General Hospital,Senior Medical Laboratory Technologist,U4(SC),1,0,-1,NA
+810,KASESE,Protestant General Hospital,Health Educator,U4(SC),1,0,-1,NA
+811,KASESE,Protestant General Hospital,Medical Social Worker,U4L,1,0,-1,NA
+812,KASESE,Protestant General Hospital,Assistant Nursing Officer,U5(SC),17,0,-17,NA
+813,KASESE,Protestant General Hospital,Assistant Nursing Officer - Psychiatry,U5(SC),1,0,-1,NA
+814,KASESE,Protestant General Hospital,Assistant Nursing Officer (Midwifery),U5(SC),3,0,-3,NA
+815,KASESE,Protestant General Hospital,Psychiatric Clinical Officer,U5(SC),1,0,-1,NA
+816,KASESE,Protestant General Hospital,Anaesthetic officer,U5(SC),3,0,-3,NA
+817,KASESE,Protestant General Hospital,Dispenser,U5(SC),2,0,-2,NA
+818,KASESE,Protestant General Hospital,Physiotherapist,U5(SC),1,0,-1,NA
+819,KASESE,Protestant General Hospital,Occupational therapist,U5(SC),1,0,-1,NA
+820,KASESE,Protestant General Hospital,Radiographer,U5(SC),2,0,-2,NA
+821,KASESE,Protestant General Hospital,Medical Laboratory Technologist,U5(SC),1,0,-1,NA
+822,KASESE,Protestant General Hospital,Medical Laboratory Technician,U5(SC),2,0,-2,NA
+823,KASESE,Protestant General Hospital,Assistant Health Educator,U5(SC),1,0,-1,NA
+824,KASESE,Protestant General Hospital,Health Inspector,U5(SC),1,0,-1,NA
+825,KASESE,Protestant General Hospital,Medical Laboratory Assistant,U7U,1,0,-1,NA
+826,KASESE,Protestant General Hospital,Enrolled Nurse,U7U,46,0,-46,NA
+827,KASESE,Protestant General Hospital,Enrolled Psychiatric Nurse,U7U,2,0,-2,NA
+828,KASESE,Protestant General Hospital,Anaesthetic Attendant,U8U,2,0,-2,NA
+829,KASESE,Protestant General Hospital,Mortuary Attendant,U8L,2,0,-2,NA
+830,KASESE,Protestant General Hospital,Darkroom Attendant,U8L,1,0,-1,NA
+831,KASESE,Protestant Health Centre III,Senior Clinical Officer,,3,0,-3,NA
+832,KASESE,Protestant Health Centre III,Nursing Officer (Nursing),,3,10,7,NA
+833,KASESE,Protestant Health Centre III,Enrolled Nurse,,9,10,1,NA
+834,KASESE,Protestant Health Centre III,Clinical Officer,,3,4,1,NA
+835,KASESE,Protestant Health Centre III,Laboratory Assistant,,3,12,9,NA
+836,KASESE,Protestant Health Centre III,Enrolled Midwife,,6,6,0,NA
+837,KASESE,Protestant Health Centre III,Laboratory Technician,,3,0,-3,NA
+838,KASESE,Protestant Health Centre III,Senior Medical Clinical officer,U3(SC),3,0,-3,NA
+839,KASESE,Protestant Health Centre III,Assistant Nursing Officer,U5(SC),3,0,-3,NA
+840,KASESE,Protestant Health Centre III,Clinical officer,U5(SC),3,0,-3,NA
+841,KASESE,Protestant Health Centre III,Medical Laboratory Technician,U5(SC),3,0,-3,NA
+842,KASESE,Protestant Health Centre III,Medical Laboratory Assistant,U7U,3,0,-3,NA
+843,KASESE,Protestant Health Centre III,Enrolled Nurse,U7U,9,0,-9,NA
+844,KASESE,Protestant Health Centre III,Health Information Assistant,U7U,3,0,-3,NA
+845,KASESE,Protestant Health Centre III,Health Assistant,U7U,3,0,-3,NA
+846,KASESE,Protestant Health Centre IV,Senior Nursing Officer,,2,5,3,NA
+847,KASESE,Protestant Health Centre IV,Enrolled Psychiatric Nurse,,2,1,-1,NA
+848,KASESE,Protestant Health Centre IV,Nursing Officer (Nursing),,2,6,4,NA
+849,KASESE,Protestant Health Centre IV,Senior Medical Officer,,2,1,-1,NA
+850,KASESE,Protestant Health Centre IV,Enrolled Nurse,,6,9,3,NA
+851,KASESE,Protestant Health Centre IV,Clinical Officer,,4,5,1,NA
+852,KASESE,Protestant Health Centre IV,Ophthalmic Clinical Officer,,2,0,-2,NA
+853,KASESE,Protestant Health Centre IV,Anaesthetic Assistant,,4,0,-4,NA
+854,KASESE,Protestant Health Centre IV,Laboratory Assistant,,2,5,3,NA
+855,KASESE,Protestant Health Centre IV,Theatre Assistant,,4,4,0,NA
+856,KASESE,Protestant Health Centre IV,Health Inspector,,4,2,-2,NA
+857,KASESE,Protestant Health Centre IV,Anaesthetic Officer,,2,1,-1,NA
+858,KASESE,Protestant Health Centre IV,Enrolled Midwife,,6,3,-3,NA
+859,KASESE,Protestant Health Centre IV,Laboratory Technician,,2,1,-1,NA
+860,KASESE,Protestant Health Centre IV,Public Health Nurse,,2,0,-2,NA
+861,KASESE,Protestant Health Centre IV,Nursing Officer (Psychiatry),,2,0,-2,NA
+862,KASESE,Protestant Health Centre IV,Nursing Officer (Midwifery),,2,0,-2,NA
+863,KASESE,Protestant Health Centre IV,Assistant Entomological Officer (Med),,2,0,-2,NA
+864,KASESE,Protestant Health Centre IV,Medical Officer,,2,3,1,NA
+865,KASESE,Protestant Health Centre IV,Senior Medical Officer,U3(SC),2,0,-2,NA
+866,KASESE,Protestant Health Centre IV,Medical Officer,U4(SC),2,0,-2,NA
+867,KASESE,Protestant Health Centre IV,Senior Assistant Nursing Officer,U4(SC),2,0,-2,NA
+868,KASESE,Protestant Health Centre IV,Public/Community Health Nurse,U4(SC),2,0,-2,NA
+869,KASESE,Protestant Health Centre IV,Ophthalmic clinical Officer,U4(SC),2,0,-2,NA
+870,KASESE,Protestant Health Centre IV,Medical Clinical officer,U4(SC),4,0,-4,NA
+871,KASESE,Protestant Health Centre IV,Assistant Nursing Officer,U5(SC),2,0,-2,NA
+872,KASESE,Protestant Health Centre IV,Assistant Nursing Officer - Psychiatry,U5(SC),2,0,-2,NA
+873,KASESE,Protestant Health Centre IV,Assistant Nursing Officer (Midwifery),U5(SC),2,0,-2,NA
+874,KASESE,Protestant Health Centre IV,Anaesthetic officer,U5(SC),2,0,-2,NA
+875,KASESE,Protestant Health Centre IV,Dispenser,U5(SC),2,0,-2,NA
+876,KASESE,Protestant Health Centre IV,Medical Laboratory Technician,U5(SC),2,0,-2,NA
+877,KASESE,Protestant Health Centre IV,Assistant Health Educator,U5(SC),2,0,-2,NA
+878,KASESE,Protestant Health Centre IV,Health Inspector,U5(SC),4,0,-4,NA
+879,KASESE,Protestant Health Centre IV,Theatre Assistant,U6U,4,0,-4,NA
+880,KASESE,Protestant Health Centre IV,Anaesthetic Assistant,U7U,4,0,-4,NA
+881,KASESE,Protestant Health Centre IV,Medical Laboratory Assistant,U7U,2,0,-2,NA
+882,KASESE,Protestant Health Centre IV,Enrolled Nurse,U7U,6,0,-6,NA
+883,KASESE,Protestant Health Centre IV,Enrolled Psychiatric Nurse,U7U,2,0,-2,NA
+884,KASESE,Protestant Health Centre IV,Health Information Assistant,U7U,2,0,-2,NA
+885,KASESE,Protestant Health Centre IV,Health Assistant,U7U,2,0,-2,NA
+886,KASESE,Protestant Health Centre IV,Cold Chain Assistant,U7L,2,0,-2,NA
+887,KIBOGA,Protestant Health Centre III,Senior Clinical Officer,,1,0,-1,NA
+888,KIBOGA,Protestant Health Centre III,Nursing Officer (Nursing),,1,0,-1,NA
+889,KIBOGA,Protestant Health Centre III,Enrolled Nurse,,3,0,-3,NA
+890,KIBOGA,Protestant Health Centre III,Clinical Officer,,1,0,-1,NA
+891,KIBOGA,Protestant Health Centre III,Laboratory Assistant,,1,0,-1,NA
+892,KIBOGA,Protestant Health Centre III,Enrolled Midwife,,2,4,2,NA
+893,KIBOGA,Protestant Health Centre III,Laboratory Technician,,1,0,-1,NA
+894,KIBOGA,Protestant Health Centre III,Senior Medical Clinical officer,U3(SC),1,0,-1,NA
+895,KIBOGA,Protestant Health Centre III,Assistant Nursing Officer,U5(SC),1,0,-1,NA
+896,KIBOGA,Protestant Health Centre III,Clinical officer,U5(SC),1,0,-1,NA
+897,KIBOGA,Protestant Health Centre III,Medical Laboratory Technician,U5(SC),1,0,-1,NA
+898,KIBOGA,Protestant Health Centre III,Medical Laboratory Assistant,U7U,1,0,-1,NA
+899,KIBOGA,Protestant Health Centre III,Enrolled Nurse,U7U,3,0,-3,NA
+900,KIBOGA,Protestant Health Centre III,Health Information Assistant,U7U,1,0,-1,NA
+901,KIBOGA,Protestant Health Centre III,Health Assistant,U7U,1,0,-1,NA
+902,KIRUHURA,Protestant General Hospital,Senior Nursing Officer,,5,1,-4,NA
+903,KIRUHURA,Protestant General Hospital,Principal Nursing Officer,,1,0,-1,NA
+904,KIRUHURA,Protestant General Hospital,Physiotherapist,,1,0,-1,NA
+905,KIRUHURA,Protestant General Hospital,Senior Clinical Officer,,1,0,-1,NA
+906,KIRUHURA,Protestant General Hospital,Enrolled Psychiatric Nurse,,2,0,-2,NA
+907,KIRUHURA,Protestant General Hospital,Occupational Therapist,,1,0,-1,NA
+908,KIRUHURA,Protestant General Hospital,Nursing Officer (Nursing),,17,16,-1,NA
+909,KIRUHURA,Protestant General Hospital,Senior Medical Officer,,1,0,-1,NA
+910,KIRUHURA,Protestant General Hospital,Enrolled Nurse,,46,33,-13,NA
+911,KIRUHURA,Protestant General Hospital,Clinical Officer,,5,5,0,NA
+912,KIRUHURA,Protestant General Hospital,Radiographer,,2,0,-2,NA
+913,KIRUHURA,Protestant General Hospital,Ophthalmic Clinical Officer,,1,0,-1,NA
+914,KIRUHURA,Protestant General Hospital,Anaesthetic Assistant,,2,0,-2,NA
+915,KIRUHURA,Protestant General Hospital,Laboratory Assistant,,1,6,5,NA
+916,KIRUHURA,Protestant General Hospital,Theatre Assistant,,0,2,2,NA
+917,KIRUHURA,Protestant General Hospital,Health Inspector,,1,0,-1,NA
+918,KIRUHURA,Protestant General Hospital,Health Educator,,1,0,-1,NA
+919,KIRUHURA,Protestant General Hospital,Anaesthetic Officer,,3,3,0,NA
+920,KIRUHURA,Protestant General Hospital,Medical Officer Special Grade (Obs Gyne),,1,0,-1,NA
+921,KIRUHURA,Protestant General Hospital,Enrolled Midwife,,25,5,-20,NA
+922,KIRUHURA,Protestant General Hospital,Nutritionist,,1,0,-1,NA
+923,KIRUHURA,Protestant General Hospital,Orthopedic Officer,,2,1,-1,NA
+924,KIRUHURA,Protestant General Hospital,Medical Officer Special Grade (Community),,1,0,-1,NA
+925,KIRUHURA,Protestant General Hospital,Senior Laboratory Technologist,,1,0,-1,NA
+926,KIRUHURA,Protestant General Hospital,Laboratory Technician,,2,1,-1,NA
+927,KIRUHURA,Protestant General Hospital,Principal Medical Officer,,1,0,-1,NA
+928,KIRUHURA,Protestant General Hospital,Medical Officer Special Grade (Internal Medicine),,1,0,-1,NA
+929,KIRUHURA,Protestant General Hospital,Medical Officer Special Grade (Surgery),,1,0,-1,NA
+930,KIRUHURA,Protestant General Hospital,Medical Officer Special Grade (Paediatrics),,1,0,-1,NA
+931,KIRUHURA,Protestant General Hospital,Public Health Nurse,,1,0,-1,NA
+932,KIRUHURA,Protestant General Hospital,Psychiatric Clinical Officer,,1,0,-1,NA
+933,KIRUHURA,Protestant General Hospital,Nursing Officer (Psychiatry),,3,0,-3,NA
+934,KIRUHURA,Protestant General Hospital,Nursing Officer (Midwifery),,1,0,-1,NA
+935,KIRUHURA,Protestant General Hospital,Assistant Entomological Officer (Med),,1,0,-1,NA
+936,KIRUHURA,Protestant General Hospital,Medical Officer,,4,3,-1,NA
+937,KIRUHURA,Protestant General Hospital,Laboratory Technologist,,1,1,0,NA
+938,KIRUHURA,Protestant General Hospital,Principal Medical Officer,U2(SC),1,0,-1,NA
+939,KIRUHURA,Protestant General Hospital,Medical Officer Special Grade - Internal Medicine,U2(SC),1,0,-1,NA
+940,KIRUHURA,Protestant General Hospital,Medical Officer Special Grade - General Surgery,U2(SC),1,0,-1,NA
+941,KIRUHURA,Protestant General Hospital,Medical Officer Special Grade - Obstetrics & Gynaecology,U2(SC),1,0,-1,NA
+942,KIRUHURA,Protestant General Hospital,Medical Officer Special Grade - Paediatrics,U2(SC),1,0,-1,NA
+943,KIRUHURA,Protestant General Hospital,Medical Officer Special Grade - Public Health,U2(SC),1,0,-1,NA
+944,KIRUHURA,Protestant General Hospital,Principal Nursing Officer,U2(SC),1,0,-1,NA
+945,KIRUHURA,Protestant General Hospital,Senior Medical Officer,U3(SC),1,0,-1,NA
+946,KIRUHURA,Protestant General Hospital,Senior Medical Clinical officer,U3(SC),1,0,-1,NA
+947,KIRUHURA,Protestant General Hospital,Medical Officer,U4(SC),4,0,-4,NA
+948,KIRUHURA,Protestant General Hospital,Senior Assistant Nursing Officer,U4(SC),5,0,-5,NA
+949,KIRUHURA,Protestant General Hospital,Public/Community Health Nurse,U4(SC),1,0,-1,NA
+950,KIRUHURA,Protestant General Hospital,Ophthalmic clinical Officer,U4(SC),1,0,-1,NA
+951,KIRUHURA,Protestant General Hospital,Medical Clinical officer,U4(SC),5,0,-5,NA
+952,KIRUHURA,Protestant General Hospital,Orthopaedic Officer,U4(SC),2,0,-2,NA
+953,KIRUHURA,Protestant General Hospital,Senior Medical Laboratory Technologist,U4(SC),1,0,-1,NA
+954,KIRUHURA,Protestant General Hospital,Health Educator,U4(SC),1,0,-1,NA
+955,KIRUHURA,Protestant General Hospital,Medical Social Worker,U4L,1,0,-1,NA
+956,KIRUHURA,Protestant General Hospital,Assistant Nursing Officer,U5(SC),17,0,-17,NA
+957,KIRUHURA,Protestant General Hospital,Assistant Nursing Officer - Psychiatry,U5(SC),1,0,-1,NA
+958,KIRUHURA,Protestant General Hospital,Assistant Nursing Officer (Midwifery),U5(SC),3,0,-3,NA
+959,KIRUHURA,Protestant General Hospital,Psychiatric Clinical Officer,U5(SC),1,0,-1,NA
+960,KIRUHURA,Protestant General Hospital,Anaesthetic officer,U5(SC),3,0,-3,NA
+961,KIRUHURA,Protestant General Hospital,Dispenser,U5(SC),2,0,-2,NA
+962,KIRUHURA,Protestant General Hospital,Physiotherapist,U5(SC),1,0,-1,NA
+963,KIRUHURA,Protestant General Hospital,Occupational therapist,U5(SC),1,0,-1,NA
+964,KIRUHURA,Protestant General Hospital,Radiographer,U5(SC),2,0,-2,NA
+965,KIRUHURA,Protestant General Hospital,Medical Laboratory Technologist,U5(SC),1,0,-1,NA
+966,KIRUHURA,Protestant General Hospital,Medical Laboratory Technician,U5(SC),2,0,-2,NA
+967,KIRUHURA,Protestant General Hospital,Assistant Health Educator,U5(SC),1,0,-1,NA
+968,KIRUHURA,Protestant General Hospital,Health Inspector,U5(SC),1,0,-1,NA
+969,KIRUHURA,Protestant General Hospital,Medical Laboratory Assistant,U7U,1,0,-1,NA
+970,KIRUHURA,Protestant General Hospital,Enrolled Nurse,U7U,46,0,-46,NA
+971,KIRUHURA,Protestant General Hospital,Enrolled Psychiatric Nurse,U7U,2,0,-2,NA
+972,KIRUHURA,Protestant General Hospital,Anaesthetic Attendant,U8U,2,0,-2,NA
+973,KIRUHURA,Protestant General Hospital,Mortuary Attendant,U8L,2,0,-2,NA
+974,KIRUHURA,Protestant General Hospital,Darkroom Attendant,U8L,1,0,-1,NA
+975,KOTIDO,Protestant Health Centre III,Senior Clinical Officer,,1,0,-1,NA
+976,KOTIDO,Protestant Health Centre III,Nursing Officer (Nursing),,1,0,-1,NA
+977,KOTIDO,Protestant Health Centre III,Enrolled Nurse,,3,0,-3,NA
+978,KOTIDO,Protestant Health Centre III,Clinical Officer,,1,0,-1,NA
+979,KOTIDO,Protestant Health Centre III,Laboratory Assistant,,1,2,1,NA
+980,KOTIDO,Protestant Health Centre III,Enrolled Midwife,,2,1,-1,NA
+981,KOTIDO,Protestant Health Centre III,Laboratory Technician,,1,0,-1,NA
+982,KOTIDO,Protestant Health Centre III,Senior Medical Clinical officer,U3(SC),1,0,-1,NA
+983,KOTIDO,Protestant Health Centre III,Assistant Nursing Officer,U5(SC),1,0,-1,NA
+984,KOTIDO,Protestant Health Centre III,Clinical officer,U5(SC),1,0,-1,NA
+985,KOTIDO,Protestant Health Centre III,Medical Laboratory Technician,U5(SC),1,0,-1,NA
+986,KOTIDO,Protestant Health Centre III,Medical Laboratory Assistant,U7U,1,0,-1,NA
+987,KOTIDO,Protestant Health Centre III,Enrolled Nurse,U7U,3,0,-3,NA
+988,KOTIDO,Protestant Health Centre III,Health Information Assistant,U7U,1,0,-1,NA
+989,KOTIDO,Protestant Health Centre III,Health Assistant,U7U,1,0,-1,NA
+990,KUMI,Protestant General Hospital,Senior Nursing Officer,,5,2,-3,NA
+991,KUMI,Protestant General Hospital,Principal Nursing Officer,,1,1,0,NA
+992,KUMI,Protestant General Hospital,Physiotherapist,,1,2,1,NA
+993,KUMI,Protestant General Hospital,Senior Clinical Officer,,1,1,0,NA
+994,KUMI,Protestant General Hospital,Enrolled Psychiatric Nurse,,2,0,-2,NA
+995,KUMI,Protestant General Hospital,Occupational Therapist,,1,0,-1,NA
+996,KUMI,Protestant General Hospital,Nursing Officer (Nursing),,17,0,-17,NA
+997,KUMI,Protestant General Hospital,Senior Medical Officer,,1,0,-1,NA
+998,KUMI,Protestant General Hospital,Enrolled Nurse,,46,12,-34,NA
+999,KUMI,Protestant General Hospital,Clinical Officer,,5,5,0,NA
+1000,KUMI,Protestant General Hospital,Radiographer,,2,1,-1,NA
+1001,KUMI,Protestant General Hospital,Ophthalmic Clinical Officer,,1,0,-1,NA
+1002,KUMI,Protestant General Hospital,Anaesthetic Assistant,,2,0,-2,NA
+1003,KUMI,Protestant General Hospital,Laboratory Assistant,,1,5,4,NA
+1004,KUMI,Protestant General Hospital,Theatre Assistant,,0,2,2,NA
+1005,KUMI,Protestant General Hospital,Health Inspector,,1,0,-1,NA
+1006,KUMI,Protestant General Hospital,Health Educator,,1,0,-1,NA
+1007,KUMI,Protestant General Hospital,Anaesthetic Officer,,3,0,-3,NA
+1008,KUMI,Protestant General Hospital,Medical Officer Special Grade (Obs Gyne),,1,0,-1,NA
+1009,KUMI,Protestant General Hospital,Enrolled Midwife,,25,5,-20,NA
+1010,KUMI,Protestant General Hospital,Nutritionist,,1,3,2,NA
+1011,KUMI,Protestant General Hospital,Orthopedic Officer,,2,1,-1,NA
+1012,KUMI,Protestant General Hospital,Medical Officer Special Grade (Community),,1,0,-1,NA
+1013,KUMI,Protestant General Hospital,Senior Laboratory Technologist,,1,0,-1,NA
+1014,KUMI,Protestant General Hospital,Laboratory Technician,,2,1,-1,NA
+1015,KUMI,Protestant General Hospital,Principal Medical Officer,,1,0,-1,NA
+1016,KUMI,Protestant General Hospital,Medical Officer Special Grade (Internal Medicine),,1,0,-1,NA
+1017,KUMI,Protestant General Hospital,Medical Officer Special Grade (Surgery),,1,0,-1,NA
+1018,KUMI,Protestant General Hospital,Medical Officer Special Grade (Paediatrics),,1,0,-1,NA
+1019,KUMI,Protestant General Hospital,Public Health Nurse,,1,0,-1,NA
+1020,KUMI,Protestant General Hospital,Psychiatric Clinical Officer,,1,0,-1,NA
+1021,KUMI,Protestant General Hospital,Nursing Officer (Psychiatry),,3,0,-3,NA
+1022,KUMI,Protestant General Hospital,Nursing Officer (Midwifery),,1,0,-1,NA
+1023,KUMI,Protestant General Hospital,Assistant Entomological Officer (Med),,1,0,-1,NA
+1024,KUMI,Protestant General Hospital,Medical Officer,,4,6,2,NA
+1025,KUMI,Protestant General Hospital,Laboratory Technologist,,1,3,2,NA
+1026,KUMI,Protestant General Hospital,Principal Medical Officer,U2(SC),1,0,-1,NA
+1027,KUMI,Protestant General Hospital,Medical Officer Special Grade - Internal Medicine,U2(SC),1,0,-1,NA
+1028,KUMI,Protestant General Hospital,Medical Officer Special Grade - General Surgery,U2(SC),1,0,-1,NA
+1029,KUMI,Protestant General Hospital,Medical Officer Special Grade - Obstetrics & Gynaecology,U2(SC),1,0,-1,NA
+1030,KUMI,Protestant General Hospital,Medical Officer Special Grade - Paediatrics,U2(SC),1,0,-1,NA
+1031,KUMI,Protestant General Hospital,Medical Officer Special Grade - Public Health,U2(SC),1,0,-1,NA
+1032,KUMI,Protestant General Hospital,Principal Nursing Officer,U2(SC),1,0,-1,NA
+1033,KUMI,Protestant General Hospital,Senior Medical Officer,U3(SC),1,0,-1,NA
+1034,KUMI,Protestant General Hospital,Senior Medical Clinical officer,U3(SC),1,0,-1,NA
+1035,KUMI,Protestant General Hospital,Medical Officer,U4(SC),4,0,-4,NA
+1036,KUMI,Protestant General Hospital,Senior Assistant Nursing Officer,U4(SC),5,0,-5,NA
+1037,KUMI,Protestant General Hospital,Public/Community Health Nurse,U4(SC),1,0,-1,NA
+1038,KUMI,Protestant General Hospital,Ophthalmic clinical Officer,U4(SC),1,0,-1,NA
+1039,KUMI,Protestant General Hospital,Medical Clinical officer,U4(SC),5,0,-5,NA
+1040,KUMI,Protestant General Hospital,Orthopaedic Officer,U4(SC),2,0,-2,NA
+1041,KUMI,Protestant General Hospital,Senior Medical Laboratory Technologist,U4(SC),1,0,-1,NA
+1042,KUMI,Protestant General Hospital,Health Educator,U4(SC),1,0,-1,NA
+1043,KUMI,Protestant General Hospital,Medical Social Worker,U4L,1,0,-1,NA
+1044,KUMI,Protestant General Hospital,Assistant Nursing Officer,U5(SC),17,0,-17,NA
+1045,KUMI,Protestant General Hospital,Assistant Nursing Officer - Psychiatry,U5(SC),1,0,-1,NA
+1046,KUMI,Protestant General Hospital,Assistant Nursing Officer (Midwifery),U5(SC),3,0,-3,NA
+1047,KUMI,Protestant General Hospital,Psychiatric Clinical Officer,U5(SC),1,0,-1,NA
+1048,KUMI,Protestant General Hospital,Anaesthetic officer,U5(SC),3,0,-3,NA
+1049,KUMI,Protestant General Hospital,Dispenser,U5(SC),2,0,-2,NA
+1050,KUMI,Protestant General Hospital,Physiotherapist,U5(SC),1,0,-1,NA
+1051,KUMI,Protestant General Hospital,Occupational therapist,U5(SC),1,0,-1,NA
+1052,KUMI,Protestant General Hospital,Radiographer,U5(SC),2,0,-2,NA
+1053,KUMI,Protestant General Hospital,Medical Laboratory Technologist,U5(SC),1,0,-1,NA
+1054,KUMI,Protestant General Hospital,Medical Laboratory Technician,U5(SC),2,0,-2,NA
+1055,KUMI,Protestant General Hospital,Assistant Health Educator,U5(SC),1,0,-1,NA
+1056,KUMI,Protestant General Hospital,Health Inspector,U5(SC),1,0,-1,NA
+1057,KUMI,Protestant General Hospital,Medical Laboratory Assistant,U7U,1,0,-1,NA
+1058,KUMI,Protestant General Hospital,Enrolled Nurse,U7U,46,0,-46,NA
+1059,KUMI,Protestant General Hospital,Enrolled Psychiatric Nurse,U7U,2,0,-2,NA
+1060,KUMI,Protestant General Hospital,Anaesthetic Attendant,U8U,2,0,-2,NA
+1061,KUMI,Protestant General Hospital,Mortuary Attendant,U8L,2,0,-2,NA
+1062,KUMI,Protestant General Hospital,Darkroom Attendant,U8L,1,0,-1,NA
+1063,KYENJOJO,Protestant Health Centre II,Enrolled Nurse,U7U,1,0,-1,NA
+1064,KYENJOJO,Protestant Health Centre II,Health Assistant,U7U,1,0,-1,NA
+1065,LIRA,Protestant Health Centre III,Senior Clinical Officer,,2,0,-2,NA
+1066,LIRA,Protestant Health Centre III,Nursing Officer (Nursing),,2,0,-2,NA
+1067,LIRA,Protestant Health Centre III,Enrolled Nurse,,6,1,-5,NA
+1068,LIRA,Protestant Health Centre III,Clinical Officer,,2,1,-1,NA
+1069,LIRA,Protestant Health Centre III,Laboratory Assistant,,2,0,-2,NA
+1070,LIRA,Protestant Health Centre III,Enrolled Midwife,,4,3,-1,NA
+1071,LIRA,Protestant Health Centre III,Laboratory Technician,,2,0,-2,NA
+1072,LIRA,Protestant Health Centre III,Senior Medical Clinical officer,U3(SC),2,0,-2,NA
+1073,LIRA,Protestant Health Centre III,Assistant Nursing Officer,U5(SC),2,0,-2,NA
+1074,LIRA,Protestant Health Centre III,Clinical officer,U5(SC),2,0,-2,NA
+1075,LIRA,Protestant Health Centre III,Medical Laboratory Technician,U5(SC),2,0,-2,NA
+1076,LIRA,Protestant Health Centre III,Medical Laboratory Assistant,U7U,2,0,-2,NA
+1077,LIRA,Protestant Health Centre III,Enrolled Nurse,U7U,6,0,-6,NA
+1078,LIRA,Protestant Health Centre III,Health Information Assistant,U7U,2,0,-2,NA
+1079,LIRA,Protestant Health Centre III,Health Assistant,U7U,2,0,-2,NA
+1080,LIRA,Protestant Health Centre IV,Senior Nursing Officer,,1,0,-1,NA
+1081,LIRA,Protestant Health Centre IV,Enrolled Psychiatric Nurse,,1,0,-1,NA
+1082,LIRA,Protestant Health Centre IV,Nursing Officer (Nursing),,1,0,-1,NA
+1083,LIRA,Protestant Health Centre IV,Senior Medical Officer,,1,0,-1,NA
+1084,LIRA,Protestant Health Centre IV,Enrolled Nurse,,3,4,1,NA
+1085,LIRA,Protestant Health Centre IV,Clinical Officer,,2,7,5,NA
+1086,LIRA,Protestant Health Centre IV,Ophthalmic Clinical Officer,,1,0,-1,NA
+1087,LIRA,Protestant Health Centre IV,Anaesthetic Assistant,,2,0,-2,NA
+1088,LIRA,Protestant Health Centre IV,Laboratory Assistant,,1,6,5,NA
+1089,LIRA,Protestant Health Centre IV,Theatre Assistant,,2,2,0,NA
+1090,LIRA,Protestant Health Centre IV,Health Inspector,,2,0,-2,NA
+1091,LIRA,Protestant Health Centre IV,Anaesthetic Officer,,1,1,0,NA
+1092,LIRA,Protestant Health Centre IV,Enrolled Midwife,,3,6,3,NA
+1093,LIRA,Protestant Health Centre IV,Laboratory Technician,,1,3,2,NA
+1094,LIRA,Protestant Health Centre IV,Public Health Nurse,,1,0,-1,NA
+1095,LIRA,Protestant Health Centre IV,Nursing Officer (Psychiatry),,1,0,-1,NA
+1096,LIRA,Protestant Health Centre IV,Nursing Officer (Midwifery),,1,0,-1,NA
+1097,LIRA,Protestant Health Centre IV,Assistant Entomological Officer (Med),,1,0,-1,NA
+1098,LIRA,Protestant Health Centre IV,Medical Officer,,1,6,5,NA
+1099,LIRA,Protestant Health Centre IV,Senior Medical Officer,U3(SC),1,0,-1,NA
+1100,LIRA,Protestant Health Centre IV,Medical Officer,U4(SC),1,0,-1,NA
+1101,LIRA,Protestant Health Centre IV,Senior Assistant Nursing Officer,U4(SC),1,0,-1,NA
+1102,LIRA,Protestant Health Centre IV,Public/Community Health Nurse,U4(SC),1,0,-1,NA
+1103,LIRA,Protestant Health Centre IV,Ophthalmic clinical Officer,U4(SC),1,0,-1,NA
+1104,LIRA,Protestant Health Centre IV,Medical Clinical officer,U4(SC),2,0,-2,NA
+1105,LIRA,Protestant Health Centre IV,Assistant Nursing Officer,U5(SC),1,0,-1,NA
+1106,LIRA,Protestant Health Centre IV,Assistant Nursing Officer - Psychiatry,U5(SC),1,0,-1,NA
+1107,LIRA,Protestant Health Centre IV,Assistant Nursing Officer (Midwifery),U5(SC),1,0,-1,NA
+1108,LIRA,Protestant Health Centre IV,Anaesthetic officer,U5(SC),1,0,-1,NA
+1109,LIRA,Protestant Health Centre IV,Dispenser,U5(SC),1,0,-1,NA
+1110,LIRA,Protestant Health Centre IV,Medical Laboratory Technician,U5(SC),1,0,-1,NA
+1111,LIRA,Protestant Health Centre IV,Assistant Health Educator,U5(SC),1,0,-1,NA
+1112,LIRA,Protestant Health Centre IV,Health Inspector,U5(SC),2,0,-2,NA
+1113,LIRA,Protestant Health Centre IV,Theatre Assistant,U6U,2,0,-2,NA
+1114,LIRA,Protestant Health Centre IV,Anaesthetic Assistant,U7U,2,0,-2,NA
+1115,LIRA,Protestant Health Centre IV,Medical Laboratory Assistant,U7U,1,0,-1,NA
+1116,LIRA,Protestant Health Centre IV,Enrolled Nurse,U7U,3,0,-3,NA
+1117,LIRA,Protestant Health Centre IV,Enrolled Psychiatric Nurse,U7U,1,0,-1,NA
+1118,LIRA,Protestant Health Centre IV,Health Information Assistant,U7U,1,0,-1,NA
+1119,LIRA,Protestant Health Centre IV,Health Assistant,U7U,1,0,-1,NA
+1120,LIRA,Protestant Health Centre IV,Cold Chain Assistant,U7L,1,0,-1,NA
+1121,LWENGO,Protestant Health Centre III,Senior Clinical Officer,,1,0,-1,NA
+1122,LWENGO,Protestant Health Centre III,Nursing Officer (Nursing),,1,0,-1,NA
+1123,LWENGO,Protestant Health Centre III,Enrolled Nurse,,3,2,-1,NA
+1124,LWENGO,Protestant Health Centre III,Clinical Officer,,1,0,-1,NA
+1125,LWENGO,Protestant Health Centre III,Laboratory Assistant,,1,2,1,NA
+1126,LWENGO,Protestant Health Centre III,Enrolled Midwife,,2,2,0,NA
+1127,LWENGO,Protestant Health Centre III,Laboratory Technician,,1,0,-1,NA
+1128,LWENGO,Protestant Health Centre III,Senior Medical Clinical officer,U3(SC),1,0,-1,NA
+1129,LWENGO,Protestant Health Centre III,Assistant Nursing Officer,U5(SC),1,0,-1,NA
+1130,LWENGO,Protestant Health Centre III,Clinical officer,U5(SC),1,0,-1,NA
+1131,LWENGO,Protestant Health Centre III,Medical Laboratory Technician,U5(SC),1,0,-1,NA
+1132,LWENGO,Protestant Health Centre III,Medical Laboratory Assistant,U7U,1,0,-1,NA
+1133,LWENGO,Protestant Health Centre III,Enrolled Nurse,U7U,3,0,-3,NA
+1134,LWENGO,Protestant Health Centre III,Health Information Assistant,U7U,1,0,-1,NA
+1135,LWENGO,Protestant Health Centre III,Health Assistant,U7U,1,0,-1,NA
+1136,MANAFWA,Protestant Health Centre IV,Senior Nursing Officer,,1,0,-1,NA
+1137,MANAFWA,Protestant Health Centre IV,Enrolled Psychiatric Nurse,,1,0,-1,NA
+1138,MANAFWA,Protestant Health Centre IV,Nursing Officer (Nursing),,1,0,-1,NA
+1139,MANAFWA,Protestant Health Centre IV,Senior Medical Officer,,1,0,-1,NA
+1140,MANAFWA,Protestant Health Centre IV,Enrolled Nurse,,3,3,0,NA
+1141,MANAFWA,Protestant Health Centre IV,Clinical Officer,,2,2,0,NA
+1142,MANAFWA,Protestant Health Centre IV,Ophthalmic Clinical Officer,,1,0,-1,NA
+1143,MANAFWA,Protestant Health Centre IV,Anaesthetic Assistant,,2,0,-2,NA
+1144,MANAFWA,Protestant Health Centre IV,Laboratory Assistant,,1,3,2,NA
+1145,MANAFWA,Protestant Health Centre IV,Theatre Assistant,,2,0,-2,NA
+1146,MANAFWA,Protestant Health Centre IV,Health Inspector,,2,0,-2,NA
+1147,MANAFWA,Protestant Health Centre IV,Anaesthetic Officer,,1,0,-1,NA
+1148,MANAFWA,Protestant Health Centre IV,Enrolled Midwife,,3,2,-1,NA
+1149,MANAFWA,Protestant Health Centre IV,Laboratory Technician,,1,0,-1,NA
+1150,MANAFWA,Protestant Health Centre IV,Public Health Nurse,,1,0,-1,NA
+1151,MANAFWA,Protestant Health Centre IV,Nursing Officer (Psychiatry),,1,0,-1,NA
+1152,MANAFWA,Protestant Health Centre IV,Nursing Officer (Midwifery),,1,0,-1,NA
+1153,MANAFWA,Protestant Health Centre IV,Assistant Entomological Officer (Med),,1,0,-1,NA
+1154,MANAFWA,Protestant Health Centre IV,Medical Officer,,1,0,-1,NA
+1155,MANAFWA,Protestant Health Centre IV,Senior Medical Officer,U3(SC),1,0,-1,NA
+1156,MANAFWA,Protestant Health Centre IV,Medical Officer,U4(SC),1,0,-1,NA
+1157,MANAFWA,Protestant Health Centre IV,Senior Assistant Nursing Officer,U4(SC),1,0,-1,NA
+1158,MANAFWA,Protestant Health Centre IV,Public/Community Health Nurse,U4(SC),1,0,-1,NA
+1159,MANAFWA,Protestant Health Centre IV,Ophthalmic clinical Officer,U4(SC),1,0,-1,NA
+1160,MANAFWA,Protestant Health Centre IV,Medical Clinical officer,U4(SC),2,0,-2,NA
+1161,MANAFWA,Protestant Health Centre IV,Assistant Nursing Officer,U5(SC),1,0,-1,NA
+1162,MANAFWA,Protestant Health Centre IV,Assistant Nursing Officer - Psychiatry,U5(SC),1,0,-1,NA
+1163,MANAFWA,Protestant Health Centre IV,Assistant Nursing Officer (Midwifery),U5(SC),1,0,-1,NA
+1164,MANAFWA,Protestant Health Centre IV,Anaesthetic officer,U5(SC),1,0,-1,NA
+1165,MANAFWA,Protestant Health Centre IV,Dispenser,U5(SC),1,0,-1,NA
+1166,MANAFWA,Protestant Health Centre IV,Medical Laboratory Technician,U5(SC),1,0,-1,NA
+1167,MANAFWA,Protestant Health Centre IV,Assistant Health Educator,U5(SC),1,0,-1,NA
+1168,MANAFWA,Protestant Health Centre IV,Health Inspector,U5(SC),2,0,-2,NA
+1169,MANAFWA,Protestant Health Centre IV,Theatre Assistant,U6U,2,0,-2,NA
+1170,MANAFWA,Protestant Health Centre IV,Anaesthetic Assistant,U7U,2,0,-2,NA
+1171,MANAFWA,Protestant Health Centre IV,Medical Laboratory Assistant,U7U,1,0,-1,NA
+1172,MANAFWA,Protestant Health Centre IV,Enrolled Nurse,U7U,3,0,-3,NA
+1173,MANAFWA,Protestant Health Centre IV,Enrolled Psychiatric Nurse,U7U,1,0,-1,NA
+1174,MANAFWA,Protestant Health Centre IV,Health Information Assistant,U7U,1,0,-1,NA
+1175,MANAFWA,Protestant Health Centre IV,Health Assistant,U7U,1,0,-1,NA
+1176,MANAFWA,Protestant Health Centre IV,Cold Chain Assistant,U7L,1,0,-1,NA
+1177,MARACHA,Protestant Health Center II,Enrolled Nurse,,1,2,1,NA
+1178,MARACHA,Protestant Health Center II,Enrolled Midwife,,1,2,1,NA
+1179,MASINDI,Protestant Health Centre IV,Senior Nursing Officer,,1,0,-1,NA
+1180,MASINDI,Protestant Health Centre IV,Enrolled Psychiatric Nurse,,1,0,-1,NA
+1181,MASINDI,Protestant Health Centre IV,Nursing Officer (Nursing),,1,0,-1,NA
+1182,MASINDI,Protestant Health Centre IV,Senior Medical Officer,,1,0,-1,NA
+1183,MASINDI,Protestant Health Centre IV,Enrolled Nurse,,3,0,-3,NA
+1184,MASINDI,Protestant Health Centre IV,Clinical Officer,,2,0,-2,NA
+1185,MASINDI,Protestant Health Centre IV,Ophthalmic Clinical Officer,,1,0,-1,NA
+1186,MASINDI,Protestant Health Centre IV,Anaesthetic Assistant,,2,0,-2,NA
+1187,MASINDI,Protestant Health Centre IV,Laboratory Assistant,,1,0,-1,NA
+1188,MASINDI,Protestant Health Centre IV,Theatre Assistant,,2,0,-2,NA
+1189,MASINDI,Protestant Health Centre IV,Health Inspector,,2,0,-2,NA
+1190,MASINDI,Protestant Health Centre IV,Anaesthetic Officer,,1,0,-1,NA
+1191,MASINDI,Protestant Health Centre IV,Enrolled Midwife,,3,0,-3,NA
+1192,MASINDI,Protestant Health Centre IV,Laboratory Technician,,1,0,-1,NA
+1193,MASINDI,Protestant Health Centre IV,Public Health Nurse,,1,0,-1,NA
+1194,MASINDI,Protestant Health Centre IV,Nursing Officer (Psychiatry),,1,0,-1,NA
+1195,MASINDI,Protestant Health Centre IV,Nursing Officer (Midwifery),,1,0,-1,NA
+1196,MASINDI,Protestant Health Centre IV,Assistant Entomological Officer (Med),,1,0,-1,NA
+1197,MASINDI,Protestant Health Centre IV,Medical Officer,,1,0,-1,NA
+1198,MASINDI,Protestant Health Centre IV,Senior Medical Officer,U3(SC),1,0,-1,NA
+1199,MASINDI,Protestant Health Centre IV,Medical Officer,U4(SC),1,0,-1,NA
+1200,MASINDI,Protestant Health Centre IV,Senior Assistant Nursing Officer,U4(SC),1,0,-1,NA
+1201,MASINDI,Protestant Health Centre IV,Public/Community Health Nurse,U4(SC),1,0,-1,NA
+1202,MASINDI,Protestant Health Centre IV,Ophthalmic clinical Officer,U4(SC),1,0,-1,NA
+1203,MASINDI,Protestant Health Centre IV,Medical Clinical officer,U4(SC),2,0,-2,NA
+1204,MASINDI,Protestant Health Centre IV,Assistant Nursing Officer,U5(SC),1,0,-1,NA
+1205,MASINDI,Protestant Health Centre IV,Assistant Nursing Officer - Psychiatry,U5(SC),1,0,-1,NA
+1206,MASINDI,Protestant Health Centre IV,Assistant Nursing Officer (Midwifery),U5(SC),1,0,-1,NA
+1207,MASINDI,Protestant Health Centre IV,Anaesthetic officer,U5(SC),1,0,-1,NA
+1208,MASINDI,Protestant Health Centre IV,Dispenser,U5(SC),1,0,-1,NA
+1209,MASINDI,Protestant Health Centre IV,Medical Laboratory Technician,U5(SC),1,0,-1,NA
+1210,MASINDI,Protestant Health Centre IV,Assistant Health Educator,U5(SC),1,0,-1,NA
+1211,MASINDI,Protestant Health Centre IV,Health Inspector,U5(SC),2,0,-2,NA
+1212,MASINDI,Protestant Health Centre IV,Theatre Assistant,U6U,2,0,-2,NA
+1213,MASINDI,Protestant Health Centre IV,Anaesthetic Assistant,U7U,2,0,-2,NA
+1214,MASINDI,Protestant Health Centre IV,Medical Laboratory Assistant,U7U,1,0,-1,NA
+1215,MASINDI,Protestant Health Centre IV,Enrolled Nurse,U7U,3,0,-3,NA
+1216,MASINDI,Protestant Health Centre IV,Enrolled Psychiatric Nurse,U7U,1,0,-1,NA
+1217,MASINDI,Protestant Health Centre IV,Health Information Assistant,U7U,1,0,-1,NA
+1218,MASINDI,Protestant Health Centre IV,Health Assistant,U7U,1,0,-1,NA
+1219,MASINDI,Protestant Health Centre IV,Cold Chain Assistant,U7L,1,0,-1,NA
+1220,MBALE,Protestant General Hospital,Senior Nursing Officer,,5,0,-5,NA
+1221,MBALE,Protestant General Hospital,Principal Nursing Officer,,1,0,-1,NA
+1222,MBALE,Protestant General Hospital,Physiotherapist,,1,1,0,NA
+1223,MBALE,Protestant General Hospital,Senior Clinical Officer,,1,0,-1,NA
+1224,MBALE,Protestant General Hospital,Enrolled Psychiatric Nurse,,2,0,-2,NA
+1225,MBALE,Protestant General Hospital,Occupational Therapist,,1,0,-1,NA
+1226,MBALE,Protestant General Hospital,Nursing Officer (Nursing),,17,0,-17,NA
+1227,MBALE,Protestant General Hospital,Senior Medical Officer,,1,1,0,NA
+1228,MBALE,Protestant General Hospital,Enrolled Nurse,,46,4,-42,NA
+1229,MBALE,Protestant General Hospital,Clinical Officer,,5,1,-4,NA
+1230,MBALE,Protestant General Hospital,Radiographer,,2,3,1,NA
+1231,MBALE,Protestant General Hospital,Ophthalmic Clinical Officer,,1,0,-1,NA
+1232,MBALE,Protestant General Hospital,Anaesthetic Assistant,,2,0,-2,NA
+1233,MBALE,Protestant General Hospital,Laboratory Assistant,,1,4,3,NA
+1234,MBALE,Protestant General Hospital,Theatre Assistant,,0,0,0,NA
+1235,MBALE,Protestant General Hospital,Health Inspector,,1,0,-1,NA
+1236,MBALE,Protestant General Hospital,Health Educator,,1,0,-1,NA
+1237,MBALE,Protestant General Hospital,Anaesthetic Officer,,3,1,-2,NA
+1238,MBALE,Protestant General Hospital,Medical Officer Special Grade (Obs Gyne),,1,0,-1,NA
+1239,MBALE,Protestant General Hospital,Enrolled Midwife,,25,0,-25,NA
+1240,MBALE,Protestant General Hospital,Nutritionist,,1,0,-1,NA
+1241,MBALE,Protestant General Hospital,Orthopedic Officer,,2,0,-2,NA
+1242,MBALE,Protestant General Hospital,Medical Officer Special Grade (Community),,1,0,-1,NA
+1243,MBALE,Protestant General Hospital,Senior Laboratory Technologist,,1,0,-1,NA
+1244,MBALE,Protestant General Hospital,Laboratory Technician,,2,1,-1,NA
+1245,MBALE,Protestant General Hospital,Principal Medical Officer,,1,0,-1,NA
+1246,MBALE,Protestant General Hospital,Medical Officer Special Grade (Internal Medicine),,1,0,-1,NA
+1247,MBALE,Protestant General Hospital,Medical Officer Special Grade (Surgery),,1,0,-1,NA
+1248,MBALE,Protestant General Hospital,Medical Officer Special Grade (Paediatrics),,1,0,-1,NA
+1249,MBALE,Protestant General Hospital,Public Health Nurse,,1,0,-1,NA
+1250,MBALE,Protestant General Hospital,Psychiatric Clinical Officer,,1,0,-1,NA
+1251,MBALE,Protestant General Hospital,Nursing Officer (Psychiatry),,3,0,-3,NA
+1252,MBALE,Protestant General Hospital,Nursing Officer (Midwifery),,1,0,-1,NA
+1253,MBALE,Protestant General Hospital,Assistant Entomological Officer (Med),,1,0,-1,NA
+1254,MBALE,Protestant General Hospital,Medical Officer,,4,14,10,NA
+1255,MBALE,Protestant General Hospital,Laboratory Technologist,,1,1,0,NA
+1256,MBALE,Protestant General Hospital,Principal Medical Officer,U2(SC),1,0,-1,NA
+1257,MBALE,Protestant General Hospital,Medical Officer Special Grade - Internal Medicine,U2(SC),1,0,-1,NA
+1258,MBALE,Protestant General Hospital,Medical Officer Special Grade - General Surgery,U2(SC),1,0,-1,NA
+1259,MBALE,Protestant General Hospital,Medical Officer Special Grade - Obstetrics & Gynaecology,U2(SC),1,0,-1,NA
+1260,MBALE,Protestant General Hospital,Medical Officer Special Grade - Paediatrics,U2(SC),1,0,-1,NA
+1261,MBALE,Protestant General Hospital,Medical Officer Special Grade - Public Health,U2(SC),1,0,-1,NA
+1262,MBALE,Protestant General Hospital,Principal Nursing Officer,U2(SC),1,0,-1,NA
+1263,MBALE,Protestant General Hospital,Senior Medical Officer,U3(SC),1,0,-1,NA
+1264,MBALE,Protestant General Hospital,Senior Medical Clinical officer,U3(SC),1,0,-1,NA
+1265,MBALE,Protestant General Hospital,Medical Officer,U4(SC),4,0,-4,NA
+1266,MBALE,Protestant General Hospital,Senior Assistant Nursing Officer,U4(SC),5,0,-5,NA
+1267,MBALE,Protestant General Hospital,Public/Community Health Nurse,U4(SC),1,0,-1,NA
+1268,MBALE,Protestant General Hospital,Ophthalmic clinical Officer,U4(SC),1,0,-1,NA
+1269,MBALE,Protestant General Hospital,Medical Clinical officer,U4(SC),5,0,-5,NA
+1270,MBALE,Protestant General Hospital,Orthopaedic Officer,U4(SC),2,0,-2,NA
+1271,MBALE,Protestant General Hospital,Senior Medical Laboratory Technologist,U4(SC),1,0,-1,NA
+1272,MBALE,Protestant General Hospital,Health Educator,U4(SC),1,0,-1,NA
+1273,MBALE,Protestant General Hospital,Medical Social Worker,U4L,1,0,-1,NA
+1274,MBALE,Protestant General Hospital,Assistant Nursing Officer,U5(SC),17,0,-17,NA
+1275,MBALE,Protestant General Hospital,Assistant Nursing Officer - Psychiatry,U5(SC),1,0,-1,NA
+1276,MBALE,Protestant General Hospital,Assistant Nursing Officer (Midwifery),U5(SC),3,0,-3,NA
+1277,MBALE,Protestant General Hospital,Psychiatric Clinical Officer,U5(SC),1,0,-1,NA
+1278,MBALE,Protestant General Hospital,Anaesthetic officer,U5(SC),3,0,-3,NA
+1279,MBALE,Protestant General Hospital,Dispenser,U5(SC),2,0,-2,NA
+1280,MBALE,Protestant General Hospital,Physiotherapist,U5(SC),1,0,-1,NA
+1281,MBALE,Protestant General Hospital,Occupational therapist,U5(SC),1,0,-1,NA
+1282,MBALE,Protestant General Hospital,Radiographer,U5(SC),2,0,-2,NA
+1283,MBALE,Protestant General Hospital,Medical Laboratory Technologist,U5(SC),1,0,-1,NA
+1284,MBALE,Protestant General Hospital,Medical Laboratory Technician,U5(SC),2,0,-2,NA
+1285,MBALE,Protestant General Hospital,Assistant Health Educator,U5(SC),1,0,-1,NA
+1286,MBALE,Protestant General Hospital,Health Inspector,U5(SC),1,0,-1,NA
+1287,MBALE,Protestant General Hospital,Medical Laboratory Assistant,U7U,1,0,-1,NA
+1288,MBALE,Protestant General Hospital,Enrolled Nurse,U7U,46,0,-46,NA
+1289,MBALE,Protestant General Hospital,Enrolled Psychiatric Nurse,U7U,2,0,-2,NA
+1290,MBALE,Protestant General Hospital,Anaesthetic Attendant,U8U,2,0,-2,NA
+1291,MBALE,Protestant General Hospital,Mortuary Attendant,U8L,2,0,-2,NA
+1292,MBALE,Protestant General Hospital,Darkroom Attendant,U8L,1,0,-1,NA
+1293,MBALE,Protestant Health Centre III,Senior Clinical Officer,,1,0,-1,NA
+1294,MBALE,Protestant Health Centre III,Nursing Officer (Nursing),,1,2,1,NA
+1295,MBALE,Protestant Health Centre III,Enrolled Nurse,,3,1,-2,NA
+1296,MBALE,Protestant Health Centre III,Clinical Officer,,1,3,2,NA
+1297,MBALE,Protestant Health Centre III,Laboratory Assistant,,1,1,0,NA
+1298,MBALE,Protestant Health Centre III,Enrolled Midwife,,2,0,-2,NA
+1299,MBALE,Protestant Health Centre III,Laboratory Technician,,1,2,1,NA
+1300,MBALE,Protestant Health Centre III,Senior Medical Clinical officer,U3(SC),1,0,-1,NA
+1301,MBALE,Protestant Health Centre III,Assistant Nursing Officer,U5(SC),1,0,-1,NA
+1302,MBALE,Protestant Health Centre III,Clinical officer,U5(SC),1,0,-1,NA
+1303,MBALE,Protestant Health Centre III,Medical Laboratory Technician,U5(SC),1,0,-1,NA
+1304,MBALE,Protestant Health Centre III,Medical Laboratory Assistant,U7U,1,0,-1,NA
+1305,MBALE,Protestant Health Centre III,Enrolled Nurse,U7U,3,0,-3,NA
+1306,MBALE,Protestant Health Centre III,Health Information Assistant,U7U,1,0,-1,NA
+1307,MBALE,Protestant Health Centre III,Health Assistant,U7U,1,0,-1,NA
+1308,MBALE,Protestant Health Centre IV,Senior Nursing Officer,,1,0,-1,NA
+1309,MBALE,Protestant Health Centre IV,Enrolled Psychiatric Nurse,,1,0,-1,NA
+1310,MBALE,Protestant Health Centre IV,Nursing Officer (Nursing),,1,0,-1,NA
+1311,MBALE,Protestant Health Centre IV,Senior Medical Officer,,1,0,-1,NA
+1312,MBALE,Protestant Health Centre IV,Enrolled Nurse,,3,2,-1,NA
+1313,MBALE,Protestant Health Centre IV,Clinical Officer,,2,2,0,NA
+1314,MBALE,Protestant Health Centre IV,Ophthalmic Clinical Officer,,1,0,-1,NA
+1315,MBALE,Protestant Health Centre IV,Anaesthetic Assistant,,2,0,-2,NA
+1316,MBALE,Protestant Health Centre IV,Laboratory Assistant,,1,2,1,NA
+1317,MBALE,Protestant Health Centre IV,Theatre Assistant,,2,0,-2,NA
+1318,MBALE,Protestant Health Centre IV,Health Inspector,,2,0,-2,NA
+1319,MBALE,Protestant Health Centre IV,Anaesthetic Officer,,1,0,-1,NA
+1320,MBALE,Protestant Health Centre IV,Enrolled Midwife,,3,1,-2,NA
+1321,MBALE,Protestant Health Centre IV,Laboratory Technician,,1,1,0,NA
+1322,MBALE,Protestant Health Centre IV,Public Health Nurse,,1,0,-1,NA
+1323,MBALE,Protestant Health Centre IV,Nursing Officer (Psychiatry),,1,0,-1,NA
+1324,MBALE,Protestant Health Centre IV,Nursing Officer (Midwifery),,1,0,-1,NA
+1325,MBALE,Protestant Health Centre IV,Assistant Entomological Officer (Med),,1,0,-1,NA
+1326,MBALE,Protestant Health Centre IV,Medical Officer,,1,2,1,NA
+1327,MBALE,Protestant Health Centre IV,Senior Medical Officer,U3(SC),1,0,-1,NA
+1328,MBALE,Protestant Health Centre IV,Medical Officer,U4(SC),1,0,-1,NA
+1329,MBALE,Protestant Health Centre IV,Senior Assistant Nursing Officer,U4(SC),1,0,-1,NA
+1330,MBALE,Protestant Health Centre IV,Public/Community Health Nurse,U4(SC),1,0,-1,NA
+1331,MBALE,Protestant Health Centre IV,Ophthalmic clinical Officer,U4(SC),1,0,-1,NA
+1332,MBALE,Protestant Health Centre IV,Medical Clinical officer,U4(SC),2,0,-2,NA
+1333,MBALE,Protestant Health Centre IV,Assistant Nursing Officer,U5(SC),1,0,-1,NA
+1334,MBALE,Protestant Health Centre IV,Assistant Nursing Officer - Psychiatry,U5(SC),1,0,-1,NA
+1335,MBALE,Protestant Health Centre IV,Assistant Nursing Officer (Midwifery),U5(SC),1,0,-1,NA
+1336,MBALE,Protestant Health Centre IV,Anaesthetic officer,U5(SC),1,0,-1,NA
+1337,MBALE,Protestant Health Centre IV,Dispenser,U5(SC),1,0,-1,NA
+1338,MBALE,Protestant Health Centre IV,Medical Laboratory Technician,U5(SC),1,0,-1,NA
+1339,MBALE,Protestant Health Centre IV,Assistant Health Educator,U5(SC),1,0,-1,NA
+1340,MBALE,Protestant Health Centre IV,Health Inspector,U5(SC),2,0,-2,NA
+1341,MBALE,Protestant Health Centre IV,Theatre Assistant,U6U,2,0,-2,NA
+1342,MBALE,Protestant Health Centre IV,Anaesthetic Assistant,U7U,2,0,-2,NA
+1343,MBALE,Protestant Health Centre IV,Medical Laboratory Assistant,U7U,1,0,-1,NA
+1344,MBALE,Protestant Health Centre IV,Enrolled Nurse,U7U,3,0,-3,NA
+1345,MBALE,Protestant Health Centre IV,Enrolled Psychiatric Nurse,U7U,1,0,-1,NA
+1346,MBALE,Protestant Health Centre IV,Health Information Assistant,U7U,1,0,-1,NA
+1347,MBALE,Protestant Health Centre IV,Health Assistant,U7U,1,0,-1,NA
+1348,MBALE,Protestant Health Centre IV,Cold Chain Assistant,U7L,1,0,-1,NA
+1349,MBARARA,Protestant General Hospital,Senior Nursing Officer,,5,1,-4,NA
+1350,MBARARA,Protestant General Hospital,Principal Nursing Officer,,1,0,-1,NA
+1351,MBARARA,Protestant General Hospital,Physiotherapist,,1,1,0,NA
+1352,MBARARA,Protestant General Hospital,Senior Clinical Officer,,1,2,1,NA
+1353,MBARARA,Protestant General Hospital,Enrolled Psychiatric Nurse,,2,0,-2,NA
+1354,MBARARA,Protestant General Hospital,Occupational Therapist,,1,3,2,NA
+1355,MBARARA,Protestant General Hospital,Nursing Officer (Nursing),,17,9,-8,NA
+1356,MBARARA,Protestant General Hospital,Senior Medical Officer,,1,0,-1,NA
+1357,MBARARA,Protestant General Hospital,Enrolled Nurse,,46,3,-43,NA
+1358,MBARARA,Protestant General Hospital,Clinical Officer,,5,1,-4,NA
+1359,MBARARA,Protestant General Hospital,Radiographer,,2,1,-1,NA
+1360,MBARARA,Protestant General Hospital,Ophthalmic Clinical Officer,,1,1,0,NA
+1361,MBARARA,Protestant General Hospital,Anaesthetic Assistant,,2,0,-2,NA
+1362,MBARARA,Protestant General Hospital,Laboratory Assistant,,1,3,2,NA
+1363,MBARARA,Protestant General Hospital,Theatre Assistant,,0,1,1,NA
+1364,MBARARA,Protestant General Hospital,Health Inspector,,1,0,-1,NA
+1365,MBARARA,Protestant General Hospital,Health Educator,,1,0,-1,NA
+1366,MBARARA,Protestant General Hospital,Anaesthetic Officer,,3,0,-3,NA
+1367,MBARARA,Protestant General Hospital,Medical Officer Special Grade (Obs Gyne),,1,0,-1,NA
+1368,MBARARA,Protestant General Hospital,Enrolled Midwife,,25,5,-20,NA
+1369,MBARARA,Protestant General Hospital,Nutritionist,,1,0,-1,NA
+1370,MBARARA,Protestant General Hospital,Orthopedic Officer,,2,2,0,NA
+1371,MBARARA,Protestant General Hospital,Medical Officer Special Grade (Community),,1,0,-1,NA
+1372,MBARARA,Protestant General Hospital,Senior Laboratory Technologist,,1,0,-1,NA
+1373,MBARARA,Protestant General Hospital,Laboratory Technician,,2,1,-1,NA
+1374,MBARARA,Protestant General Hospital,Principal Medical Officer,,1,0,-1,NA
+1375,MBARARA,Protestant General Hospital,Medical Officer Special Grade (Internal Medicine),,1,0,-1,NA
+1376,MBARARA,Protestant General Hospital,Medical Officer Special Grade (Surgery),,1,0,-1,NA
+1377,MBARARA,Protestant General Hospital,Medical Officer Special Grade (Paediatrics),,1,0,-1,NA
+1378,MBARARA,Protestant General Hospital,Public Health Nurse,,1,0,-1,NA
+1379,MBARARA,Protestant General Hospital,Psychiatric Clinical Officer,,1,0,-1,NA
+1380,MBARARA,Protestant General Hospital,Nursing Officer (Psychiatry),,3,0,-3,NA
+1381,MBARARA,Protestant General Hospital,Nursing Officer (Midwifery),,1,0,-1,NA
+1382,MBARARA,Protestant General Hospital,Assistant Entomological Officer (Med),,1,0,-1,NA
+1383,MBARARA,Protestant General Hospital,Medical Officer,,4,2,-2,NA
+1384,MBARARA,Protestant General Hospital,Laboratory Technologist,,1,0,-1,NA
+1385,MBARARA,Protestant General Hospital,Principal Medical Officer,U2(SC),1,0,-1,NA
+1386,MBARARA,Protestant General Hospital,Medical Officer Special Grade - Internal Medicine,U2(SC),1,0,-1,NA
+1387,MBARARA,Protestant General Hospital,Medical Officer Special Grade - General Surgery,U2(SC),1,0,-1,NA
+1388,MBARARA,Protestant General Hospital,Medical Officer Special Grade - Obstetrics & Gynaecology,U2(SC),1,0,-1,NA
+1389,MBARARA,Protestant General Hospital,Medical Officer Special Grade - Paediatrics,U2(SC),1,0,-1,NA
+1390,MBARARA,Protestant General Hospital,Medical Officer Special Grade - Public Health,U2(SC),1,0,-1,NA
+1391,MBARARA,Protestant General Hospital,Principal Nursing Officer,U2(SC),1,0,-1,NA
+1392,MBARARA,Protestant General Hospital,Senior Medical Officer,U3(SC),1,0,-1,NA
+1393,MBARARA,Protestant General Hospital,Senior Medical Clinical officer,U3(SC),1,0,-1,NA
+1394,MBARARA,Protestant General Hospital,Medical Officer,U4(SC),4,0,-4,NA
+1395,MBARARA,Protestant General Hospital,Senior Assistant Nursing Officer,U4(SC),5,0,-5,NA
+1396,MBARARA,Protestant General Hospital,Public/Community Health Nurse,U4(SC),1,0,-1,NA
+1397,MBARARA,Protestant General Hospital,Ophthalmic clinical Officer,U4(SC),1,0,-1,NA
+1398,MBARARA,Protestant General Hospital,Medical Clinical officer,U4(SC),5,0,-5,NA
+1399,MBARARA,Protestant General Hospital,Orthopaedic Officer,U4(SC),2,0,-2,NA
+1400,MBARARA,Protestant General Hospital,Senior Medical Laboratory Technologist,U4(SC),1,0,-1,NA
+1401,MBARARA,Protestant General Hospital,Health Educator,U4(SC),1,0,-1,NA
+1402,MBARARA,Protestant General Hospital,Medical Social Worker,U4L,1,0,-1,NA
+1403,MBARARA,Protestant General Hospital,Assistant Nursing Officer,U5(SC),17,0,-17,NA
+1404,MBARARA,Protestant General Hospital,Assistant Nursing Officer - Psychiatry,U5(SC),1,0,-1,NA
+1405,MBARARA,Protestant General Hospital,Assistant Nursing Officer (Midwifery),U5(SC),3,0,-3,NA
+1406,MBARARA,Protestant General Hospital,Psychiatric Clinical Officer,U5(SC),1,0,-1,NA
+1407,MBARARA,Protestant General Hospital,Anaesthetic officer,U5(SC),3,0,-3,NA
+1408,MBARARA,Protestant General Hospital,Dispenser,U5(SC),2,0,-2,NA
+1409,MBARARA,Protestant General Hospital,Physiotherapist,U5(SC),1,0,-1,NA
+1410,MBARARA,Protestant General Hospital,Occupational therapist,U5(SC),1,0,-1,NA
+1411,MBARARA,Protestant General Hospital,Radiographer,U5(SC),2,0,-2,NA
+1412,MBARARA,Protestant General Hospital,Medical Laboratory Technologist,U5(SC),1,0,-1,NA
+1413,MBARARA,Protestant General Hospital,Medical Laboratory Technician,U5(SC),2,0,-2,NA
+1414,MBARARA,Protestant General Hospital,Assistant Health Educator,U5(SC),1,0,-1,NA
+1415,MBARARA,Protestant General Hospital,Health Inspector,U5(SC),1,0,-1,NA
+1416,MBARARA,Protestant General Hospital,Medical Laboratory Assistant,U7U,1,0,-1,NA
+1417,MBARARA,Protestant General Hospital,Enrolled Nurse,U7U,46,0,-46,NA
+1418,MBARARA,Protestant General Hospital,Enrolled Psychiatric Nurse,U7U,2,0,-2,NA
+1419,MBARARA,Protestant General Hospital,Anaesthetic Attendant,U8U,2,0,-2,NA
+1420,MBARARA,Protestant General Hospital,Mortuary Attendant,U8L,2,0,-2,NA
+1421,MBARARA,Protestant General Hospital,Darkroom Attendant,U8L,1,0,-1,NA
+1422,MITYANA,Protestant Health Centre III,Senior Clinical Officer,,1,0,-1,NA
+1423,MITYANA,Protestant Health Centre III,Nursing Officer (Nursing),,1,0,-1,NA
+1424,MITYANA,Protestant Health Centre III,Enrolled Nurse,,3,0,-3,NA
+1425,MITYANA,Protestant Health Centre III,Clinical Officer,,1,0,-1,NA
+1426,MITYANA,Protestant Health Centre III,Laboratory Assistant,,1,4,3,NA
+1427,MITYANA,Protestant Health Centre III,Enrolled Midwife,,2,0,-2,NA
+1428,MITYANA,Protestant Health Centre III,Laboratory Technician,,1,0,-1,NA
+1429,MITYANA,Protestant Health Centre III,Senior Medical Clinical officer,U3(SC),1,0,-1,NA
+1430,MITYANA,Protestant Health Centre III,Assistant Nursing Officer,U5(SC),1,0,-1,NA
+1431,MITYANA,Protestant Health Centre III,Clinical officer,U5(SC),1,0,-1,NA
+1432,MITYANA,Protestant Health Centre III,Medical Laboratory Technician,U5(SC),1,0,-1,NA
+1433,MITYANA,Protestant Health Centre III,Medical Laboratory Assistant,U7U,1,0,-1,NA
+1434,MITYANA,Protestant Health Centre III,Enrolled Nurse,U7U,3,0,-3,NA
+1435,MITYANA,Protestant Health Centre III,Health Information Assistant,U7U,1,0,-1,NA
+1436,MITYANA,Protestant Health Centre III,Health Assistant,U7U,1,0,-1,NA
+1437,MOYO,Protestant Health Center II,Enrolled Nurse,,1,0,-1,NA
+1438,MOYO,Protestant Health Center II,Enrolled Midwife,,1,0,-1,NA
+1439,MUKONO,Protestant General Hospital,Senior Nursing Officer,,5,0,-5,NA
+1440,MUKONO,Protestant General Hospital,Principal Nursing Officer,,1,0,-1,NA
+1441,MUKONO,Protestant General Hospital,Physiotherapist,,1,0,-1,NA
+1442,MUKONO,Protestant General Hospital,Senior Clinical Officer,,1,0,-1,NA
+1443,MUKONO,Protestant General Hospital,Enrolled Psychiatric Nurse,,2,1,-1,NA
+1444,MUKONO,Protestant General Hospital,Occupational Therapist,,1,0,-1,NA
+1445,MUKONO,Protestant General Hospital,Nursing Officer (Nursing),,17,0,-17,NA
+1446,MUKONO,Protestant General Hospital,Senior Medical Officer,,1,0,-1,NA
+1447,MUKONO,Protestant General Hospital,Enrolled Nurse,,46,7,-39,NA
+1448,MUKONO,Protestant General Hospital,Clinical Officer,,5,8,3,NA
+1449,MUKONO,Protestant General Hospital,Radiographer,,2,3,1,NA
+1450,MUKONO,Protestant General Hospital,Ophthalmic Clinical Officer,,1,0,-1,NA
+1451,MUKONO,Protestant General Hospital,Anaesthetic Assistant,,2,0,-2,NA
+1452,MUKONO,Protestant General Hospital,Laboratory Assistant,,1,7,6,NA
+1453,MUKONO,Protestant General Hospital,Theatre Assistant,,0,2,2,NA
+1454,MUKONO,Protestant General Hospital,Health Inspector,,1,0,-1,NA
+1455,MUKONO,Protestant General Hospital,Health Educator,,1,0,-1,NA
+1456,MUKONO,Protestant General Hospital,Anaesthetic Officer,,3,2,-1,NA
+1457,MUKONO,Protestant General Hospital,Medical Officer Special Grade (Obs Gyne),,1,0,-1,NA
+1458,MUKONO,Protestant General Hospital,Enrolled Midwife,,25,10,-15,NA
+1459,MUKONO,Protestant General Hospital,Nutritionist,,1,0,-1,NA
+1460,MUKONO,Protestant General Hospital,Orthopedic Officer,,2,1,-1,NA
+1461,MUKONO,Protestant General Hospital,Medical Officer Special Grade (Community),,1,0,-1,NA
+1462,MUKONO,Protestant General Hospital,Senior Laboratory Technologist,,1,0,-1,NA
+1463,MUKONO,Protestant General Hospital,Laboratory Technician,,2,0,-2,NA
+1464,MUKONO,Protestant General Hospital,Principal Medical Officer,,1,0,-1,NA
+1465,MUKONO,Protestant General Hospital,Medical Officer Special Grade (Internal Medicine),,1,0,-1,NA
+1466,MUKONO,Protestant General Hospital,Medical Officer Special Grade (Surgery),,1,0,-1,NA
+1467,MUKONO,Protestant General Hospital,Medical Officer Special Grade (Paediatrics),,1,0,-1,NA
+1468,MUKONO,Protestant General Hospital,Public Health Nurse,,1,0,-1,NA
+1469,MUKONO,Protestant General Hospital,Psychiatric Clinical Officer,,1,0,-1,NA
+1470,MUKONO,Protestant General Hospital,Nursing Officer (Psychiatry),,3,0,-3,NA
+1471,MUKONO,Protestant General Hospital,Nursing Officer (Midwifery),,1,0,-1,NA
+1472,MUKONO,Protestant General Hospital,Assistant Entomological Officer (Med),,1,0,-1,NA
+1473,MUKONO,Protestant General Hospital,Medical Officer,,4,9,5,NA
+1474,MUKONO,Protestant General Hospital,Laboratory Technologist,,1,3,2,NA
+1475,MUKONO,Protestant General Hospital,Principal Medical Officer,U2(SC),1,0,-1,NA
+1476,MUKONO,Protestant General Hospital,Medical Officer Special Grade - Internal Medicine,U2(SC),1,0,-1,NA
+1477,MUKONO,Protestant General Hospital,Medical Officer Special Grade - General Surgery,U2(SC),1,0,-1,NA
+1478,MUKONO,Protestant General Hospital,Medical Officer Special Grade - Obstetrics & Gynaecology,U2(SC),1,0,-1,NA
+1479,MUKONO,Protestant General Hospital,Medical Officer Special Grade - Paediatrics,U2(SC),1,0,-1,NA
+1480,MUKONO,Protestant General Hospital,Medical Officer Special Grade - Public Health,U2(SC),1,0,-1,NA
+1481,MUKONO,Protestant General Hospital,Principal Nursing Officer,U2(SC),1,0,-1,NA
+1482,MUKONO,Protestant General Hospital,Senior Medical Officer,U3(SC),1,0,-1,NA
+1483,MUKONO,Protestant General Hospital,Senior Medical Clinical officer,U3(SC),1,0,-1,NA
+1484,MUKONO,Protestant General Hospital,Medical Officer,U4(SC),4,0,-4,NA
+1485,MUKONO,Protestant General Hospital,Senior Assistant Nursing Officer,U4(SC),5,0,-5,NA
+1486,MUKONO,Protestant General Hospital,Public/Community Health Nurse,U4(SC),1,0,-1,NA
+1487,MUKONO,Protestant General Hospital,Ophthalmic clinical Officer,U4(SC),1,0,-1,NA
+1488,MUKONO,Protestant General Hospital,Medical Clinical officer,U4(SC),5,0,-5,NA
+1489,MUKONO,Protestant General Hospital,Orthopaedic Officer,U4(SC),2,0,-2,NA
+1490,MUKONO,Protestant General Hospital,Senior Medical Laboratory Technologist,U4(SC),1,0,-1,NA
+1491,MUKONO,Protestant General Hospital,Health Educator,U4(SC),1,0,-1,NA
+1492,MUKONO,Protestant General Hospital,Medical Social Worker,U4L,1,0,-1,NA
+1493,MUKONO,Protestant General Hospital,Assistant Nursing Officer,U5(SC),17,0,-17,NA
+1494,MUKONO,Protestant General Hospital,Assistant Nursing Officer - Psychiatry,U5(SC),1,0,-1,NA
+1495,MUKONO,Protestant General Hospital,Assistant Nursing Officer (Midwifery),U5(SC),3,0,-3,NA
+1496,MUKONO,Protestant General Hospital,Psychiatric Clinical Officer,U5(SC),1,0,-1,NA
+1497,MUKONO,Protestant General Hospital,Anaesthetic officer,U5(SC),3,0,-3,NA
+1498,MUKONO,Protestant General Hospital,Dispenser,U5(SC),2,0,-2,NA
+1499,MUKONO,Protestant General Hospital,Physiotherapist,U5(SC),1,0,-1,NA
+1500,MUKONO,Protestant General Hospital,Occupational therapist,U5(SC),1,0,-1,NA
+1501,MUKONO,Protestant General Hospital,Radiographer,U5(SC),2,0,-2,NA
+1502,MUKONO,Protestant General Hospital,Medical Laboratory Technologist,U5(SC),1,0,-1,NA
+1503,MUKONO,Protestant General Hospital,Medical Laboratory Technician,U5(SC),2,0,-2,NA
+1504,MUKONO,Protestant General Hospital,Assistant Health Educator,U5(SC),1,0,-1,NA
+1505,MUKONO,Protestant General Hospital,Health Inspector,U5(SC),1,0,-1,NA
+1506,MUKONO,Protestant General Hospital,Medical Laboratory Assistant,U7U,1,0,-1,NA
+1507,MUKONO,Protestant General Hospital,Enrolled Nurse,U7U,46,0,-46,NA
+1508,MUKONO,Protestant General Hospital,Enrolled Psychiatric Nurse,U7U,2,0,-2,NA
+1509,MUKONO,Protestant General Hospital,Anaesthetic Attendant,U8U,2,0,-2,NA
+1510,MUKONO,Protestant General Hospital,Mortuary Attendant,U8L,2,0,-2,NA
+1511,MUKONO,Protestant General Hospital,Darkroom Attendant,U8L,1,0,-1,NA
+1512,NAKASEKE,Protestant General Hospital,Senior Nursing Officer,,5,0,-5,NA
+1513,NAKASEKE,Protestant General Hospital,Principal Nursing Officer,,1,1,0,NA
+1514,NAKASEKE,Protestant General Hospital,Physiotherapist,,1,1,0,NA
+1515,NAKASEKE,Protestant General Hospital,Senior Clinical Officer,,1,0,-1,NA
+1516,NAKASEKE,Protestant General Hospital,Enrolled Psychiatric Nurse,,2,0,-2,NA
+1517,NAKASEKE,Protestant General Hospital,Occupational Therapist,,1,0,-1,NA
+1518,NAKASEKE,Protestant General Hospital,Nursing Officer (Nursing),,17,0,-17,NA
+1519,NAKASEKE,Protestant General Hospital,Senior Medical Officer,,1,0,-1,NA
+1520,NAKASEKE,Protestant General Hospital,Enrolled Nurse,,46,16,-30,NA
+1521,NAKASEKE,Protestant General Hospital,Clinical Officer,,5,5,0,NA
+1522,NAKASEKE,Protestant General Hospital,Radiographer,,2,0,-2,NA
+1523,NAKASEKE,Protestant General Hospital,Ophthalmic Clinical Officer,,1,0,-1,NA
+1524,NAKASEKE,Protestant General Hospital,Anaesthetic Assistant,,2,0,-2,NA
+1525,NAKASEKE,Protestant General Hospital,Laboratory Assistant,,1,17,16,NA
+1526,NAKASEKE,Protestant General Hospital,Theatre Assistant,,0,1,1,NA
+1527,NAKASEKE,Protestant General Hospital,Health Inspector,,1,0,-1,NA
+1528,NAKASEKE,Protestant General Hospital,Health Educator,,1,0,-1,NA
+1529,NAKASEKE,Protestant General Hospital,Anaesthetic Officer,,3,4,1,NA
+1530,NAKASEKE,Protestant General Hospital,Medical Officer Special Grade (Obs Gyne),,1,0,-1,NA
+1531,NAKASEKE,Protestant General Hospital,Enrolled Midwife,,25,4,-21,NA
+1532,NAKASEKE,Protestant General Hospital,Nutritionist,,1,0,-1,NA
+1533,NAKASEKE,Protestant General Hospital,Orthopedic Officer,,2,0,-2,NA
+1534,NAKASEKE,Protestant General Hospital,Medical Officer Special Grade (Community),,1,0,-1,NA
+1535,NAKASEKE,Protestant General Hospital,Senior Laboratory Technologist,,1,0,-1,NA
+1536,NAKASEKE,Protestant General Hospital,Laboratory Technician,,2,6,4,NA
+1537,NAKASEKE,Protestant General Hospital,Principal Medical Officer,,1,0,-1,NA
+1538,NAKASEKE,Protestant General Hospital,Medical Officer Special Grade (Internal Medicine),,1,0,-1,NA
+1539,NAKASEKE,Protestant General Hospital,Medical Officer Special Grade (Surgery),,1,0,-1,NA
+1540,NAKASEKE,Protestant General Hospital,Medical Officer Special Grade (Paediatrics),,1,0,-1,NA
+1541,NAKASEKE,Protestant General Hospital,Public Health Nurse,,1,0,-1,NA
+1542,NAKASEKE,Protestant General Hospital,Psychiatric Clinical Officer,,1,0,-1,NA
+1543,NAKASEKE,Protestant General Hospital,Nursing Officer (Psychiatry),,3,0,-3,NA
+1544,NAKASEKE,Protestant General Hospital,Nursing Officer (Midwifery),,1,0,-1,NA
+1545,NAKASEKE,Protestant General Hospital,Assistant Entomological Officer (Med),,1,0,-1,NA
+1546,NAKASEKE,Protestant General Hospital,Medical Officer,,4,4,0,NA
+1547,NAKASEKE,Protestant General Hospital,Laboratory Technologist,,1,0,-1,NA
+1548,NAKASEKE,Protestant General Hospital,Principal Medical Officer,U2(SC),1,0,-1,NA
+1549,NAKASEKE,Protestant General Hospital,Medical Officer Special Grade - Internal Medicine,U2(SC),1,0,-1,NA
+1550,NAKASEKE,Protestant General Hospital,Medical Officer Special Grade - General Surgery,U2(SC),1,0,-1,NA
+1551,NAKASEKE,Protestant General Hospital,Medical Officer Special Grade - Obstetrics & Gynaecology,U2(SC),1,0,-1,NA
+1552,NAKASEKE,Protestant General Hospital,Medical Officer Special Grade - Paediatrics,U2(SC),1,0,-1,NA
+1553,NAKASEKE,Protestant General Hospital,Medical Officer Special Grade - Public Health,U2(SC),1,0,-1,NA
+1554,NAKASEKE,Protestant General Hospital,Principal Nursing Officer,U2(SC),1,0,-1,NA
+1555,NAKASEKE,Protestant General Hospital,Senior Medical Officer,U3(SC),1,0,-1,NA
+1556,NAKASEKE,Protestant General Hospital,Senior Medical Clinical officer,U3(SC),1,0,-1,NA
+1557,NAKASEKE,Protestant General Hospital,Medical Officer,U4(SC),4,0,-4,NA
+1558,NAKASEKE,Protestant General Hospital,Senior Assistant Nursing Officer,U4(SC),5,0,-5,NA
+1559,NAKASEKE,Protestant General Hospital,Public/Community Health Nurse,U4(SC),1,0,-1,NA
+1560,NAKASEKE,Protestant General Hospital,Ophthalmic clinical Officer,U4(SC),1,0,-1,NA
+1561,NAKASEKE,Protestant General Hospital,Medical Clinical officer,U4(SC),5,0,-5,NA
+1562,NAKASEKE,Protestant General Hospital,Orthopaedic Officer,U4(SC),2,0,-2,NA
+1563,NAKASEKE,Protestant General Hospital,Senior Medical Laboratory Technologist,U4(SC),1,0,-1,NA
+1564,NAKASEKE,Protestant General Hospital,Health Educator,U4(SC),1,0,-1,NA
+1565,NAKASEKE,Protestant General Hospital,Medical Social Worker,U4L,1,0,-1,NA
+1566,NAKASEKE,Protestant General Hospital,Assistant Nursing Officer,U5(SC),17,0,-17,NA
+1567,NAKASEKE,Protestant General Hospital,Assistant Nursing Officer - Psychiatry,U5(SC),1,0,-1,NA
+1568,NAKASEKE,Protestant General Hospital,Assistant Nursing Officer (Midwifery),U5(SC),3,0,-3,NA
+1569,NAKASEKE,Protestant General Hospital,Psychiatric Clinical Officer,U5(SC),1,0,-1,NA
+1570,NAKASEKE,Protestant General Hospital,Anaesthetic officer,U5(SC),3,0,-3,NA
+1571,NAKASEKE,Protestant General Hospital,Dispenser,U5(SC),2,0,-2,NA
+1572,NAKASEKE,Protestant General Hospital,Physiotherapist,U5(SC),1,0,-1,NA
+1573,NAKASEKE,Protestant General Hospital,Occupational therapist,U5(SC),1,0,-1,NA
+1574,NAKASEKE,Protestant General Hospital,Radiographer,U5(SC),2,0,-2,NA
+1575,NAKASEKE,Protestant General Hospital,Medical Laboratory Technologist,U5(SC),1,0,-1,NA
+1576,NAKASEKE,Protestant General Hospital,Medical Laboratory Technician,U5(SC),2,0,-2,NA
+1577,NAKASEKE,Protestant General Hospital,Assistant Health Educator,U5(SC),1,0,-1,NA
+1578,NAKASEKE,Protestant General Hospital,Health Inspector,U5(SC),1,0,-1,NA
+1579,NAKASEKE,Protestant General Hospital,Medical Laboratory Assistant,U7U,1,0,-1,NA
+1580,NAKASEKE,Protestant General Hospital,Enrolled Nurse,U7U,46,0,-46,NA
+1581,NAKASEKE,Protestant General Hospital,Enrolled Psychiatric Nurse,U7U,2,0,-2,NA
+1582,NAKASEKE,Protestant General Hospital,Anaesthetic Attendant,U8U,2,0,-2,NA
+1583,NAKASEKE,Protestant General Hospital,Mortuary Attendant,U8L,2,0,-2,NA
+1584,NAKASEKE,Protestant General Hospital,Darkroom Attendant,U8L,1,0,-1,NA
+1585,NAKASEKE,Protestant Health Centre III,Senior Clinical Officer,,1,0,-1,NA
+1586,NAKASEKE,Protestant Health Centre III,Nursing Officer (Nursing),,1,0,-1,NA
+1587,NAKASEKE,Protestant Health Centre III,Enrolled Nurse,,3,0,-3,NA
+1588,NAKASEKE,Protestant Health Centre III,Clinical Officer,,1,0,-1,NA
+1589,NAKASEKE,Protestant Health Centre III,Laboratory Assistant,,1,1,0,NA
+1590,NAKASEKE,Protestant Health Centre III,Enrolled Midwife,,2,1,-1,NA
+1591,NAKASEKE,Protestant Health Centre III,Laboratory Technician,,1,0,-1,NA
+1592,NAKASEKE,Protestant Health Centre III,Senior Medical Clinical officer,U3(SC),1,0,-1,NA
+1593,NAKASEKE,Protestant Health Centre III,Assistant Nursing Officer,U5(SC),1,0,-1,NA
+1594,NAKASEKE,Protestant Health Centre III,Clinical officer,U5(SC),1,0,-1,NA
+1595,NAKASEKE,Protestant Health Centre III,Medical Laboratory Technician,U5(SC),1,0,-1,NA
+1596,NAKASEKE,Protestant Health Centre III,Medical Laboratory Assistant,U7U,1,0,-1,NA
+1597,NAKASEKE,Protestant Health Centre III,Enrolled Nurse,U7U,3,0,-3,NA
+1598,NAKASEKE,Protestant Health Centre III,Health Information Assistant,U7U,1,0,-1,NA
+1599,NAKASEKE,Protestant Health Centre III,Health Assistant,U7U,1,0,-1,NA
+1600,NEBBI,Protestant Health Centre III,Senior Clinical Officer,,1,0,-1,NA
+1601,NEBBI,Protestant Health Centre III,Nursing Officer (Nursing),,1,0,-1,NA
+1602,NEBBI,Protestant Health Centre III,Enrolled Nurse,,3,2,-1,NA
+1603,NEBBI,Protestant Health Centre III,Clinical Officer,,1,1,0,NA
+1604,NEBBI,Protestant Health Centre III,Laboratory Assistant,,1,3,2,NA
+1605,NEBBI,Protestant Health Centre III,Enrolled Midwife,,2,1,-1,NA
+1606,NEBBI,Protestant Health Centre III,Laboratory Technician,,1,0,-1,NA
+1607,NEBBI,Protestant Health Centre III,Senior Medical Clinical officer,U3(SC),1,0,-1,NA
+1608,NEBBI,Protestant Health Centre III,Assistant Nursing Officer,U5(SC),1,0,-1,NA
+1609,NEBBI,Protestant Health Centre III,Clinical officer,U5(SC),1,0,-1,NA
+1610,NEBBI,Protestant Health Centre III,Medical Laboratory Technician,U5(SC),1,0,-1,NA
+1611,NEBBI,Protestant Health Centre III,Medical Laboratory Assistant,U7U,1,0,-1,NA
+1612,NEBBI,Protestant Health Centre III,Enrolled Nurse,U7U,3,0,-3,NA
+1613,NEBBI,Protestant Health Centre III,Health Information Assistant,U7U,1,0,-1,NA
+1614,NEBBI,Protestant Health Centre III,Health Assistant,U7U,1,0,-1,NA
+1615,NEBBI,Protestant Health Centre IV,Senior Nursing Officer,,2,0,-2,NA
+1616,NEBBI,Protestant Health Centre IV,Enrolled Psychiatric Nurse,,2,0,-2,NA
+1617,NEBBI,Protestant Health Centre IV,Nursing Officer (Nursing),,2,0,-2,NA
+1618,NEBBI,Protestant Health Centre IV,Senior Medical Officer,,2,0,-2,NA
+1619,NEBBI,Protestant Health Centre IV,Enrolled Nurse,,6,3,-3,NA
+1620,NEBBI,Protestant Health Centre IV,Clinical Officer,,4,4,0,NA
+1621,NEBBI,Protestant Health Centre IV,Ophthalmic Clinical Officer,,2,0,-2,NA
+1622,NEBBI,Protestant Health Centre IV,Anaesthetic Assistant,,4,0,-4,NA
+1623,NEBBI,Protestant Health Centre IV,Laboratory Assistant,,2,2,0,NA
+1624,NEBBI,Protestant Health Centre IV,Theatre Assistant,,4,0,-4,NA
+1625,NEBBI,Protestant Health Centre IV,Health Inspector,,4,0,-4,NA
+1626,NEBBI,Protestant Health Centre IV,Anaesthetic Officer,,2,0,-2,NA
+1627,NEBBI,Protestant Health Centre IV,Enrolled Midwife,,6,2,-4,NA
+1628,NEBBI,Protestant Health Centre IV,Laboratory Technician,,2,0,-2,NA
+1629,NEBBI,Protestant Health Centre IV,Public Health Nurse,,2,0,-2,NA
+1630,NEBBI,Protestant Health Centre IV,Nursing Officer (Psychiatry),,2,0,-2,NA
+1631,NEBBI,Protestant Health Centre IV,Nursing Officer (Midwifery),,2,0,-2,NA
+1632,NEBBI,Protestant Health Centre IV,Assistant Entomological Officer (Med),,2,0,-2,NA
+1633,NEBBI,Protestant Health Centre IV,Medical Officer,,2,1,-1,NA
+1634,NEBBI,Protestant Health Centre IV,Senior Medical Officer,U3(SC),2,0,-2,NA
+1635,NEBBI,Protestant Health Centre IV,Medical Officer,U4(SC),2,0,-2,NA
+1636,NEBBI,Protestant Health Centre IV,Senior Assistant Nursing Officer,U4(SC),2,0,-2,NA
+1637,NEBBI,Protestant Health Centre IV,Public/Community Health Nurse,U4(SC),2,0,-2,NA
+1638,NEBBI,Protestant Health Centre IV,Ophthalmic clinical Officer,U4(SC),2,0,-2,NA
+1639,NEBBI,Protestant Health Centre IV,Medical Clinical officer,U4(SC),4,0,-4,NA
+1640,NEBBI,Protestant Health Centre IV,Assistant Nursing Officer,U5(SC),2,0,-2,NA
+1641,NEBBI,Protestant Health Centre IV,Assistant Nursing Officer - Psychiatry,U5(SC),2,0,-2,NA
+1642,NEBBI,Protestant Health Centre IV,Assistant Nursing Officer (Midwifery),U5(SC),2,0,-2,NA
+1643,NEBBI,Protestant Health Centre IV,Anaesthetic officer,U5(SC),2,0,-2,NA
+1644,NEBBI,Protestant Health Centre IV,Dispenser,U5(SC),2,0,-2,NA
+1645,NEBBI,Protestant Health Centre IV,Medical Laboratory Technician,U5(SC),2,0,-2,NA
+1646,NEBBI,Protestant Health Centre IV,Assistant Health Educator,U5(SC),2,0,-2,NA
+1647,NEBBI,Protestant Health Centre IV,Health Inspector,U5(SC),4,0,-4,NA
+1648,NEBBI,Protestant Health Centre IV,Theatre Assistant,U6U,4,0,-4,NA
+1649,NEBBI,Protestant Health Centre IV,Anaesthetic Assistant,U7U,4,0,-4,NA
+1650,NEBBI,Protestant Health Centre IV,Medical Laboratory Assistant,U7U,2,0,-2,NA
+1651,NEBBI,Protestant Health Centre IV,Enrolled Nurse,U7U,6,0,-6,NA
+1652,NEBBI,Protestant Health Centre IV,Enrolled Psychiatric Nurse,U7U,2,0,-2,NA
+1653,NEBBI,Protestant Health Centre IV,Health Information Assistant,U7U,2,0,-2,NA
+1654,NEBBI,Protestant Health Centre IV,Health Assistant,U7U,2,0,-2,NA
+1655,NEBBI,Protestant Health Centre IV,Cold Chain Assistant,U7L,2,0,-2,NA
+1656,NGORA,Protestant General Hospital,Senior Nursing Officer,,5,4,-1,NA
+1657,NGORA,Protestant General Hospital,Principal Nursing Officer,,1,0,-1,NA
+1658,NGORA,Protestant General Hospital,Physiotherapist,,1,0,-1,NA
+1659,NGORA,Protestant General Hospital,Senior Clinical Officer,,1,0,-1,NA
+1660,NGORA,Protestant General Hospital,Enrolled Psychiatric Nurse,,2,0,-2,NA
+1661,NGORA,Protestant General Hospital,Occupational Therapist,,1,0,-1,NA
+1662,NGORA,Protestant General Hospital,Nursing Officer (Nursing),,17,7,-10,NA
+1663,NGORA,Protestant General Hospital,Senior Medical Officer,,1,0,-1,NA
+1664,NGORA,Protestant General Hospital,Enrolled Nurse,,46,7,-39,NA
+1665,NGORA,Protestant General Hospital,Clinical Officer,,5,8,3,NA
+1666,NGORA,Protestant General Hospital,Radiographer,,2,1,-1,NA
+1667,NGORA,Protestant General Hospital,Ophthalmic Clinical Officer,,1,0,-1,NA
+1668,NGORA,Protestant General Hospital,Anaesthetic Assistant,,2,1,-1,NA
+1669,NGORA,Protestant General Hospital,Laboratory Assistant,,1,1,0,NA
+1670,NGORA,Protestant General Hospital,Theatre Assistant,,0,2,2,NA
+1671,NGORA,Protestant General Hospital,Health Inspector,,1,0,-1,NA
+1672,NGORA,Protestant General Hospital,Health Educator,,1,0,-1,NA
+1673,NGORA,Protestant General Hospital,Anaesthetic Officer,,3,0,-3,NA
+1674,NGORA,Protestant General Hospital,Medical Officer Special Grade (Obs Gyne),,1,1,0,NA
+1675,NGORA,Protestant General Hospital,Enrolled Midwife,,25,5,-20,NA
+1676,NGORA,Protestant General Hospital,Nutritionist,,1,0,-1,NA
+1677,NGORA,Protestant General Hospital,Orthopedic Officer,,2,1,-1,NA
+1678,NGORA,Protestant General Hospital,Medical Officer Special Grade (Community),,1,0,-1,NA
+1679,NGORA,Protestant General Hospital,Senior Laboratory Technologist,,1,0,-1,NA
+1680,NGORA,Protestant General Hospital,Laboratory Technician,,2,1,-1,NA
+1681,NGORA,Protestant General Hospital,Principal Medical Officer,,1,0,-1,NA
+1682,NGORA,Protestant General Hospital,Medical Officer Special Grade (Internal Medicine),,1,0,-1,NA
+1683,NGORA,Protestant General Hospital,Medical Officer Special Grade (Surgery),,1,0,-1,NA
+1684,NGORA,Protestant General Hospital,Medical Officer Special Grade (Paediatrics),,1,0,-1,NA
+1685,NGORA,Protestant General Hospital,Public Health Nurse,,1,0,-1,NA
+1686,NGORA,Protestant General Hospital,Psychiatric Clinical Officer,,1,0,-1,NA
+1687,NGORA,Protestant General Hospital,Nursing Officer (Psychiatry),,3,0,-3,NA
+1688,NGORA,Protestant General Hospital,Nursing Officer (Midwifery),,1,0,-1,NA
+1689,NGORA,Protestant General Hospital,Assistant Entomological Officer (Med),,1,0,-1,NA
+1690,NGORA,Protestant General Hospital,Medical Officer,,4,3,-1,NA
+1691,NGORA,Protestant General Hospital,Laboratory Technologist,,1,0,-1,NA
+1692,NGORA,Protestant General Hospital,Principal Medical Officer,U2(SC),1,0,-1,NA
+1693,NGORA,Protestant General Hospital,Medical Officer Special Grade - Internal Medicine,U2(SC),1,0,-1,NA
+1694,NGORA,Protestant General Hospital,Medical Officer Special Grade - General Surgery,U2(SC),1,0,-1,NA
+1695,NGORA,Protestant General Hospital,Medical Officer Special Grade - Obstetrics & Gynaecology,U2(SC),1,0,-1,NA
+1696,NGORA,Protestant General Hospital,Medical Officer Special Grade - Paediatrics,U2(SC),1,0,-1,NA
+1697,NGORA,Protestant General Hospital,Medical Officer Special Grade - Public Health,U2(SC),1,0,-1,NA
+1698,NGORA,Protestant General Hospital,Principal Nursing Officer,U2(SC),1,0,-1,NA
+1699,NGORA,Protestant General Hospital,Senior Medical Officer,U3(SC),1,0,-1,NA
+1700,NGORA,Protestant General Hospital,Senior Medical Clinical officer,U3(SC),1,0,-1,NA
+1701,NGORA,Protestant General Hospital,Medical Officer,U4(SC),4,0,-4,NA
+1702,NGORA,Protestant General Hospital,Senior Assistant Nursing Officer,U4(SC),5,0,-5,NA
+1703,NGORA,Protestant General Hospital,Public/Community Health Nurse,U4(SC),1,0,-1,NA
+1704,NGORA,Protestant General Hospital,Ophthalmic clinical Officer,U4(SC),1,0,-1,NA
+1705,NGORA,Protestant General Hospital,Medical Clinical officer,U4(SC),5,0,-5,NA
+1706,NGORA,Protestant General Hospital,Orthopaedic Officer,U4(SC),2,0,-2,NA
+1707,NGORA,Protestant General Hospital,Senior Medical Laboratory Technologist,U4(SC),1,0,-1,NA
+1708,NGORA,Protestant General Hospital,Health Educator,U4(SC),1,0,-1,NA
+1709,NGORA,Protestant General Hospital,Medical Social Worker,U4L,1,0,-1,NA
+1710,NGORA,Protestant General Hospital,Assistant Nursing Officer,U5(SC),17,0,-17,NA
+1711,NGORA,Protestant General Hospital,Assistant Nursing Officer - Psychiatry,U5(SC),1,0,-1,NA
+1712,NGORA,Protestant General Hospital,Assistant Nursing Officer (Midwifery),U5(SC),3,0,-3,NA
+1713,NGORA,Protestant General Hospital,Psychiatric Clinical Officer,U5(SC),1,0,-1,NA
+1714,NGORA,Protestant General Hospital,Anaesthetic officer,U5(SC),3,0,-3,NA
+1715,NGORA,Protestant General Hospital,Dispenser,U5(SC),2,0,-2,NA
+1716,NGORA,Protestant General Hospital,Physiotherapist,U5(SC),1,0,-1,NA
+1717,NGORA,Protestant General Hospital,Occupational therapist,U5(SC),1,0,-1,NA
+1718,NGORA,Protestant General Hospital,Radiographer,U5(SC),2,0,-2,NA
+1719,NGORA,Protestant General Hospital,Medical Laboratory Technologist,U5(SC),1,0,-1,NA
+1720,NGORA,Protestant General Hospital,Medical Laboratory Technician,U5(SC),2,0,-2,NA
+1721,NGORA,Protestant General Hospital,Assistant Health Educator,U5(SC),1,0,-1,NA
+1722,NGORA,Protestant General Hospital,Health Inspector,U5(SC),1,0,-1,NA
+1723,NGORA,Protestant General Hospital,Medical Laboratory Assistant,U7U,1,0,-1,NA
+1724,NGORA,Protestant General Hospital,Enrolled Nurse,U7U,46,0,-46,NA
+1725,NGORA,Protestant General Hospital,Enrolled Psychiatric Nurse,U7U,2,0,-2,NA
+1726,NGORA,Protestant General Hospital,Anaesthetic Attendant,U8U,2,0,-2,NA
+1727,NGORA,Protestant General Hospital,Mortuary Attendant,U8L,2,0,-2,NA
+1728,NGORA,Protestant General Hospital,Darkroom Attendant,U8L,1,0,-1,NA
+1729,RUKUNGIRI,Protestant General Hospital,Senior Nursing Officer,,5,2,-3,NA
+1730,RUKUNGIRI,Protestant General Hospital,Principal Nursing Officer,,1,1,0,NA
+1731,RUKUNGIRI,Protestant General Hospital,Physiotherapist,,1,0,-1,NA
+1732,RUKUNGIRI,Protestant General Hospital,Senior Clinical Officer,,1,0,-1,NA
+1733,RUKUNGIRI,Protestant General Hospital,Enrolled Psychiatric Nurse,,2,1,-1,NA
+1734,RUKUNGIRI,Protestant General Hospital,Occupational Therapist,,1,1,0,NA
+1735,RUKUNGIRI,Protestant General Hospital,Nursing Officer (Nursing),,17,1,-16,NA
+1736,RUKUNGIRI,Protestant General Hospital,Senior Medical Officer,,1,0,-1,NA
+1737,RUKUNGIRI,Protestant General Hospital,Enrolled Nurse,,46,22,-24,NA
+1738,RUKUNGIRI,Protestant General Hospital,Clinical Officer,,5,5,0,NA
+1739,RUKUNGIRI,Protestant General Hospital,Radiographer,,2,0,-2,NA
+1740,RUKUNGIRI,Protestant General Hospital,Ophthalmic Clinical Officer,,1,0,-1,NA
+1741,RUKUNGIRI,Protestant General Hospital,Anaesthetic Assistant,,2,0,-2,NA
+1742,RUKUNGIRI,Protestant General Hospital,Laboratory Assistant,,1,5,4,NA
+1743,RUKUNGIRI,Protestant General Hospital,Theatre Assistant,,0,0,0,NA
+1744,RUKUNGIRI,Protestant General Hospital,Health Inspector,,1,0,-1,NA
+1745,RUKUNGIRI,Protestant General Hospital,Health Educator,,1,0,-1,NA
+1746,RUKUNGIRI,Protestant General Hospital,Anaesthetic Officer,,3,0,-3,NA
+1747,RUKUNGIRI,Protestant General Hospital,Medical Officer Special Grade (Obs Gyne),,1,0,-1,NA
+1748,RUKUNGIRI,Protestant General Hospital,Enrolled Midwife,,25,4,-21,NA
+1749,RUKUNGIRI,Protestant General Hospital,Nutritionist,,1,0,-1,NA
+1750,RUKUNGIRI,Protestant General Hospital,Orthopedic Officer,,2,1,-1,NA
+1751,RUKUNGIRI,Protestant General Hospital,Medical Officer Special Grade (Community),,1,0,-1,NA
+1752,RUKUNGIRI,Protestant General Hospital,Senior Laboratory Technologist,,1,0,-1,NA
+1753,RUKUNGIRI,Protestant General Hospital,Laboratory Technician,,2,1,-1,NA
+1754,RUKUNGIRI,Protestant General Hospital,Principal Medical Officer,,1,0,-1,NA
+1755,RUKUNGIRI,Protestant General Hospital,Medical Officer Special Grade (Internal Medicine),,1,0,-1,NA
+1756,RUKUNGIRI,Protestant General Hospital,Medical Officer Special Grade (Surgery),,1,0,-1,NA
+1757,RUKUNGIRI,Protestant General Hospital,Medical Officer Special Grade (Paediatrics),,1,0,-1,NA
+1758,RUKUNGIRI,Protestant General Hospital,Public Health Nurse,,1,0,-1,NA
+1759,RUKUNGIRI,Protestant General Hospital,Psychiatric Clinical Officer,,1,0,-1,NA
+1760,RUKUNGIRI,Protestant General Hospital,Nursing Officer (Psychiatry),,3,0,-3,NA
+1761,RUKUNGIRI,Protestant General Hospital,Nursing Officer (Midwifery),,1,0,-1,NA
+1762,RUKUNGIRI,Protestant General Hospital,Assistant Entomological Officer (Med),,1,0,-1,NA
+1763,RUKUNGIRI,Protestant General Hospital,Medical Officer,,4,5,1,NA
+1764,RUKUNGIRI,Protestant General Hospital,Laboratory Technologist,,1,0,-1,NA
+1765,RUKUNGIRI,Protestant General Hospital,Principal Medical Officer,U2(SC),1,0,-1,NA
+1766,RUKUNGIRI,Protestant General Hospital,Medical Officer Special Grade - Internal Medicine,U2(SC),1,0,-1,NA
+1767,RUKUNGIRI,Protestant General Hospital,Medical Officer Special Grade - General Surgery,U2(SC),1,0,-1,NA
+1768,RUKUNGIRI,Protestant General Hospital,Medical Officer Special Grade - Obstetrics & Gynaecology,U2(SC),1,0,-1,NA
+1769,RUKUNGIRI,Protestant General Hospital,Medical Officer Special Grade - Paediatrics,U2(SC),1,0,-1,NA
+1770,RUKUNGIRI,Protestant General Hospital,Medical Officer Special Grade - Public Health,U2(SC),1,0,-1,NA
+1771,RUKUNGIRI,Protestant General Hospital,Principal Nursing Officer,U2(SC),1,0,-1,NA
+1772,RUKUNGIRI,Protestant General Hospital,Senior Medical Officer,U3(SC),1,0,-1,NA
+1773,RUKUNGIRI,Protestant General Hospital,Senior Medical Clinical officer,U3(SC),1,0,-1,NA
+1774,RUKUNGIRI,Protestant General Hospital,Medical Officer,U4(SC),4,0,-4,NA
+1775,RUKUNGIRI,Protestant General Hospital,Senior Assistant Nursing Officer,U4(SC),5,0,-5,NA
+1776,RUKUNGIRI,Protestant General Hospital,Public/Community Health Nurse,U4(SC),1,0,-1,NA
+1777,RUKUNGIRI,Protestant General Hospital,Ophthalmic clinical Officer,U4(SC),1,0,-1,NA
+1778,RUKUNGIRI,Protestant General Hospital,Medical Clinical officer,U4(SC),5,0,-5,NA
+1779,RUKUNGIRI,Protestant General Hospital,Orthopaedic Officer,U4(SC),2,0,-2,NA
+1780,RUKUNGIRI,Protestant General Hospital,Senior Medical Laboratory Technologist,U4(SC),1,0,-1,NA
+1781,RUKUNGIRI,Protestant General Hospital,Health Educator,U4(SC),1,0,-1,NA
+1782,RUKUNGIRI,Protestant General Hospital,Medical Social Worker,U4L,1,0,-1,NA
+1783,RUKUNGIRI,Protestant General Hospital,Assistant Nursing Officer,U5(SC),17,0,-17,NA
+1784,RUKUNGIRI,Protestant General Hospital,Assistant Nursing Officer - Psychiatry,U5(SC),1,0,-1,NA
+1785,RUKUNGIRI,Protestant General Hospital,Assistant Nursing Officer (Midwifery),U5(SC),3,0,-3,NA
+1786,RUKUNGIRI,Protestant General Hospital,Psychiatric Clinical Officer,U5(SC),1,0,-1,NA
+1787,RUKUNGIRI,Protestant General Hospital,Anaesthetic officer,U5(SC),3,0,-3,NA
+1788,RUKUNGIRI,Protestant General Hospital,Dispenser,U5(SC),2,0,-2,NA
+1789,RUKUNGIRI,Protestant General Hospital,Physiotherapist,U5(SC),1,0,-1,NA
+1790,RUKUNGIRI,Protestant General Hospital,Occupational therapist,U5(SC),1,0,-1,NA
+1791,RUKUNGIRI,Protestant General Hospital,Radiographer,U5(SC),2,0,-2,NA
+1792,RUKUNGIRI,Protestant General Hospital,Medical Laboratory Technologist,U5(SC),1,0,-1,NA
+1793,RUKUNGIRI,Protestant General Hospital,Medical Laboratory Technician,U5(SC),2,0,-2,NA
+1794,RUKUNGIRI,Protestant General Hospital,Assistant Health Educator,U5(SC),1,0,-1,NA
+1795,RUKUNGIRI,Protestant General Hospital,Health Inspector,U5(SC),1,0,-1,NA
+1796,RUKUNGIRI,Protestant General Hospital,Medical Laboratory Assistant,U7U,1,0,-1,NA
+1797,RUKUNGIRI,Protestant General Hospital,Enrolled Nurse,U7U,46,0,-46,NA
+1798,RUKUNGIRI,Protestant General Hospital,Enrolled Psychiatric Nurse,U7U,2,0,-2,NA
+1799,RUKUNGIRI,Protestant General Hospital,Anaesthetic Attendant,U8U,2,0,-2,NA
+1800,RUKUNGIRI,Protestant General Hospital,Mortuary Attendant,U8L,2,0,-2,NA
+1801,RUKUNGIRI,Protestant General Hospital,Darkroom Attendant,U8L,1,0,-1,NA
+1802,SIRONKO,Protestant Health Centre III,Senior Clinical Officer,,1,1,0,NA
+1803,SIRONKO,Protestant Health Centre III,Nursing Officer (Nursing),,1,1,0,NA
+1804,SIRONKO,Protestant Health Centre III,Enrolled Nurse,,3,0,-3,NA
+1805,SIRONKO,Protestant Health Centre III,Clinical Officer,,1,0,-1,NA
+1806,SIRONKO,Protestant Health Centre III,Laboratory Assistant,,1,1,0,NA
+1807,SIRONKO,Protestant Health Centre III,Enrolled Midwife,,2,1,-1,NA
+1808,SIRONKO,Protestant Health Centre III,Laboratory Technician,,1,0,-1,NA
+1809,SIRONKO,Protestant Health Centre III,Senior Medical Clinical officer,U3(SC),1,0,-1,NA
+1810,SIRONKO,Protestant Health Centre III,Assistant Nursing Officer,U5(SC),1,0,-1,NA
+1811,SIRONKO,Protestant Health Centre III,Clinical officer,U5(SC),1,0,-1,NA
+1812,SIRONKO,Protestant Health Centre III,Medical Laboratory Technician,U5(SC),1,0,-1,NA
+1813,SIRONKO,Protestant Health Centre III,Medical Laboratory Assistant,U7U,1,0,-1,NA
+1814,SIRONKO,Protestant Health Centre III,Enrolled Nurse,U7U,3,0,-3,NA
+1815,SIRONKO,Protestant Health Centre III,Health Information Assistant,U7U,1,0,-1,NA
+1816,SIRONKO,Protestant Health Centre III,Health Assistant,U7U,1,0,-1,NA
+1817,SOROTI,Protestant Health Center II,Enrolled Nurse,,1,1,0,NA
+1818,SOROTI,Protestant Health Center II,Enrolled Midwife,,1,0,-1,NA
+1819,WAKISO,Protestant Health Centre III,Senior Clinical Officer,,3,0,-3,NA
+1820,WAKISO,Protestant Health Centre III,Nursing Officer (Nursing),,3,0,-3,NA
+1821,WAKISO,Protestant Health Centre III,Enrolled Nurse,,9,0,-9,NA
+1822,WAKISO,Protestant Health Centre III,Clinical Officer,,3,0,-3,NA
+1823,WAKISO,Protestant Health Centre III,Laboratory Assistant,,3,0,-3,NA
+1824,WAKISO,Protestant Health Centre III,Enrolled Midwife,,6,2,-4,NA
+1825,WAKISO,Protestant Health Centre III,Laboratory Technician,,3,0,-3,NA
+1826,WAKISO,Protestant Health Centre III,Senior Medical Clinical officer,U3(SC),3,0,-3,NA
+1827,WAKISO,Protestant Health Centre III,Assistant Nursing Officer,U5(SC),3,0,-3,NA
+1828,WAKISO,Protestant Health Centre III,Clinical officer,U5(SC),3,0,-3,NA
+1829,WAKISO,Protestant Health Centre III,Medical Laboratory Technician,U5(SC),3,0,-3,NA
+1830,WAKISO,Protestant Health Centre III,Medical Laboratory Assistant,U7U,3,0,-3,NA
+1831,WAKISO,Protestant Health Centre III,Enrolled Nurse,U7U,9,0,-9,NA
+1832,WAKISO,Protestant Health Centre III,Health Information Assistant,U7U,3,0,-3,NA
+1833,WAKISO,Protestant Health Centre III,Health Assistant,U7U,3,0,-3,NA
+1834,YUMBE,Protestant Health Centre III,Senior Clinical Officer,,2,0,-2,NA
+1835,YUMBE,Protestant Health Centre III,Nursing Officer (Nursing),,2,0,-2,NA
+1836,YUMBE,Protestant Health Centre III,Enrolled Nurse,,6,1,-5,NA
+1837,YUMBE,Protestant Health Centre III,Clinical Officer,,2,1,-1,NA
+1838,YUMBE,Protestant Health Centre III,Laboratory Assistant,,2,1,-1,NA
+1839,YUMBE,Protestant Health Centre III,Enrolled Midwife,,4,1,-3,NA
+1840,YUMBE,Protestant Health Centre III,Laboratory Technician,,2,0,-2,NA
+1841,YUMBE,Protestant Health Centre III,Senior Medical Clinical officer,U3(SC),2,0,-2,NA
+1842,YUMBE,Protestant Health Centre III,Assistant Nursing Officer,U5(SC),2,0,-2,NA
+1843,YUMBE,Protestant Health Centre III,Clinical officer,U5(SC),2,0,-2,NA
+1844,YUMBE,Protestant Health Centre III,Medical Laboratory Technician,U5(SC),2,0,-2,NA
+1845,YUMBE,Protestant Health Centre III,Medical Laboratory Assistant,U7U,2,0,-2,NA
+1846,YUMBE,Protestant Health Centre III,Enrolled Nurse,U7U,6,0,-6,NA
+1847,YUMBE,Protestant Health Centre III,Health Information Assistant,U7U,2,0,-2,NA
+1848,YUMBE,Protestant Health Centre III,Health Assistant,U7U,2,0,-2,NA
+1849,ZOMBO,Protestant Health Centre III,Senior Clinical Officer,,1,0,-1,NA
+1850,ZOMBO,Protestant Health Centre III,Nursing Officer (Nursing),,1,0,-1,NA
+1851,ZOMBO,Protestant Health Centre III,Enrolled Nurse,,3,1,-2,NA
+1852,ZOMBO,Protestant Health Centre III,Clinical Officer,,1,0,-1,NA
+1853,ZOMBO,Protestant Health Centre III,Laboratory Assistant,,1,3,2,NA
+1854,ZOMBO,Protestant Health Centre III,Enrolled Midwife,,2,1,-1,NA
+1855,ZOMBO,Protestant Health Centre III,Laboratory Technician,,1,3,2,NA
+1856,ZOMBO,Protestant Health Centre III,Senior Medical Clinical officer,U3(SC),1,0,-1,NA
+1857,ZOMBO,Protestant Health Centre III,Assistant Nursing Officer,U5(SC),1,0,-1,NA
+1858,ZOMBO,Protestant Health Centre III,Clinical officer,U5(SC),1,0,-1,NA
+1859,ZOMBO,Protestant Health Centre III,Medical Laboratory Technician,U5(SC),1,0,-1,NA
+1860,ZOMBO,Protestant Health Centre III,Medical Laboratory Assistant,U7U,1,0,-1,NA
+1861,ZOMBO,Protestant Health Centre III,Enrolled Nurse,U7U,3,0,-3,NA
+1862,ZOMBO,Protestant Health Centre III,Health Information Assistant,U7U,1,0,-1,NA
+1863,ZOMBO,Protestant Health Centre III,Health Assistant,U7U,1,0,-1,NA
