@@ -15,6 +15,7 @@ data_path = root_path + "/data"
 notebook_path = root_path + "/notebooks"
 lib_path = root_path + "/lib"
 refs_path = root_path + "/refs"
+tmp_path = root_path + "/tmp"
 
 
 # required to use as module

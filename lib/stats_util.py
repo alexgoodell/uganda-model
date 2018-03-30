@@ -1,7 +1,7 @@
 
 
 from dependencies import *
-
+import time
 
 # --------------------------- Pandas / matplot lib ----------------------------
 def clean_columns(df):
@@ -80,8 +80,11 @@ def is_number(s):
     except ValueError:
         return False
 
-# ----------------------------------- Other -----------------------------------
+# ----------------------------------- Other ----------------------------------
+
 
 # required to use as module
 if __name__ == '__main__': 
 	print "hello world"
+
+
