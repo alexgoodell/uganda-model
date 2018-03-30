@@ -1,3 +1,6 @@
+
+
+
 for cat analysis: http://patsy.readthedocs.io/en/latest/quickstart.html
 
 PrettyPandas
