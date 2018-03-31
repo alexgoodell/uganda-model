@@ -69,24 +69,21 @@ RUN pip install blockdiag==1.5.3
 # unknown
 RUN pip install Pillow==5.0.0 ruamel.ordereddict==0.4.13 webcolors==1.8.1
 
+ENV NB_USER ubuntubaby
+ENV NB_UID 1000
+ENV HOME /home/${NB_USER}
 
-# Install limcat source code from GitHub
-# There are two ways to do this: pull the current repo (which might have errors)
-# Or the specific commit (dfd9...) from when I tested this (Dec 29)
+RUN adduser --disabled-password \
+    --gecos "Default user" \
+    --uid ${NB_UID} \
+    ${NB_USER}
 
-# RUN cd /home && git clone --depth  1  https://github.com/alexgoodell/limcat.git
-RUN cd /home && git clone  --depth  1  https://github.com/alexgoodell/uganda-model.git
-# RUN cd /home/limcat && git reset --hard 6b6ee126a3f657f8fd1d27e09f970a5ce29e85a3
+# RUN cd /home && git clone  --depth  1  https://github.com/alexgoodell/uganda-model.git .
 
-# RUN cd /home/uganda-model && jupyter notebook --ip=127.0.0.1 --port 8003 --allow-root
+# Make sure the contents of our repo are in ${HOME}
+COPY . ${HOME}
+USER root
+RUN chown -R ${NB_UID} ${HOME}
+USER ${NB_USER}
 
-
-# # Run the model for a small population for 12 cycles
-# RUN cd /home/limcat && go run go/*.go --run_type single --size s --cycles 12 --name basecase --runs 1
-
-# # Format outputs - The final file should be found in "output_html"
-# RUN cd /home/limcat && python outputs2.py --images y --name basecase --size s --comment "basecase2 single run"
-
-# VOLUME /outputs
-
-# RUN 
+CMD ["jupyter", "notebook", "--ip", "0.0.0.0"]
