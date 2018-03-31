@@ -8,6 +8,7 @@ from prompter import prompt, yesno
 from termcolor import colored
 import config
 import lib.util as util
+sys.dont_write_bytecode = True
 
 logging.basicConfig()
 

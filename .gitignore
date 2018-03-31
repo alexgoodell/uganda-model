@@ -2,9 +2,13 @@
 
 # Compiled python
 *.pyc
+*/*.pyc
 
 # Temp files
 *.tmp
+
+# Temp directory
+tmp/*.*
 
 # Word temporary
 ~$*.doc*
