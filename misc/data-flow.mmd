@@ -1,0 +1,47 @@
+graph LR
+ds[districts] --> fc
+bg[Budget office district data, otims_2018] --> ds
+um[UMDPC registry, umdpc2018] --> md[adf] 
+md -->  mdadf[mda_df]
+npa --> npadf[npa_df]
+fm[Facility master list, mohdhi2017] --> fc[facilities]
+fc -- join by facility --> md
+ds -- join to district --> npa[adf]
+ad[AHPC registry, ahpc2018] --> npa[adf]
+mdadf[mda_df] --> final[adf]
+npadf[npa_df] --> final
+final --> vfinal[adf]
+vfinal --> vars
+vars[Misc vars] --> model[Run model]
+hrhis[HRIS, hrhis2017]  --> vac[Vacancies df, used by var nb]
+ds -- join to district --> vac
+subgraph Sources
+    ad
+    fm
+    um
+    bg
+    hrhis
+end
+subgraph Facilities notebook
+    ds
+    fc
+   vac
+end
+subgraph Physician nb
+    md
+end
+subgraph NPA nb
+    npa
+end
+subgraph Workforce nb
+    npadf
+    mdadf
+    final
+end
+subgraph Variables nb, processing
+  vfinal
+  vars
+end
+subgraph Model nb
+  model
+end
