@@ -8,6 +8,8 @@ Here I have included a description of best-available data. Key unknown parameter
 
 ### Overview
 
+![Training structure](imgs/training.jpg)
+
 According to Bulamba et al <cite data-cite="bulamba2018"><a href="https://github.com/alexgoodell/uganda-model/blob/master/refs/cite-md/bulamba2018.md">(bulamba2018)</a></cite>: 
 
 > Prior to 1970, most anaesthesia in Uganda was provided either by the surgeons (mainly foreign expatriates) or medical assistants trained on the job to provide ether or chloroform using apparatus like the Schimmelbusch mask. Mulago paramedical school had been established in the 1960s to provide technical training to a range of medical assistants who otherwise had no formal medical background but were expected to work with expatriates in the provision of medical care. Formal training of anaesthesia providers started in 1971 when the Ministry of Health initiated a three-year training program for Anaesthetic Assistants. The pre-entry qualification in this program was an Ordinary Level (O-level) certificate and the course was followed by a mandatory year of internship at Mulago national referral hospital, Kampala. The award was a national Diploma in Anaesthesia. This program had a pioneer intake of 8 students but was terminated in 1982, after only 12 years of training.
@@ -160,7 +162,7 @@ Bulamba gives the following figures for currently practicing anesthetists. Howev
 
 The following diagram describes the flow of data currently used in the model as of Apr 5, 2018 3:15 PM. 
 
-![data structure](misc/data-flow.svg)
+![data structure](../misc/data-flow.svg)
 
 [Edit this diagram](https://mermaidjs.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggTFJcbmRzW2Rpc3RyaWN0c10gLS0-IGZjXG5iZ1tCdWRnZXQgb2ZmaWNlIGRpc3RyaWN0IGRhdGEsIG90aW1zXzIwMThdIC0tPiBkc1xudW1bVU1EUEMgcmVnaXN0cnksIHVtZHBjMjAxOF0gLS0-IG1kW2FkZl0gXG5tZCAtLT4gIG1kYWRmW21kYV9kZl1cbm5wYSAtLT4gbnBhZGZbbnBhX2RmXVxuZm1bRmFjaWxpdHkgbWFzdGVyIGxpc3QsIG1vaGRoaTIwMTddIC0tPiBmY1tmYWNpbGl0aWVzXVxuZmMgLS0gam9pbiBieSBmYWNpbGl0eSAtLT4gbWRcbmRzIC0tIGpvaW4gdG8gZGlzdHJpY3QgLS0-IG5wYVthZGZdXG5hZFtBSFBDIHJlZ2lzdHJ5LCBhaHBjMjAxOF0gLS0-IG5wYVthZGZdXG5tZGFkZlttZGFfZGZdIC0tPiBmaW5hbFthZGZdXG5ucGFkZltucGFfZGZdIC0tPiBmaW5hbFxuZmluYWwgLS0-IHZmaW5hbFthZGZdXG52ZmluYWwgLS0-IHZhcnNcbnZhcnNbTWlzYyB2YXJzXSAtLT4gbW9kZWxbUnVuIG1vZGVsXVxuaHJoaXNbSFJJUywgaHJoaXMyMDE3XSAgLS0-IHZhY1tWYWNhbmNpZXMgZGYsIHVzZWQgYnkgdmFyIG5iXVxuZHMgLS0gam9pbiB0byBkaXN0cmljdCAtLT4gdmFjXG5zdWJncmFwaCBTb3VyY2VzXG4gICAgYWRcbiAgICBmbVxuICAgIHVtXG4gICAgYmdcbiAgICBocmhpc1xuZW5kXG5zdWJncmFwaCBGYWNpbGl0aWVzIG5vdGVib29rXG4gICAgZHNcbiAgICBmY1xuICAgdmFjXG5lbmRcbnN1YmdyYXBoIFBoeXNpY2lhbiBuYlxuICAgIG1kXG5lbmRcbnN1YmdyYXBoIE5QQSBuYlxuICAgIG5wYVxuZW5kXG5zdWJncmFwaCBXb3JrZm9yY2UgbmJcbiAgICBucGFkZlxuICAgIG1kYWRmXG4gICAgZmluYWxcbmVuZFxuc3ViZ3JhcGggVmFyaWFibGVzIG5iLCBwcm9jZXNzaW5nXG4gIHZmaW5hbFxuICB2YXJzXG5lbmRcbnN1YmdyYXBoIE1vZGVsIG5iXG4gIG1vZGVsXG5lbmQiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9fQ)
 
