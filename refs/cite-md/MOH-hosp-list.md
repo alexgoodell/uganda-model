@@ -1,9 +1,8 @@
 | Item          | Value                                                                                            |
 |:--------------|:-------------------------------------------------------------------------------------------------|
-| bdsk-url-1    | http://health.go.ug/affiliated-institutions/hospitals)                                           |
 | date-modified | 2018-03-12 06:56:32 +0000                                                                        |
 | author        | {Ministry of Health}                                                                             |
-| url           | http://health.go.ug/affiliated-institutions/hospitals                                            |
+| url           | http://health.go.ug/affiliated-institutions/hospitals)                                           |
 | booktitle     | Ministry of Health, Government of Uganda                                                         |
 | title         | {List of Hospitals}                                                                              |
 | ID            | MOH-hosp-list                                                                                    |

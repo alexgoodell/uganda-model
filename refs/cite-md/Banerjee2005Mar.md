@@ -1,6 +1,5 @@
 | Item          | Value                                                                                              |
 |:--------------|:---------------------------------------------------------------------------------------------------|
-| bdsk-url-1    | http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1831898                                                |
 | publisher     | Makerere University Medical School                                                                 |
 | date-modified | 2018-03-13 06:28:23 +0000                                                                          |
 | title         | {Bridging the health gap in Uganda: The surgical role of the clinical officer}                     |

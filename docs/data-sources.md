@@ -83,8 +83,7 @@ List of programs source: <cite data-cite="mohscholar2017"><a href="https://githu
 | Gulu School of Clinical Officers                      | ?               |               |
 | Ishaka Adventists Anaesthetic Officer Training School | ?               |               |
 | Kitovu Catholic Anaesthetic Officer Training School   | ?               |               |
-|=======================================================|=================|===============|
-| Total                                                 | ?               |               |
+| __Total__                                             | ?               |               |
 
 Sources: <cite data-cite="lacoranes2018"><a href="https://github.com/alexgoodell/uganda-model/blob/master/refs/cite-md/lacoranes2018.md">(lacoranes2018)</a></cite>, <cite data-cite="bulamba2018"><a href="https://github.com/alexgoodell/uganda-model/blob/master/refs/cite-md/bulamba2018.md">(bulamba2018)</a></cite>
 
@@ -152,8 +151,7 @@ Bulamba gives the following figures for currently practicing anesthetists. Howev
 | Southwestern | Public university     |                 5 |                   |     5 |                 |
 |              | Public hospital       |                 2 |                   |     2 |               7 |
 | Central      | Several and mixed     |                61 |                 1 |    62 |              62 |
-|==============|=======================|===================|===================|=======|=================|
-| Total        |                       |                73 |                 3 |    76 |              76 |
+| __Total__    |                       |                73 |                 3 |    76 |              76 |
 
 
 
