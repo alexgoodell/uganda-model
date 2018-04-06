@@ -31,3 +31,5 @@ tmp/*.*
 *.key
 
 tmp/*.*
+
+private-docs/*.*

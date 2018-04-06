@@ -1,5 +1,10 @@
 
 
+What happens when there isn't an anesthesiologist? 
+"It was reported that anesthesia was occasionally or solely administered by the surgeon performing the surgery or an uncertiﬁed nurse/theater assistant."
+<cite data-cite="Linden2012-sw"><a href="https://github.com/alexgoodell/uganda-model/blob/master/refs/cite-md/Linden2012-sw.md">(Linden2012-sw)</a></cite>
+
+
 
 for cat analysis: http://patsy.readthedocs.io/en/latest/quickstart.html
 
