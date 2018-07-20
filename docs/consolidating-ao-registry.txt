@@ -1,0 +1,1414 @@
+Potential duplicate #DUP1
+===================================================
+
+Record from Butisema:
+
+	ID: 18
+	First name: Bernadette
+	Last name: Osure
+	Other names: Apput
+	Facility: PRIVATE
+	Phone number(s): 722709703 
+	Email: benardosure@gmail.com
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 10139
+	First name: Bernadette
+	Last name: Igoe
+	Other names: 
+	Residence: SERERE, Eastern, Uganda
+	Phone number(s): 752889990
+	Email: 
+
+
+
+Potential duplicate #DUP2
+===================================================
+
+Record from Butisema:
+
+	ID: 20
+	First name: Betty
+	Last name: Amolo
+	Other names: 
+	Facility: KITGUM HOSPITAL
+	Phone number(s): 783255643 
+	Email: bettamolo413@gmail.com
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 15369
+	First name: Betty
+	Last name: Akello
+	Other names: 
+	Residence: LIRA, Northern, Uganda
+	Phone number(s): 0777110692
+	Email: 
+
+
+
+Potential duplicate #DUP3
+===================================================
+
+Record from Butisema:
+
+	ID: 28
+	First name: Charles
+	Last name: Karuhanga
+	Other names: 
+	Facility: MULAGO NRH
+	Phone number(s): 772619543 
+	Email: amtcharles@gmail.com
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 16968
+	First name: Charles
+	Last name: Babuji
+	Other names: 
+	Residence: KOBOKO, Northern, Uganda
+	Phone number(s): 0772534167
+	Email: babuji.charles@gmail.com
+
+Potential record match #2 from IHRIS database:
+
+	Registration number: 572
+	First name: Julius
+	Last name: Karuhanga
+	Other names: Bazilele
+	Residence: LUWERO, Central, Uganda
+	Phone number(s): 772588789
+	Email: 
+
+
+
+Potential duplicate #DUP4
+===================================================
+
+Record from Butisema:
+
+	ID: 62
+	First name: Innocent
+	Last name: Atoo
+	Other names: 
+	Facility: 
+	Phone number(s): 774341164 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 15978
+	First name: Innocent
+	Last name: Arinaitwe
+	Other names: 
+	Residence: BUSHENYI, Western, Uganda
+	Phone number(s): 782862728
+	Email: 
+
+Potential record match #2 from IHRIS database:
+
+	Registration number: 8467
+	First name: Innocent
+	Last name: Atukunda
+	Other names: 
+	Residence: 
+	Phone number(s): 
+	Email: 
+
+
+
+Potential duplicate #DUP5
+===================================================
+
+Record from Butisema:
+
+	ID: 74
+	First name: James
+	Last name: Odongo
+	Other names: 
+	Facility: KATAKWI
+	Phone number(s): 779512203 
+	Email: jamesodongo20k@gmail.com
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 581
+	First name: Samuel
+	Last name: Odong
+	Other names: Ekong
+	Residence: MBALE, Eastern, Uganda
+	Phone number(s): 
+	Email: 
+
+
+
+Potential duplicate #DUP6
+===================================================
+
+Record from Butisema:
+
+	ID: 78
+	First name: John
+	Last name: Okurut
+	Other names: Peter
+	Facility: ATUTUR DH
+	Phone number(s): 782655118 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 10337
+	First name: John
+	Last name: Ojok
+	Other names: Bosco Anyai
+	Residence: 
+	Phone number(s): 
+	Email: 
+
+Potential record match #2 from IHRIS database:
+
+	Registration number: 11465
+	First name: John
+	Last name: Okuda
+	Other names: Bosco
+	Residence: ABIM, Northern, Uganda
+	Phone number(s): 782556705
+	Email: 
+
+
+
+Potential duplicate #DUP7
+===================================================
+
+Record from Butisema:
+
+	ID: 85
+	First name: Julius
+	Last name: Mukwana
+	Other names: 
+	Facility: TORORO HOSPITAL
+	Phone number(s): 772843573 704404910
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 572
+	First name: Julius
+	Last name: Karuhanga
+	Other names: Bazilele
+	Residence: LUWERO, Central, Uganda
+	Phone number(s): 772588789
+	Email: 
+
+
+
+Potential duplicate #DUP8
+===================================================
+
+Record from Butisema:
+
+	ID: 89
+	First name: Juliet
+	Last name: Nekesa
+	Other names: 
+	Facility: 
+	Phone number(s): 779497387 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 21544
+	First name: Juliet
+	Last name: Nakiganda
+	Other names: 
+	Residence: KAMPALA, Central, Uganda
+	Phone number(s): 0702371210
+	Email: 
+
+
+
+Potential duplicate #DUP9
+===================================================
+
+Record from Butisema:
+
+	ID: 90
+	First name: Martha
+	Last name: Ajulong
+	Other names: 
+	Facility: SERERE
+	Phone number(s): 784130320 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 19708
+	First name: Anna
+	Last name: Ajulong
+	Other names: Martha
+	Residence: SERERE, Eastern, Uganda
+	Phone number(s): 0787724899
+	Email: 
+
+
+
+Potential duplicate #DUP10
+===================================================
+
+Record from Butisema:
+
+	ID: 91
+	First name: Justine
+	Last name: Tuhaire
+	Other names: 
+	Facility: MULAGO NRH
+	Phone number(s): 772398804 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 1159
+	First name: Justine
+	Last name: Opus
+	Other names: 
+	Residence: MBALE, Eastern, Uganda
+	Phone number(s): 
+	Email: 
+
+
+
+Potential duplicate #DUP11
+===================================================
+
+Record from Butisema:
+
+	ID: 94
+	First name: Lucy
+	Last name: Akello
+	Other names: 
+	Facility: ADJUMANI HOSPITAL
+	Phone number(s): 772605237 
+	Email: akello.gena@gmail.com
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 15369
+	First name: Betty
+	Last name: Akello
+	Other names: 
+	Residence: LIRA, Northern, Uganda
+	Phone number(s): 0777110692
+	Email: 
+
+
+
+Potential duplicate #DUP12
+===================================================
+
+Record from Butisema:
+
+	ID: 96
+	First name: Margret
+	Last name: Aciro
+	Other names: 
+	Facility: LALOGI H/C IV OMORO
+	Phone number(s):  
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 11449
+	First name: Margaret
+	Last name: Apio
+	Other names: Rose
+	Residence: ADJUMANI, Northern, Uganda
+	Phone number(s): 0783300375
+	Email: 
+
+Potential record match #2 from IHRIS database:
+
+	Registration number: 25097
+	First name: Margaret
+	Last name: Aciro
+	Other names: 
+	Residence: KITGUM, Northern, Uganda
+	Phone number(s): 0772902314
+	Email: aciro.margret@yahoo.com
+
+
+
+Potential duplicate #DUP13
+===================================================
+
+Record from Butisema:
+
+	ID: 107
+	First name: Patrick
+	Last name: Ocen
+	Other names: Okello
+	Facility: KAPCHORWA HOSPITAL
+	Phone number(s): 785392240 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 18248
+	First name: Patrick
+	Last name: Ochen
+	Other names: Okello
+	Residence: ABIM, Northern, Uganda
+	Phone number(s): 0705771600
+	Email: moyohwa@yahoo.co.uk
+
+Potential record match #2 from IHRIS database:
+
+	Registration number: 8713
+	First name: Patrick
+	Last name: Mwandha
+	Other names: 
+	Residence: 
+	Phone number(s): 
+	Email: 
+
+
+
+Potential duplicate #DUP14
+===================================================
+
+Record from Butisema:
+
+	ID: 109
+	First name: Nelson
+	Last name: Opolot
+	Other names: Otim
+	Facility: MULAGO PARAMEDICAL SCHOOL
+	Phone number(s):  
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 9161
+	First name: John
+	Last name: Opolot
+	Other names: Mark
+	Residence: WAKISO, Central, Uganda
+	Phone number(s): 0772683819
+	Email: markopolot@yahoomail.com
+
+
+
+Potential duplicate #DUP15
+===================================================
+
+Record from Butisema:
+
+	ID: 113
+	First name: Peter
+	Last name: Malinga
+	Other names: 
+	Facility: BUSOLWE HOSPITAL
+	Phone number(s): 783644493 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 6160
+	First name: Felester
+	Last name: Masika
+	Other names: 
+	Residence: KASESE, Western, Uganda
+	Phone number(s): 0752497055
+	Email: masikafelesta@gmail
+
+
+
+Potential duplicate #DUP16
+===================================================
+
+Record from Butisema:
+
+	ID: 116
+	First name: Patrick
+	Last name: Odong
+	Other names: 
+	Facility: ST. LUKE HOSPITAL
+	Phone number(s): 773355008 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 7959
+	First name: Patrick
+	Last name: Jabo
+	Other names: Cosnat
+	Residence: ADJUMANI, Northern, Uganda
+	Phone number(s): 
+	Email: jabopatrick@gmail.com
+
+Potential record match #2 from IHRIS database:
+
+	Registration number: 18248
+	First name: Patrick
+	Last name: Ochen
+	Other names: Okello
+	Residence: ABIM, Northern, Uganda
+	Phone number(s): 0705771600
+	Email: moyohwa@yahoo.co.uk
+
+
+
+Potential duplicate #DUP17
+===================================================
+
+Record from Butisema:
+
+	ID: 117
+	First name: Paul
+	Last name: Ura
+	Other names: 
+	Facility: ARUA RRH
+	Phone number(s): 772640092 
+	Email: urapaul06@gmail.com
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 5891
+	First name: Paul
+	Last name: Masereka
+	Other names: 
+	Residence: KAMPALA, Central, Uganda
+	Phone number(s): 0772590914
+	Email: paulmasereka@yahoo.com
+
+
+
+Potential duplicate #DUP18
+===================================================
+
+Record from Butisema:
+
+	ID: 119
+	First name: Paul
+	Last name: Akope
+	Other names: 
+	Facility: 
+	Phone number(s): 782186696 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 22677
+	First name: Paul
+	Last name: Aleper
+	Other names: 
+	Residence: NAKAPIRIPIRIT, Northern, Uganda
+	Phone number(s): 0775636879
+	Email: 
+
+
+
+Potential duplicate #DUP19
+===================================================
+
+Record from Butisema:
+
+	ID: 123
+	First name: Rebecca
+	Last name: Nakato
+	Other names: 
+	Facility: MULAGO NRH
+	Phone number(s): 783606113 
+	Email: beckynakato@gmail.com
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 21109
+	First name: Rebecca
+	Last name: Nakafeero
+	Other names: 
+	Residence: KAMPALA, Central, Uganda
+	Phone number(s): 0779696441
+	Email: 
+
+Potential record match #2 from IHRIS database:
+
+	Registration number: 4407
+	First name: Rebecca
+	Last name: Nabaggala
+	Other names: 
+	Residence: KAMPALA, Central, Uganda
+	Phone number(s): 0780455740
+	Email: rebeccanabagala@gmail.com
+
+
+
+Potential duplicate #DUP20
+===================================================
+
+Record from Butisema:
+
+	ID: 125
+	First name: Robert
+	Last name: Twinamtsiko
+	Other names: 
+	Facility: MULAGO NRH
+	Phone number(s): 783888337 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 6852
+	First name: Robert
+	Last name: Ejangat
+	Other names: 
+	Residence: 
+	Phone number(s): 
+	Email: 
+
+
+
+Potential duplicate #DUP21
+===================================================
+
+Record from Butisema:
+
+	ID: 126
+	First name: Tom
+	Last name: Ocen
+	Other names: Henry
+	Facility: BUDUDA HOSPITAL
+	Phone number(s): 774145308 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 12923
+	First name: Tom
+	Last name: Okwel
+	Other names: 
+	Residence: OYAM, Northern, Uganda
+	Phone number(s): 772662247
+	Email: 
+
+
+
+Potential duplicate #DUP22
+===================================================
+
+Record from Butisema:
+
+	ID: 132
+	First name: Saddiel
+	Last name: Nabulya
+	Other names: 
+	Facility: BARENTU HOSPITAL
+	Phone number(s): 7822511256 
+	Email: nabulya.luyomo9@gmail.com
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 14007
+	First name: Saddie
+	Last name: Nabulya
+	Other names: Luyombo
+	Residence: KAMPALA, Central, Uganda
+	Phone number(s): 
+	Email: 
+
+
+
+Potential duplicate #DUP23
+===================================================
+
+Record from Butisema:
+
+	ID: 139
+	First name: Steve
+	Last name: Masereka
+	Other names: 
+	Facility: NSAMBYA HOSPITAL
+	Phone number(s): 773988054 
+	Email: stevemas2003@gmail.com
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 16760
+	First name: Raphael
+	Last name: Masereka
+	Other names: Bisanji
+	Residence: KASESE, Western, Uganda
+	Phone number(s): 0772 326424
+	Email: masraph@gmail.com
+
+
+
+Potential duplicate #DUP24
+===================================================
+
+Record from Butisema:
+
+	ID: 142
+	First name: Sylivia
+	Last name: Atimango
+	Other names: .
+	Facility: MULAGO NRH
+	Phone number(s): 779701694 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 17903
+	First name: Sylvia
+	Last name: Acam
+	Other names: Jane
+	Residence: KUMI, Eastern, Uganda
+	Phone number(s): 0782235497
+	Email: acamjanesylvia@gmail.com
+
+
+
+Potential duplicate #DUP25
+===================================================
+
+Record from Butisema:
+
+	ID: 150
+	First name: Wildry
+	Last name: Tuboine
+	Other names: Muhindo
+	Facility: FORTPORTAL RRH
+	Phone number(s): 774122871 
+	Email: tmwildry@gmail.com
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 18387
+	First name: Muhindo
+	Last name: Tuboine
+	Other names: Wildry
+	Residence: TORORO, Eastern, Uganda
+	Phone number(s): 0774122877
+	Email: tmwildry@gmail.com
+
+
+
+Potential duplicate #DUP26
+===================================================
+
+Record from Butisema:
+
+	ID: 164
+	First name: Annet
+	Last name: Nakagwa
+	Other names: 
+	Facility: 
+	Phone number(s): 703609318 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 19580
+	First name: Bernadette
+	Last name: Nakaggwa
+	Other names: 
+	Residence: KAMPALA, Central, Uganda
+	Phone number(s): 0712835747
+	Email: 
+
+Potential record match #2 from IHRIS database:
+
+	Registration number: 26179
+	First name: Annet
+	Last name: Nakaggwa
+	Other names: Kiggundu
+	Residence: WAKISO, Central, Uganda
+	Phone number(s): 0772556770
+	Email: 
+
+
+
+Potential duplicate #DUP27
+===================================================
+
+Record from Butisema:
+
+	ID: 165
+	First name: Wilfred
+	Last name: Odotch
+	Other names: 
+	Facility: 
+	Phone number(s): 703632450 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 18867
+	First name: Wilfred
+	Last name: Odoch
+	Other names: 
+	Residence: NEBBI, Northern, Uganda
+	Phone number(s): 0782051460
+	Email: 
+
+
+
+Potential duplicate #DUP28
+===================================================
+
+Record from Butisema:
+
+	ID: 170
+	First name: Lilly
+	Last name: Adong
+	Other names: Anath
+	Facility: GULU
+	Phone number(s): 782822701 
+	Email: lillyadong28@gmail.com
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 7901
+	First name: Lilly
+	Last name: Angolere
+	Other names: Mary
+	Residence: MOROTO, Northern, Uganda
+	Phone number(s): 0754525561
+	Email: angolere@gmail.com
+
+
+
+Potential duplicate #DUP29
+===================================================
+
+Record from Butisema:
+
+	ID: 185
+	First name: Joseph
+	Last name: Kayongo
+	Other names: 
+	Facility: MULAGO NRH
+	Phone number(s): 779452700 
+	Email: jkayongo@yahoo.co.uk
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 7142
+	First name: Joseph
+	Last name: Omoding
+	Other names: 
+	Residence: SOROTI, Eastern, Uganda
+	Phone number(s): 0782956572
+	Email: 
+
+
+
+Potential duplicate #DUP30
+===================================================
+
+Record from Butisema:
+
+	ID: 186
+	First name: Elizabeth
+	Last name: Dushabe
+	Other names: 
+	Facility: KISORO HOSPITAL
+	Phone number(s):  
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 25360
+	First name: Elizabeth
+	Last name: Asienzo
+	Other names: Mary
+	Residence: OYAM, Northern, Uganda
+	Phone number(s): 078200930
+	Email: 
+
+Potential record match #2 from IHRIS database:
+
+	Registration number: 18701
+	First name: Elizabeth
+	Last name: Musagule
+	Other names: Mugisha
+	Residence: BUIKWE, Central, Uganda
+	Phone number(s): 0772 879960
+	Email: elizabethmugisha@ymail.com
+
+Potential record match #3 from IHRIS database:
+
+	Registration number: 17669
+	First name: Elizabeth
+	Last name: Dusabe
+	Other names: 
+	Residence: KISORO, Western, Uganda
+	Phone number(s): 
+	Email: 
+
+
+
+Potential duplicate #DUP31
+===================================================
+
+Record from Butisema:
+
+	ID: 191
+	First name: Bernadette
+	Last name: Kyoheirwe
+	Other names: 
+	Facility: 
+	Phone number(s):  
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 10139
+	First name: Bernadette
+	Last name: Igoe
+	Other names: 
+	Residence: SERERE, Eastern, Uganda
+	Phone number(s): 752889990
+	Email: 
+
+
+
+Potential duplicate #DUP32
+===================================================
+
+Record from Butisema:
+
+	ID: 197
+	First name: Grace
+	Last name: Aninga
+	Other names: Arike
+	Facility: KOBOKO H/C IV
+	Phone number(s): 774471110 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 11685
+	First name: Grace
+	Last name: Amongi
+	Other names: 
+	Residence: LIRA, Northern, Uganda
+	Phone number(s): 772988859
+	Email: amongigrace@gmail.com
+
+Potential record match #2 from IHRIS database:
+
+	Registration number: 18293
+	First name: Grace
+	Last name: Aol
+	Other names: 
+	Residence: GULU, Northern, Uganda
+	Phone number(s): 0776889381
+	Email: 
+
+
+
+Potential duplicate #DUP33
+===================================================
+
+Record from Butisema:
+
+	ID: 198
+	First name: Joseph
+	Last name: Ekodu
+	Other names: 
+	Facility: MULAGO NRH
+	Phone number(s): 70308237 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 7142
+	First name: Joseph
+	Last name: Omoding
+	Other names: 
+	Residence: SOROTI, Eastern, Uganda
+	Phone number(s): 0782956572
+	Email: 
+
+
+
+Potential duplicate #DUP34
+===================================================
+
+Record from Butisema:
+
+	ID: 199
+	First name: Ezorine
+	Last name: Lule
+	Other names: 
+	Facility: NAGURU HOSPITAL
+	Phone number(s): 782728768 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 10749
+	First name: George
+	Last name: Lule
+	Other names: 
+	Residence: WAKISO, Central, Uganda
+	Phone number(s): 712365771
+	Email: 
+
+
+
+Potential duplicate #DUP35
+===================================================
+
+Record from Butisema:
+
+	ID: 202
+	First name: Paison
+	Last name: Byaruhanga
+	Other names: 
+	Facility: ST CATHERINES HOSPITAL
+	Phone number(s): 718795107 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 28845
+	First name: Vincent
+	Last name: Byaruhanga
+	Other names: 
+	Residence: BULIISA, Western, Uganda
+	Phone number(s): 0775361463
+	Email: 
+
+Potential record match #2 from IHRIS database:
+
+	Registration number: 11393
+	First name: Ivan
+	Last name: Byaruhanga
+	Other names: 
+	Residence: RUBIRIZI, Western, Uganda
+	Phone number(s): 772661536
+	Email: byaivan@gmail.com
+
+
+
+Potential duplicate #DUP36
+===================================================
+
+Record from Butisema:
+
+	ID: 203
+	First name: Jane
+	Last name: Kangeya
+	Other names: Rose
+	Facility: NTARA HC IV
+	Phone number(s): 781665093 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 19624
+	First name: Jane
+	Last name: Kajoina
+	Other names: Rose
+	Residence: KYEGEGWA, Western, Uganda
+	Phone number(s): 0772370159
+	Email: 
+
+
+
+Potential duplicate #DUP37
+===================================================
+
+Record from Butisema:
+
+	ID: 207
+	First name: Robert
+	Last name: Kidde
+	Other names: Sseruwuge
+	Facility: KALISIZO HOSPITAL
+	Phone number(s): 701689739 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 13799
+	First name: Robert
+	Last name: Kibuka
+	Other names: 
+	Residence: MASINDI, Western, Uganda
+	Phone number(s): 772417258
+	Email: 
+
+Potential record match #2 from IHRIS database:
+
+	Registration number: 24059
+	First name: Robert
+	Last name: Kibuuka
+	Other names: 
+	Residence: BUTAMBALA, Central, Uganda
+	Phone number(s): 0772417258
+	Email: kibuukarobert@outlook.com
+
+
+
+Potential duplicate #DUP38
+===================================================
+
+Record from Butisema:
+
+	ID: 209
+	First name: Yvonne
+	Last name: Tusimiire
+	Other names: 
+	Facility: KISUBI
+	Phone number(s): 775514454 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 16754
+	First name: Yvonne
+	Last name: Tusiimire
+	Other names: 
+	Residence: WAKISO, Central, Uganda
+	Phone number(s): 
+	Email: 
+
+
+
+Potential duplicate #DUP39
+===================================================
+
+Record from Butisema:
+
+	ID: 216
+	First name: Moses
+	Last name: Muwanguzi
+	Other names: 
+	Facility: BOMBO GENERAL MISSION HOSPITAL
+	Phone number(s): 774300278 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 16757
+	First name: Florence
+	Last name: Muwanguzi
+	Other names: 
+	Residence: KAYUNGA, Central, Uganda
+	Phone number(s): 0712195118
+	Email: 
+
+
+
+Potential duplicate #DUP40
+===================================================
+
+Record from Butisema:
+
+	ID: 89
+	First name: Juliet
+	Last name: Nekesa
+	Other names: 
+	Facility: 
+	Phone number(s): 779497387 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 21544
+	First name: Juliet
+	Last name: Nakiganda
+	Other names: 
+	Residence: KAMPALA, Central, Uganda
+	Phone number(s): 0702371210
+	Email: 
+
+
+
+Potential duplicate #DUP41
+===================================================
+
+Record from Butisema:
+
+	ID: 220
+	First name: Godfrey
+	Last name: Lumu
+	Other names: 
+	Facility: NAMAYUMBA H/C IV
+	Phone number(s): 772311559 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 29212
+	First name: Godfrey
+	Last name: Agupio
+	Other names: 
+	Residence: KAMPALA, Central, Uganda
+	Phone number(s): 0788309066
+	Email: 
+
+
+
+Potential duplicate #DUP42
+===================================================
+
+Record from Butisema:
+
+	ID: 223
+	First name: Grace
+	Last name: Aguti
+	Other names: 
+	Facility: KAKUUTO H/C IV
+	Phone number(s): 772898575 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 11685
+	First name: Grace
+	Last name: Amongi
+	Other names: 
+	Residence: LIRA, Northern, Uganda
+	Phone number(s): 772988859
+	Email: amongigrace@gmail.com
+
+Potential record match #2 from IHRIS database:
+
+	Registration number: 13501
+	First name: Grace
+	Last name: Mubiru
+	Other names: 
+	Residence: KAMPALA, Central, Uganda
+	Phone number(s): 774125005
+	Email: gracemubiru@ymail.com
+
+Potential record match #3 from IHRIS database:
+
+	Registration number: 9499
+	First name: Grace
+	Last name: Mukisa
+	Other names: 
+	Residence: KAMULI, Eastern, Uganda
+	Phone number(s): 782799229
+	Email: 
+
+Potential record match #4 from IHRIS database:
+
+	Registration number: 17471
+	First name: Maria
+	Last name: Aguti
+	Other names: Atai
+	Residence: WAKISO, Central, Uganda
+	Phone number(s): 0794900130
+	Email: 
+
+Potential record match #5 from IHRIS database:
+
+	Registration number: 18293
+	First name: Grace
+	Last name: Aol
+	Other names: 
+	Residence: GULU, Northern, Uganda
+	Phone number(s): 0776889381
+	Email: 
+
+
+
+Potential duplicate #DUP43
+===================================================
+
+Record from Butisema:
+
+	ID: 224
+	First name: Jude
+	Last name: Segirinya
+	Other names: 
+	Facility: MITYAWA HOSPITAL
+	Phone number(s): 706450166 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 10185
+	First name: Yuda
+	Last name: Ssegirinya
+	Other names: Tadeo
+	Residence: NAKASONGOLA, Central, Uganda
+	Phone number(s): 0753555608
+	Email: j.ssegirinya@yahoo.com
+
+
+
+Potential duplicate #DUP44
+===================================================
+
+Record from Butisema:
+
+	ID: 237
+	First name: Ann
+	Last name: Nalwoga
+	Other names: Stella
+	Facility: BUIKWE
+	Phone number(s): 779266844 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 807
+	First name: Margaret
+	Last name: Nalwoga
+	Other names: 
+	Residence: KAMPALA, Central, Uganda
+	Phone number(s): 0772693765
+	Email: 
+
+
+
+Potential duplicate #DUP45
+===================================================
+
+Record from Butisema:
+
+	ID: 246
+	First name: Francis
+	Last name: Okech
+	Other names: 
+	Facility: ST. MARY'S HOSPITAL LACOR
+	Phone number(s): 782367103 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 22334
+	First name: Francis
+	Last name: Okech
+	Other names: Ouma
+	Residence: AMURU, Northern, Uganda
+	Phone number(s): 0718799557
+	Email: 
+
+Potential record match #2 from IHRIS database:
+
+	Registration number: 17459
+	First name: Francis
+	Last name: Okecho
+	Other names: 
+	Residence: DOKOLO, Northern, Uganda
+	Phone number(s): 0750414040
+	Email: okechofrancis@gmail.com
+
+
+
+Potential duplicate #DUP46
+===================================================
+
+Record from Butisema:
+
+	ID: 254
+	First name: Jacinta
+	Last name: Amito
+	Other names: 
+	Facility: ST. MARY'S HOSPITAL LACOR
+	Phone number(s): 772350347 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number:  10225
+	First name: Jacinta
+	Last name: Ajok
+	Other names: 
+	Residence: LIRA, Northern, Uganda
+	Phone number(s): 0775134175
+	Email: 
+
+
+
+Potential duplicate #DUP47
+===================================================
+
+Record from Butisema:
+
+	ID: 281
+	First name: Annet
+	Last name: Nakayiza
+	Other names: 
+	Facility: NTWETWE
+	Phone number(s): 782450623 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 26179
+	First name: Annet
+	Last name: Nakaggwa
+	Other names: Kiggundu
+	Residence: WAKISO, Central, Uganda
+	Phone number(s): 0772556770
+	Email: 
+
+
+
+Potential duplicate #DUP48
+===================================================
+
+Record from Butisema:
+
+	ID: 284
+	First name: Moses
+	Last name: Dhote
+	Other names: 
+	Facility: MGOKOYEM
+	Phone number(s): 172977371 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 7961
+	First name: Moses
+	Last name: Ndhote
+	Other names: 
+	Residence: BUIKWE, Central, Uganda
+	Phone number(s): 712977371
+	Email: ndhotemoses@gmail.com
+
+
+
+Potential duplicate #DUP49
+===================================================
+
+Record from Butisema:
+
+	ID: 299
+	First name: Ruth
+	Last name: Namali
+	Other names: 
+	Facility: ST. MARY'S HOSPITAL LACOR
+	Phone number(s): 774559722 
+	Email: 
+
+Potential record match #1 from IHRIS database:
+
+	Registration number: 11333
+	First name: Ruth
+	Last name: Naluyima
+	Other names: 
+	Residence: KAMPALA, Central, Uganda
+	Phone number(s): 0785180489
+	Email: 
+
+Potential record match #2 from IHRIS database:
+
+	Registration number: 124
+	First name: Jaliat
+	Last name: Nambalirwa
+	Other names: 
+	Residence: KAMPALA, Central, Uganda
+	Phone number(s): 712800825
+	Email: 
+
+There were 125 perfect matches, 40 matched by phone number, 49 other potential matches, and 79 with no match.
