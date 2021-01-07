@@ -13,7 +13,7 @@ Fiona==1.7.11.post1
 descartes==1.1.0
 -e git+git@github.com:matplotlib/basemap.git@b24b3ef8f7b92252ee713d5f3151c248dbee5c0e#egg=basemap
 pyproj==1.9.5.1
-lxml==4.2.0
+lxml==4.6.2
 pyshp==1.2.12
 PySAL==1.14.3
 
