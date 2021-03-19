@@ -3,7 +3,7 @@
 future==0.16.0
 termcolor==1.1.0
 # Web
-Jinja2==2.10
+Jinja2==2.11.3
 ##  Mapping
 # Basemap
 Shapely==1.6.4.post1
