@@ -137,5 +137,5 @@ webcolors==1.8.1
 ## The following requirements were added by pip freeze:
 geopandas==0.3.0
 Markdown==2.6.11
-markdown2==2.3.5
+markdown2==2.4.0
 path.py==11.0.1
