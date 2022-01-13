@@ -130,7 +130,7 @@ Werkzeug==0.14.1
 # Block diag
 blockdiag==1.5.3
 # unknown
-Pillow==5.0.0
+Pillow==9.0.0
 ruamel.ordereddict==0.4.13
 webcolors==1.8.1
 # !!! Don't add to requirements txt manually

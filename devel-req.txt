@@ -143,7 +143,7 @@ Werkzeug==0.14.1
 blockdiag==1.5.3
 
 # unknown
-Pillow==5.0.0
+Pillow==9.0.0
 ruamel.ordereddict==0.4.13
 webcolors==1.8.1
 
