@@ -131,7 +131,7 @@ ptpython==0.41
 
 # ArchiveNow
 archivenow==2017.11.21.10.50.27
-certifi==2018.1.18
+certifi==2022.12.7
 chardet==3.0.4
 Flask==0.12.2
 itsdangerous==0.24
